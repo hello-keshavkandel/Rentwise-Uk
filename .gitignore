@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Data — do NOT commit large raw files to GitHub.
+# Keep the folder (via .gitkeep) but ignore the downloaded files.
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models (large binaries)
+models/*.pkl
+models/*.joblib
+!models/.gitkeep
+
+# OS
+.DS_Store
