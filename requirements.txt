@@ -1,0 +1,17 @@
+# RentWise UK — Python dependencies
+# Install with:  pip install -r requirements.txt
+
+pandas==2.2.2          # tables / data manipulation (the workhorse)
+numpy==1.26.4          # numerical arrays, maths
+scikit-learn==1.5.1    # ML: Ridge, Random Forest, metrics, train/test split
+xgboost==2.1.1         # gradient-boosting model (our main model)
+shap==0.46.0           # explainability (why the model predicted a value)
+matplotlib==3.9.2      # static charts
+plotly==5.23.0         # interactive charts
+folium==0.17.0         # interactive maps
+streamlit==1.37.1      # the web dashboard
+requests==2.32.3       # downloading data files over HTTP
+openpyxl==3.1.5        # reading ONS .xlsx files
+jupyter==1.0.0         # notebooks for exploration
+statsmodels==0.14.2   # ARIMA / time-series forecasting (Module 4)
+pytest==8.2.2

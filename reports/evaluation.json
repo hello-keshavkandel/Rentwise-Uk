@@ -1,0 +1,17 @@
+{
+  "test": {
+    "rmse": 137.10218037217186,
+    "mae": 96.7373291015625,
+    "r2": 0.9000715613365173
+  },
+  "baseline_test": {
+    "rmse": 191.91564200647338,
+    "mae": 149.3337332540682,
+    "r2": 0.8041962106823088
+  },
+  "rmse_improvement_vs_baseline": 0.2856122672504862,
+  "meets_r2_target": true,
+  "cross_regional_rmse_mean": 294.61361091817207,
+  "cross_regional_rmse_min": 155.99737811602145,
+  "cross_regional_rmse_max": 629.9865118028553
+}

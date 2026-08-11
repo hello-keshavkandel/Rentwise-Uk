@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "test": {
+      "rmse": 55.736339540279594,
+      "mae": 43.671127431136895,
+      "r2": 0.9603063184600786
+    }
+  },
+  "random_forest": {
+    "params": {
+      "max_depth": 10,
+      "min_samples_leaf": 2,
+      "n_estimators": 300
+    },
+    "test": {
+      "rmse": 65.84928798231805,
+      "mae": 52.85403493493102,
+      "r2": 0.9445952931472567
+    }
+  },
+  "xgboost": {
+    "params": {
+      "learning_rate": 0.05,
+      "max_depth": 3,
+      "n_estimators": 300
+    },
+    "test": {
+      "rmse": 58.83844456436649,
+      "mae": 47.06757678407611,
+      "r2": 0.9557649154938214
+    }
+  },
+  "best_model": "Ridge (baseline)",
+  "rmse_improvement_vs_baseline": 0.0,
+  "meets_10pct_target": false
+}

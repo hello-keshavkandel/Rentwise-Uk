@@ -1,0 +1,10 @@
+# Streamlit theme + server settings for RentWise UK.
+[theme]
+primaryColor = "#2E74B5"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F8FD"
+textColor = "#1F3864"
+font = "sans serif"
+
+[server]
+headless = true
