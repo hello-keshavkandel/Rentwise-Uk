@@ -118,8 +118,13 @@ class RentWisePredictor:
         # only shows the region it is actually in (not "being in London" for a
         # non-London property).
         row0 = X1.iloc[0]
+        # I drop region dummies that are 0 for this property, and I also hide any
+        # feature whose impact rounds to £0. On the real data `year` is a constant
+        # (one ONS monthly snapshot), so it carries no signal and would otherwise
+        # show a confusing "£0" line in the explanation.
         pairs = [(f, v) for f, v in zip(self.feature_cols, shap_vals)
-                 if not (f.startswith("region_") and row0.get(f, 0) == 0)]
+                 if not (f.startswith("region_") and row0.get(f, 0) == 0)
+                 and abs(v) >= 0.5]
         contribs = sorted(pairs, key=lambda kv: abs(kv[1]), reverse=True)
         return {"rent": round(rent), "region": area["region"], "income": income,
                 "ratio": ratio, "affordable": bool(self.affordability.is_affordable(ratio)),
