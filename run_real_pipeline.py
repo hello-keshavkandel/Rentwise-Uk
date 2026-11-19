@@ -137,143 +137,40 @@ def run_module2():
 
 
 def run_module1():
-    """Real HM Land Registry sale-price model (Module 1)."""
-    from sklearn.linear_model import LinearRegression
-    from sklearn.preprocessing import StandardScaler
-    from sklearn.pipeline import make_pipeline
-    from sklearn.ensemble import RandomForestRegressor
-    from sklearn.model_selection import train_test_split
-    from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-    from xgboost import XGBRegressor
-    PT = {"D": "Detached", "S": "Semi-detached", "T": "Terraced", "F": "Flat"}
+    """Real HM Land Registry sale-price model (Module 1), EPC-enriched when available."""
+    import re as _re
+    from src.modules.module1_model import train_and_report
     lr = None
     for name in ("land_registry_pp_2026.csv", "hm_land_registry_price_paid_latest.csv"):
-        if (RAW / name).exists(): lr = RAW / name; break
+        if (RAW / name).exists():
+            lr = RAW / name; break
     if lr is None:
         print("[Module 1] no Land Registry file found - skipping"); return
-    rows = []
-    with open(lr, newline="") as f:
-        for r in csv.reader(f):
-            if len(r) < 16 or r[14] != "A" or r[15] != "A" or r[4] not in PT:
-                continue
-            try: price = int(r[1])
-            except ValueError: continue
-            if 20000 <= price <= 2000000:
-                rows.append((price, PT[r[4]], 1 if r[5] == "Y" else 0,
-                             1 if r[6] == "F" else 0, (r[12] or "").upper()))
-    df = pd.DataFrame(rows, columns=["price", "ptype", "is_new", "is_freehold", "district"])
-    n_clean = len(df)
-    if len(df) > 90000: df = df.sample(90000, random_state=config.RANDOM_SEED).reset_index(drop=True)
-    tr, te = train_test_split(df, test_size=0.15, random_state=config.RANDOM_SEED)
-    enc = tr.groupby("district")["price"].median(); glob = tr.price.median()
-    for d in (tr, te):
-        d["district_med"] = d.district.map(enc).fillna(glob)
-        for p in PT.values(): d[f"pt_{p}"] = (d.ptype == p).astype(int)
-    feat = ["is_new", "is_freehold", "district_med"] + [f"pt_{p}" for p in PT.values()]
-    out = []
-    for name, m, sc in [("OLS (baseline)", LinearRegression(), True),
-                        ("Random Forest", RandomForestRegressor(n_estimators=200, max_depth=20,
-                         random_state=config.RANDOM_SEED, n_jobs=1), False),
-                        ("XGBoost", XGBRegressor(n_estimators=400, max_depth=6, learning_rate=0.05,
-                         random_state=config.RANDOM_SEED, verbosity=0, n_jobs=1), False)]:
-        est = make_pipeline(StandardScaler(), m) if sc else m
-        est.fit(tr[feat], tr.price); p = est.predict(te[feat])
-        out.append((name, np.sqrt(mean_squared_error(te.price, p)),
-                    mean_absolute_error(te.price, p), r2_score(te.price, p)))
-    best = min(out, key=lambda x: x[1]); best_name = best[0]
-    import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
-    label = {"is_new": "new-build", "is_freehold": "freehold tenure", "district_med": "local area price level",
-             "pt_Detached": "detached", "pt_Semi-detached": "semi-detached",
-             "pt_Terraced": "terraced", "pt_Flat": "flat"}
-
-    # ---- SHAP global importance on the best model ----
-    shap_txt = ["- SHAP unavailable."]; imp = None
+    # optional EPC lookup (floor area + rooms)
+    epc = None
+    for ext in (".parquet", ".csv"):
+        p = (config.DATA_PROCESSED / "epc_lookup").with_suffix(ext)
+        if p.exists():
+            epc = pd.read_parquet(p) if ext == ".parquet" else pd.read_csv(p, dtype={"house_no": str})
+            break
+    # region map (from Module 2 clean data) for the cross-regional test
+    region_map = None
     try:
-        if best_name == "XGBoost":
-            import xgboost as xgb
-            bmod = XGBRegressor(n_estimators=400, max_depth=6, learning_rate=0.05,
-                                random_state=config.RANDOM_SEED, verbosity=0, n_jobs=1).fit(tr[feat], tr.price)
-            Xs = te[feat].sample(min(3000, len(te)), random_state=config.RANDOM_SEED)
-            contrib = bmod.get_booster().predict(xgb.DMatrix(Xs), pred_contribs=True)[:, :-1]
-            imp = pd.Series(np.abs(contrib).mean(axis=0), index=feat).sort_values(ascending=False)
-        else:
-            import shap
-            bmod = (make_pipeline(StandardScaler(), LinearRegression()) if best_name.startswith("OLS")
-                    else RandomForestRegressor(n_estimators=200, max_depth=20,
-                                               random_state=config.RANDOM_SEED, n_jobs=1))
-            bmod.fit(tr[feat], tr.price)
-            bg = shap.utils.sample(tr[feat], 200, random_state=config.RANDOM_SEED)
-            sv = shap.Explainer(bmod.predict, bg)(te[feat].sample(min(1500, len(te)),
-                                                                  random_state=config.RANDOM_SEED))
-            imp = pd.Series(np.abs(sv.values).mean(axis=0), index=feat).sort_values(ascending=False)
-        shap_txt = [f"- **{label.get(f, f)}**: £{v:,.0f}" for f, v in imp.head(6).items()]
-        top = imp.head(7)[::-1]
-        plt.figure(figsize=(6.4, 4)); plt.barh([label.get(f, f) for f in top.index], top.values, color="#2E74B5")
-        plt.xlabel("Mean |SHAP| (£ impact on sale price)")
-        plt.title("Module 1 (real): SHAP feature importance"); plt.tight_layout()
-        plt.savefig(config.ROOT / "reports" / "figures" / "m1_shap.png", dpi=130); plt.close()
-    except Exception as e:
-        shap_txt = [f"- SHAP unavailable: {e}"]
-
-    # ---- Cross-regional validation (leave-one-region-out) ----
-    xreg = []
-    try:
-        import re as _re
         clean = pd.read_csv(config.DATA_PROCESSED / "rentwise_clean.csv")
         def _norm(s):
             s = str(s).lower().replace(" ua", "").replace("city of", "").replace("county of", "")
             return _re.sub(r"[^a-z0-9]+", " ", s).strip()
-        rmap = {_norm(n): r for n, r in zip(clean.la_name, clean.region)}
-        dfx = df.copy(); dfx["region"] = dfx.district.apply(lambda d: rmap.get(_norm(d)))
-        dfx = dfx.dropna(subset=["region"])
-        if len(dfx) > 40000: dfx = dfx.sample(40000, random_state=config.RANDOM_SEED)
-        for reg in sorted(dfx.region.unique()):
-            trn, tst = dfx[dfx.region != reg], dfx[dfx.region == reg]
-            if len(tst) < 200: continue
-            enc2 = trn.groupby("district")["price"].median(); g2 = trn.price.median()
-            def prep(d):
-                d = d.copy(); d["district_med"] = d.district.map(enc2).fillna(g2)
-                for pp in PT.values(): d[f"pt_{pp}"] = (d.ptype == pp).astype(int)
-                return d
-            trn2, tst2 = prep(trn), prep(tst)
-            m = XGBRegressor(n_estimators=150, max_depth=6, learning_rate=0.05,
-                             random_state=config.RANDOM_SEED, verbosity=0, n_jobs=1).fit(trn2[feat], trn2.price)
-            pr = m.predict(tst2[feat])
-            xreg.append((reg, float(np.sqrt(mean_squared_error(tst2.price, pr))),
-                         float(r2_score(tst2.price, pr)), len(tst2)))
+        region_map = {_norm(n): r for n, r in zip(clean.la_name, clean.region)}
     except Exception:
-        xreg = []
-
-    md = ["# Module 1 - Sale Price Prediction (summary) [REAL HM Land Registry data]\n",
-          "## Model comparison (held-out test set)",
-          "| Model | Test RMSE (£) | Test MAE (£) | Test R² |", "|---|---|---|---|"]
-    md += [f"| {n} | {rm:,.0f} | {ma:,.0f} | {r2:.3f} |" for n, rm, ma, r2 in out]
-    md.append(f"\n**Best model:** {best_name} (R² {best[3]:.3f}).")
-    md.append("\n## SHAP feature importance (best model, mean £ impact on sale price)")
-    md += shap_txt
-    if xreg:
-        mx = np.mean([x[1] for x in xreg])
-        md.append("\n## Cross-regional validation (leave-one-region-out)")
-        md += ["| Region | RMSE (£) | R² | n |", "|---|---|---|---|"]
-        md += [f"| {r} | {rm:,.0f} | {r2:.3f} | {n:,} |" for r, rm, r2, n in xreg]
-        md.append(f"\nMean leave-one-region-out RMSE £{mx:,.0f} — higher than the in-sample test error, "
-                  "because a wholly held-out region carries no local price signal (district encoding falls "
-                  "back to the national median). This is a deliberately strict generalisation test.")
-        # figure
-        xs = sorted(xreg, key=lambda x: x[1])
-        plt.figure(figsize=(6.6, 3.8))
-        plt.barh([r for r, _, _, _ in xs], [v for _, v, _, _ in xs], color="#2E74B5")
-        plt.axvline(mx, color="black", ls="--", lw=1, label=f"mean £{mx:,.0f}")
-        plt.xlabel("Leave-one-region-out RMSE (£)")
-        plt.title("Module 1 (real): cross-regional validation"); plt.legend(fontsize=8)
-        plt.tight_layout(); plt.savefig(config.ROOT / "reports" / "figures" / "m1_cross_regional.png", dpi=130); plt.close()
-    md.append(f"\n*Real HM Land Registry Price Paid, England & Wales (modelled on a {len(df):,}-transaction "
-              f"random sample of {n_clean:,} cleaned standard residential sales; district median-price "
-              "target encoding from training data only). Real sale prices need floor area/bedrooms for "
-              "higher accuracy - a documented limitation.*")
-    (config.ROOT / "reports" / "module1_summary.md").write_text("\n".join(md))
-    print(f"[Module 1] best {best_name}: RMSE £{best[1]:,.0f} R2 {best[3]:.3f} | "
-          f"cross-regional folds {len(xreg)} | SHAP top {imp.index[0] if imp is not None else 'n/a'}")
+        region_map = None
+    res = train_and_report(lr, epc_lookup=epc, reports_dir=config.ROOT / "reports",
+                           seed=config.RANDOM_SEED, region_map=region_map)
+    tag = "EPC-enriched" if res["use_epc"] else "baseline"
+    extra = ""
+    if res["ab"]:
+        extra = (f" | EPC lift R2 {res['ab']['baseline_r2']:.3f}->{res['ab']['enriched_r2']:.3f}"
+                 f" (match {100*res['match_rate']:.0f}%)")
+    print(f"[Module 1] {tag}: best {res['best']} R2 {res['best_r2']:.3f}{extra}")
 
 
 def run_module4():
