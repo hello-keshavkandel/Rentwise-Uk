@@ -24,3 +24,4 @@ models/*.joblib
 .env
 data/raw/epc/*
 !data/raw/epc/.gitkeep
+data/processed/rentwise.duckdb
