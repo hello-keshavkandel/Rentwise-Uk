@@ -17,9 +17,11 @@ from src.data import sources as S
 
 
 def test_registry_shape():
-    assert len(S.SOURCES) == 6
+    assert len(S.SOURCES) == 9                              # 6 required + 3 optional (Module 3)
+    assert len([s for s in S.SOURCES if not s.optional]) == 6
     assert S.BY_KEY["land_registry"].url is not None       # has a real URL
     assert S.BY_KEY["pipr_monthly"].url is None            # manual (ONS URL changes)
+    assert S.BY_KEY["osm_amenities"].optional is True      # geospatial enrichment is optional
 
 
 def test_manifest_on_real_files():

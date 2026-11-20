@@ -46,3 +46,19 @@ strongest price drivers that HM Land Registry omits.
      `EPC_EMAIL` / `EPC_API_KEY` in `.env` for the API path.
   2. Build the lookup:  `python -m src.data.epc`
   3. Train the enriched model:  `python run_module1_enriched.py`
+
+## Module 3 geospatial enrichment (optional — fetched later)
+
+These power the richer spatial drivers and interactive maps. They are optional:
+the pipeline validates them when present and runs without them otherwise.
+
+| File in `data/raw/` | Source | Columns / format |
+|---|---|---|
+| `osm_amenities.csv` | OpenStreetMap (Overpass / osmnx export) | `lad_code, category[, lat, lon]` |
+| `ofsted_schools.csv` | Ofsted / Get Information About Schools | `lad_code, ofsted_rating` |
+| `geo/lad_boundaries.geojson` | ONS Open Geography Portal (LAD 2024) | GeoJSON FeatureCollection with `LAD24CD` |
+
+Then: `python -m src.data.sources manifest` validates them, and
+`src/modules/module3_geo.py` + `src/viz/maps.py` build the features and choropleth maps.
+*(`assign_lad` point-in-polygon needs the optional `geopandas`; if your amenity rows
+already carry `lad_code`, it isn't required.)*

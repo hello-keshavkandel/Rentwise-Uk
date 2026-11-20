@@ -106,6 +106,35 @@ def v_police_dir(p: Path) -> dict:
             "detail": f"{len(files)} street.csv files"}
 
 
+def _csv_header(p: Path) -> set:
+    with open(p, newline="", encoding="utf-8-sig") as f:
+        return {c.strip().lower() for c in next(csv.reader(f), [])}
+
+
+def v_osm(p: Path) -> dict:                      # Module 3 (optional)
+    cols = _csv_header(p)
+    return {"ok": {"lad_code", "category"} <= cols, "rows": _csv_rows(p),
+            "detail": f"cols={sorted(cols)[:6]}"}
+
+
+def v_ofsted(p: Path) -> dict:                   # Module 3 (optional)
+    cols = _csv_header(p)
+    return {"ok": {"lad_code", "ofsted_rating"} <= cols, "rows": _csv_rows(p),
+            "detail": f"cols={sorted(cols)[:6]}"}
+
+
+def v_geojson(p: Path) -> dict:                  # Module 3 (optional)
+    try:
+        g = json.loads(p.read_text())
+        feats = g.get("features", [])
+        props = feats[0].get("properties", {}) if feats else {}
+        ok = g.get("type") == "FeatureCollection" and any(
+            k.upper().startswith("LAD") and k.upper().endswith("CD") for k in props)
+        return {"ok": ok, "rows": len(feats), "detail": f"{len(feats)} features"}
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "rows": 0, "detail": f"invalid geojson: {e}"}
+
+
 # ----------------------------------------------------------------------- model
 @dataclass
 class Source:
@@ -116,6 +145,7 @@ class Source:
     url: Optional[str] = None           # None => manual download only
     note: str = ""
     is_dir: bool = False
+    optional: bool = False              # optional sources don't affect all_ok
 
     def path(self, raw_dir: Path) -> Path:
         return Path(raw_dir) / self.filename
@@ -176,6 +206,16 @@ SOURCES: list[Source] = [
     Source("police", "data.police.uk street-level crime",
            "police", v_police_dir, url=None, is_dir=True,
            note="Bulk archive from data.police.uk — unzip street.csv files into data/raw/police/."),
+    # --- Module 3 geospatial enrichment (optional; fetched later like EPC) ---
+    Source("osm_amenities", "OpenStreetMap amenities by local authority",
+           "osm_amenities.csv", v_osm, url=None, optional=True,
+           note="Export OSM points (Overpass/osmnx) as rows of lad_code,category,[lat,lon]."),
+    Source("ofsted", "Ofsted school ratings by local authority",
+           "ofsted_schools.csv", v_ofsted, url=None, optional=True,
+           note="Ofsted/Get-Information-About-Schools export with lad_code,ofsted_rating."),
+    Source("la_boundaries", "ONS LA (2024) boundary geometry (GeoJSON)",
+           "geo/lad_boundaries.geojson", v_geojson, url=None, optional=True,
+           note="ONS Open Geography Portal LAD(2024) boundaries as GeoJSON (needs LAD24CD)."),
 ]
 
 BY_KEY = {s.key: s for s in SOURCES}
@@ -196,8 +236,10 @@ def build_manifest(raw_dir: Path) -> dict:
     manifest = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "sources": {c["key"]: {**c, "name": BY_KEY[c["key"]].name,
-                               "url": BY_KEY[c["key"]].url} for c in checks},
-        "all_ok": all(c.get("ok") for c in checks),
+                               "url": BY_KEY[c["key"]].url,
+                               "optional": BY_KEY[c["key"]].optional} for c in checks},
+        # required (non-optional) sources must all pass; optional ones are pending enrichment
+        "all_ok": all(c.get("ok") for c in checks if not BY_KEY[c["key"]].optional),
     }
     (raw_dir / "_manifest.json").write_text(json.dumps(manifest, indent=2))
     return manifest
