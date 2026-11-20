@@ -1,89 +1,76 @@
-# RentWise UK
+# RentWise UK 🏠
 
-A data-driven housing & long-term rental intelligence system for the UK market.
-MSc Masters Project (Group 27), University of the West of Scotland. Open data only — no ethical approval required.
+**A data-driven UK housing & long-term rental intelligence system — predict, explain, and measure affordability from open government data.**
+
+[![CI](https://github.com/hello-keshavkandel/Rentwise-Uk/actions/workflows/ci.yml/badge.svg)](https://github.com/hello-keshavkandel/Rentwise-Uk/actions/workflows/ci.yml)
+&nbsp;**Live app:** https://rentwiseuk.streamlit.app
+
+RentWise UK predicts long-term rental prices and residential sale prices across England & Wales, expresses rent as an **affordability measure against local incomes**, **explains every estimate with SHAP**, attaches a **calibrated confidence range**, and forecasts regional trends — all from **open government data only** (ONS, HM Land Registry, data.police.uk). Four interconnected ML modules feed one interactive Streamlit dashboard.
+
+> Originally an MSc project; now developed as a solo product by **Keshav Kandel**. The dissertation state is preserved at the `dissertation-submission` git tag.
+
+---
 
 ## What it does
-Predicts UK long-term rental prices and residential sale prices, expresses rent as an affordability measure against local incomes, explains the drivers with SHAP, analyses geospatial drivers, forecasts regional trends, and presents the results in an interactive Streamlit dashboard — four interconnected machine-learning modules over one shared open-data pipeline.
 
-## Project structure
-```
-Rentwise-UK/
-├── config.py              # central settings (paths, thresholds, success criteria)
-├── requirements.txt       # Python dependencies
-├── run_pipeline.py        # SYNTHETIC development build (all four modules)
-├── run_real_pipeline.py   # REAL-DATA build (all four modules) — see below
-├── DATA_SOURCES.md        # data dictionary: what/where/why for every dataset
-├── data_contract.md       # shared schema between modules
-├── data/
-│   ├── raw/               # source files (git-ignored): real ONS/HMLR/police + lookup
-│   └── processed/         # cleaned & merged data
-├── notebooks/             # exploration (EDA)
-├── src/
-│   ├── data/              # data generation, cleaning, real-data loading
-│   ├── features/          # feature engineering
-│   ├── models/            # training, evaluation, SHAP, affordability, prediction
-│   └── modules/           # Modules 1 (sale price), 3 (geospatial), 4 (forecasting)
-├── tests/                 # unit tests (data contract, affordability engine)
-├── models/                # saved trained model (best_model.joblib)
-├── reports/               # metrics, summaries, and figures
-└── app/                   # Streamlit dashboard (app/streamlit_app.py)
-```
-
-## Setup (once)
-```bash
-python -m venv .venv
-source .venv/bin/activate            # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python config.py                     # sanity-check settings
-```
-
-## Two ways to build the system
-
-**A — Synthetic development build** (instant; builds/tests the whole pipeline without any downloads):
-```bash
-python run_pipeline.py               # generates synthetic data and runs all four modules
-```
-
-**B — Real-data build** (the results reported in the dissertation). Place these real open files in `data/raw/`:
-
-| File in `data/raw/` | Source | Used by |
+| Module | What | Headline |
 |---|---|---|
-| `ons_pipr_monthly.xlsx` | ONS Price Index of Private Rents — monthly price statistics | Module 2 (rent by LA & property type) |
-| `ons_pipr_historical.xlsx` | ONS PIPR historical series (monthly, from 2005) | Module 4 (forecasting) |
-| `ashe_table8_7a.xlsx` | ONS ASHE Table 8.7a — annual gross pay by LA of residence | Module 2 (affordability) |
-| `land_registry_pp_2026.csv` | HM Land Registry Price Paid | Module 1 (sale price) |
-| `police/*street.csv` | data.police.uk street-level crime | Module 3 (crime driver) |
-| `lsoa_to_lad.csv` | ONS LSOA(2021)→LAD(2024) lookup | maps crime LSOA → local authority |
+| **2 · Rent & affordability** | Predicts LA-level rents, scores them vs the 30% income benchmark, explains with SHAP | XGBoost **R² 0.90**, +29% over baseline; **calibrated 80% intervals** |
+| **1 · Sale price** | HM Land Registry price model, optional **EPC floor-area** enrichment | XGBoost R² 0.567 → higher with EPC; conformal intervals |
+| **3 · Geospatial** | Spatial drivers of rent (crime live; OSM/Ofsted + maps in progress) | SHAP + ablation; interactive choropleths |
+| **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends | mean MAPE ~0.6%, 80/95% intervals |
 
-Then:
+The dashboard has two views: a **Rent estimator** (pick a local authority + property type → predicted rent, affordability verdict, a **confidence range**, and a plain-English SHAP explanation) and a **System results** overview of all four modules, with a live **health/freshness banner**.
+
+## Quickstart
+
 ```bash
-python run_real_pipeline.py          # builds + evaluates all four modules on real data
-streamlit run app/streamlit_app.py   # launch the dashboard
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+make validate     # check/validate the open data in data/raw (see DATA_SOURCES.md)
+make build        # run the real-data pipeline (all four modules)
+make store        # build the DuckDB query store
+make app          # launch the dashboard
+make test         # run the test suite
+make health       # artifacts + data/model freshness
 ```
 
-## Results (real open data)
-- **Module 2 — Rent & affordability:** XGBoost **R² 0.900** (RMSE £137), beating a Ridge baseline (R² 0.804) by **29%** — both success criteria met. Top driver: local income. ~95% of local authorities exceed the 30% affordability benchmark.
-- **Module 1 — Sale price:** XGBoost **R² 0.567** on a 90,000-transaction sample of ~216,000 cleaned HM Land Registry sales; includes SHAP importance (local area price level and detached type dominate) and a leave-one-region-out cross-regional test (mean RMSE ~£184k — a deliberately strict generalisation check). Lower R² reflects open data lacking floor area/bedrooms — a documented limitation.
-- **Module 4 — Forecasting:** ARIMA / Holt-Winters, mean **MAPE ≈ 0.6%** across nine regions, with **80%/95% prediction intervals** (empirical coverage 68% / 89% — intervals slightly over-confident).
-- **Module 3 — Geospatial:** real crime driver (SHAP ≈ £57; largely collinear with income/region). Transport, schools, green space, amenities and interactive maps are future work (need OSM/Ofsted).
+Run `make help` for every target. The real raw data is git-ignored — `DATA_SOURCES.md` lists exactly what to download and from where.
 
-*Development note: the system was built iteratively — first on synthetic data (`run_pipeline.py`) to develop and test the pipeline, then validated on real open data (`run_real_pipeline.py`).*
+## Architecture
 
-## Team (per project specification)
-- **Keshav Kandel** — technical lead: system design, development, testing, integration (Module 2: rental price & affordability).
-- **Abdullah** — Module 1 (sale price): data sourcing/documentation, results interpretation, write-up.
-- **Milan** — Module 3 (geospatial): geospatial features/analysis, interpretation, write-up.
-- **Harish** — Module 4 (forecasting + dashboard): requirements, usability testing, deployment docs, project management.
-
-## Dashboard
-`streamlit run app/streamlit_app.py` opens two views: a **Rent estimator** (pick a local authority and property type — the bedroom count is derived from the type, matching the ONS data — returning predicted rent, affordability verdict and a SHAP explanation) and a **System results** overview of all four modules.
-
-## Status
-0. Setup ✅  1. Data ✅  2. Cleaning ✅  3. EDA ✅  4. Features ✅  5. Modelling ✅  6. Evaluation ✅  7. SHAP ✅  8. Affordability ✅  9. Dashboard ✅  · Real-data validation ✅ · 10. Deploy ▶ (Streamlit Community Cloud)
-
-## Tests
-```bash
-python -m pytest tests/              # data-contract and affordability-engine unit tests
 ```
-# Rentwise-Uk
+open data ─▶ fetch + validate ─▶ shared feature store ─▶ four ML modules ─▶ Streamlit dashboard
+ (sources.py)   (_manifest.json)     (data contract)      (1 sale · 2 rent ·      (+ health banner,
+                                      + DuckDB store)       3 geo · 4 forecast)     SHAP, intervals, maps)
+```
+
+- **Object-oriented pipeline** — each stage is a class with a `run()` method; the whole system rebuilds from `python run_real_pipeline.py` (`make build`).
+- **Provenance & validation** — `src/data/sources.py` records bytes/sha256/row-counts/validation per source in `data/raw/_manifest.json`.
+- **Processed store** — `src/data/store.py` (DuckDB) for fast SQL over the processed data.
+- **Calibrated uncertainty** — `src/models/conformal.py` (cross-conformal) gives honest intervals; empirically 90%→90%, 80%→80% on real data.
+- **Metrics history** — `src/models/registry.py` logs every run to `reports/metrics_history.jsonl`.
+- **Maps** — `src/viz/maps.py` renders folium choropleths from LA-boundary GeoJSON.
+
+## Data sources
+
+Open data only, no proprietary access, no ethical approval required — HM Land Registry Price Paid, ONS Price Index of Private Rents, ONS ASHE earnings, data.police.uk crime, ONS geography; optional EPC (floor area), OpenStreetMap & Ofsted (geospatial). See **`DATA_SOURCES.md`**.
+
+## Testing
+
+```bash
+make test        # pytest — 34 tests (unit + integration); data-dependent ones skip without the raw data
+```
+CI runs the suite on every push. Per-milestone test reports are in `reports/TESTING_REPORT_*.md`.
+
+## Deployment
+
+- **Streamlit Community Cloud** (live) — auto-deploys from `main`; Python 3.11.
+- **Any container host** — `docker build -t rentwise-uk . && docker run -p 8501:8501 rentwise-uk`.
+
+See **`DEPLOYMENT.md`** and **`ROADMAP.md`** (the product roadmap).
+
+## Licence & author
+
+MIT (see `LICENSE`). Built by **Keshav Kandel** — *indicative estimates, not financial advice.*

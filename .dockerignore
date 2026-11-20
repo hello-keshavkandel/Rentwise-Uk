@@ -1,0 +1,14 @@
+# keep the image small: exclude large raw data, envs, caches, git, docs
+.git
+.github
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+data/raw/
+notebooks/
+reports/figures/*.pdf
+*.docx
+*.pptx
+.DS_Store

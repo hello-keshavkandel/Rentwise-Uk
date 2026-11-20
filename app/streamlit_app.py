@@ -48,6 +48,30 @@ st.caption("Data-driven UK housing & long-term rental intelligence — a four-mo
 
 view = st.sidebar.radio("View", ["Rent estimator", "System results"])
 
+# ---- observability: data/model freshness banner + methodology ----
+with st.sidebar:
+    try:
+        from src.health import check
+        _h = check()
+        _icon = {"ok": "🟢", "degraded": "🟡", "down": "🔴"}.get(_h["status"], "⚪")
+        _d = _h["data"].get("age_days"); _m = _h["model"].get("age_days")
+        st.caption(f"{_icon} System {_h['status']}"
+                   + (f" · data {int(_d)}d old" if _d is not None else "")
+                   + (f" · model {int(_m)}d old" if _m is not None else ""))
+    except Exception:
+        pass
+    with st.expander("About & methodology"):
+        st.markdown(
+            "**RentWise UK** predicts UK rents and sale prices from **open government "
+            "data** (ONS, HM Land Registry, data.police.uk) and explains every estimate.\n\n"
+            "- **Rent (Module 2):** XGBoost, R² 0.90; SHAP explanations; affordability vs the "
+            "30% income benchmark; **calibrated 80% prediction intervals** (conformal).\n"
+            "- **Sale price (Module 1):** HM Land Registry + optional EPC floor area.\n"
+            "- **Geospatial (Module 3):** crime driver; OSM/Ofsted layers + maps in progress.\n"
+            "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends.\n\n"
+            "Estimates are **indicative, not financial advice**. "
+            "Code: github.com/hello-keshavkandel/Rentwise-Uk")
+
 # ---------------------------------------------------------------- Rent estimator
 if view == "Rent estimator":
     try:

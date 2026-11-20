@@ -29,6 +29,9 @@ module1:            ## train the EPC-enriched Module 1 (needs EPC lookup)
 refresh: validate build store   ## end-to-end refresh: validate -> rebuild -> store
 	@echo "RentWise UK refresh complete."
 
+health:             ## check artifacts + data/model freshness
+	$(PY) -m src.health
+
 test:               ## run the test suite
 	$(PY) -m pytest -q
 
