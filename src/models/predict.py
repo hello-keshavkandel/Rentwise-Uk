@@ -59,6 +59,10 @@ class RentWisePredictor:
         # I keep a small background sample so a linear model can be explained too.
         self._background = feats[self.feature_cols].sample(
             min(len(feats), 200), random_state=config.RANDOM_SEED)
+        # Calibrated 80% prediction interval half-width (conformal), if available.
+        from src.models.conformal import load_q
+        self.interval_q = load_q(config.MODELS_DIR / "conformal.json", alpha=0.2)
+        self.interval_level = 0.80
 
     def area_names(self):
         # I give the dashboard the list of areas to show in its dropdown.
@@ -126,9 +130,14 @@ class RentWisePredictor:
                  if not (f.startswith("region_") and row0.get(f, 0) == 0)
                  and abs(v) >= 0.5]
         contribs = sorted(pairs, key=lambda kv: abs(kv[1]), reverse=True)
+        # Calibrated prediction interval (80% by default), floored to a valid rent.
+        interval = None
+        if self.interval_q is not None:
+            interval = {"low": max(round(rent - self.interval_q), int(RENT_FLOOR)),
+                        "high": round(rent + self.interval_q), "level": self.interval_level}
         return {"rent": round(rent), "region": area["region"], "income": income,
                 "ratio": ratio, "affordable": bool(self.affordability.is_affordable(ratio)),
-                "contributions": contribs}
+                "contributions": contribs, "interval": interval}
 
 
 if __name__ == "__main__":

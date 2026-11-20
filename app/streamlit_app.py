@@ -1,12 +1,12 @@
 """
 streamlit_app.py  —  Phase 9 / Module 4 integration: the RentWise UK dashboard.
 
-I am the single user-facing app for the whole four-module system. The sidebar
+the single user-facing app for the whole four-module system. The sidebar
 switches between two views:
   * Rent estimator  - the interactive Module 2 tool (rent + affordability + SHAP).
   * System results  - a read-only overview of all four modules' outputs.
 
-Why this design (I explain this in the viva): only dropdowns/sliders (no free text,
+Why this design : only dropdowns/sliders (no free text,
 no uploads, no code execution) so there is no injection surface; the model is
 loaded read-only and cached; every estimate carries a plain-English explanation
 and an 'indicative, not financial advice' disclaimer.
@@ -72,6 +72,10 @@ if view == "Rent estimator":
         c1,c2,c3 = st.columns(3)
         c1.metric("Predicted monthly rent", f"£{r['rent']:,}")
         c2.metric("Rent-to-income", f"{pct:.0f}%"); c3.metric("Region", r["region"])
+        iv = r.get("interval")
+        if iv:
+            st.caption(f"{int(iv['level']*100)}% confidence range: "
+                       f"**£{iv['low']:,} – £{iv['high']:,}** (calibrated by conformal prediction).")
         if r["affordable"]:
             st.success(f"✅ Affordable — rent is {pct:.0f}% of local income (≤30% benchmark).")
         else:

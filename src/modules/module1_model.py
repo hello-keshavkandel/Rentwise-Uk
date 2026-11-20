@@ -208,6 +208,14 @@ def train_and_report(pp_path, epc_lookup=None, reports_dir=None, seed=42,
               "district median-price target encoding from training data only.*")
     (reports_dir / "module1_summary.md").write_text("\n".join(md))
 
+    # record this run in the metrics history (quality over time)
+    try:
+        from src.models.registry import log_run
+        log_run("module1", {"r2": best[3], "rmse": best[1], "mae": best[2],
+                            "use_epc": use_epc, "match_rate": match_rate, "n": len(df)})
+    except Exception as e:  # noqa: BLE001
+        log.warning("metrics logging skipped: %s", e)
+
     return {"models": results, "best": best_name, "best_r2": best[3],
             "ab": ab, "interval": interval, "cross_regional": xreg,
             "use_epc": use_epc, "match_rate": match_rate, "n_modelled": len(df)}
