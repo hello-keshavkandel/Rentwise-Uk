@@ -38,14 +38,19 @@ ONS rent data is published at **local-authority** level (and by property type), 
 Adds **floor area** and **habitable rooms** to the sale-price model — the two
 strongest price drivers that HM Land Registry omits.
 
-- **Source:** https://epc.opendatacommunities.org (England & Wales; free registration)
+- **Source:** https://get-energy-performance-data.communities.gov.uk — GOV.UK "Get energy
+  performance of buildings data" (beta), which replaced epc.opendatacommunities.org.
+  England & Wales, Open Government Licence; **sign-in with GOV.UK One Login required**.
 - **Fields used:** `total_floor_area`, `number_habitable_rooms` (joined to Price Paid by postcode + house number)
 - **How to add it:**
-  1. Register (instant) and either download the domestic bulk data into `data/raw/epc/`
-     (so each local authority folder has a `certificates.csv`), **or** put
-     `EPC_EMAIL` / `EPC_API_KEY` in `.env` for the API path.
+  1. Sign in, choose the **domestic** EPC bulk download (CSV), and unzip it anywhere under
+     `data/raw/epc/`. Any file names/folder layout work; recommendation tables are ignored.
+     The national file is large (tens of millions of rows, several GB) — that's fine.
   2. Build the lookup:  `python -m src.data.epc`
+     (reads only the needed columns, in chunks, keeping only postcodes found in Price Paid)
   3. Train the enriched model:  `python run_module1_enriched.py`
+- The legacy API path (`EPC_EMAIL`/`EPC_API_KEY`) targets the old service and is not
+  verified against the new GOV.UK developer API — use the bulk download.
 
 ## Module 3 geospatial enrichment (optional — fetched later)
 

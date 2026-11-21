@@ -15,15 +15,16 @@ number).
 
 DATA ACQUISITION (free, one-off)
 --------------------------------
-Register at https://epc.opendatacommunities.org (instant, just an email), then
-EITHER:
-  * Bulk  — download the domestic certificates (whole country, or per local
-            authority) and unzip into `data/raw/epc/` so the tree looks like:
-                data/raw/epc/domestic-E06000001-Hartlepool/certificates.csv
-                data/raw/epc/domestic-E06000002-.../certificates.csv
-            `load_bulk()` reads every certificates.csv it finds.
-  * API   — put your credentials in `.env` (EPC_EMAIL, EPC_API_KEY) and call
-            `fetch_api(postcodes)` to pull only the postcodes you need.
+Sign in with GOV.UK One Login at https://get-energy-performance-data.communities.gov.uk
+(the service that replaced epc.opendatacommunities.org), then EITHER:
+  * Bulk  — download the domestic certificates CSV(s) and unzip anywhere under
+            `data/raw/epc/`. Any file name/layout works: `load_bulk()` scans every
+            CSV, keeps those whose header has postcode + total floor area, reads
+            only the needed columns in chunks, and (via `python -m src.data.epc`)
+            keeps only postcodes present in Price Paid.
+  * API   — `fetch_api()` targets the legacy Open Data Communities API
+            (EPC_EMAIL / EPC_API_KEY). The GOV.UK service has a new developer API;
+            fetch_api has NOT been verified against it — prefer the bulk route.
 
 Either way, `build_epc_lookup()` writes a consolidated
 `data/processed/epc_lookup.parquet` that the feature join consumes.
@@ -97,25 +98,68 @@ def _keep_wanted(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # --------------------------------------------------------------------------- bulk
-def load_bulk(epc_dir: str | Path) -> pd.DataFrame:
-    """Read and concatenate every `certificates.csv` under `epc_dir`."""
+def _candidate_csvs(epc_dir: Path) -> list[str]:
+    """Every CSV under epc_dir except recommendation tables.
+
+    The old Open Data Communities bulk export used per-LA folders with a
+    `certificates.csv`; the GOV.UK service may name files differently, so we
+    accept any *.csv and decide by its header (see load_bulk)."""
+    files = sorted(glob.glob(str(epc_dir / "**" / "*.csv"), recursive=True))
+    return [f for f in files if "recommendation" not in Path(f).name.lower()]
+
+
+def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> pd.DataFrame:
+    """Read EPC bulk CSVs memory-safely.
+
+    * Only CSVs whose header has a postcode AND total floor area are used.
+    * Only the WANTED columns are read, in chunks (the national file is ~30M rows).
+    * If `postcodes` is given (any iterable of postcodes, spaces/case ignored),
+      rows for other postcodes are dropped chunk by chunk — so a national file
+      shrinks to just the properties that can ever join to Price Paid.
+    """
     epc_dir = Path(epc_dir)
-    files = sorted(glob.glob(str(epc_dir / "**" / "certificates.csv"), recursive=True))
-    if not files:
-        raise FileNotFoundError(
-            f"No certificates.csv found under {epc_dir}. Download EPC bulk data "
-            "from https://epc.opendatacommunities.org and unzip it there "
-            "(see src/data/epc.py docstring)."
-        )
-    usecols = None  # bulk files are wide; we read all then trim (robust to layout changes)
-    frames = []
+    files = _candidate_csvs(epc_dir)
+    keys = None
+    if postcodes is not None:
+        keys = set(_norm_postcode(pd.Series(list(postcodes))).dropna())
+
+    frames, used = [], 0
     for fp in files:
         try:
-            df = pd.read_csv(fp, dtype=str, low_memory=False, usecols=usecols)
-            frames.append(_keep_wanted(df))
+            header = pd.read_csv(fp, nrows=0).columns
         except Exception as e:                           # noqa: BLE001
-            log.warning("skipped %s: %s", fp, e)
-    log.info("EPC bulk: read %d certificate file(s)", len(frames))
+            log.warning("skipped %s (unreadable header: %s)", fp, e)
+            continue
+        canon = {c: _canon(c) for c in header}
+        if not {"postcode", "total_floor_area"} <= set(canon.values()):
+            log.info("skipped %s (not a certificates table)", Path(fp).name)
+            continue
+        usecols = [c for c, k in canon.items() if k in WANTED]
+        rows_in = rows_kept = 0
+        try:
+            for chunk in pd.read_csv(fp, dtype=str, usecols=usecols,
+                                     chunksize=chunksize, low_memory=False):
+                rows_in += len(chunk)
+                chunk = _keep_wanted(chunk)
+                if keys is not None:
+                    chunk = chunk[_norm_postcode(chunk["postcode"]).isin(keys)]
+                rows_kept += len(chunk)
+                if len(chunk):
+                    frames.append(chunk)
+        except Exception as e:                           # noqa: BLE001
+            log.warning("skipped rest of %s: %s", fp, e)
+        used += 1
+        log.info("EPC %s: %d rows read, %d kept", Path(fp).name, rows_in, rows_kept)
+
+    if used == 0:
+        raise FileNotFoundError(
+            f"No EPC certificate CSVs found under {epc_dir}. Download the domestic "
+            "EPC bulk data from https://get-energy-performance-data.communities.gov.uk "
+            "(GOV.UK One Login) and unzip it there (see DATA_SOURCES.md)."
+        )
+    log.info("EPC bulk: used %d certificate file(s)", used)
+    if not frames:
+        return _keep_wanted(pd.DataFrame(columns=list(WANTED)))
     return pd.concat(frames, ignore_index=True)
 
 
@@ -199,9 +243,10 @@ def consolidate(raw: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
-def build_epc_lookup(epc_raw_dir: str | Path, out_parquet: str | Path) -> pd.DataFrame:
-    """End-to-end: read bulk EPC -> consolidate -> write parquet lookup."""
-    lookup = consolidate(load_bulk(epc_raw_dir))
+def build_epc_lookup(epc_raw_dir: str | Path, out_parquet: str | Path,
+                     postcodes=None) -> pd.DataFrame:
+    """End-to-end: read bulk EPC (optionally postcode-filtered) -> consolidate -> write lookup."""
+    lookup = consolidate(load_bulk(epc_raw_dir, postcodes=postcodes))
     out_parquet = Path(out_parquet)
     out_parquet.parent.mkdir(parents=True, exist_ok=True)
     try:
@@ -220,4 +265,13 @@ if __name__ == "__main__":  # pragma: no cover
     import config
     raw_dir = config.DATA_RAW / "epc"
     out = config.DATA_PROCESSED / "epc_lookup.parquet"
-    build_epc_lookup(raw_dir, out)
+    # Keep only postcodes that appear in Price Paid (column 3, no header) — this is
+    # what makes a ~30M-row national EPC file fit comfortably in memory.
+    pcs = None
+    for name in ("land_registry_pp_2026.csv", "hm_land_registry_price_paid_latest.csv"):
+        pp = config.DATA_RAW / name
+        if pp.exists():
+            pcs = pd.read_csv(pp, header=None, usecols=[3], dtype=str)[3].dropna().unique()
+            log.info("filtering EPC to %d Price Paid postcodes from %s", len(pcs), name)
+            break
+    build_epc_lookup(raw_dir, out, postcodes=pcs)
