@@ -60,7 +60,7 @@ Open data only, no proprietary access, no ethical approval required — HM Land 
 ## Testing
 
 ```bash
-make test        # pytest — 50 tests (unit + integration); data-dependent ones skip without the raw data
+make test        # pytest — 51 tests (unit + integration); data-dependent ones skip without the raw data
 ```
 CI runs the suite on every push. Per-milestone test reports are in `reports/TESTING_REPORT_*.md`.
 

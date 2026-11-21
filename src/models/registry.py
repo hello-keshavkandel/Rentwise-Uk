@@ -20,6 +20,11 @@ from pathlib import Path
 
 
 def _default_path() -> Path:
+    # Overridable so tests (see tests/conftest.py) never write to the real history.
+    import os
+    env = os.environ.get("RENTWISE_METRICS_HISTORY")
+    if env:
+        return Path(env)
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
     import config

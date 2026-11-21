@@ -25,3 +25,15 @@ def test_log_and_history(tmp_path):
 def test_history_empty(tmp_path):
     df = reg.history("module1", history_path=tmp_path / "none.jsonl")
     assert df.empty
+
+
+def test_tests_never_touch_real_history():
+    """conftest redirects the registry; a default-path log_run must not hit reports/."""
+    import os
+    from src.models import registry
+    real = registry.Path(__file__).resolve().parents[1] / "reports" / "metrics_history.jsonl"
+    before = real.read_bytes() if real.exists() else None
+    registry.log_run("pytest_guard", {"x": 1.0})
+    after = real.read_bytes() if real.exists() else None
+    assert before == after
+    assert os.environ["RENTWISE_METRICS_HISTORY"].endswith("metrics_history.jsonl")
