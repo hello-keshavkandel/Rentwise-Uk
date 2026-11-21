@@ -43,9 +43,11 @@ strongest price drivers that HM Land Registry omits.
   England & Wales, Open Government Licence; **sign-in with GOV.UK One Login required**.
 - **Fields used:** `total_floor_area`, `number_habitable_rooms` (joined to Price Paid by postcode + house number)
 - **How to add it:**
-  1. Sign in, choose the **domestic** EPC bulk download (CSV), and unzip it anywhere under
-     `data/raw/epc/`. Any file names/folder layout work; recommendation tables are ignored.
-     The national file is large (tens of millions of rows, several GB) — that's fine.
+  1. Sign in → **Download files** → **Domestic Energy Performance Certificates** →
+     **Download all** (`domestic-csv.zip`, ~7.7 GB, Sep 2008 – latest month).
+     **Move the zip into `data/raw/epc/` — do not unzip it**; the loader streams the CSVs
+     straight out of the archive (extracted, it would be tens of GB). Extracted CSVs also
+     work. Recommendation tables are ignored.
   2. Build the lookup:  `python -m src.data.epc`
      (reads only the needed columns, in chunks, keeping only postcodes found in Price Paid)
   3. Train the enriched model:  `python run_module1_enriched.py`

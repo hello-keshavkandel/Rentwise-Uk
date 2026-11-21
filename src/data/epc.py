@@ -17,8 +17,8 @@ DATA ACQUISITION (free, one-off)
 --------------------------------
 Sign in with GOV.UK One Login at https://get-energy-performance-data.communities.gov.uk
 (the service that replaced epc.opendatacommunities.org), then EITHER:
-  * Bulk  — download the domestic certificates CSV(s) and unzip anywhere under
-            `data/raw/epc/`. Any file name/layout works: `load_bulk()` scans every
+  * Bulk  — download `domestic-csv.zip` and move it (no need to unzip) or
+            extracted CSVs anywhere under `data/raw/epc/`. Any file name/layout works: `load_bulk()` scans every
             CSV, keeps those whose header has postcode + total floor area, reads
             only the needed columns in chunks, and (via `python -m src.data.epc`)
             keeps only postcodes present in Price Paid.
@@ -98,14 +98,40 @@ def _keep_wanted(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # --------------------------------------------------------------------------- bulk
-def _candidate_csvs(epc_dir: Path) -> list[str]:
-    """Every CSV under epc_dir except recommendation tables.
+def _is_recommendations(name: str) -> bool:
+    return "recommendation" in Path(name).name.lower()
 
-    The old Open Data Communities bulk export used per-LA folders with a
-    `certificates.csv`; the GOV.UK service may name files differently, so we
-    accept any *.csv and decide by its header (see load_bulk)."""
-    files = sorted(glob.glob(str(epc_dir / "**" / "*.csv"), recursive=True))
-    return [f for f in files if "recommendation" not in Path(f).name.lower()]
+
+def _candidate_sources(epc_dir: Path) -> list[tuple[str, str | None]]:
+    """(path, zip_member) pairs for every certificate-like CSV under epc_dir.
+
+    Plain *.csv files AND *.csv members inside *.zip archives are both found, so
+    the ~8 GB GOV.UK `domestic-csv.zip` can be read in place — no need to unzip
+    it to tens of GB. Recommendation tables are skipped; the header check in
+    load_bulk decides the rest."""
+    import zipfile
+    out: list[tuple[str, str | None]] = []
+    for f in sorted(glob.glob(str(epc_dir / "**" / "*.csv"), recursive=True)):
+        if not _is_recommendations(f):
+            out.append((f, None))
+    for z in sorted(glob.glob(str(epc_dir / "**" / "*.zip"), recursive=True)):
+        try:
+            with zipfile.ZipFile(z) as zf:
+                for m in zf.namelist():
+                    if m.lower().endswith(".csv") and not _is_recommendations(m):
+                        out.append((z, m))
+        except zipfile.BadZipFile:
+            log.warning("skipped %s (not a valid zip — download incomplete?)", z)
+    return out
+
+
+def _open(path: str, member: str | None):
+    """File handle for a plain CSV or a member streamed out of a zip."""
+    if member is None:
+        return open(path, "rb")
+    import zipfile
+    zf = zipfile.ZipFile(path)
+    return zf.open(member)
 
 
 def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> pd.DataFrame:
@@ -118,44 +144,47 @@ def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> 
       shrinks to just the properties that can ever join to Price Paid.
     """
     epc_dir = Path(epc_dir)
-    files = _candidate_csvs(epc_dir)
+    sources = _candidate_sources(epc_dir)
     keys = None
     if postcodes is not None:
         keys = set(_norm_postcode(pd.Series(list(postcodes))).dropna())
 
     frames, used = [], 0
-    for fp in files:
+    for path, member in sources:
+        label = f"{Path(path).name}:{member}" if member else Path(path).name
         try:
-            header = pd.read_csv(fp, nrows=0).columns
+            with _open(path, member) as fh:
+                header = pd.read_csv(fh, nrows=0).columns
         except Exception as e:                           # noqa: BLE001
-            log.warning("skipped %s (unreadable header: %s)", fp, e)
+            log.warning("skipped %s (unreadable header: %s)", label, e)
             continue
         canon = {c: _canon(c) for c in header}
         if not {"postcode", "total_floor_area"} <= set(canon.values()):
-            log.info("skipped %s (not a certificates table)", Path(fp).name)
+            log.info("skipped %s (not a certificates table)", label)
             continue
         usecols = [c for c, k in canon.items() if k in WANTED]
         rows_in = rows_kept = 0
         try:
-            for chunk in pd.read_csv(fp, dtype=str, usecols=usecols,
-                                     chunksize=chunksize, low_memory=False):
-                rows_in += len(chunk)
-                chunk = _keep_wanted(chunk)
-                if keys is not None:
-                    chunk = chunk[_norm_postcode(chunk["postcode"]).isin(keys)]
-                rows_kept += len(chunk)
-                if len(chunk):
-                    frames.append(chunk)
+            with _open(path, member) as fh:
+                for chunk in pd.read_csv(fh, dtype=str, usecols=usecols,
+                                         chunksize=chunksize, low_memory=False):
+                    rows_in += len(chunk)
+                    chunk = _keep_wanted(chunk)
+                    if keys is not None:
+                        chunk = chunk[_norm_postcode(chunk["postcode"]).isin(keys)]
+                    rows_kept += len(chunk)
+                    if len(chunk):
+                        frames.append(chunk)
         except Exception as e:                           # noqa: BLE001
-            log.warning("skipped rest of %s: %s", fp, e)
+            log.warning("skipped rest of %s: %s", label, e)
         used += 1
-        log.info("EPC %s: %d rows read, %d kept", Path(fp).name, rows_in, rows_kept)
+        log.info("EPC %s: %d rows read, %d kept", label, rows_in, rows_kept)
 
     if used == 0:
         raise FileNotFoundError(
             f"No EPC certificate CSVs found under {epc_dir}. Download the domestic "
             "EPC bulk data from https://get-energy-performance-data.communities.gov.uk "
-            "(GOV.UK One Login) and unzip it there (see DATA_SOURCES.md)."
+            "(GOV.UK One Login) and put the zip (or extracted CSVs) there (see DATA_SOURCES.md)."
         )
     log.info("EPC bulk: used %d certificate file(s)", used)
     if not frames:

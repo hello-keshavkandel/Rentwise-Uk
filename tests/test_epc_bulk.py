@@ -47,3 +47,22 @@ def test_build_lookup_end_to_end(tmp_path):
     lk = build_epc_lookup(tmp_path / "raw", out, postcodes=["AB12CD"])
     assert len(lk) == 2 and set(lk["house_no"]) == {"12", "14"}
     assert out.exists() or out.with_suffix(".csv").exists()
+
+
+def test_reads_csv_inside_zip_without_extracting(tmp_path):
+    import zipfile
+    z = tmp_path / "domestic-csv.zip"
+    with zipfile.ZipFile(z, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+        zf.writestr("domestic-csv/certificates-2025.csv",
+                    HDR + "1,12 High St,,AB1 2CD,80,4,House,2025-01-01,C\n"
+                          "2,3 Low Rd,,EF3 4GH,55,3,Flat,2024-06-01,D\n")
+        zf.writestr("domestic-csv/recommendations-2025.csv", "LMK_KEY,IMPROVEMENT\n1,loft\n")
+    df = load_bulk(tmp_path, postcodes=["AB12CD"], chunksize=1)
+    assert list(df["postcode"]) == ["AB1 2CD"]
+    assert not any(tmp_path.glob("**/certificates-2025.csv"))   # nothing extracted
+
+
+def test_truncated_zip_is_skipped_not_fatal(tmp_path):
+    (tmp_path / "partial.zip").write_bytes(b"PK\x03\x04 incomplete download")
+    _write(tmp_path / "ok.csv", ["1,12 High St,,AB1 2CD,80,4,House,2025-01-01,C\n"])
+    assert len(load_bulk(tmp_path)) == 1
