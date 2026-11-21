@@ -5,7 +5,6 @@ Validators run against the REAL raw files when present (skipped otherwise). The
 network fetch is tested with a mocked `requests.get`, so no download happens.
 """
 import sys
-import json
 from pathlib import Path
 
 import pytest

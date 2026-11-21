@@ -18,7 +18,7 @@ RentWise UK predicts long-term rental prices and residential sale prices across 
 | **2 · Rent & affordability** | Predicts LA-level rents, scores them vs the 30% income benchmark, explains with SHAP | XGBoost **R² 0.90**, +29% over baseline; **calibrated 80% intervals** |
 | **1 · Sale price** | HM Land Registry price model, optional **EPC floor-area** enrichment | XGBoost R² 0.567 → higher with EPC; conformal intervals |
 | **3 · Geospatial** | Spatial drivers of rent (crime live; OSM/Ofsted + maps in progress) | SHAP + ablation; interactive choropleths |
-| **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends | mean MAPE ~0.6%, 80/95% intervals |
+| **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends; rolling-origin backtest + conformal intervals | mean MAPE ~0.6%, recalibrated 80/95% bands |
 
 The dashboard has two views: a **Rent estimator** (pick a local authority + property type → predicted rent, affordability verdict, a **confidence range**, and a plain-English SHAP explanation) and a **System results** overview of all four modules, with a live **health/freshness banner**.
 
@@ -60,7 +60,7 @@ Open data only, no proprietary access, no ethical approval required — HM Land 
 ## Testing
 
 ```bash
-make test        # pytest — 34 tests (unit + integration); data-dependent ones skip without the raw data
+make test        # pytest — 43 tests (unit + integration); data-dependent ones skip without the raw data
 ```
 CI runs the suite on every push. Per-milestone test reports are in `reports/TESTING_REPORT_*.md`.
 

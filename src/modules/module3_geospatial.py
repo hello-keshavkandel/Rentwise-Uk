@@ -112,7 +112,7 @@ class GeospatialModule:
         md += [f"- **{f}**: £{v:.0f}" for f, v in spatial_imp.items()]
         md.append("\n*Figures from synthetic OSM/police/Ofsted-style data; regenerated on real data.*")
         (config.ROOT / "reports" / "module3_summary.md").write_text("\n".join(md))
-        print(f"\nI saved -> models/module3_model.joblib, m3_ablation.png, m3_spatial_shap.png, reports/module3_summary.md")
+        print("\nI saved -> models/module3_model.joblib, m3_ablation.png, m3_spatial_shap.png, reports/module3_summary.md")
 
 
 if __name__ == "__main__":

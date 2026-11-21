@@ -14,7 +14,6 @@ import csv
 import logging
 from pathlib import Path
 
-import numpy as np
 import pandas as pd
 
 log = logging.getLogger("rentwise.module1.features")

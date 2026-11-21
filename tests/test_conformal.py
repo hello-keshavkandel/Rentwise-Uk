@@ -5,7 +5,6 @@ Synthetic, fast, deterministic — verifies the conformal widths order correctly
 that empirical coverage lands near the nominal level.
 """
 import sys
-import json
 from pathlib import Path
 
 import numpy as np

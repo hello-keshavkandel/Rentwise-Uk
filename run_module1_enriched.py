@@ -73,7 +73,7 @@ def main() -> None:
     if res["interval"]:
         iv = res["interval"]
         print(f"90% conformal interval: ±£{iv['half_width']:,.0f}  (coverage {100*iv['coverage']:.0f}%)")
-    print(f"Summary written to reports/module1_summary.md")
+    print("Summary written to reports/module1_summary.md")
 
 
 if __name__ == "__main__":

@@ -14,9 +14,16 @@ run_pipeline.py (which builds the synthetic development version).
 """
 
 import warnings; warnings.filterwarnings("ignore")
-import sys, json, csv, glob, collections
+import sys
+import json
+import csv
+import glob
+import collections
 from pathlib import Path
-import numpy as np, pandas as pd, joblib, openpyxl
+import numpy as np
+import pandas as pd
+import joblib
+import openpyxl
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config
 
@@ -116,6 +123,12 @@ def run_module2():
         "Transport pending (OSM, future work).*")
     print(f"[Module 2] Ridge £{base['rmse']:.0f}/R2 {base['r2']:.3f}  "
           f"XGBoost £{xt['rmse']:.0f}/R2 {xt['r2']:.3f} (deployed)")
+    try:
+        from src.models.registry import log_run
+        log_run("module2", {"r2": xt["r2"], "rmse": xt["rmse"], "mae": xt["mae"],
+                            "baseline_r2": base["r2"]})
+    except Exception:
+        pass
     ModelEvaluator().run(); ShapExplainer().run(); AffordabilityEngine().run()
     # Module 3 real crime ablation (only real spatial feature available)
     def rmse_with(c):
@@ -195,10 +208,11 @@ def run_module4():
         return pd.Series(s)
 
     def mape(a, f): a, f = np.array(a), np.array(f); return np.mean(np.abs((a - f) / a)) * 100
-    res = []; cov80, cov95 = [], []; london = None
+    res = []; cov80, cov95 = [], []; london = None; region_series = {}
     for reg in regions:
         ser = series(reg)
         if ser is None or len(ser) < 60: continue
+        region_series[reg] = ser
         train, test = ser[:-12], ser[-12:]
         ma = np.nan
         try:
@@ -222,6 +236,40 @@ def run_module4():
     wb.close()
     am = np.nanmean([r[1] for r in res]); em = np.nanmean([r[2] for r in res])
     c80 = np.mean(cov80) if cov80 else float("nan"); c95 = np.mean(cov95) if cov95 else float("nan")
+
+    # --- Rolling-origin backtest + conformal (recalibrated) intervals -----------
+    # The single held-out window above is one sample; here we refit at several
+    # expanding origins per region, pool the forecast errors, and read calibrated
+    # 80%/95% interval half-widths straight from those errors (distribution-free,
+    # so they hit their nominal coverage by construction rather than by assumption).
+    roll_mape = float("nan"); rel80 = rel95 = float("nan"); n_bt_pts = 0
+    try:
+        from src.models.forecast_backtest import (
+            default_arima_forecaster, rolling_origin_backtest, conformal_interval_widths,
+        )
+        fc_fn = default_arima_forecaster(order=(1, 1, 1))
+        pooled_abs_pct, pooled_rel_err, roll_mapes = [], [], []
+        for reg, ser in region_series.items():
+            try:
+                bt = rolling_origin_backtest(ser.values, fc_fn, horizon=12,
+                                             n_origins=4, step=6)
+            except ValueError:
+                continue
+            roll_mapes.append(bt.mape)
+            pooled_abs_pct.append(bt.abs_pct_errors)
+            # relative signed errors so widths can be expressed as % of rent level
+            idx = np.arange(bt.errors.size)
+            level = np.repeat(ser.values[-12:].mean(), bt.errors.size)
+            pooled_rel_err.append(bt.errors / np.where(level == 0, np.nan, level))
+            _ = idx  # (kept explicit for readability)
+        if roll_mapes:
+            roll_mape = float(np.nanmean(roll_mapes))
+            rel_err = np.concatenate(pooled_rel_err)
+            n_bt_pts = int(rel_err.size)
+            w = conformal_interval_widths(rel_err, levels=(0.80, 0.95))
+            rel80, rel95 = w[0.80] * 100.0, w[0.95] * 100.0  # % of rent level
+    except Exception:
+        pass
     md = ["# Module 4 - Regional Trend Forecasting (summary) [REAL ONS data]\n",
           "| Region | ARIMA MAPE (%) | Holt-Winters MAPE (%) |", "|---|---|---|"]
     md += [f"| {r} | {a:.2f} | {e:.2f} |" for r, a, e in res]
@@ -233,6 +281,17 @@ def run_module4():
     md.append("\n*Real ONS Price Index of Private Rents historical series (£ by region, monthly "
               "from 2005); held-out last 12 months; 80%/95% intervals from the ARIMA forecast "
               "distribution.*")
+    if np.isfinite(roll_mape):
+        md.append("\n## Rolling-origin backtest + recalibrated intervals\n")
+        md.append(f"Refitting ARIMA at several expanding origins per region "
+                  f"({n_bt_pts} pooled forecast points) gives a **rolling mean MAPE of "
+                  f"{roll_mape:.2f}%**, a more stable estimate of skill than the single "
+                  f"held-out window ({am:.2f}%).")
+        md.append(f"\n**Recalibrated (conformal) interval half-widths**, read directly from "
+                  f"the pooled backtest errors and expressed as a share of the rent level: "
+                  f"**80% → ±{rel80:.1f}%**, **95% → ±{rel95:.1f}%**. Because these come from "
+                  f"the empirical error quantiles they achieve their nominal coverage by "
+                  f"construction, rather than relying on ARIMA's parametric assumptions.")
     (config.ROOT / "reports" / "module4_summary.md").write_text("\n".join(md))
     # London forecast chart with 80%/95% bands
     if london:
@@ -247,7 +306,16 @@ def run_module4():
         plt.ylabel("Median rent (£)"); plt.legend(fontsize=8); plt.tight_layout()
         plt.savefig(config.ROOT / "reports" / "figures" / "m4_forecast_london.png", dpi=130); plt.close()
     print(f"[Module 4] mean MAPE: ARIMA {am:.2f}%  Holt-Winters {em:.2f}%  | "
-          f"interval coverage 80%={c80:.0f}% 95%={c95:.0f}%")
+          f"interval coverage 80%={c80:.0f}% 95%={c95:.0f}%"
+          + (f"  | rolling MAPE {roll_mape:.2f}%  conformal ±{rel80:.1f}%/±{rel95:.1f}%"
+             if np.isfinite(roll_mape) else ""))
+    try:
+        from src.models.registry import log_run
+        log_run("module4", {"mape_arima": am, "mape_hw": em, "cov80": c80, "cov95": c95,
+                            "rolling_mape": roll_mape, "conformal_rel80": rel80,
+                            "conformal_rel95": rel95})
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":
@@ -256,5 +324,12 @@ if __name__ == "__main__":
     run_module2()
     run_module1()
     run_module4()
+    # Keep the DuckDB query store in sync with the freshly built processed data.
+    try:
+        from src.data.store import build_store
+        build_store()
+        print("DuckDB query store rebuilt (data/processed/rentwise.duckdb).")
+    except Exception as e:  # pragma: no cover - store is an analytics convenience
+        print(f"(store refresh skipped: {e})")
     print("\nAll four modules built on REAL open data. Launch the dashboard with:")
     print("   streamlit run app/streamlit_app.py")
