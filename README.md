@@ -16,7 +16,7 @@ RentWise UK predicts long-term rental prices and residential sale prices across 
 | Module | What | Headline |
 |---|---|---|
 | **2 · Rent & affordability** | Predicts LA-level rents, scores them vs the 30% income benchmark, explains with SHAP | XGBoost **R² 0.90**, +29% over baseline; **calibrated 80% intervals** |
-| **1 · Sale price** | HM Land Registry price model, optional **EPC floor-area** enrichment | XGBoost R² 0.567 → higher with EPC; conformal intervals |
+| **1 · Sale price** | HM Land Registry price model enriched with **EPC floor area + rooms** (86% of sales matched) | XGBoost R² **0.568 → 0.732** with EPC; 90% conformal intervals |
 | **3 · Geospatial** | Spatial drivers of rent (crime live; OSM/Ofsted + maps in progress) | SHAP + ablation; interactive choropleths |
 | **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends; rolling-origin backtest + conformal intervals | mean MAPE ~0.6%, recalibrated 80/95% bands |
 

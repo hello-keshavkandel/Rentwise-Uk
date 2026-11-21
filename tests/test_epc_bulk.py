@@ -1,4 +1,5 @@
 """load_bulk(): any file name, header-based detection, chunking, postcode filter."""
+import pandas as pd
 import pytest
 
 from src.data.epc import build_epc_lookup, load_bulk
@@ -66,3 +67,19 @@ def test_truncated_zip_is_skipped_not_fatal(tmp_path):
     (tmp_path / "partial.zip").write_bytes(b"PK\x03\x04 incomplete download")
     _write(tmp_path / "ok.csv", ["1,12 High St,,AB1 2CD,80,4,House,2025-01-01,C\n"])
     assert len(load_bulk(tmp_path)) == 1
+
+
+def test_per_source_reduction_matches_one_shot(tmp_path):
+    """File-by-file dedupe must equal consolidating all raw rows at once."""
+    from src.data.epc import _clean_and_dedupe, consolidate
+    _write(tmp_path / "certificates-2015.csv",
+           ["1,12 High St,,AB1 2CD,70,3,House,2015-01-01,D\n",     # superseded later
+            "2,14 High St,,AB1 2CD,90,4,House,2015-05-01,C\n"])
+    _write(tmp_path / "certificates-2024.csv",
+           ["3,12 High St,,AB1 2CD,85,4,House,2024-03-01,B\n",     # newest for no.12
+            "4,7 Low Rd,,EF3 4GH,50,2,Flat,2024-01-01,C\n"])
+    one_shot = consolidate(load_bulk(tmp_path)).sort_values(["pc_key", "house_no"]).reset_index(drop=True)
+    reduced = consolidate(load_bulk(tmp_path, per_source=_clean_and_dedupe)
+                          ).sort_values(["pc_key", "house_no"]).reset_index(drop=True)
+    pd.testing.assert_frame_equal(one_shot, reduced)
+    assert one_shot.set_index("house_no").loc["12", "total_floor_area"] == 85

@@ -64,9 +64,27 @@ needs the real EPC dataset (free, user-supplied — see `DATA_SOURCES.md`).
 - **Real result:** will be produced by `python -m src.data.epc` then
   `python run_module1_enriched.py` once EPC bulk/API data is in place.
 
+## 4b. Real EPC result (21 Nov 2026)
+
+Built from the GOV.UK `domestic-csv.zip` (Sep 2008 – Oct 2026; 19 yearly certificate files,
+30.1M certificates streamed from the zip, filtered to the 209,062 Price Paid postcodes,
+reduced to **4,305,581 unique properties**). Mac and sandbox runs produced identical per-year counts.
+
+| | Real result |
+|---|---|
+| EPC match rate | **86.2%** (186,245 of 216,172 cleaned sales) |
+| XGBoost R², no EPC → with EPC | **0.568 → 0.732 (+0.164)** |
+| Best model test RMSE / MAE | £110,933 / £68,235 |
+| Floor area SHAP rank | #2 (£68,290 mean impact), after local price level |
+| 90% conformal interval | ±£154,252, empirical coverage 90% |
+
+The real lift (+0.164) is smaller than the synthetic-fixture illustration (+0.238), as expected.
+Open issues: the interval is a single absolute width (too wide for cheap homes, too narrow for
+expensive ones → move to relative/log-scale conformal); leave-one-region-out remains weak for
+London (R² −0.88), so London predictions need a region-aware treatment.
+
 ## 5. Known gaps / not yet covered
 
-- Real EPC accuracy is **not yet measured** (blocked on the free EPC download).
 - `ruff`/`black` linting not run here (no `ruff` in this environment) — will be part of Milestone 1 CI.
 - No property-level address fuzzy-matching yet (we match on postcode + house number; flats/named houses that carry no number don't match and are reported honestly).
 

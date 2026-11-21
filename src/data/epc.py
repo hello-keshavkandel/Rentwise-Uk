@@ -134,7 +134,8 @@ def _open(path: str, member: str | None):
     return zf.open(member)
 
 
-def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> pd.DataFrame:
+def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000,
+              per_source=None) -> pd.DataFrame:
     """Read EPC bulk CSVs memory-safely.
 
     * Only CSVs whose header has a postcode AND total floor area are used.
@@ -142,6 +143,9 @@ def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> 
     * If `postcodes` is given (any iterable of postcodes, spaces/case ignored),
       rows for other postcodes are dropped chunk by chunk — so a national file
       shrinks to just the properties that can ever join to Price Paid.
+    * If `per_source` is given, each file's kept rows are passed through it as soon
+      as that file is read (e.g. de-duplicate to one row per property), so memory
+      is bounded by the reduced size, not the raw row count.
     """
     epc_dir = Path(epc_dir)
     sources = _candidate_sources(epc_dir)
@@ -164,6 +168,7 @@ def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> 
             continue
         usecols = [c for c, k in canon.items() if k in WANTED]
         rows_in = rows_kept = 0
+        mark = len(frames)
         try:
             with _open(path, member) as fh:
                 for chunk in pd.read_csv(fh, dtype=str, usecols=usecols,
@@ -178,6 +183,10 @@ def load_bulk(epc_dir: str | Path, postcodes=None, chunksize: int = 500_000) -> 
         except Exception as e:                           # noqa: BLE001
             log.warning("skipped rest of %s: %s", label, e)
         used += 1
+        if per_source is not None and len(frames) > mark:
+            reduced = per_source(pd.concat(frames[mark:], ignore_index=True))
+            del frames[mark:]
+            frames.append(reduced)
         log.info("EPC %s: %d rows read, %d kept", label, rows_in, rows_kept)
 
     if used == 0:
@@ -238,6 +247,35 @@ def fetch_api(postcodes, email=None, api_key=None, cache_csv=None) -> pd.DataFra
 
 
 # ------------------------------------------------------------------ consolidate
+_LOOKUP_COLS = ["pc_key", "house_no", "total_floor_area", "number_habitable_rooms",
+                "number_heated_rooms", "built_form", "construction_age_band"]
+
+
+def _clean_and_dedupe(raw: pd.DataFrame) -> pd.DataFrame:
+    """Raw EPC rows -> one latest record per (pc_key, house_no), keeping `_date`.
+
+    Re-applicable: running it on concatenated outputs gives the same result as
+    running it once on all the raw rows, which is what lets build_epc_lookup
+    reduce file by file."""
+    df = raw.copy()
+    if "_date" not in df.columns:                       # raw rows (not yet reduced)
+        df["total_floor_area"] = pd.to_numeric(df["total_floor_area"], errors="coerce")
+        for c in ("number_habitable_rooms", "number_heated_rooms"):
+            df[c] = pd.to_numeric(df[c], errors="coerce")
+        # plausibility guards (EPC has data-entry noise)
+        df.loc[(df["total_floor_area"] < 10) | (df["total_floor_area"] > 2000), "total_floor_area"] = np.nan
+        df.loc[(df["number_habitable_rooms"] < 1) | (df["number_habitable_rooms"] > 20),
+               "number_habitable_rooms"] = np.nan
+        df["pc_key"] = _norm_postcode(df["postcode"])
+        df["house_no"] = _house_number(df["address1"])
+        df["_date"] = pd.to_datetime(df.get("lodgement_date"), errors="coerce").fillna(
+            pd.to_datetime(df.get("inspection_date"), errors="coerce"))
+        df = df.dropna(subset=["pc_key", "house_no", "total_floor_area"])
+    df = (df.sort_values("_date", kind="stable")
+            .drop_duplicates(subset=["pc_key", "house_no"], keep="last"))
+    return df[_LOOKUP_COLS + ["_date"]].reset_index(drop=True)
+
+
 def consolidate(raw: pd.DataFrame) -> pd.DataFrame:
     """
     Clean the raw EPC rows into one best record per (postcode, house number).
@@ -245,29 +283,9 @@ def consolidate(raw: pd.DataFrame) -> pd.DataFrame:
     * numeric floor area / room counts, with implausible values dropped,
     * most RECENT certificate kept per property (EPCs are re-lodged over time),
     * a compact join key (`pc_key`, `house_no`).
+    Accepts raw rows or already-reduced rows (from _clean_and_dedupe).
     """
-    df = raw.copy()
-    df["total_floor_area"] = pd.to_numeric(df["total_floor_area"], errors="coerce")
-    for c in ("number_habitable_rooms", "number_heated_rooms"):
-        df[c] = pd.to_numeric(df[c], errors="coerce")
-
-    # plausibility guards (EPC has data-entry noise)
-    df.loc[(df["total_floor_area"] < 10) | (df["total_floor_area"] > 2000), "total_floor_area"] = np.nan
-    df.loc[(df["number_habitable_rooms"] < 1) | (df["number_habitable_rooms"] > 20), "number_habitable_rooms"] = np.nan
-
-    df["pc_key"] = _norm_postcode(df["postcode"])
-    df["house_no"] = _house_number(df["address1"])
-    date = pd.to_datetime(df.get("lodgement_date"), errors="coerce").fillna(
-        pd.to_datetime(df.get("inspection_date"), errors="coerce"))
-    df["_date"] = date
-
-    df = df.dropna(subset=["pc_key", "house_no", "total_floor_area"])
-    df = (df.sort_values("_date")
-            .drop_duplicates(subset=["pc_key", "house_no"], keep="last"))
-
-    keep = ["pc_key", "house_no", "total_floor_area", "number_habitable_rooms",
-            "number_heated_rooms", "built_form", "construction_age_band"]
-    out = df[keep].reset_index(drop=True)
+    out = _clean_and_dedupe(raw)[_LOOKUP_COLS].reset_index(drop=True)
     log.info("EPC consolidated: %d unique properties", len(out))
     return out
 
@@ -275,7 +293,8 @@ def consolidate(raw: pd.DataFrame) -> pd.DataFrame:
 def build_epc_lookup(epc_raw_dir: str | Path, out_parquet: str | Path,
                      postcodes=None) -> pd.DataFrame:
     """End-to-end: read bulk EPC (optionally postcode-filtered) -> consolidate -> write lookup."""
-    lookup = consolidate(load_bulk(epc_raw_dir, postcodes=postcodes))
+    lookup = consolidate(load_bulk(epc_raw_dir, postcodes=postcodes,
+                                   per_source=_clean_and_dedupe))
     out_parquet = Path(out_parquet)
     out_parquet.parent.mkdir(parents=True, exist_ok=True)
     try:

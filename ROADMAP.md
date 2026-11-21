@@ -12,7 +12,7 @@
 
 | Area | Current state | Gap to close |
 |---|---|---|
-| **Module 1 — Sale price** | XGBoost R² **0.567** on HM Land Registry (2026 H1, 90k sample) | No floor area / bedrooms → accuracy capped |
+| **Module 1 — Sale price** | XGBoost R² **0.567** on HM Land Registry (2026 H1, 90k sample) → **0.732 with real EPC** (done) | Wide absolute intervals (±£154k at 90%); weak London generalisation |
 | **Module 2 — Rent & affordability** | XGBoost R² **0.900**, SHAP, 30% benchmark | Area-level only; no calibrated intervals |
 | **Module 3 — Geospatial** | Crime driver only | No transport / schools / green space / amenities; no maps |
 | **Module 4 — Forecasting** | ARIMA + Holt-Winters, MAPE ~0.6% | Intervals slightly mis-calibrated |
