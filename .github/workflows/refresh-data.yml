@@ -1,0 +1,37 @@
+name: Monthly data refresh
+
+# Runs on the 2nd of each month (ONS release cadence) and on demand.
+# It fetches the sources whose URLs are automatable (HM Land Registry), validates
+# everything present, and publishes the provenance manifest as an artifact.
+#
+# NOTE: ONS (PIPR, ASHE) and data.police.uk change their URLs / ship as bulk
+# archives each release, so those are downloaded manually — the job validates
+# them if present and otherwise reports them as pending, without failing hard.
+
+on:
+  schedule:
+    - cron: "0 6 2 * *"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Fetch automatable sources
+        run: python -m src.data.sources fetch || true
+      - name: Validate + write manifest
+        run: python -m src.data.sources manifest
+      - name: Upload data manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-manifest
+          path: data/raw/_manifest.json

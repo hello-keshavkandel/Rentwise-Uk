@@ -1,0 +1,19 @@
+# RentWise UK — linting
+line-length = 120
+target-version = "py311"
+exclude = [".venv", "venv", "data", "reports", "notebooks", "__pycache__"]
+
+[lint]
+select = ["E", "F", "W", "I"]   # pycodestyle, pyflakes, warnings, import-order
+# We keep pyflakes (F*) strict — those catch real bugs (unused/undefined names).
+# The ignored rules below are deliberate house style, not defects:
+ignore = [
+    "E741",   # short names like l/q are fine in the maths-heavy modules
+    "E701",   # compact `if x: y` one-liners used throughout the pipeline
+    "E702",   # compact `a; b` statements — intentional dense style in this repo
+    "E402",   # tests insert the repo root on sys.path before importing it
+    "I001",   # import ordering is not enforced (left to the author)
+]
+
+[lint.per-file-ignores]
+"tests/*" = ["E501"]   # long inline SQL / assertions in tests are readable as-is

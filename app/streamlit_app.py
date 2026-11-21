@@ -1,12 +1,12 @@
 """
 streamlit_app.py  —  Phase 9 / Module 4 integration: the RentWise UK dashboard.
 
-I am the single user-facing app for the whole four-module system. The sidebar
+the single user-facing app for the whole four-module system. The sidebar
 switches between two views:
   * Rent estimator  - the interactive Module 2 tool (rent + affordability + SHAP).
   * System results  - a read-only overview of all four modules' outputs.
 
-Why this design (I explain this in the viva): only dropdowns/sliders (no free text,
+Why this design : only dropdowns/sliders (no free text,
 no uploads, no code execution) so there is no injection surface; the model is
 loaded read-only and cached; every estimate carries a plain-English explanation
 and an 'indicative, not financial advice' disclaimer.
@@ -48,6 +48,33 @@ st.caption("Data-driven UK housing & long-term rental intelligence — a four-mo
 
 view = st.sidebar.radio("View", ["Rent estimator", "System results"])
 
+# ---- observability: data/model freshness banner + methodology ----
+with st.sidebar:
+    try:
+        from src.health import check
+        _h = check()
+        _icon = {"ok": "🟢", "degraded": "🟡", "down": "🔴"}.get(_h["status"], "⚪")
+        _d = _h["data"].get("age_days"); _m = _h["model"].get("age_days")
+        _b = _h["data"].get("backend")
+        st.caption(f"{_icon} System {_h['status']}"
+                   + (f" · data via {_b}" if _b else "")
+                   + (f" · data {int(_d)}d old" if _d is not None else "")
+                   + (f" · model {int(_m)}d old" if _m is not None else ""))
+    except Exception:
+        pass
+    with st.expander("About & methodology"):
+        st.markdown(
+            "**RentWise UK** predicts UK rents and sale prices from **open government "
+            "data** (ONS, HM Land Registry, data.police.uk) and explains every estimate.\n\n"
+            "- **Rent (Module 2):** XGBoost, R² 0.90; SHAP explanations; affordability vs the "
+            "30% income benchmark; **calibrated 80% prediction intervals** (conformal).\n"
+            "- **Sale price (Module 1):** HM Land Registry + optional EPC floor area.\n"
+            "- **Geospatial (Module 3):** crime driver; OSM/Ofsted layers + maps in progress.\n"
+            "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends; rolling-origin "
+            "backtest with recalibrated (conformal) 80/95% bands.\n\n"
+            "Estimates are **indicative, not financial advice**. "
+            "Code: github.com/hello-keshavkandel/Rentwise-Uk")
+
 # ---------------------------------------------------------------- Rent estimator
 if view == "Rent estimator":
     try:
@@ -72,6 +99,10 @@ if view == "Rent estimator":
         c1,c2,c3 = st.columns(3)
         c1.metric("Predicted monthly rent", f"£{r['rent']:,}")
         c2.metric("Rent-to-income", f"{pct:.0f}%"); c3.metric("Region", r["region"])
+        iv = r.get("interval")
+        if iv:
+            st.caption(f"{int(iv['level']*100)}% confidence range: "
+                       f"**£{iv['low']:,} – £{iv['high']:,}** (calibrated by conformal prediction).")
         if r["affordable"]:
             st.success(f"✅ Affordable — rent is {pct:.0f}% of local income (≤30% benchmark).")
         else:

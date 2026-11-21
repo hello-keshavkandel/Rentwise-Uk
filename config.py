@@ -12,6 +12,15 @@ from pathlib import Path
 
 # ---- Folder paths (built relative to this file, so they work on any computer) ----
 ROOT = Path(__file__).resolve().parent
+
+# Load environment variables from a local .env (e.g. EPC_EMAIL / EPC_API_KEY),
+# if python-dotenv is installed and a .env exists. Never commit .env.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(ROOT / ".env")
+except Exception:
+    pass
+
 DATA_RAW = ROOT / "data" / "raw"            # untouched downloaded files
 DATA_PROCESSED = ROOT / "data" / "processed"  # cleaned/merged files we create
 MODELS_DIR = ROOT / "models"                 # saved trained models

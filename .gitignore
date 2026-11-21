@@ -11,7 +11,9 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
-
+!data/processed/rentwise.duckdb
+# The DuckDB store is the app's primary data source — committed and deployed.
+!
 # Models (large binaries)
 models/*.pkl
 models/*.joblib
@@ -19,3 +21,8 @@ models/*.joblib
 
 # OS
 .DS_Store
+
+# secrets
+.env
+data/raw/epc/*
+!data/raw/epc/.gitkeep

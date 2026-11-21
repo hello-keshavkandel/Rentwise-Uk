@@ -17,7 +17,7 @@ import config
 class FeatureBuilder:
     """I engineer the model inputs from the cleaned data.
 
-    Why my choices matter (I explain this in the viva):
+    Why my choices matter 
       * Ordinal encoding for property type - it has a real size order (Room<..<Detached).
       * One-hot encoding for region - it has NO order, so I make yes/no columns and
         avoid implying London > Wales.

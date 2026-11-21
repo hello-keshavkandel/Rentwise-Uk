@@ -32,3 +32,33 @@ ONS rent data is published at **local-authority** level (and by property type), 
 - ASHE earnings are **individual** employee earnings, not household income, so the affordability ratio is an area-level indicator, not an individual verdict.
 - HM Land Registry Price Paid lacks floor area / bedroom counts, which caps Module 1's accuracy.
 - Coverage is England & Wales (the ten modelled regions); Scotland/NI are out of scope for the joined dataset.
+
+## EPC — Energy Performance Certificates (Module 1 enrichment)
+
+Adds **floor area** and **habitable rooms** to the sale-price model — the two
+strongest price drivers that HM Land Registry omits.
+
+- **Source:** https://epc.opendatacommunities.org (England & Wales; free registration)
+- **Fields used:** `total_floor_area`, `number_habitable_rooms` (joined to Price Paid by postcode + house number)
+- **How to add it:**
+  1. Register (instant) and either download the domestic bulk data into `data/raw/epc/`
+     (so each local authority folder has a `certificates.csv`), **or** put
+     `EPC_EMAIL` / `EPC_API_KEY` in `.env` for the API path.
+  2. Build the lookup:  `python -m src.data.epc`
+  3. Train the enriched model:  `python run_module1_enriched.py`
+
+## Module 3 geospatial enrichment (optional — fetched later)
+
+These power the richer spatial drivers and interactive maps. They are optional:
+the pipeline validates them when present and runs without them otherwise.
+
+| File in `data/raw/` | Source | Columns / format |
+|---|---|---|
+| `osm_amenities.csv` | OpenStreetMap (Overpass / osmnx export) | `lad_code, category[, lat, lon]` |
+| `ofsted_schools.csv` | Ofsted / Get Information About Schools | `lad_code, ofsted_rating` |
+| `geo/lad_boundaries.geojson` | ONS Open Geography Portal (LAD 2024) | GeoJSON FeatureCollection with `LAD24CD` |
+
+Then: `python -m src.data.sources manifest` validates them, and
+`src/modules/module3_geo.py` + `src/viz/maps.py` build the features and choropleth maps.
+*(`assign_lad` point-in-polygon needs the optional `geopandas`; if your amenity rows
+already carry `lad_code`, it isn't required.)*

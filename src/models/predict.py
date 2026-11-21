@@ -18,6 +18,7 @@ import shap
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 import config
 from src.models.affordability import AffordabilityEngine
+from src.data.store import load_table
 
 TARGET = "median_monthly_rent"
 PROPERTY_ORDER = {"Room": 1, "Flat": 2, "Terraced": 3, "Semi-detached": 4, "Detached": 5}
@@ -35,12 +36,12 @@ class RentWisePredictor:
         # per-area lookup of the figures a user can't be expected to know.
         self.model = joblib.load(config.MODELS_DIR / "best_model.joblib")
 
-        feats = pd.read_csv(config.DATA_PROCESSED / "rentwise_features.csv")
+        feats = load_table("rentwise_features")   # DuckDB store, CSV fallback
         self.feature_cols = [c for c in feats.columns if c != TARGET]
         _, self.income_edges = pd.qcut(feats["median_annual_income"], 4,
                                        retbins=True, labels=False)
 
-        clean = pd.read_csv(config.DATA_PROCESSED / "rentwise_clean.csv")
+        clean = load_table("rentwise_clean")
         self.areas = (clean.groupby("la_name")
                       .agg(region=("region", "first"),
                            income=("median_annual_income", "first"),
@@ -59,6 +60,10 @@ class RentWisePredictor:
         # I keep a small background sample so a linear model can be explained too.
         self._background = feats[self.feature_cols].sample(
             min(len(feats), 200), random_state=config.RANDOM_SEED)
+        # Calibrated 80% prediction interval half-width (conformal), if available.
+        from src.models.conformal import load_q
+        self.interval_q = load_q(config.MODELS_DIR / "conformal.json", alpha=0.2)
+        self.interval_level = 0.80
 
     def area_names(self):
         # I give the dashboard the list of areas to show in its dropdown.
@@ -126,9 +131,14 @@ class RentWisePredictor:
                  if not (f.startswith("region_") and row0.get(f, 0) == 0)
                  and abs(v) >= 0.5]
         contribs = sorted(pairs, key=lambda kv: abs(kv[1]), reverse=True)
+        # Calibrated prediction interval (80% by default), floored to a valid rent.
+        interval = None
+        if self.interval_q is not None:
+            interval = {"low": max(round(rent - self.interval_q), int(RENT_FLOOR)),
+                        "high": round(rent + self.interval_q), "level": self.interval_level}
         return {"rent": round(rent), "region": area["region"], "income": income,
                 "ratio": ratio, "affordable": bool(self.affordability.is_affordable(ratio)),
-                "contributions": contribs}
+                "contributions": contribs, "interval": interval}
 
 
 if __name__ == "__main__":
