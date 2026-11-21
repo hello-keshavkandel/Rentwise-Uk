@@ -47,3 +47,66 @@ def test_missing_csv_is_skipped(tmp_path):
     db = tmp_path / "t.duckdb"
     counts = st.build_store(processed_dir=tmp_path, db_path=db)   # only one CSV present
     assert "rentwise_clean" in counts and "affordability" not in counts
+
+
+# ---- store-first reads with CSV fallback (the app's read path) ----------------
+
+def test_load_table_prefers_store(tmp_path):
+    proc = _tiny_processed(tmp_path)
+    db = proc / "rentwise.duckdb"
+    st.build_store(processed_dir=proc, db_path=db)
+    # mutate the CSV after building: a store read must NOT see this change
+    (proc / "rentwise_clean.csv").write_text("region,median_monthly_rent\nX,1\n")
+    df = st.load_table("rentwise_clean", db_path=db)
+    assert len(df) > 1 and "X" not in set(df["region"])
+    assert st.source_of("rentwise_clean", db_path=db) == "duckdb"
+
+
+def test_load_table_falls_back_to_csv_when_store_missing(tmp_path):
+    proc = _tiny_processed(tmp_path)
+    db = proc / "rentwise.duckdb"            # never built
+    df = st.load_table("rentwise_clean", db_path=db)
+    assert len(df) == len(pd.read_csv(proc / "rentwise_clean.csv"))
+    assert st.source_of("rentwise_clean", db_path=db) == "csv"
+
+
+def test_load_table_falls_back_when_table_missing(tmp_path):
+    proc = _tiny_processed(tmp_path)
+    db = proc / "rentwise.duckdb"
+    con = st.connect(db); con.execute("CREATE TABLE other AS SELECT 1 x"); con.close()
+    df = st.load_table("rentwise_clean", db_path=db)
+    assert "region" in df.columns
+
+
+def test_load_table_survives_corrupt_store(tmp_path):
+    proc = _tiny_processed(tmp_path)
+    db = proc / "rentwise.duckdb"
+    db.write_bytes(b"not a duckdb file")
+    df = st.load_table("rentwise_clean", db_path=db)
+    assert "region" in df.columns
+    assert st.source_of("rentwise_clean", db_path=db) == "csv"
+
+
+def test_load_table_unknown_name_raises(tmp_path):
+    with pytest.raises(KeyError):
+        st.load_table("nope", db_path=tmp_path / "missing.duckdb")
+
+
+def test_committed_store_matches_processed_csvs():
+    """The committed store must be in sync with the committed CSVs (guards drift)."""
+    import numpy as np
+    import config
+    db = config.DATA_PROCESSED / "rentwise.duckdb"
+    if not db.exists():
+        pytest.skip("store not present")
+    for t in ("rentwise_features", "rentwise_clean"):
+        csv = config.DATA_PROCESSED / f"{t}.csv"
+        if not csv.exists():
+            continue
+        a, b = st.load_table(t, db_path=db), pd.read_csv(csv)
+        assert list(a.columns) == list(b.columns) and a.shape == b.shape, t
+        for c in b.columns:
+            if pd.api.types.is_numeric_dtype(b[c]):
+                assert np.allclose(a[c].astype(float), b[c].astype(float), equal_nan=True), (t, c)
+            else:
+                assert (a[c].astype(str) == b[c].astype(str)).all(), (t, c)

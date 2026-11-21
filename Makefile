@@ -38,5 +38,5 @@ test:               ## run the test suite
 app:                ## launch the Streamlit dashboard
 	streamlit run app/streamlit_app.py
 
-clean:              ## remove the DuckDB store
-	rm -f data/processed/rentwise.duckdb
+clean:              ## rebuild the DuckDB store from scratch (it is committed; never leave it deleted)
+	rm -f data/processed/rentwise.duckdb && $(PY) -m src.data.store build

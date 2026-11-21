@@ -51,3 +51,24 @@ def test_summary_line_is_string(tmp_path, monkeypatch):
     monkeypatch.setattr(H, "OPTIONAL", {})
     monkeypatch.setattr(H, "MANIFEST", tmp_path / "none.json")
     assert "status:" in H.summary_line()
+
+
+def test_data_backend_prefers_store_then_csv_then_down(tmp_path, monkeypatch):
+    model = tmp_path / "m.joblib"; model.write_text("x")
+    store = tmp_path / "rentwise.duckdb"
+    csvs = {"features": tmp_path / "f.csv", "clean": tmp_path / "c.csv"}
+    monkeypatch.setattr(H, "REQUIRED", {"model": model})
+    monkeypatch.setattr(H, "OPTIONAL", {})
+    monkeypatch.setattr(H, "DATA_STORE", store)
+    monkeypatch.setattr(H, "DATA_CSVS", csvs)
+    monkeypatch.setattr(H, "MANIFEST", tmp_path / "none.json")
+    # neither store nor CSVs -> not serviceable
+    assert H.data_backend() is None and H.check()["status"] == "down"
+    # CSVs only -> csv fallback, serviceable
+    for p in csvs.values():
+        p.write_text("a\n1\n")
+    assert H.data_backend() == "csv" and H.check()["serviceable"]
+    # store present -> duckdb is primary
+    store.write_text("x")
+    assert H.data_backend() == "duckdb"
+    assert "data: duckdb" in H.summary_line()

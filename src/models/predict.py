@@ -18,6 +18,7 @@ import shap
 sys.path.append(str(Path(__file__).resolve().parents[2]))
 import config
 from src.models.affordability import AffordabilityEngine
+from src.data.store import load_table
 
 TARGET = "median_monthly_rent"
 PROPERTY_ORDER = {"Room": 1, "Flat": 2, "Terraced": 3, "Semi-detached": 4, "Detached": 5}
@@ -35,12 +36,12 @@ class RentWisePredictor:
         # per-area lookup of the figures a user can't be expected to know.
         self.model = joblib.load(config.MODELS_DIR / "best_model.joblib")
 
-        feats = pd.read_csv(config.DATA_PROCESSED / "rentwise_features.csv")
+        feats = load_table("rentwise_features")   # DuckDB store, CSV fallback
         self.feature_cols = [c for c in feats.columns if c != TARGET]
         _, self.income_edges = pd.qcut(feats["median_annual_income"], 4,
                                        retbins=True, labels=False)
 
-        clean = pd.read_csv(config.DATA_PROCESSED / "rentwise_clean.csv")
+        clean = load_table("rentwise_clean")
         self.areas = (clean.groupby("la_name")
                       .agg(region=("region", "first"),
                            income=("median_annual_income", "first"),

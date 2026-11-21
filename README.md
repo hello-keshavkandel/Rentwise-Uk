@@ -48,7 +48,7 @@ open data ─▶ fetch + validate ─▶ shared feature store ─▶ four ML mod
 
 - **Object-oriented pipeline** — each stage is a class with a `run()` method; the whole system rebuilds from `python run_real_pipeline.py` (`make build`).
 - **Provenance & validation** — `src/data/sources.py` records bytes/sha256/row-counts/validation per source in `data/raw/_manifest.json`.
-- **Processed store** — `src/data/store.py` (DuckDB) for fast SQL over the processed data.
+- **Processed store** — `src/data/store.py` (DuckDB) is the app's **primary data source**: `data/processed/rentwise.duckdb` is committed and deployed, read via `load_table()` with automatic CSV fallback. The pipeline rebuilds it after every run; a test guards it against drifting from the CSVs.
 - **Calibrated uncertainty** — `src/models/conformal.py` (cross-conformal) gives honest intervals; empirically 90%→90%, 80%→80% on real data.
 - **Metrics history** — `src/models/registry.py` logs every run to `reports/metrics_history.jsonl`.
 - **Maps** — `src/viz/maps.py` renders folium choropleths from LA-boundary GeoJSON.
@@ -60,7 +60,7 @@ Open data only, no proprietary access, no ethical approval required — HM Land 
 ## Testing
 
 ```bash
-make test        # pytest — 43 tests (unit + integration); data-dependent ones skip without the raw data
+make test        # pytest — 50 tests (unit + integration); data-dependent ones skip without the raw data
 ```
 CI runs the suite on every push. Per-milestone test reports are in `reports/TESTING_REPORT_*.md`.
 

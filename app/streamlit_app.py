@@ -55,7 +55,9 @@ with st.sidebar:
         _h = check()
         _icon = {"ok": "🟢", "degraded": "🟡", "down": "🔴"}.get(_h["status"], "⚪")
         _d = _h["data"].get("age_days"); _m = _h["model"].get("age_days")
+        _b = _h["data"].get("backend")
         st.caption(f"{_icon} System {_h['status']}"
+                   + (f" · data via {_b}" if _b else "")
                    + (f" · data {int(_d)}d old" if _d is not None else "")
                    + (f" · model {int(_m)}d old" if _m is not None else ""))
     except Exception:
@@ -68,7 +70,8 @@ with st.sidebar:
             "30% income benchmark; **calibrated 80% prediction intervals** (conformal).\n"
             "- **Sale price (Module 1):** HM Land Registry + optional EPC floor area.\n"
             "- **Geospatial (Module 3):** crime driver; OSM/Ofsted layers + maps in progress.\n"
-            "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends.\n\n"
+            "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends; rolling-origin "
+            "backtest with recalibrated (conformal) 80/95% bands.\n\n"
             "Estimates are **indicative, not financial advice**. "
             "Code: github.com/hello-keshavkandel/Rentwise-Uk")
 

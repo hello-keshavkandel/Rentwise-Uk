@@ -19,7 +19,7 @@ import json
 import logging
 from pathlib import Path
 
-import duckdb
+import pandas as pd
 
 log = logging.getLogger("rentwise.store")
 
@@ -46,6 +46,7 @@ def _processed_dir() -> Path:
 def connect(db_path: Path | str | None = None, read_only: bool = False):
     db_path = Path(db_path) if db_path else _default_db()
     db_path.parent.mkdir(parents=True, exist_ok=True)
+    import duckdb  # lazy: the app still runs (CSV fallback) if duckdb is absent
     return duckdb.connect(str(db_path), read_only=read_only)
 
 
@@ -86,6 +87,48 @@ def build_store(processed_dir: Path | str | None = None,
         return counts
     finally:
         con.close()
+
+
+def load_table(name: str, db_path: Path | str | None = None) -> pd.DataFrame:
+    """Store-first read with CSV fallback — the single read path for the app.
+
+    The committed DuckDB store is the primary source. If the store file, the
+    table, or duckdb itself is unavailable (or the file is unreadable), we fall
+    back to the matching processed CSV so the app never goes down over it.
+    """
+    db = Path(db_path) if db_path else _default_db()
+    if db.exists():
+        try:
+            con = connect(db, read_only=True)
+            try:
+                tables = {r[0] for r in con.execute("SHOW TABLES").fetchall()}
+                if name in tables:
+                    return con.execute(f"SELECT * FROM {name}").df()
+                log.warning("table %s not in store; falling back to CSV", name)
+            finally:
+                con.close()
+        except Exception as e:  # corrupt/locked/version-mismatched store
+            log.warning("store read failed (%s); falling back to CSV", e)
+    csv_name = PROCESSED_TABLES.get(name)
+    if csv_name is None:
+        raise KeyError(f"unknown table {name!r} and not present in the store")
+    return pd.read_csv(db.parent / csv_name)
+
+
+def source_of(name: str, db_path: Path | str | None = None) -> str:
+    """'duckdb' or 'csv' — which backend load_table would use (for health/UI)."""
+    db = Path(db_path) if db_path else _default_db()
+    if db.exists():
+        try:
+            con = connect(db, read_only=True)
+            try:
+                if name in {r[0] for r in con.execute("SHOW TABLES").fetchall()}:
+                    return "duckdb"
+            finally:
+                con.close()
+        except Exception:
+            pass
+    return "csv"
 
 
 def table(name: str, db_path: Path | str | None = None):
