@@ -12,6 +12,8 @@ data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/processed/rentwise.duckdb
+# Prepared (WGS84, England & Wales) LA boundaries for the app's maps — small, committed.
+!data/processed/lad_boundaries_wgs84.geojson
 # The DuckDB store is the app's primary data source — committed and deployed.
 !
 # Models (large binaries)
@@ -26,3 +28,6 @@ models/*.joblib
 .env
 data/raw/epc/*
 !data/raw/epc/.gitkeep
+
+# generated interactive maps (rebuild with src.viz.maps)
+reports/maps/

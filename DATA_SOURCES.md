@@ -56,6 +56,14 @@ strongest price drivers that HM Land Registry omits.
 
 ## Module 3 geospatial enrichment (optional — fetched later)
 
+### LA boundaries (done)
+- **Source:** ONS "Local Authority Districts (May 2024) Boundaries UK BGC" (GeoJSON), via
+  https://ckan.publishing.service.gov.uk/dataset/local-authority-districts-may-2024-boundaries-uk-bgc
+  — May 2024 vintage to match the `LAD24CD` codes used throughout. Contains OS data © Crown copyright and database right.
+- Save as `data/raw/geo/lad_boundaries.geojson`, then `make geo` (`python -m src.data.geo`): reprojects
+  British National Grid → WGS84, keeps England & Wales, maps Barnsley/Sheffield to their April-2025 codes
+  (E08000038/39, as used by ONS rent data) and writes the committed `data/processed/lad_boundaries_wgs84.geojson`.
+
 These power the richer spatial drivers and interactive maps. They are optional:
 the pipeline validates them when present and runs without them otherwise.
 

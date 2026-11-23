@@ -7,7 +7,7 @@ are read directly (no geopandas needed), so this stays a light dependency.
 
     from src.viz.maps import choropleth
     m = choropleth({"E07000223": 0.44, "E08000035": 0.31},
-                   geojson_path="data/raw/geo/lad_boundaries.geojson",
+                   geojson_path="data/processed/lad_boundaries_wgs84.geojson",
                    value_name="Rent-to-income", out_html="reports/maps/affordability.html")
 """
 

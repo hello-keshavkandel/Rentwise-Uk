@@ -3,7 +3,7 @@
 
 PY ?= python3
 
-.PHONY: help setup fetch validate build store module1 refresh test lint app clean
+.PHONY: help setup fetch validate build geo store module1 refresh test lint app clean
 
 help:               ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -19,6 +19,9 @@ validate:           ## validate raw data + (re)write data/raw/_manifest.json
 
 build:              ## run the full real-data pipeline (all four modules)
 	$(PY) run_real_pipeline.py
+
+geo:                ## reproject LA boundaries for maps (needs data/raw/geo/lad_boundaries.geojson)
+	$(PY) -m src.data.geo
 
 store:              ## (re)build the DuckDB processed-data store
 	$(PY) -m src.data.store build
