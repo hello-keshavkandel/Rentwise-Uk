@@ -52,11 +52,23 @@ def _crs_of(geo: dict) -> str:
     return BNG if abs(c[0]) > 180 or abs(c[1]) > 90 else WGS84
 
 
-def _map_rings(coords, fn):
-    """Apply fn to every [x, y] ring in a (Multi)Polygon coordinate tree."""
-    if coords and isinstance(coords[0][0], (int, float)):
-        return fn(coords)
-    return [_map_rings(c, fn) for c in coords]
+def _clean_polygon(rings, fn):
+    """fn() every ring; drop rings that rounding collapsed below 4 points (a valid
+    closed ring needs >= 4). If the exterior collapses, the whole polygon goes."""
+    out = [fn(r) for r in rings]
+    if not out or len(out[0]) < 4:
+        return None
+    return [out[0]] + [r for r in out[1:] if len(r) >= 4]
+
+
+def _clean_geometry(geom: dict, fn) -> dict | None:
+    if geom["type"] == "Polygon":
+        p = _clean_polygon(geom["coordinates"], fn)
+        return None if p is None else {"type": "Polygon", "coordinates": p}
+    if geom["type"] == "MultiPolygon":
+        polys = [p for p in (_clean_polygon(rs, fn) for rs in geom["coordinates"]) if p]
+        return {"type": "MultiPolygon", "coordinates": polys} if polys else None
+    raise ValueError(f"unsupported geometry {geom['type']}")
 
 
 def prepare_boundaries(src: str | Path, dst: str | Path, countries=("E", "W"),
@@ -95,10 +107,13 @@ def prepare_boundaries(src: str | Path, dst: str | Path, countries=("E", "W"),
             continue
         if code in CODE_ALIASES:
             code, aliased = CODE_ALIASES[code], aliased + 1
-        g = f["geometry"]
+        geom = _clean_geometry(f["geometry"], ring_fn)
+        if geom is None:
+            log.warning("dropped %s: geometry collapsed after rounding", code)
+            continue
         feats.append({"type": "Feature",
                       "properties": {code_field: code, name_field: f["properties"].get(name_field)},
-                      "geometry": {"type": g["type"], "coordinates": _map_rings(g["coordinates"], ring_fn)}})
+                      "geometry": geom})
 
     out = {"type": "FeatureCollection", "features": feats}
     dst = Path(dst)

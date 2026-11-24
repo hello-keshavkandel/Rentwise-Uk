@@ -49,3 +49,17 @@ def test_wgs84_input_passes_through(tmp_path):
                                   crs="EPSG:4326")))
     s = prepare_boundaries(src, tmp_path / "o.geojson")
     assert s["source_crs"] == "EPSG:4326" and s["features"] == 1
+
+
+def test_rings_collapsed_by_rounding_are_dropped(tmp_path):
+    """A ~1 m islet collapses below 4 points at ~10 m precision: drop it, keep the mainland."""
+    big = [[[-1.0, 52.0], [-0.9, 52.0], [-0.9, 52.1], [-1.0, 52.1], [-1.0, 52.0]]]
+    islet = [[[-0.5, 52.00001], [-0.49999, 52.00001], [-0.49999, 52.00002], [-0.5, 52.00001]]]
+    src = tmp_path / "raw.geojson"
+    src.write_text(json.dumps(_fc([_feat("E07000001", "X", [big, islet], "MultiPolygon"),
+                                   _feat("E07000002", "Gone", islet)], crs="EPSG:4326")))
+    s = prepare_boundaries(src, tmp_path / "o.geojson")
+    g = json.loads((tmp_path / "o.geojson").read_text())
+    assert s["features"] == 1                                   # all-islet feature dropped
+    polys = g["features"][0]["geometry"]["coordinates"]
+    assert len(polys) == 1 and all(len(r) >= 4 for p in polys for r in p)

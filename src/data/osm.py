@@ -95,8 +95,18 @@ def assign_lad(points: pd.DataFrame, boundaries_geojson: str | Path,
     from shapely.geometry import shape
 
     geo = json.loads(Path(boundaries_geojson).read_text())
-    polys = [shape(f["geometry"]) for f in geo["features"]]
-    codes = [f["properties"][code_field] for f in geo["features"]]
+    from shapely import make_valid
+    polys, codes = [], []
+    for f in geo["features"]:
+        try:
+            g = shape(f["geometry"])
+        except ValueError:                       # malformed ring: rebuild from valid rings only
+            log.warning("skipping malformed geometry for %s", f["properties"].get(code_field))
+            continue
+        g = g if g.is_valid else make_valid(g)
+        if not g.is_empty:
+            polys.append(g)
+            codes.append(f["properties"][code_field])
     tree = STRtree(polys)
     pts = mk_points(points["lon"].to_numpy(), points["lat"].to_numpy())
     pt_idx, poly_idx = tree.query(pts, predicate="within")
