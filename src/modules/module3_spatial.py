@@ -103,6 +103,24 @@ def evaluate(clean: pd.DataFrame, features: pd.DataFrame, spatial: pd.DataFrame,
     return res
 
 
+def ablation_figure(res: dict, path: Path) -> None:
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    keys = ["base", "+schools", "+amenities", "+both"]
+    labels = ["Base (Module 2)", "+ schools", "+ amenities", "+ both"]
+    r2 = [res[k]["r2"] for k in keys]; sd = [res[k]["r2_sd"] for k in keys]
+    fig, ax = plt.subplots(figsize=(6, 3.4))
+    ax.bar(labels, r2, yerr=sd, color=["#9aa5b1", "#7fb3d5", "#2e86c1", "#1b4f72"], capsize=4)
+    lo = min(r2) - 0.05
+    ax.set_ylim(lo, 1.0); ax.set_ylabel("R² (whole LAs held out)")
+    ax.set_title("Module 3: spatial features vs rent accuracy (real data)")
+    for i, v in enumerate(r2):
+        ax.text(i, v + sd[i] + 0.004, f"{v:.3f}", ha="center", fontsize=9)
+    fig.tight_layout(); Path(path).parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(path, dpi=130); plt.close(fig)
+
+
 def write_summary(res: dict, spatial: pd.DataFrame, path: Path) -> None:
     b, s = res["base"], res["+both"]
     gains = np.array(s["r2_runs"]) - np.array(b["r2_runs"])
@@ -157,6 +175,7 @@ if __name__ == "__main__":  # pragma: no cover
     spatial.to_csv(P / "la_spatial_features.csv", index=False)
     res = evaluate(pd.read_csv(P / "rentwise_clean.csv"), pd.read_csv(P / "rentwise_features.csv"), spatial)
     write_summary(res, schools, config.ROOT / "reports" / "module3_summary.md")
+    ablation_figure(res, config.ROOT / "reports" / "figures" / "m3_ablation.png")
     try:
         from src.models.registry import log_run
         log_run("module3", {"r2_base_grouped": res["base"]["r2"], "r2_spatial_grouped": res["+both"]["r2"],

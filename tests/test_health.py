@@ -72,3 +72,16 @@ def test_data_backend_prefers_store_then_csv_then_down(tmp_path, monkeypatch):
     store.write_text("x")
     assert H.data_backend() == "duckdb"
     assert "data: duckdb" in H.summary_line()
+
+
+def test_model_age_comes_from_training_metadata(tmp_path, monkeypatch):
+    import json
+    model = tmp_path / "m.joblib"; model.write_text("x")
+    meta = tmp_path / "meta.json"
+    meta.write_text(json.dumps({"trained_at": "2026-01-01T00:00:00+00:00"}))
+    monkeypatch.setattr(H, "REQUIRED", {"model": model})
+    monkeypatch.setattr(H, "MODEL_META", meta)
+    monkeypatch.setattr(H, "MANIFEST", tmp_path / "none.json")
+    h = H.check()
+    assert h["model"]["name"] == "xgboost-spatial"
+    assert h["model"]["updated_at"].startswith("2026-01-01") and h["model"]["age_days"] > 300

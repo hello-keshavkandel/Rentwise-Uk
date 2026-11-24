@@ -22,8 +22,9 @@ ROOT = Path(__file__).resolve().parents[1]
 # artifacts the app needs to serve predictions. Data is served from the DuckDB
 # store (primary) with the processed CSVs as fallback — either one is enough.
 REQUIRED = {
-    "model": ROOT / "models" / "best_model.joblib",
+    "model": ROOT / "models" / "best_model.joblib",   # legacy fallback (always shipped)
 }
+MODEL_META = ROOT / "models" / "rent_model_meta.json"
 DATA_STORE = ROOT / "data" / "processed" / "rentwise.duckdb"
 DATA_CSVS = {
     "features": ROOT / "data" / "processed" / "rentwise_features.csv",
@@ -103,12 +104,24 @@ def check() -> dict:
         except Exception as e:  # noqa: BLE001
             data["error"] = str(e)
 
-    # model freshness
-    mt = _mtime(REQUIRED["model"])
-    model = {"present": mt is not None}
-    if mt:
-        model["updated_at"] = mt.isoformat(timespec="seconds")
-        model["age_days"] = _age_days(mt)
+    # model freshness: the deployed model's recorded training time (file mtimes reset
+    # on every deploy/clone, so they are not a trustworthy age), else legacy mtime.
+    model = {"present": False}
+    trained = None
+    if MODEL_META.exists():
+        try:
+            meta = json.loads(MODEL_META.read_text())
+            trained = datetime.fromisoformat(meta["trained_at"])
+            model.update(present=True, name="xgboost-spatial")
+        except Exception:  # noqa: BLE001
+            trained = None
+    if trained is None:
+        trained = _mtime(REQUIRED["model"])
+        if trained:
+            model.update(present=True, name="xgboost-legacy")
+    if trained:
+        model["updated_at"] = trained.isoformat(timespec="seconds")
+        model["age_days"] = _age_days(trained)
 
     if not required_ok:
         status = "down"

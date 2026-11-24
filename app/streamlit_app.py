@@ -35,18 +35,37 @@ st.markdown("""<style>
 
 FRIENDLY = {"bedrooms":"Number of bedrooms","median_annual_income":"Local income",
  "crime_per_1000":"Local crime level","transport_score":"Transport access",
- "property_type_ord":"Property type / size","income_band":"Area income band","year":"Year"}
+ "property_type_ord":"Property type / size","income_band":"Area income band","year":"Year",
+ "school_quality":"Local school quality (historic Ofsted)",
+ "share_good_or_better":"Share of Good/Outstanding schools"}
+AMENITY = {"rail_station":"Rail stations","bus_stop":"Bus stops","supermarket":"Supermarkets",
+ "convenience":"Convenience shops","gp_clinic":"GP surgeries & clinics","hospital":"Hospitals",
+ "pharmacy":"Pharmacies","restaurant_cafe":"Restaurants & cafés","pub_bar":"Pubs & bars",
+ "park":"Parks","gym":"Gyms"}
 def friendly(f):
-    return "Being in "+f.replace("region_","") if f.startswith("region_") else FRIENDLY.get(f,f)
+    if f.endswith("__missing"):
+        base = f[:-len("__missing")]
+        if base.startswith(("school", "share_good")):
+            return "School data not available (Wales — schools are inspected by Estyn)"
+        return f"{FRIENDLY.get(base, base)}: no data for this area"
+    if f.startswith("region_"):
+        return "Being in " + f.replace("region_", "")
+    if f.startswith("dens_"):
+        return f"Density of {AMENITY.get(f[5:], f[5:]).lower()}"
+    return FRIENDLY.get(f, f)
+
+def amenity_per_km2(log_density):
+    import math
+    return math.expm1(log_density) if log_density is not None else None
 
 @st.cache_resource
 def get_predictor():
     return RentWisePredictor()
 
 st.title("🏠 RentWise UK")
-st.caption("Data-driven UK housing & long-term rental intelligence — a four-module group system")
+st.caption("Data-driven UK housing & long-term rental intelligence — predict, explain and map rents from open data")
 
-view = st.sidebar.radio("View", ["Rent estimator", "System results"])
+view = st.sidebar.radio("View", ["Rent estimator", "Area map", "System results"])
 
 # ---- observability: data/model freshness banner + methodology ----
 with st.sidebar:
@@ -66,12 +85,13 @@ with st.sidebar:
         st.markdown(
             "**RentWise UK** predicts UK rents and sale prices from **open government "
             "data** (ONS, HM Land Registry, data.police.uk) and explains every estimate.\n\n"
-            "- **Rent (Module 2):** XGBoost, R² 0.90 (0.78 for areas not seen in training); SHAP explanations; affordability vs the "
-            "30% income benchmark; **calibrated 80% prediction intervals** (conformal).\n"
+            "- **Rent (Modules 2+3):** XGBoost on income, crime, property type **plus local amenities "
+            "and schools**; R² 0.95 for the areas served (0.82 for unseen areas); SHAP explanations; "
+            "affordability vs the 30% income benchmark; **calibrated 80% intervals** (conformal).\n"
             "- **Sale price (Module 1):** HM Land Registry + EPC floor area/rooms; XGBoost R² 0.73 "
             "(0.57 without EPC).\n"
-            "- **Geospatial (Module 3):** OSM amenity density + historic Ofsted school quality; "
-            "improves rent R² for unseen areas from 0.78 to 0.83.\n"
+            "- **Geospatial (Module 3):** 506k OpenStreetMap amenities + historic Ofsted grades "
+            "(18k schools) per area; see the **Area map**.\n"
             "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends; rolling-origin "
             "backtest with recalibrated (conformal) 80/95% bands.\n\n"
             "Estimates are **indicative, not financial advice**. "
@@ -120,8 +140,54 @@ if view == "Rent estimator":
         with st.expander("Read the explanation in words"):
             for f,v in top:
                 st.write(f"- **{friendly(f)}** {'increases' if v>=0 else 'decreases'} the estimate by £{abs(v):.0f}.")
+            st.caption("These are associations learned from data across areas, not causes.")
+        prof = predictor.spatial_profile(area)
+        if prof:
+            with st.expander("What's nearby (area profile)"):
+                rows = [(AMENITY[k[5:]], amenity_per_km2(v)) for k, v in prof.items()
+                        if k.startswith("dens_") and k[5:] in AMENITY]
+                st.table({"Amenity": [r[0] for r in rows],
+                          "Per km² (whole area)": [f"{r[1]:.2f}" for r in rows]})
+                sq = prof.get("school_quality")
+                st.write("**Schools:** " + (f"average historic Ofsted score {sq:.2f}/4, "
+                         f"{prof['share_good_or_better']*100:.0f}% Good or Outstanding"
+                         if sq is not None else "no Ofsted data (Wales — schools are inspected by Estyn)"))
+                st.caption("Source: OpenStreetMap contributors (ODbL); Ofsted & DfE (historic 2019-framework grades).")
     else:
         st.info("👈 Choose a property on the left, then click **Estimate rent**.")
+
+# --------------------------------------------------------------------- Area map
+elif view == "Area map":
+    import pandas as pd
+    import streamlit.components.v1 as components
+    st.subheader("Area map — England & Wales by local authority")
+    P = config.DATA_PROCESSED
+    geo = P / "lad_boundaries_wgs84.geojson"
+    if not geo.exists():
+        st.warning("Boundary file missing — run `make geo`."); st.stop()
+    options = {"Rent-to-income ratio (affordability)": "ratio",
+               "Average historic Ofsted school quality (England)": "school_quality",
+               **{f"Density: {v.lower()} per km²": f"dens_{k}" for k, v in AMENITY.items()}}
+    choice = st.selectbox("Show", list(options))
+
+    @st.cache_data(show_spinner="Drawing map…")
+    def map_html(metric: str) -> str:
+        from src.viz.maps import choropleth
+        clean = pd.read_csv(P / "rentwise_clean.csv")[["la_code", "la_name"]].drop_duplicates()
+        if metric == "ratio":
+            a = pd.read_csv(P / "affordability.csv").merge(clean, on="la_name")
+            vals, label, cmap = dict(zip(a.la_code, a.rent_to_income)), "Rent-to-income ratio", "YlOrRd"
+        else:
+            sp = pd.read_csv(P / "la_spatial_features.csv")
+            v = sp[metric] if metric == "school_quality" else sp[metric].map(amenity_per_km2)
+            vals, label = dict(zip(sp.lad_code, v)), choice
+            cmap = "YlGnBu"
+        vals = {k: x for k, x in vals.items() if pd.notna(x)}
+        return choropleth(vals, geo, value_name=label, fill_color=cmap)._repr_html_()
+
+    components.html(map_html(options[choice]), height=620)
+    st.caption("Grey = no data (e.g. Ofsted does not inspect Welsh schools). Boundaries: ONS (May 2024), "
+               "contains OS data © Crown copyright. Amenities: © OpenStreetMap contributors.")
 
 # --------------------------------------------------------------- System results
 else:
@@ -130,7 +196,8 @@ else:
     reports = config.ROOT / "reports"; figs = reports / "figures"
     modules = [
         ("Module 1 — Sale Price Prediction", "module1_summary.md", "m1_predicted_vs_actual.png"),
-        ("Module 2 — Rental Price & Affordability", "model_comparison.md", "07_shap_importance.png"),
+        ("Module 2 — Rental Price & Affordability (deployed model)",
+         "rent_model_summary.md", "rent_shap_importance.png"),
         ("Module 3 — Geospatial Driver Analysis", "module3_summary.md", "m3_ablation.png"),
         ("Module 4 — Regional Trend Forecasting", "module4_summary.md", "m4_forecast_london.png"),
     ]

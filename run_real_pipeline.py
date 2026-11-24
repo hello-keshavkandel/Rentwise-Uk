@@ -130,23 +130,24 @@ def run_module2():
     except Exception:
         pass
     ModelEvaluator().run(); ShapExplainer().run(); AffordabilityEngine().run()
-    # Module 3 real crime ablation (only real spatial feature available)
-    def rmse_with(c):
-        m = XGBRegressor(n_estimators=300, max_depth=5, learning_rate=0.05,
-                         random_state=config.RANDOM_SEED, verbosity=0, n_jobs=1).fit(Xtrf[c], ytrf)
-        return float(np.sqrt(((yte - m.predict(Xte[c])) ** 2).mean()))
-    allc = list(Xtrf.columns); full = rmse_with(allc)
-    noc = rmse_with([c for c in allc if c != "crime_per_1000"])
-    (config.ROOT / "reports" / "module3_summary.md").write_text(
-        "# Module 3 - Geospatial Driver Analysis (summary) [REAL crime data]\n\n"
-        "## Real spatial feature: crime (data.police.uk, LSOA -> local authority)\n"
-        f"- Crime ablation (XGBoost on real rent): test RMSE £{full:.0f} with crime vs "
-        f"£{noc:.0f} without (marginal ~£{noc-full:.0f}).\n"
-        "- Module 2 SHAP on real data attributes about £57 of rent to local crime level.\n\n"
-        "## Future work (open data not yet sourced)\n"
-        "- Transport proximity, school quality, green space and amenity density need OSM/Ofsted "
-        "layers; interactive choropleth maps need LA boundary geometry. These remain future work.\n")
-    print(f"[Module 3] crime ablation: full £{full:.0f} vs no-crime £{noc:.0f} (marginal £{noc-full:.0f})")
+    # Module 3 now runs on real OSM + Ofsted data in run_module3_and_spatial_model();
+    # it no longer writes a crime-only module3_summary.md here (that overwrote real results).
+
+
+def run_module3_and_spatial_model():
+    """Module 3 (real spatial features + ablation) and the deployed spatial rent model.
+
+    Needs the prepared, committed inputs: osm_amenities_by_la.csv, school_quality_by_la.csv,
+    lad_boundaries_wgs84.geojson (see DATA_SOURCES.md: make geo / schools / osm)."""
+    import subprocess
+    P = config.DATA_PROCESSED
+    need = ["osm_amenities_by_la.csv", "school_quality_by_la.csv", "lad_boundaries_wgs84.geojson"]
+    if not all((P / n).exists() for n in need):
+        print("[Module 3] spatial inputs missing — skipped (deployed model unchanged).")
+        return
+    for mod in ("src.modules.module3_spatial", "src.models.rent_spatial"):
+        subprocess.run([sys.executable, "-m", mod], check=True, cwd=config.ROOT)
+    print("[Module 3] spatial features + deployed spatial rent model rebuilt.")
 
 
 def run_module1():
@@ -322,6 +323,7 @@ if __name__ == "__main__":
     print("=" * 60); print("RentWise UK — REAL-DATA pipeline (all four modules)"); print("=" * 60)
     build_module2_dataset()
     run_module2()
+    run_module3_and_spatial_model()
     run_module1()
     run_module4()
     # Keep the DuckDB query store in sync with the freshly built processed data.
