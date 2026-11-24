@@ -10,7 +10,8 @@ on 1198 rows (314 local authorities).
 
 **Calibrated intervals (conformal):** 80% → ±£113, 90% → ±£161.
 Coverage for served areas 80% / 90% (on target). For unseen areas they would
-cover only 54% / 68% — which is why the app and API serve only the 314 trained areas.
+cover only 54% / 68% — which is why the app and API serve only the
+314 trained areas.
 
 Previous deployed model (no spatial features): R² 0.913 / MAE £89 (seen), 0.775 / £152 (unseen), 80% interval ±£140.
 

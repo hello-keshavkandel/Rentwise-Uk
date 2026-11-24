@@ -51,3 +51,15 @@ def test_area_by_code_roundtrip(predictor):
     row = predictor.area_by_code("E07000223")
     assert row is not None and row["la_name"] == "Adur"
     assert predictor.area_by_code("E99999999") is None
+
+
+def test_model_saved_with_the_deployed_xgboost_version():
+    """The committed model must be saved by the XGBoost version pinned for deployment;
+    a model written by a newer major version may not load on Streamlit Cloud/Docker."""
+    import json
+    import re
+    pin = re.search(r"^xgboost==([\d.]+)", (config.ROOT / "requirements.txt").read_text(), re.M).group(1)
+    saved = json.loads((config.MODELS_DIR / "rent_model_meta.json").read_text())["xgboost_version"]
+    assert saved.split(".")[:2] == pin.split(".")[:2], (
+        f"model saved with xgboost {saved} but requirements pin {pin}: retrain with the pinned version "
+        "(e.g. a venv from requirements.txt) — see DEPLOYMENT.md")

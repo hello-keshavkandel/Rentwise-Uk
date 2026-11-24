@@ -48,7 +48,7 @@
     "school_quality",
     "share_good_or_better"
   ],
-  "trained_at": "2026-11-24T03:30:14+00:00",
+  "trained_at": "2026-11-24T03:39:12+00:00",
   "n_rows": 1198,
   "n_las": 314,
   "params": {
@@ -59,7 +59,7 @@
     "verbosity": 0,
     "n_jobs": 4
   },
-  "xgboost_version": "3.2.0",
+  "xgboost_version": "2.1.1",
   "evaluation": {
     "random_cv": {
       "r2": 0.9470389020945202,

@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt ruff
+          pip install -r requirements.txt -r requirements-api.txt ruff
       - name: Lint (ruff)
         continue-on-error: true   # advisory for now; not a merge blocker yet
         run: ruff check .

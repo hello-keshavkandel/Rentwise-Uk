@@ -1,0 +1,5 @@
+# Public REST API (Milestone 5) — install on top of requirements.txt:
+#   pip install -r requirements.txt -r requirements-api.txt
+fastapi>=0.115,<1.0     # web framework + OpenAPI docs (/docs)
+uvicorn[standard]>=0.30 # ASGI server
+httpx>=0.27             # used by FastAPI's TestClient in the test suite

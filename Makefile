@@ -3,7 +3,7 @@
 
 PY ?= python3
 
-.PHONY: help setup fetch validate build geo schools osm store module1 refresh test lint app clean
+.PHONY: help setup fetch validate build geo schools osm spatial api alerts store module1 refresh test lint app clean
 
 help:               ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -28,6 +28,15 @@ schools:            ## historic Ofsted grade per LA (needs data/raw/schools/: Of
 
 osm:                ## OSM amenity counts per LA (needs data/raw/osm/*.osm.pbf + requirements-data.txt)
 	$(PY) -m src.data.osm
+
+spatial:            ## Module 3 features + retrain/recalibrate the deployed spatial rent model
+	$(PY) -m src.modules.module3_spatial && $(PY) -m src.models.rent_spatial
+
+api:                ## run the public REST API locally (docs at http://localhost:8000/docs)
+	$(PY) -m uvicorn src.api.app:app --reload --port 8000
+
+alerts:             ## evaluate users' rent/affordability alerts (run after each refresh)
+	$(PY) -m src.api.alerts
 
 store:              ## (re)build the DuckDB processed-data store
 	$(PY) -m src.data.store build

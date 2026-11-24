@@ -74,3 +74,46 @@ git add data/processed/rentwise.duckdb data/processed/*.csv
 `tests/test_store.py::test_committed_store_matches_processed_csvs` fails CI if the
 committed store and CSVs drift apart. Keep `duckdb` pinned in `requirements.txt`
 (currently 1.5.6) — newer DuckDB reads older store files, but not the reverse.
+
+## Deployed rent model (Modules 2 + 3)
+
+The live estimator uses `models/rent_xgb_spatial.json` (portable XGBoost JSON) + `models/rent_model_meta.json`
++ `models/conformal.json`, built by `make spatial`. If those files are absent the app falls back to the legacy
+`best_model.joblib`.
+
+**Version rule:** retrain with the **same XGBoost version pinned in `requirements.txt`** (currently 2.1.1).
+A model written by a newer major version may not load on Streamlit Cloud. Simplest way:
+
+```bash
+python3 -m venv /tmp/venv_deploy && /tmp/venv_deploy/bin/pip install -r requirements.txt
+/tmp/venv_deploy/bin/python -m src.models.rent_spatial
+```
+
+`tests/test_predict_spatial.py::test_model_saved_with_the_deployed_xgboost_version` fails CI if this drifts.
+
+## Public REST API (Milestone 5)
+
+```bash
+pip install -r requirements.txt -r requirements-api.txt
+python -m src.api.admin create-key --name me          # bootstrap/service key (shown once)
+uvicorn src.api.app:app --host 0.0.0.0 --port 8000    # or: docker compose up --build
+```
+
+| Setting (env) | Default | Purpose |
+|---|---|---|
+| `RENTWISE_API_DB` | `data/api/rentwise_api.sqlite3` | users, keys, saved areas, alerts, notifications (git-ignored; mount a volume) |
+| `RENTWISE_RATE_LIMIT` | `60` | requests per minute per API key |
+| `RENTWISE_ALLOW_SIGNUP` | `1` | set `0` to disable public sign-up |
+| `RENTWISE_SESSION_DAYS` | `7` | login token lifetime |
+| `RENTWISE_SMTP_HOST`/`_PORT`/`_USER`/`_PASSWORD`/`_FROM` | unset | email delivery for alerts (else stored + logged) |
+
+**Alerts** are evaluated by a job, not on request: run `python -m src.api.alerts` (or
+`docker compose run --rm api python -m src.api.alerts`) on the API host after each monthly data refresh
+(e.g. cron `0 9 3 * *`). Alerts are edge-triggered: one notification when a condition becomes true.
+
+**Run behind HTTPS** (a reverse proxy such as Caddy/Nginx or the platform's TLS); the API relies on TLS for
+transport security of keys and tokens.
+
+**Known single-instance limits** (fine for launch, change before scaling out): the rate limiter is in-process
+(use Redis with >1 replica) and storage is SQLite (move to Postgres; the SQL is plain and parameterised).
+The API serves only the 314 trained areas because its intervals are calibrated for those.

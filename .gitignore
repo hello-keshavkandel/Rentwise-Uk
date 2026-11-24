@@ -34,3 +34,8 @@ data/raw/epc/*
 
 # generated interactive maps (rebuild with src.viz.maps)
 reports/maps/
+
+# API database (users, keys, alerts) — runtime data, never committed
+data/api/
+*.sqlite3
+*.sqlite3-*

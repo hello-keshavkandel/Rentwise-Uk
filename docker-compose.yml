@@ -1,0 +1,20 @@
+# RentWise UK — dashboard + public API together.
+#   docker compose up --build          dashboard http://localhost:8501 · API http://localhost:8000/docs
+#   docker compose run --rm api python -m src.api.admin create-key --name me
+#   docker compose run --rm api python -m src.api.alerts          # schedule monthly after data refresh
+services:
+  web:
+    build: { context: ., dockerfile: Dockerfile }
+    ports: ["8501:8501"]
+    restart: unless-stopped
+  api:
+    build: { context: ., dockerfile: Dockerfile.api }
+    ports: ["8000:8000"]
+    environment:
+      RENTWISE_RATE_LIMIT: "60"          # requests per minute per API key
+      RENTWISE_ALLOW_SIGNUP: "1"
+      # RENTWISE_SMTP_HOST / _PORT / _USER / _PASSWORD / _FROM  -> email alert delivery
+    volumes: ["api-data:/app/data/api"]
+    restart: unless-stopped
+volumes:
+  api-data:

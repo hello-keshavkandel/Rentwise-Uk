@@ -63,13 +63,17 @@
 - **Polish:** custom domain, refreshed UI, About/methodology page, demo GIF in the README.
 - **Definition of done:** always-on app on your domain, auto-deployed, monitored, that you'd happily put at the top of your CV.
 
-## Phase 5 — Toward a real public product (later, when there are users)
+## Phase 5 — Toward a real public product
 
-*Flagged now, built when the above is solid.*
+**Milestone 5 — done (Nov 2026):** public **REST API** (FastAPI, OpenAPI docs) with hashed API keys and
+per-key rate limiting; **user accounts** (scrypt passwords, expiring bearer tokens), self-service keys,
+**saved areas** and edge-triggered **rent / affordability alerts** with pluggable email delivery; Docker +
+compose. See `reports/REPORT_P1_M5.md`.
 
-- Public **REST API** (FastAPI) + API keys; optional React/Next frontend.
-- User accounts, saved areas, price/affordability **alerts**.
-- Postgres + cloud; caching/CDN; rate limiting.
+**Next (when there are users):**
+- Postgres + Redis (shared rate limiting) + cloud host behind HTTPS; API monitoring.
+- Password reset / email verification; optional React/Next frontend; usage dashboards.
+- Wider intervals (or refusal) for unseen areas; per-capita amenity features (ONS population); Estyn for Wales.
 - Monetisation options (freemium API, embeds for agents/portals).
 
 ---
