@@ -13,8 +13,8 @@
 | Area | Current state | Gap to close |
 |---|---|---|
 | **Module 1 — Sale price** | XGBoost R² **0.567** on HM Land Registry (2026 H1, 90k sample) → **0.732 with real EPC** (done) | Wide absolute intervals (±£154k at 90%); weak London generalisation |
-| **Module 2 — Rent & affordability** | XGBoost R² **0.900**, SHAP, 30% benchmark | Area-level only; no calibrated intervals |
-| **Module 3 — Geospatial** | Crime driver only | No transport / schools / green space / amenities; no maps |
+| **Module 2 — Rent & affordability** | XGBoost R² **0.900** (random split; **0.775** with whole LAs held out), SHAP, 30% benchmark, conformal intervals (done) | Area-level only; headline R² is in-sample-LA |
+| **Module 3 — Geospatial** | **Done (real data):** 11 OSM amenity densities + historic Ofsted quality + LA boundaries; unseen-LA R² 0.775 → **0.833** | Spatial features not yet in the live estimator; density per km² (no population yet); Wales schools (Estyn) missing |
 | **Module 4 — Forecasting** | ARIMA + Holt-Winters, MAPE ~0.6% | Intervals slightly mis-calibrated |
 | **Data** | Manual download → `data/raw/` → `run_real_pipeline.py` | No automation, no refresh, CSV-only, no validation |
 | **App / deploy** | Streamlit two-view, free Community Cloud | Sleeps; no CI/CD, monitoring, analytics, domain |

@@ -1,1 +1,2 @@
 {"ts": "2026-11-21T03:33:38+00:00", "module": "module1", "commit": "d8a2533", "metrics": {"r2": 0.7321085333824158, "rmse": 110933.25589740888, "mae": 68234.75, "use_epc": 1.0, "match_rate": 0.8615593138796884, "n": 90000.0}}
+{"ts": "2026-11-24T03:13:15+00:00", "module": "module3", "commit": "91215a9", "metrics": {"r2_base_grouped": 0.7745895836712282, "r2_spatial_grouped": 0.833252790193544, "mae_base_grouped": 151.6529307803248, "mae_spatial_grouped": 130.12470647846916, "r2_base_random": 0.9129379084098763, "r2_spatial_random": 0.9455466691180991}}
