@@ -56,6 +56,15 @@ strongest price drivers that HM Land Registry omits.
 
 ## Module 3 geospatial enrichment (optional — fetched later)
 
+### OpenStreetMap amenities
+- **Source:** Geofabrik extracts — https://download.geofabrik.de/europe/united-kingdom.html —
+  `england-latest.osm.pbf` (~1.5 GB) and `wales-latest.osm.pbf` (~133 MB). Data © OpenStreetMap contributors, ODbL.
+- Put both in `data/raw/osm/`, `pip install -r requirements-data.txt`, then `make osm` (`python -m src.data.osm`).
+- Keeps rail stations, bus stops, supermarkets, convenience shops, GPs/clinics, hospitals, pharmacies,
+  restaurants/cafés, pubs/bars, parks and gyms; assigns each to an LA by point-in-polygon.
+- Output: per-amenity `data/raw/osm_amenities.csv`; committed per-LA counts `data/processed/osm_amenities_by_la.csv`.
+- Caveat: OSM completeness varies by area — treat counts as relative density, not a census.
+
 ### Schools — historic Ofsted grades (done)
 Ofsted scrapped single-word overall grades (Sept 2024) and moved to report cards (Nov 2025).
 RentWise uses each school's **last official grade under the 2019 framework, labelled historic**.

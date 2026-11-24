@@ -3,7 +3,7 @@
 
 PY ?= python3
 
-.PHONY: help setup fetch validate build geo schools store module1 refresh test lint app clean
+.PHONY: help setup fetch validate build geo schools osm store module1 refresh test lint app clean
 
 help:               ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
@@ -25,6 +25,9 @@ geo:                ## reproject LA boundaries for maps (needs data/raw/geo/lad_
 
 schools:            ## historic Ofsted grade per LA (needs data/raw/schools/: Ofsted MI + GIAS)
 	$(PY) -m src.data.schools
+
+osm:                ## OSM amenity counts per LA (needs data/raw/osm/*.osm.pbf + requirements-data.txt)
+	$(PY) -m src.data.osm
 
 store:              ## (re)build the DuckDB processed-data store
 	$(PY) -m src.data.store build

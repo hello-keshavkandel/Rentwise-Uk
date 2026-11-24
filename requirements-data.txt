@@ -1,0 +1,5 @@
+# Extra dependencies for the DATA-PREPARATION steps only (not needed by the live app).
+#   pip install -r requirements.txt -r requirements-data.txt
+pyproj>=3.6        # make geo     — reproject ONS LA boundaries (BNG -> WGS84)
+osmium>=4.0        # make osm     — stream OpenStreetMap .osm.pbf extracts
+shapely>=2.0       # make osm     — point-in-polygon assignment of amenities to LAs
