@@ -56,6 +56,19 @@ strongest price drivers that HM Land Registry omits.
 
 ## Module 3 geospatial enrichment (optional — fetched later)
 
+### Schools — historic Ofsted grades (done)
+Ofsted scrapped single-word overall grades (Sept 2024) and moved to report cards (Nov 2025).
+RentWise uses each school's **last official grade under the 2019 framework, labelled historic**.
+- **Ofsted:** "Management information – state-funded schools – latest inspections as at <month>" (CSV) from
+  https://www.gov.uk/government/statistical-data-sets/monthly-management-information-ofsteds-school-inspections-outcomes
+- **DfE GIAS:** "All establishment data" (`edubasealldata<date>.csv`) from
+  https://get-information-schools.service.gov.uk/Downloads — gives each school's district (LAD) code by URN.
+- Put both in `data/raw/schools/`, then `make schools` (`python -m src.data.schools`).
+- Grade per school: OEIF overall → mean of the 4 OEIF key judgements (when overall "Not judged") →
+  ungraded inspection that explicitly confirms a grade. Ambiguous outcomes and report-card-only schools stay blank.
+- Oct-2026 build: 18,263 / 21,926 schools scored; all 292 English rent LAs covered. **Wales (Estyn) not covered.**
+- Output: per-school `data/raw/ofsted_schools.csv`; committed per-LA `data/processed/school_quality_by_la.csv`.
+
 ### LA boundaries (done)
 - **Source:** ONS "Local Authority Districts (May 2024) Boundaries UK BGC" (GeoJSON), via
   https://ckan.publishing.service.gov.uk/dataset/local-authority-districts-may-2024-boundaries-uk-bgc

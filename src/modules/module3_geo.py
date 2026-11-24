@@ -37,7 +37,11 @@ def school_quality(schools: pd.DataFrame, lad_col: str = "lad_code",
                    rating_col: str = "ofsted_rating") -> pd.DataFrame:
     """Mean Ofsted rating per LA (Outstanding=4 … Inadequate=1)."""
     s = schools.copy()
-    s["_score"] = s[rating_col].astype(str).str.strip().str.lower().map(OFSTED_SCORE)
+    numeric = pd.to_numeric(s[rating_col], errors="coerce")
+    if numeric.notna().any():                 # numeric Ofsted grade: 1=Outstanding … 4=Inadequate
+        s["_score"] = 5 - numeric
+    else:                                     # text labels
+        s["_score"] = s[rating_col].astype(str).str.strip().str.lower().map(OFSTED_SCORE)
     out = s.groupby(lad_col)["_score"].mean().rename("school_quality").reset_index()
     return out
 
