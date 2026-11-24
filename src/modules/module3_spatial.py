@@ -109,6 +109,8 @@ def write_summary(res: dict, spatial: pd.DataFrame, path: Path) -> None:
     rows = "\n".join(f"| {k} | {v['r2']:.3f} ± {v['r2_sd']:.3f} | £{v['mae']:.0f} ± {v['mae_sd']:.0f} |"
                      for k, v in res.items() if k in ("base", "+amenities", "+schools", "+both"))
     rs = res["random_split"]
+    med_year = (int(spatial["median_inspection_year"].median())
+                if "median_inspection_year" in spatial else "n/a")
     md = f"""# Module 3 - Geospatial features (summary) [REAL OSM + Ofsted + ONS boundaries]
 
 **Spatial features improve rent prediction for unseen local authorities:**
@@ -137,7 +139,7 @@ accuracy sits between the two.
 ## Caveats
 - OSM completeness varies by area; densities are relative indicators, not a census.
 - Density per km² favours compact urban LAs; per-capita measures need ONS population (future).
-- School grades are historic (median inspection year {int(spatial['median_inspection_year'].median()) if 'median_inspection_year' in spatial else 'n/a'}).
+- School grades are historic (median inspection year {med_year}).
 - Associations, not causes: these features describe places, they don't set rents.
 """
     path.write_text(md)
