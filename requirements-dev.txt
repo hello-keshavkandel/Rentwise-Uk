@@ -1,0 +1,2 @@
+# Developer tools (lint). Install with: pip install -r requirements-dev.txt
+ruff>=0.6

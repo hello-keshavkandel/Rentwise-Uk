@@ -44,6 +44,7 @@ from pydantic import BaseModel, Field
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
+import config  # noqa: E402  (also loads .env so RENTWISE_* settings apply)
 from src.api import security as sec  # noqa: E402
 from src.api.db import Database, now_iso  # noqa: E402
 from src.api.ratelimit import SlidingWindowLimiter  # noqa: E402
@@ -68,8 +69,8 @@ AMENITY_LABELS = {
 
 
 def db_path_from_env() -> str:
-    import config
-    return os.environ.get("RENTWISE_API_DB", str(config.ROOT / "data" / "api" / "rentwise_api.sqlite3"))
+    p = Path(os.environ.get("RENTWISE_API_DB", "data/api/rentwise_api.sqlite3"))
+    return str(p if p.is_absolute() or str(p) == ":memory:" else config.ROOT / p)
 
 
 def factor_label(f: str) -> str:

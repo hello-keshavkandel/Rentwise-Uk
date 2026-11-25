@@ -15,6 +15,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # App code + the committed artifacts the app serves (model, processed data, conformal)
 COPY . .
+# run as an unprivileged user
+RUN useradd --create-home --uid 10001 rentwise && chown -R rentwise /app
+USER rentwise
 
 EXPOSE 8501
 

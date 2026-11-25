@@ -12,3 +12,10 @@ reports/figures/*.pdf
 *.docx
 *.pptx
 .DS_Store
+
+# not read by the app or API (pipeline-only / large)
+data/processed/epc_lookup.parquet
+data/processed/rent_history.csv
+data/api/
+*.sqlite3
+reports/verify_report.md

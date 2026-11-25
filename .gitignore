@@ -42,3 +42,6 @@ reports/maps/
 data/api/
 *.sqlite3
 *.sqlite3-*
+
+# local verification output
+reports/verify_report.md

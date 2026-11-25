@@ -1,15 +1,22 @@
 # RentWise UK — pipeline orchestration
 # Usage:  make <target>   (run from the repo root)
 
-PY ?= python3
+# Use the project's Python 3.11 venv when it exists (created by `make setup`).
+PY ?= $(shell [ -x .venv/bin/python ] && echo .venv/bin/python || echo python3)
 
-.PHONY: help setup fetch validate build geo schools osm spatial api alerts store module1 refresh test lint app clean
+.PHONY: help setup verify demo fetch validate build geo schools osm spatial api alerts store module1 refresh test lint app clean
 
 help:               ## show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-setup:              ## install dependencies
-	$(PY) -m pip install -r requirements.txt
+setup:              ## create .venv (Python 3.11) with app + API + dev deps; WITH_DATA=1 adds data-prep deps
+	./scripts/setup.sh
+
+verify:             ## prove everything works: env, health, all tests, live API + dashboard
+	$(PY) scripts/verify.py
+
+demo:               ## run dashboard + API locally with a seeded demo account (Ctrl+C to stop)
+	$(PY) scripts/demo.py
 
 fetch:              ## download source data where URLs are automatable
 	$(PY) -m src.data.sources fetch
