@@ -34,7 +34,7 @@ st.markdown("""<style>
 </style>""", unsafe_allow_html=True)
 
 FRIENDLY = {"bedrooms":"Number of bedrooms","median_annual_income":"Local income",
- "crime_per_1000":"Local crime level","transport_score":"Transport access",
+ "crime_per_1000":"Crime per 1,000 residents",
  "property_type_ord":"Property type / size","income_band":"Area income band","year":"Year",
  "school_quality":"Local school quality (historic Ofsted)",
  "share_good_or_better":"Share of Good/Outstanding schools"}
@@ -53,6 +53,15 @@ def friendly(f):
     if f.startswith("dens_"):
         return f"Density of {AMENITY.get(f[5:], f[5:]).lower()}"
     return FRIENDLY.get(f, f)
+
+def month_label(period):
+    """'2026-10' -> 'October 2026'."""
+    import calendar
+    try:
+        y, m = str(period).split("-")[:2]
+        return f"{calendar.month_name[int(m)]} {y}"
+    except Exception:
+        return "the latest release"
 
 def amenity_per_km2(log_density):
     import math
@@ -81,12 +90,34 @@ with st.sidebar:
                    + (f" · model {int(_m)}d old" if _m is not None else ""))
     except Exception:
         pass
+    with st.expander("Data sources & dates"):
+        try:
+            import json as _json
+            _v = _json.loads((config.DATA_PROCESSED / "data_vintages.json").read_text())
+            _r, _e, _p, _c = (_v.get(k, {}) for k in ("rents", "earnings", "population", "crime"))
+            st.markdown(
+                f"- **Rents:** {_r.get('source')} — {month_label(_r.get('period'))}"
+                f"{' (released ' + _r['released'] + ')' if _r.get('released') else ''}\n"
+                f"- **Earnings:** {_e.get('source')} — {_e.get('period')}\n"
+                f"- **Population:** {_p.get('source')} — {_p.get('period')}\n"
+                f"- **Crime:** {_c.get('measure')} — {_c.get('period')} ({_c.get('months')} months)\n"
+                "- **Amenities:** OpenStreetMap via Geofabrik — Nov 2026 · **Schools:** Ofsted & DfE — Oct 2026\n"
+                "- **Boundaries:** ONS, May 2024")
+            if _c.get("areas_without_police_data"):
+                st.caption("No police data for: " + ", ".join(_c["areas_without_police_data"])
+                           + " — shown as missing, never as zero.")
+            if _c.get("areas_with_partial_months"):
+                st.caption("Crime based on fewer months for: " + ", ".join(
+                    f"{k} ({m})" for k, m in _c["areas_with_partial_months"].items()))
+        except Exception:
+            st.caption("Data dates unavailable — run the pipeline to rebuild them.")
     with st.expander("About & methodology"):
         st.markdown(
             "**RentWise UK** predicts UK rents and sale prices from **open government "
             "data** (ONS, HM Land Registry, data.police.uk) and explains every estimate.\n\n"
             "- **Rent (Modules 2+3):** XGBoost on income, crime, property type **plus local amenities "
-            "and schools**; R² 0.95 for the areas served (0.82 for unseen areas); SHAP explanations; "
+            "and schools**. The **official ONS median** is shown first; the model (R² 0.95 served, 0.86 unseen) "
+            "explains it with SHAP and estimates only where ONS publishes none; "
             "affordability vs the 30% income benchmark; **calibrated 80% intervals** (conformal).\n"
             "- **Sale price (Module 1):** HM Land Registry + EPC floor area/rooms; XGBoost R² 0.73 "
             "(0.57 without EPC).\n"
@@ -111,25 +142,32 @@ if view == "Rent estimator":
         ptype = st.selectbox("Property type", predictor.property_types)
         bedrooms = predictor.typical_bedrooms(ptype)   # tied to type in the ONS data
         st.caption(f"Typical size: **{bedrooms} bedrooms** (ONS reports rent by property type).")
-        go = st.button("Estimate rent", type="primary", use_container_width=True)
-        st.markdown("<p class='disclaimer'>Income and crime are looked up "
+        go = st.button("Check rent", type="primary", use_container_width=True)
+        st.markdown("<p class='disclaimer'>Earnings, crime, schools and amenities are looked up "
                     "automatically for the selected area.</p>", unsafe_allow_html=True)
 
     if go:
         r = predictor.predict(area, ptype, bedrooms); pct = r["ratio"]*100
         st.subheader(f"{ptype} · {bedrooms} bed · {area}")
         c1,c2,c3 = st.columns(3)
-        c1.metric("Predicted monthly rent", f"£{r['rent']:,}")
+        as_of = month_label(r.get("as_of"))
+        if r["kind"] == "official":
+            c1.metric("Official median rent", f"£{r['rent']:,}/month")
+            st.caption(f"**Official ONS figure** for {as_of} (Price Index of Private Rents). "
+                       f"RentWise's model estimates £{r['model_rent']:,} for the same area and type "
+                       "and uses it only to explain what drives the figure.")
+        else:
+            c1.metric("Estimated monthly rent", f"£{r['rent']:,}")
+            iv = r.get("interval")
+            st.caption("**Model estimate** — ONS publishes no figure for this property type here. "
+                       + (f"{int(iv['level']*100)}% range: **£{iv['low']:,} – £{iv['high']:,}** "
+                          "(calibrated by conformal prediction)." if iv else ""))
         c2.metric("Rent-to-income", f"{pct:.0f}%"); c3.metric("Region", r["region"])
-        iv = r.get("interval")
-        if iv:
-            st.caption(f"{int(iv['level']*100)}% confidence range: "
-                       f"**£{iv['low']:,} – £{iv['high']:,}** (calibrated by conformal prediction).")
         if r["affordable"]:
             st.success(f"✅ Affordable — rent is {pct:.0f}% of local income (≤30% benchmark).")
         else:
             st.error(f"⚠️ Above the 30% benchmark — rent is {pct:.0f}% of local income.")
-        st.subheader("Why this estimate?")
+        st.subheader("What drives rent here?")
         top = r["contributions"][:6]
         labels = [friendly(f) for f,_ in top][::-1]; values = [v for _,v in top][::-1]
         colors = ["#1E7D32" if v>=0 else "#B00020" for v in values]
@@ -173,9 +211,10 @@ elif view == "Area map":
     @st.cache_data(show_spinner="Drawing map…")
     def map_html(metric: str) -> str:
         from src.viz.maps import choropleth
-        clean = pd.read_csv(P / "rentwise_clean.csv")[["la_code", "la_name"]].drop_duplicates()
+        from src.data.store import load_table          # DuckDB store first, CSV fallback
+        clean = load_table("rentwise_clean")[["la_code", "la_name"]].drop_duplicates()
         if metric == "ratio":
-            a = pd.read_csv(P / "affordability.csv").merge(clean, on="la_name")
+            a = load_table("affordability").merge(clean, on="la_name")
             vals, label, cmap = dict(zip(a.la_code, a.rent_to_income)), "Rent-to-income ratio", "YlOrRd"
         else:
             sp = pd.read_csv(P / "la_spatial_features.csv")

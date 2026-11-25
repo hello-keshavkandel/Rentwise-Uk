@@ -1,25 +1,27 @@
 # Module 3 - Geospatial features (summary) [REAL OSM + Ofsted + ONS boundaries]
 
-**Spatial features improve rent prediction for unseen local authorities:**
-R² 0.775 → **0.833** (+0.059), MAE £152 → **£130**
-(-14%). Gain in every repeat: +0.053, +0.053, +0.054, +0.074.
+**Spatial features consistently reduce the typical error for unseen local authorities; the R² gain is small and not consistent across repeats:**
+R² 0.847 → **0.853** (+0.006), MAE £169 → **£156**
+(-8%).
+R² change per repeat: +0.009, -0.003, +0.006, +0.012 · MAE reduction per repeat:
+£12, £10, £13, £18.
 
 ## Ablation — whole LAs held out (grouped 5-fold CV × 4 repeats, XGBoost)
 | Features | R² (mean ± sd) | MAE |
 |---|---|---|
-| base | 0.775 ± 0.008 | £152 ± 3 |
-| +amenities | 0.824 ± 0.006 | £134 ± 2 |
-| +schools | 0.803 ± 0.011 | £143 ± 4 |
-| +both | 0.833 ± 0.005 | £130 ± 3 |
+| base | 0.847 ± 0.001 | £169 ± 1 |
+| +amenities | 0.854 ± 0.002 | £157 ± 1 |
+| +schools | 0.848 ± 0.008 | £166 ± 5 |
+| +both | 0.853 ± 0.004 | £156 ± 2 |
 
 ## Why grouped CV
 Each LA appears up to 4 times (one row per property type) with identical LA-level features.
-A random split scores LAs the model has already seen: base R² 0.913 / +spatial
-0.946 (MAE £89 / £69). Holding out whole LAs is the honest
+A random split scores LAs the model has already seen: base R² 0.936 / +spatial
+0.950 (MAE £97 / £78). Holding out whole LAs is the honest
 test of generalisation; the dashboard only offers LAs present in training, so its in-sample
 accuracy sits between the two.
 
-## Features (314 LAs, 1198 rows)
+## Features (316 LAs, 1264 rows)
 - **Amenity density** — log(1 + count per km²) for 11 OSM categories (rail stations, bus stops,
   supermarkets, convenience, GP/clinics, hospitals, pharmacies, restaurants/cafés, pubs/bars,
   parks, gyms); 506,395 amenities from Geofabrik England + Wales (Nov 2026).

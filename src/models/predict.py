@@ -61,8 +61,7 @@ class RentWisePredictor:
         self.areas = (clean.groupby("la_name")
                       .agg(la_code=("la_code", "first"), region=("region", "first"),
                            income=("median_annual_income", "first"),
-                           crime=("crime_per_1000", "first"),
-                           transport=("transport_score", "first"))
+                           crime=("crime_per_1000", "first"))
                       .reset_index())
 
         # I only offer property types the model was actually trained on, and I derive
@@ -72,6 +71,11 @@ class RentWisePredictor:
         self.type_beds = (clean.groupby("property_type")["bedrooms"].median()
                           .round().astype(int).to_dict())
         self.property_types = [t for t in PROPERTY_ORDER if t in self.type_beds]
+        # Official ONS medians for each (area, property type) the ONS publishes. These are
+        # the headline figures; the model only explains them, or fills a missing type.
+        self.official = {(r.la_name, r.property_type): int(r.median_monthly_rent)
+                         for r in clean.itertuples()}
+        self.vintages = self._load_vintages()
         self.affordability = AffordabilityEngine()      # I reuse the shared engine
         # I keep a small background sample so a linear model can be explained too.
         # (Only needed for linear models; the spatial model is explained exactly via XGBoost.)
@@ -93,6 +97,18 @@ class RentWisePredictor:
         if not (config.MODELS_DIR / meta.get("model_file", "")).exists():
             return None
         return meta
+
+    @staticmethod
+    def _load_vintages() -> dict:
+        p = config.DATA_PROCESSED / "data_vintages.json"
+        if not p.exists():
+            return {}
+        import json
+        return json.loads(p.read_text())
+
+    def official_rent(self, la_name, property_type):
+        """Official ONS median monthly rent, or None if ONS publishes none for this pair."""
+        return self.official.get((la_name, property_type))
 
     def model_info(self) -> dict:
         """What is deployed: model type, training time, honest evaluation figures."""
@@ -138,8 +154,7 @@ class RentWisePredictor:
         row["year"] = year
         row["bedrooms"] = bedrooms
         row["median_annual_income"] = a["income"]
-        row["crime_per_1000"] = a["crime"]
-        row["transport_score"] = a["transport"]
+        row["crime_per_1000"] = float(a["crime"]) if pd.notna(a["crime"]) else np.nan
         row["property_type_ord"] = PROPERTY_ORDER[property_type]
         row["income_band"] = int(np.clip(
             np.searchsorted(self.income_edges, a["income"], side="right"), 1, 4))
@@ -185,7 +200,6 @@ class RentWisePredictor:
 
         area = self._area(la_name)
         income = float(area["income"])
-        ratio = self.affordability.ratio(rent * 12, income)
 
         shap_vals = self._shap_row(X1)
         # I drop region dummies that are 0 for this property, so the explanation
@@ -209,9 +223,22 @@ class RentWisePredictor:
         if self.interval_q is not None:
             interval = {"low": max(round(rent - self.interval_q), int(RENT_FLOOR)),
                         "high": round(rent + self.interval_q), "level": self.interval_level}
-        return {"rent": round(rent), "region": area["region"], "la_code": area["la_code"], "income": income,
+        # Official-first: where ONS publishes this area x type, its median IS the answer;
+        # the model's estimate, factors and interval are kept as explanation.
+        official = self.official_rent(la_name, property_type)
+        headline = official if official is not None else round(rent)
+        ratio = self.affordability.ratio(headline * 12, income)
+        rents = self.vintages.get("rents", {})
+        return {"rent": headline, "kind": "official" if official is not None else "modelled",
+                "official_rent": official, "model_rent": round(rent),
+                "as_of": rents.get("period"), "source": rents.get("source"),
+                "region": area["region"], "la_code": area["la_code"], "income": income,
                 "ratio": ratio, "affordable": bool(self.affordability.is_affordable(ratio)),
-                "contributions": contribs, "interval": interval}
+                "contributions": contribs,
+                # the 80% range describes a MODEL estimate, so it is the headline's range
+                # only when the headline is modelled; an official figure carries none.
+                "interval": interval if official is None else None,
+                "model_interval": interval}
 
 
 if __name__ == "__main__":

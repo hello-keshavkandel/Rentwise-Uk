@@ -28,7 +28,12 @@ def test_every_served_area_predicts_sanely(predictor):
         for ptype in predictor.property_types:
             r = predictor.predict(la, ptype)
             assert 250 <= r["rent"] <= 10_000, (la, ptype, r["rent"])
-            assert r["interval"]["low"] <= r["rent"] <= r["interval"]["high"]
+            if r["kind"] == "official":
+                assert r["rent"] == r["official_rent"] and r["interval"] is None
+            else:
+                assert r["interval"]["low"] <= r["rent"] <= r["interval"]["high"]
+            mi = r["model_interval"]
+            assert mi["low"] <= r["model_rent"] <= mi["high"]
             assert math.isfinite(r["ratio"]) and r["ratio"] > 0
 
 
@@ -63,3 +68,12 @@ def test_model_saved_with_the_deployed_xgboost_version():
     assert saved.split(".")[:2] == pin.split(".")[:2], (
         f"model saved with xgboost {saved} but requirements pin {pin}: retrain with the pinned version "
         "(e.g. a venv from requirements.txt) — see DEPLOYMENT.md")
+
+
+def test_headline_equals_official_ons_figure_wherever_published(predictor):
+    """Official-first: for every (area, type) ONS publishes, the answer IS the ONS median."""
+    import pandas as pd
+    clean = pd.read_csv(config.DATA_PROCESSED / "rentwise_clean.csv")
+    for r in clean.itertuples():
+        out = predictor.predict(r.la_name, r.property_type)
+        assert out["kind"] == "official" and out["rent"] == int(r.median_monthly_rent), (r.la_name, r.property_type)

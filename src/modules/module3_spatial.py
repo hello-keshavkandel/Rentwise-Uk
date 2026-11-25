@@ -73,7 +73,7 @@ def grouped_cv(X: pd.DataFrame, y: np.ndarray, groups: np.ndarray, repeats: int 
         r2s.append(r2_score(y, pred))
         maes.append(mean_absolute_error(y, pred))
     return {"r2": float(np.mean(r2s)), "r2_sd": float(np.std(r2s)),
-            "mae": float(np.mean(maes)), "mae_sd": float(np.std(maes)), "r2_runs": r2s}
+            "mae": float(np.mean(maes)), "mae_sd": float(np.std(maes)), "r2_runs": r2s, "mae_runs": maes}
 
 
 def random_cv(X, y, folds: int = 5, model_factory=_xgb) -> dict:
@@ -124,6 +124,14 @@ def ablation_figure(res: dict, path: Path) -> None:
 def write_summary(res: dict, spatial: pd.DataFrame, path: Path) -> None:
     b, s = res["base"], res["+both"]
     gains = np.array(s["r2_runs"]) - np.array(b["r2_runs"])
+    mae_gains = np.array(b["mae_runs"]) - np.array(s["mae_runs"])        # positive = error reduced
+    if (gains > 0).all() and (mae_gains > 0).all():
+        verdict = "Spatial features improve rent prediction for unseen local authorities on every repeat"
+    elif (mae_gains > 0).all():
+        verdict = ("Spatial features consistently reduce the typical error for unseen local authorities; "
+                   "the R\u00b2 gain is small and not consistent across repeats")
+    else:
+        verdict = "Spatial features give no consistent improvement for unseen local authorities"
     rows = "\n".join(f"| {k} | {v['r2']:.3f} ± {v['r2_sd']:.3f} | £{v['mae']:.0f} ± {v['mae_sd']:.0f} |"
                      for k, v in res.items() if k in ("base", "+amenities", "+schools", "+both"))
     rs = res["random_split"]
@@ -131,9 +139,11 @@ def write_summary(res: dict, spatial: pd.DataFrame, path: Path) -> None:
                 if "median_inspection_year" in spatial else "n/a")
     md = f"""# Module 3 - Geospatial features (summary) [REAL OSM + Ofsted + ONS boundaries]
 
-**Spatial features improve rent prediction for unseen local authorities:**
-R² {b['r2']:.3f} → **{s['r2']:.3f}** (+{s['r2'] - b['r2']:.3f}), MAE £{b['mae']:.0f} → **£{s['mae']:.0f}**
-({100 * (s['mae'] - b['mae']) / b['mae']:+.0f}%). Gain in every repeat: {', '.join(f'+{g:.3f}' for g in gains)}.
+**{verdict}:**
+R² {b['r2']:.3f} → **{s['r2']:.3f}** ({s['r2'] - b['r2']:+.3f}), MAE £{b['mae']:.0f} → **£{s['mae']:.0f}**
+({100 * (s['mae'] - b['mae']) / b['mae']:+.0f}%).
+R² change per repeat: {', '.join(f'{g:+.3f}' for g in gains)} · MAE reduction per repeat:
+{', '.join(f'£{g:.0f}' for g in mae_gains)}.
 
 ## Ablation — whole LAs held out (grouped 5-fold CV × {len(b['r2_runs'])} repeats, XGBoost)
 | Features | R² (mean ± sd) | MAE |

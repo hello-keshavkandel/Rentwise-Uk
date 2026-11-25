@@ -1,0 +1,49 @@
+{
+  "rents": {
+    "source": "ONS Price Index of Private Rents (PIPR), monthly price statistics",
+    "period": "2026-10",
+    "history_from": "2015-01",
+    "released": "18 November 2026",
+    "file": "ons_pipr_monthly_2026-11.xlsx"
+  },
+  "earnings": {
+    "source": "ONS ASHE Table 8.7a, median gross annual pay, all employee jobs, by place of residence",
+    "period": "2025",
+    "file": "ashe_table8_7a.xlsx"
+  },
+  "population": {
+    "source": "ONS mid-year population estimates, England and Wales",
+    "period": "mid-2025",
+    "table": "MYE0: Mid-2025",
+    "file": "mye25tablesew.xlsx"
+  },
+  "crime": {
+    "source": "data.police.uk street-level crime, all forces",
+    "period": "2025-10 to 2026-09",
+    "months": 12,
+    "measure": "recorded street crimes per 1,000 residents, annualised",
+    "areas_without_police_data": [
+      "Bolton",
+      "Bury",
+      "Manchester",
+      "Oldham",
+      "Rochdale",
+      "Salford",
+      "Stockport",
+      "Tameside",
+      "Trafford",
+      "Wigan"
+    ],
+    "areas_with_partial_months": {
+      "Cheltenham": 4,
+      "Stroud": 4,
+      "Cumberland": 11,
+      "Westmorland and Furness": 11,
+      "Gloucester": 4,
+      "Cotswold": 4,
+      "Forest of Dean": 4,
+      "Tewkesbury": 4
+    }
+  },
+  "built_at": "2026-11-25T02:44:30+00:00"
+}

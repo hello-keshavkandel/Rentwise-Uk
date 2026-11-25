@@ -54,6 +54,24 @@ strongest price drivers that HM Land Registry omits.
 - The legacy API path (`EPC_EMAIL`/`EPC_API_KEY`) targets the old service and is not
   verified against the new GOV.UK developer API — use the bulk download.
 
+## Phase A inputs (Nov 2026) — official rents, crime rate, population
+
+Build with `python -m src.data.rent_dataset` (also run by `make build`). Writes `rentwise_sample.csv`,
+`rent_history.csv` (monthly official rents since Jan 2015) and `data_vintages.json` (source + period of every input,
+shown in the app's "Data sources & dates" panel and at `GET /v1/sources`).
+
+| Input | Where | Save as |
+|---|---|---|
+| ONS Price Index of Private Rents, monthly (latest edition) | https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics | `data/raw/ons_pipr_monthly_<yyyy-mm>.xlsx` (newest data month is used automatically) |
+| ONS mid-year population estimates (latest "2023 local authority boundaries" edition) | https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/estimatesofthepopulationforenglandandwales | `data/raw/population/mye25tablesew.xlsx` |
+| data.police.uk street crime, last 12 months, all forces, crime data only | https://data.police.uk/data/ | unzip into `data/raw/police_12m/` |
+
+**Rules (tested):** official rents are never trimmed or imputed; crime = recorded street crimes reported by each
+area's home force, annualised, per 1,000 residents; an area with fewer than 3 months from its home force, or an
+implausibly low rate (< 5 per 1,000 — the area's force did not publish), is **missing, never zero**.
+Nov 2026 build: Greater Manchester Police published no data (10 boroughs missing); Gloucestershire published
+4 of 12 months (rates annualised from those months).
+
 ## Module 3 geospatial enrichment (optional — fetched later)
 
 ### OpenStreetMap amenities

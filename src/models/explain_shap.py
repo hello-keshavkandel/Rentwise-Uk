@@ -33,7 +33,7 @@ class ShapExplainer:
 
     FRIENDLY = {
         "bedrooms": "number of bedrooms", "median_annual_income": "local income",
-        "crime_per_1000": "local crime level", "transport_score": "transport access",
+        "crime_per_1000": "crime per 1,000 residents",
         "property_type_ord": "property type/size", "income_band": "area income band",
         "year": "year",
     }

@@ -6,10 +6,12 @@ app.py  —  the RentWise UK public REST API (Milestone 5).
 Data endpoints (header  X-API-Key: rw_...)
     GET  /v1/areas                     areas the model serves (code, name, region)
     GET  /v1/areas/{la_code}           one area: income, spatial profile, property types
-    POST /v1/predict                   rent + calibrated interval + affordability + SHAP factors
+    POST /v1/predict                   official ONS rent (or a model estimate + interval where ONS
+                                       publishes none) + affordability + SHAP factors
 Public
     GET  /v1/health                    liveness + data/model freshness
     GET  /v1/model                     what is deployed and how well it performs (honest metrics)
+    GET  /v1/sources                   source, period and release of every input ("as of")
 Accounts (Authorization: Bearer <token>)
     POST /v1/users                     sign up
     POST /v1/auth/login | /v1/auth/logout
@@ -50,7 +52,7 @@ API_VERSION = "1.0.0"
 DISCLAIMER = "Indicative estimate from open-data models; not financial advice."
 FACTOR_LABELS = {
     "bedrooms": "Number of bedrooms", "median_annual_income": "Local income",
-    "crime_per_1000": "Local crime level", "transport_score": "Transport access",
+    "crime_per_1000": "Crime per 1,000 residents",
     "property_type_ord": "Property type / size", "income_band": "Area income band",
     "school_quality": "Local school quality (historic Ofsted)",
     "share_good_or_better": "Share of Good/Outstanding schools",
@@ -108,6 +110,11 @@ class PredictOut(BaseModel):
     property_type: str
     bedrooms: int
     rent_gbp_month: int
+    kind: Literal["official", "modelled"]
+    official_rent_gbp_month: int | None
+    model_rent_gbp_month: int
+    as_of: str | None
+    source: str | None
     interval: Interval | None
     rent_to_income: float
     affordable: bool
@@ -215,6 +222,14 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
                 "data": {k: h["data"].get(k) for k in ("backend", "generated_at", "age_days")},
                 "api_version": API_VERSION}
 
+    @app.get("/v1/sources", tags=["public"])
+    def sources():
+        """Every input's source, period and release — the 'as of' for each figure."""
+        p = get_predictor()
+        return {"vintages": getattr(p, "vintages", {}) or {},
+                "licences": {"government": "Open Government Licence v3.0",
+                             "openstreetmap": "ODbL — © OpenStreetMap contributors"}}
+
     @app.get("/v1/model", tags=["public"])
     def model_info():
         info = get_predictor().model_info()
@@ -247,7 +262,9 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
         return PredictOut(
             la_code=body.la_code, la_name=a["la_name"], region=r["region"],
             property_type=body.property_type, bedrooms=p.typical_bedrooms(body.property_type),
-            rent_gbp_month=r["rent"], interval=r["interval"], rent_to_income=round(r["ratio"], 4),
+            rent_gbp_month=r["rent"], kind=r["kind"], official_rent_gbp_month=r["official_rent"],
+            model_rent_gbp_month=r["model_rent"], as_of=r.get("as_of"), source=r.get("source"),
+            interval=r["interval"], rent_to_income=round(r["ratio"], 4),
             affordable=r["affordable"],
             factors=[Factor(feature=f, label=factor_label(f), impact_gbp=round(float(v), 2))
                      for f, v in r["contributions"][:8]],

@@ -36,7 +36,7 @@ class Pipeline:
 
     STAGES = [
         (_SOURCE_LABEL, _SOURCE),
-        ("Module 2  Phase 2  Clean data", DataCleaner),
+        ("Module 2  Phase 2  Clean data", lambda: DataCleaner(mode="synthetic")),
         ("Module 2  Phase 4  Build features", FeatureBuilder),
         ("Module 2  Phase 3  Explore (EDA)", DataExplorer),
         ("Module 2  Phase 5a Baseline model", BaselineTrainer),

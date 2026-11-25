@@ -2,9 +2,9 @@
 
 | Model | Test RMSE (£) | Test MAE (£) | Test R² |
 |---|---|---|---|
-| Ridge (baseline) | 192 | 149 | 0.804 |
-| XGBoost (deployed) | 137 | 97 | 0.900 |
+| Ridge (baseline) | 217 | 164 | 0.870 |
+| XGBoost (deployed) | 130 | 85 | 0.953 |
 
-**Deployed model:** XGBoost — beats Ridge by 29% RMSE on real data.
+**Deployed model:** XGBoost — beats Ridge by 40% RMSE on real data.
 
 *Real data: ONS Price Index of Private Rents, ONS ASHE earnings, data.police.uk crime. Transport pending (OSM, future work).*

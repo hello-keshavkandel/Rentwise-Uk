@@ -1,0 +1,317 @@
+la_name,region,avg_monthly_rent,median_income,rent_to_income,affordable
+Kensington and Chelsea,London,3791.0,46690.0,0.9743414007282073,False
+Hammersmith and Fulham,London,3237.5,42811.0,0.9074770502908132,False
+Hackney,London,2969.25,40237.0,0.8855282451475011,False
+Lambeth,London,3146.0,43666.0,0.8645628177529427,False
+Ealing,London,2552.25,35665.0,0.8587410626664798,False
+Southwark,London,3077.25,43006.0,0.8586476305631772,False
+Camden,London,3107.25,44088.0,0.8457403375068046,False
+Brent,London,2448.75,34871.0,0.842677296320725,False
+Haringey,London,2575.75,37563.0,0.822857599233288,False
+Islington,London,3181.75,47411.0,0.8053194406361392,False
+Westminster,London,3027.75,45172.0,0.8043256884795891,False
+Hounslow,London,2272.0,35301.0,0.7723293957678252,False
+Richmond upon Thames,London,2978.0,46594.0,0.7669657037386788,False
+Enfield,London,2224.5,34962.0,0.7635146730736228,False
+Tower Hamlets,London,2824.75,45183.0,0.7502157891242281,False
+Greenwich,London,2427.75,39984.0,0.7286164465786314,False
+Wandsworth,London,2938.25,49310.0,0.7150476576759278,False
+Newham,London,2136.0,36080.0,0.7104212860310422,False
+Merton,London,2549.5,43507.0,0.7031971866596181,False
+Harrow,London,2099.75,36000.0,0.6999166666666666,False
+Redbridge,London,2157.25,37190.0,0.6960742134982522,False
+Barnet,London,2243.25,39239.0,0.686026657152323,False
+Lewisham,London,2231.5,39505.0,0.6778382483229971,False
+"Bristol, City of",South West,1909.5,34051.0,0.6729317788023846,False
+Barking and Dagenham,London,1844.25,32911.0,0.6724499407492935,False
+Brighton and Hove,South East,1846.5,33506.0,0.6613143914522772,False
+Waltham Forest,London,2087.75,37971.0,0.6597929999209924,False
+Hillingdon,London,1971.0,36429.0,0.6492629498476489,False
+Croydon,London,2046.0,38080.0,0.6447478991596639,False
+Sevenoaks,South East,1863.25,34969.0,0.639394892619177,False
+Oxford,South East,1941.25,36517.0,0.6379220636963606,False
+Kingston upon Thames,London,2223.0,41833.0,0.6376783878756006,False
+Bexley,London,1923.0,36883.0,0.6256540953826966,False
+Watford,East of England,1923.0,37172.0,0.620789841816421,False
+Hertsmere,East of England,1865.75,36159.0,0.6191819464033851,False
+Bath and North East Somerset,South West,1664.75,32481.0,0.6150364828669068,False
+Sutton,London,1957.5,38359.0,0.612372585312443,False
+Harlow,East of England,1560.5,30654.0,0.6108827559209239,False
+Bromley,London,2200.0,43981.0,0.6002592028375889,False
+Epping Forest,East of England,1900.25,38171.0,0.5973906892667208,False
+Windsor and Maidenhead,South East,1861.25,37653.0,0.5931798263086606,False
+Tandridge,South East,1643.25,33316.0,0.5918777764437507,False
+Cambridge,East of England,1899.5,38711.0,0.5888248818165379,False
+Crawley,South East,1674.25,34225.0,0.587027027027027,False
+Broxbourne,East of England,1822.25,37283.0,0.5865139607864174,False
+Dartford,South East,1766.5,36210.0,0.5854183927091964,False
+Reading,South East,1721.0,35454.0,0.5825012692502962,False
+Adur,South East,1465.75,30217.0,0.582089552238806,False
+Havering,London,1951.75,40726.0,0.5750871679025684,False
+Mole Valley,South East,1658.75,35341.0,0.5632268470048951,False
+Chichester,South East,1341.5,28585.0,0.5631624978135386,False
+Spelthorne,South East,1778.25,37918.0,0.5627670235771929,False
+Dacorum,East of England,1704.25,36473.0,0.5607161461903325,False
+Portsmouth,South East,1436.25,30962.0,0.556650087203669,False
+Slough,South East,1645.0,35521.0,0.5557275977590721,False
+Guildford,South East,1846.75,39985.0,0.5542328373139928,False
+Tunbridge Wells,South East,1626.5,35319.0,0.5526204026161556,False
+Canterbury,South East,1389.5,30188.0,0.5523386776202465,False
+Manchester,North West,1383.5,30067.0,0.5521668274187648,False
+Three Rivers,East of England,1822.0,39615.0,0.5519121544869368,False
+Tonbridge and Malling,South East,1604.75,35106.0,0.5485387113313963,False
+Elmbridge,South East,1944.0,42607.0,0.5475156664397869,False
+Bracknell Forest,South East,1641.25,36067.0,0.5460670418942524,False
+Reigate and Banstead,South East,1809.25,40014.0,0.5425850952166742,False
+Woking,South East,1725.0,38172.0,0.5422823011631562,False
+St Albans,East of England,2045.25,45543.0,0.5388973058428298,False
+"Bournemouth, Christchurch and Poole",South West,1406.25,31848.0,0.5298605877920121,False
+Buckinghamshire,South East,1584.75,35937.0,0.5291760581016779,False
+Horsham,South East,1605.25,36448.0,0.5285063652326603,False
+Exeter,South West,1298.5,29531.0,0.527648911313535,False
+Surrey Heath,South East,1651.0,37793.0,0.5242240626571057,False
+Brentwood,East of England,1741.0,39864.0,0.5240818783865141,False
+Epsom and Ewell,South East,1877.5,43006.0,0.5238803887829605,False
+Arun,South East,1301.25,29809.0,0.5238350833640847,False
+Gravesham,South East,1530.0,35065.0,0.523599030372166,False
+Runnymede,South East,1836.75,42203.0,0.5222614506077767,False
+Stevenage,East of England,1550.0,35747.0,0.5203233837804571,False
+New Forest,South East,1356.0,31344.0,0.5191424196018377,False
+Welwyn Hatfield,East of England,1634.0,37805.0,0.5186615527046687,False
+South Gloucestershire,South West,1512.75,35002.0,0.5186275069996,False
+Lewes,South East,1428.75,33088.0,0.5181636847195358,False
+Thanet,South East,1218.5,28323.0,0.5162588708823218,False
+Chelmsford,East of England,1536.0,35791.0,0.514989801905507,False
+Winchester,South East,1637.5,38352.0,0.5123591989987484,False
+Rushmoor,South East,1438.25,33734.0,0.5116203237090176,False
+Worthing,South East,1394.0,32823.0,0.509642628644548,False
+Wealden,South East,1416.0,33376.0,0.5091083413231065,False
+Ashford,South East,1393.25,32991.0,0.5067745748840593,False
+Isle of Wight,South East,1127.25,26740.0,0.5058713537771129,False
+Rother,South East,1291.0,30790.0,0.5031503734978889,False
+Cherwell,South East,1532.25,36568.0,0.5028166703128418,False
+Luton,East of England,1204.25,28741.0,0.5028008767962144,False
+West Berkshire,South East,1612.75,38513.0,0.5025056474437203,False
+Mid Sussex,South East,1578.25,37705.0,0.5022941254475534,False
+Basildon,East of England,1428.5,34133.0,0.5022119356634343,False
+Southampton,South East,1373.75,32907.0,0.5009572431397575,False
+Southend-on-Sea,East of England,1395.5,33594.0,0.4984818717628148,False
+Eastleigh,South East,1426.0,34474.0,0.4963740790160701,False
+Newcastle upon Tyne,North East,1242.75,30144.0,0.49472531847133755,False
+Maidstone,South East,1407.5,34151.0,0.4945682410471143,False
+Havant,South East,1268.75,30819.0,0.494013433271683,False
+Thurrock,East of England,1497.75,36407.0,0.4936687999560524,False
+Gloucester,South West,1252.75,30455.0,0.4936135281562962,False
+Milton Keynes,South East,1483.0,36061.0,0.4934971298632872,False
+West Oxfordshire,South East,1442.0,35388.0,0.4889793150220414,False
+Eastbourne,South East,1270.75,31199.0,0.48876566556620404,False
+Folkestone and Hythe,South East,1351.75,33355.0,0.48631389596762103,False
+Norwich,East of England,1228.25,30421.0,0.48450083823674434,False
+Basingstoke and Deane,South East,1582.0,39279.0,0.48331169327121365,False
+Gosport,South East,1376.5,34256.0,0.4821929005137786,False
+Salford,North West,1219.25,30495.0,0.4797835710772258,False
+Medway,South East,1352.75,33857.0,0.4794577192308828,False
+Test Valley,South East,1410.25,35314.0,0.479215042192898,False
+North Somerset,South West,1303.25,32996.0,0.47396654139895744,False
+Trafford,North West,1401.75,35593.0,0.47259292557525356,False
+Cheltenham,South West,1416.5,36014.0,0.4719831176764592,False
+Castle Point,East of England,1407.25,35975.0,0.4694093120222377,False
+Colchester,East of England,1232.25,31589.0,0.4681059862610403,False
+Swindon,South West,1283.25,33135.0,0.46473517428700767,False
+Cotswold,South West,1270.25,32927.0,0.4629331551614177,False
+Hart,South East,1515.75,39341.0,0.4623420858646196,False
+Nottingham,East Midlands,1020.75,26512.0,0.4620171997585999,False
+Hastings,South East,1123.5,29323.0,0.4597756027691573,False
+Swale,South East,1287.0,33647.0,0.45900080244895536,False
+Somerset,South West,1142.0,29908.0,0.4582051624983282,False
+Vale of White Horse,South East,1473.75,38859.0,0.45510692503667105,False
+Dover,South East,1271.5,33704.0,0.45270591027771184,False
+East Hertfordshire,East of England,1663.0,44154.0,0.45196358200842507,False
+Waverley,South East,1591.25,42326.0,0.4511411425601285,False
+Bedford,East of England,1352.75,35987.0,0.45107955650651627,False
+Braintree,East of England,1282.0,34546.0,0.4453192844323511,False
+Leicester,East Midlands,1033.0,27858.0,0.4449709239715701,False
+Birmingham,West Midlands,1117.5,30180.0,0.44433399602385687,False
+Central Bedfordshire,East of England,1354.25,36622.0,0.44374965867511335,False
+East Hampshire,South East,1459.75,39682.0,0.4414344035078877,False
+Oadby and Wigston,East Midlands,1042.75,28368.0,0.44109560067681897,False
+Wokingham,South East,1598.5,43538.0,0.44058064219762044,False
+Tendring,East of England,1082.75,29545.0,0.43976984261296326,False
+Leeds,Yorkshire and The Humber,1160.25,31679.0,0.4395025095489125,False
+Solihull,West Midlands,1341.25,36672.0,0.4388907068062827,False
+Tewkesbury,South West,1155.5,31603.0,0.4387558143214252,False
+Plymouth,South West,1059.25,28992.0,0.43843129139072845,False
+York,Yorkshire and The Humber,1203.5,32961.0,0.4381541822153454,False
+Cardiff,Wales,1196.0,32756.0,0.43814873610941507,False
+West Suffolk,East of England,1218.25,33437.0,0.43721027604151086,False
+Peterborough,East of England,1084.75,29828.0,0.43640203835322516,False
+North Hertfordshire,East of England,1552.75,42703.0,0.4363393672575697,False
+Maldon,East of England,1177.5,32599.0,0.4334488787999632,False
+Wiltshire,South West,1150.25,31873.0,0.43306246666457504,False
+Stockport,North West,1209.75,33565.0,0.4325040965291226,False
+South Oxfordshire,South East,1547.0,43026.0,0.43146004741319205,False
+Cornwall,South West,1010.5,28210.0,0.42984757178305566,False
+Ipswich,East of England,1107.25,30928.0,0.4296107087428867,False
+Rochford,East of England,1350.25,38107.0,0.4251974702810507,False
+Malvern Hills,West Midlands,997.25,28167.0,0.4248588774097348,False
+Teignbridge,South West,1020.25,28911.0,0.42347203486562207,False
+South Hams,South West,1047.0,29721.0,0.42273140203896237,False
+Torbay,South West,1019.75,28963.0,0.422504574802334,False
+Oldham,North West,1016.0,29124.0,0.4186238154099712,False
+Tameside,North West,1041.5,29877.0,0.41831509187669447,False
+Sandwell,West Midlands,962.0,27652.0,0.4174743237378851,False
+North Devon,South West,982.75,28386.0,0.4154512787994082,False
+Uttlesford,East of England,1419.0,41006.0,0.4152563039555187,False
+Fareham,South East,1341.75,38851.0,0.4144294870144912,False
+Bolton,North West,1014.25,29409.0,0.41385290217280424,False
+Breckland,East of England,997.0,28930.0,0.4135499481507086,False
+South Cambridgeshire,East of England,1470.75,42690.0,0.4134223471539002,False
+Huntingdonshire,East of England,1149.0,33375.0,0.41312359550561795,False
+Stratford-on-Avon,West Midlands,1196.5,34847.0,0.4120297299624071,False
+West Devon,South West,911.75,26556.0,0.41199728874830543,False
+Dorset,South West,1075.75,31444.0,0.4105393715812238,False
+East Cambridgeshire,East of England,1165.25,34311.0,0.40753694150563957,False
+Babergh,East of England,1018.75,30118.0,0.405903446443987,False
+West Northamptonshire,East Midlands,1115.25,33059.0,0.404821682446535,False
+Mid Suffolk,East of England,1055.25,31507.0,0.401910686514108,False
+Rochdale,North West,988.75,29535.0,0.4017267648552565,False
+Warwick,West Midlands,1330.0,39797.0,0.4010352539136116,False
+Stroud,South West,1116.75,33495.0,0.400089565606807,False
+Bury,North West,1056.0,31687.0,0.3999116356865592,False
+Redditch,West Midlands,961.5,29113.0,0.3963177961735307,False
+North Norfolk,East of England,932.75,28421.0,0.393828507089828,False
+East Devon,South West,1054.0,32154.0,0.39335696958387756,False
+Broadland,East of England,1011.25,30920.0,0.39246442432082795,False
+South Norfolk,East of England,1076.75,32934.0,0.39233011477500457,False
+King's Lynn and West Norfolk,East of England,996.0,30581.0,0.3908309080801805,False
+Worcester,West Midlands,1073.25,32997.0,0.39030820983725795,False
+Walsall,West Midlands,946.75,29112.0,0.39025144270403955,False
+Fenland,East of England,974.5,30125.0,0.3881825726141079,False
+Mid Devon,South West,1028.75,31908.0,0.3868935690109064,False
+Wychavon,West Midlands,952.0,29661.0,0.3851522200869829,False
+Lincoln,East Midlands,955.5,29824.0,0.3844554721030043,False
+Great Yarmouth,East of England,921.75,28808.0,0.38395584559844487,False
+Cheshire East,North West,1056.25,33221.0,0.3815357755636495,False
+Lichfield,West Midlands,1071.5,33763.0,0.3808310872848977,False
+Coventry,West Midlands,1043.5,33063.0,0.3787315125669177,False
+North Warwickshire,West Midlands,1105.5,35067.0,0.37830438874155187,False
+Sefton,North West,924.5,29335.0,0.3781830577808079,False
+Vale of Glamorgan,Wales,989.25,31410.0,0.3779369627507163,False
+Torridge,South West,905.5,28752.0,0.37792153589315525,False
+Melton,East Midlands,836.0,26633.0,0.37667555288551796,False
+Knowsley,North West,1014.75,32542.0,0.37419335013213695,False
+Sheffield,Yorkshire and The Humber,991.25,31816.0,0.37386849383957754,False
+Wyre Forest,West Midlands,914.75,29408.0,0.3732657780195865,False
+Hinckley and Bosworth,East Midlands,979.5,31591.0,0.372067994048938,False
+North Northamptonshire,East Midlands,1017.0,32882.0,0.3711453074630497,False
+Boston,East Midlands,855.75,27729.0,0.37033430704316783,False
+South Kesteven,East Midlands,897.0,29071.0,0.3702659007258092,False
+Shropshire,West Midlands,911.25,29603.0,0.3693882376786136,False
+Newport,Wales,967.75,31495.0,0.36872519447531354,False
+South Staffordshire,West Midlands,975.0,31766.0,0.36831832777183154,False
+Liverpool,North West,948.0,30947.0,0.3675962128800853,False
+Rugby,West Midlands,1278.0,41814.0,0.36676711149375807,False
+Nuneaton and Bedworth,West Midlands,989.0,32402.0,0.3662736868094562,False
+Cheshire West and Chester,North West,988.25,32391.0,0.366120218579235,False
+"Herefordshire, County of",West Midlands,892.5,29361.0,0.364769592316338,False
+East Suffolk,East of England,915.75,30261.0,0.36314067611777534,False
+North West Leicestershire,East Midlands,976.0,32252.0,0.36314027037082974,False
+Gedling,East Midlands,907.25,30051.0,0.36228411700109814,False
+Charnwood,East Midlands,1012.5,33550.0,0.3621460506706409,False
+Fylde,North West,1086.0,36020.0,0.36179900055524705,False
+Blaby,East Midlands,960.5,31950.0,0.3607511737089202,False
+Ashfield,East Midlands,833.5,27797.0,0.3598230024822823,False
+Erewash,East Midlands,948.75,31673.0,0.35945442490449275,False
+Wigan,North West,945.75,31615.0,0.35897517001423374,False
+Wolverhampton,West Midlands,934.25,31308.0,0.3580873898045228,False
+Tamworth,West Midlands,988.25,33167.0,0.35755419543522177,False
+North Yorkshire,Yorkshire and The Humber,913.5,30683.0,0.35726623863377116,False
+Gwynedd,Wales,747.25,25179.0,0.3561301084236864,False
+Telford and Wrekin,West Midlands,933.5,31459.0,0.3560825201055342,False
+High Peak,East Midlands,956.25,32258.0,0.3557257114514229,False
+Monmouthshire,Wales,1036.75,35020.0,0.3552541404911479,False
+Bassetlaw,East Midlands,834.5,28314.0,0.35367662640389913,False
+Preston,North West,884.5,30038.0,0.35335242026766095,False
+Gateshead,North East,867.75,29494.0,0.3530548586153116,False
+Blackburn with Darwen,North West,809.0,27502.0,0.35299250963566287,False
+Derby,East Midlands,895.0,30467.0,0.3525125545672367,False
+North Tyneside,North East,913.75,31106.0,0.3525043399987141,False
+Broxtowe,East Midlands,909.0,30966.0,0.35225731447393915,False
+Warrington,North West,998.25,34144.0,0.35083762886597936,False
+Bromsgrove,West Midlands,1064.0,36409.0,0.350682523551869,False
+Mansfield,East Midlands,822.25,28170.0,0.35026624068157614,False
+Harborough,East Midlands,1000.5,34321.0,0.3498149820809417,False
+Pendle,North West,779.25,26742.0,0.34967466905990574,False
+Cannock Chase,West Midlands,878.5,30178.0,0.3493273245410564,False
+Lancaster,North West,862.75,29651.0,0.3491619169673873,False
+Sunderland,North East,812.5,27989.0,0.34835113794705064,False
+St. Helens,North West,911.75,31443.0,0.3479629806316191,False
+Halton,North West,864.0,29819.0,0.3476977765853986,False
+South Tyneside,North East,832.25,28784.0,0.34696359088382434,False
+Rushcliffe,East Midlands,1056.5,36705.0,0.34540253371475277,False
+Rossendale,North West,876.75,30487.0,0.3450979105848394,False
+Calderdale,Yorkshire and The Humber,910.25,31708.0,0.34448719566040115,False
+Wakefield,Yorkshire and The Humber,858.25,29954.0,0.34382720170928754,False
+Conwy,Wales,801.5,28113.0,0.34211930423647424,False
+South Ribble,North West,931.5,32740.0,0.34141722663408675,False
+East Staffordshire,West Midlands,895.25,31517.0,0.34086366088142905,False
+North East Derbyshire,East Midlands,878.25,30931.0,0.3407261323591219,False
+South Holland,East Midlands,856.25,30196.0,0.3402768578619685,False
+Newcastle-under-Lyme,West Midlands,883.25,31205.0,0.3396571062329755,False
+Stafford,West Midlands,956.25,33872.0,0.33877538970240906,False
+Wirral,North West,930.0,32959.0,0.3386025061439971,False
+North Kesteven,East Midlands,863.0,30585.0,0.33859735164296223,False
+Dudley,West Midlands,866.5,30822.0,0.33735643371617674,False
+Blackpool,North West,782.75,27979.0,0.3357160727688624,False
+Wyre,North West,833.25,29814.0,0.3353793519822902,False
+Newark and Sherwood,East Midlands,831.75,29806.0,0.334865463329531,False
+Staffordshire Moorlands,West Midlands,864.25,31065.0,0.33384838242394976,False
+Darlington,North East,837.25,30100.0,0.3337873754152824,False
+Torfaen,Wales,921.0,33201.0,0.33288153971265927,False
+Flintshire,Wales,906.0,32675.0,0.33273144605967864,False
+West Lancashire,North West,882.5,31884.0,0.33214151298456907,False
+Denbighshire,Wales,741.5,26812.0,0.33186632850962255,False
+Bolsover,East Midlands,820.5,29674.0,0.33180562108242906,False
+Bradford,Yorkshire and The Humber,784.75,28424.0,0.3313045313819308,False
+Kirklees,Yorkshire and The Humber,830.5,30238.0,0.32958529003240955,False
+Amber Valley,East Midlands,846.5,30823.0,0.32955909548064755,False
+Stoke-on-Trent,West Midlands,797.0,29041.0,0.32932750249647047,False
+South Derbyshire,East Midlands,971.75,35452.0,0.3289236150287713,False
+"Kingston upon Hull, City of",Yorkshire and The Humber,743.75,27309.0,0.3268153356036472,False
+East Lindsey,East Midlands,723.0,26705.0,0.32488298071522187,False
+Swansea,Wales,868.75,32091.0,0.32485743666448536,False
+Pembrokeshire,Wales,736.0,27243.0,0.3241933707741438,False
+Chorley,North West,900.5,33337.0,0.32414434412214654,False
+Chesterfield,East Midlands,814.5,30621.0,0.319192710884687,False
+Derbyshire Dales,East Midlands,894.25,33700.0,0.3184272997032641,False
+Stockton-on-Tees,North East,791.75,29877.0,0.318003815644141,False
+Westmorland and Furness,North West,898.5,33988.0,0.3172296104507473,False
+West Lindsey,East Midlands,810.5,30741.0,0.3163852834976091,False
+Ribble Valley,North West,897.0,34077.0,0.31587287613346243,False
+Forest of Dean,South West,961.75,36589.0,0.3154226680149772,False
+Wrexham,Wales,780.75,29752.0,0.3149031997848884,False
+Rutland,East Midlands,1035.75,39559.0,0.31418893298617256,False
+Bridgend,Wales,823.0,31475.0,0.31377283558379665,False
+Caerphilly,Wales,802.5,30854.0,0.3121151228365852,False
+Ceredigion,Wales,762.75,29326.0,0.3121121189388256,False
+East Riding of Yorkshire,Yorkshire and The Humber,827.75,31881.0,0.31156488190458265,False
+Rhondda Cynon Taf,Wales,773.0,29802.0,0.31125427823636,False
+Doncaster,Yorkshire and The Humber,807.0,31119.0,0.31119251903981493,False
+Middlesbrough,North East,782.5,30253.0,0.3103824414107692,False
+Northumberland,North East,787.75,30456.0,0.31038219070133966,False
+Merthyr Tydfil,Wales,812.75,31504.0,0.3095797359065515,False
+Barnsley,Yorkshire and The Humber,789.75,31359.0,0.30220989189706304,False
+Isle of Anglesey,Wales,751.25,29944.0,0.3010619823670852,False
+Hyndburn,North West,741.25,29647.0,0.3000303572030897,False
+Blaenau Gwent,Wales,767.25,30734.0,0.29957050823192555,True
+Burnley,North West,740.0,29680.0,0.2991913746630728,True
+Cumberland,North West,842.75,33840.0,0.29884751773049645,True
+Rotherham,Yorkshire and The Humber,734.5,29664.0,0.29712783171521034,True
+Redcar and Cleveland,North East,699.25,28630.0,0.2930841774362557,True
+North Lincolnshire,Yorkshire and The Humber,732.25,30012.0,0.2927828868452619,True
+North East Lincolnshire,Yorkshire and The Humber,703.25,28898.0,0.29202712990518376,True
+County Durham,North East,716.0,29718.0,0.2891177064405411,True
+Carmarthenshire,Wales,717.75,30774.0,0.2798791187365958,True
+Powys,Wales,702.5,30275.0,0.2784475639966969,True
+Neath Port Talbot,Wales,712.25,30709.0,0.2783223159334397,True
+Hartlepool,North East,653.75,28830.0,0.2721123829344433,True

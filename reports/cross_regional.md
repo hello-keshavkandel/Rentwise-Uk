@@ -4,17 +4,17 @@ I hold each region out, train on the rest, then predict the unseen region.
 
 | Region | n | RMSE (£) | MAE (£) | R² |
 |---|---|---|---|---|
-| East Midlands | 140 | 199 | 141 | -0.005 |
-| East of England | 175 | 358 | 279 | 0.108 |
-| London | 73 | 630 | 578 | -3.294 |
-| North East | 48 | 202 | 167 | 0.224 |
-| North West | 140 | 233 | 181 | 0.210 |
-| South East | 250 | 459 | 405 | -0.710 |
-| South West | 104 | 341 | 235 | 0.115 |
-| Wales | 88 | 161 | 136 | 0.289 |
-| West Midlands | 120 | 156 | 115 | 0.557 |
-| Yorkshire and The Humber | 60 | 207 | 196 | 0.205 |
+| East Midlands | 140 | 151 | 118 | 0.429 |
+| East of England | 180 | 400 | 314 | 0.145 |
+| London | 128 | 1039 | 906 | -1.347 |
+| North East | 48 | 212 | 161 | 0.180 |
+| North West | 140 | 240 | 186 | 0.193 |
+| South East | 256 | 499 | 448 | -0.603 |
+| South West | 104 | 363 | 263 | 0.022 |
+| Wales | 88 | 200 | 157 | -0.080 |
+| West Midlands | 120 | 177 | 138 | 0.443 |
+| Yorkshire and The Humber | 60 | 170 | 151 | 0.481 |
 
-**RMSE across regions:** mean £295 (range £156-£630). A tight range means the model generalises well across the UK.
+**RMSE across regions:** mean £345 (range £151-£1039). A tight range means the model generalises well across the UK.
 
 *Figures from synthetic development data; regenerated on real ONS data.*

@@ -16,9 +16,6 @@ run_pipeline.py (which builds the synthetic development version).
 import warnings; warnings.filterwarnings("ignore")
 import sys
 import json
-import csv
-import glob
-import collections
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -37,61 +34,12 @@ TYPE_BEDS = {"Flat": 2, "Terraced": 3, "Semi-detached": 3, "Detached": 4}
 
 
 def build_module2_dataset():
-    """I join real ONS rent + ASHE earnings + police crime into the Module 2 schema."""
-    wb = openpyxl.load_workbook(RAW / "ons_pipr_monthly.xlsx", read_only=True, data_only=True)
-    ws = wb["Table 1"]; it = ws.iter_rows(min_row=3, values_only=True)
-    hdr = list(next(it)); ci = {h: i for i, h in enumerate(hdr)}
-    raw = list(it)
-    latest = max(r[0] for r in raw if r[1] is not None and r[0] is not None)
-    rows = []
-    for r in raw:
-        code = r[ci["Area code"]]
-        if code is None or r[0] != latest or str(code)[:3] not in LA_PREFIX:
-            continue
-        region = r[ci["Region or country name"]]
-        if region not in REGIONS:
-            continue
-        for pt, col in TYPE_COL.items():
-            v = r[ci[col]]
-            if v in (None, "[x]", "[z]"):
-                continue
-            try:
-                rows.append({"la_code": code, "la_name": r[ci["Area name"]], "region": region,
-                             "year": int(str(latest)[:4]), "property_type": pt,
-                             "bedrooms": TYPE_BEDS[pt], "median_monthly_rent": round(float(v))})
-            except ValueError:
-                pass
-    wb.close()
-    rent = pd.DataFrame(rows)
-
-    wb = openpyxl.load_workbook(RAW / "ashe_table8_7a.xlsx", read_only=True, data_only=True)
-    ws = wb["All"]; inc = {}
-    for r in ws.iter_rows(min_row=6, values_only=True):
-        if r[1] and str(r[1])[:3] in LA_PREFIX:
-            try: inc[r[1]] = float(r[3])
-            except (TypeError, ValueError): pass
-    wb.close()
-
-    lookup = pd.read_csv(RAW / "lsoa_to_lad.csv", usecols=["LSOA21CD", "LAD24CD"])
-    l2 = dict(zip(lookup.LSOA21CD, lookup.LAD24CD)); cc = collections.Counter()
-    for fp in glob.glob(str(RAW / "police" / "*street.csv")):
-        with open(fp, newline="", encoding="utf-8", errors="ignore") as f:
-            for row in csv.DictReader(f):
-                lad = l2.get(row.get("LSOA code"))
-                if lad: cc[lad] += 1
-    crime = pd.Series(cc, dtype=float)
-    cidx = ((crime - crime.min()) / (crime.max() - crime.min()) * 100).round(1)
-
-    rent["median_annual_income"] = rent.la_code.map(inc)
-    rent["crime_per_1000"] = rent.la_code.map(cidx)   # normalised crime index (no population denominator)
-    rent["transport_score"] = 0.5                      # OSM not sourced -> constant placeholder (future work)
-    rent = rent.dropna(subset=["median_annual_income"])
-    cols = ["la_code", "la_name", "region", "year", "property_type", "bedrooms",
-            "median_annual_income", "crime_per_1000", "transport_score", "median_monthly_rent"]
-    out = rent[cols].sort_values(["la_name", "property_type"]).reset_index(drop=True)
-    out.to_csv(config.DATA_PROCESSED / "rentwise_sample.csv", index=False)
-    print(f"[Module 2] real dataset: {len(out)} rows, {out.la_code.nunique()} LAs, "
-          f"rent £{int(out.median_monthly_rent.min())}-{int(out.median_monthly_rent.max())}")
+    """Official Module 2 dataset: ONS rents (kept exactly as published) + ASHE earnings +
+    crime per 1,000 residents (12 months, ONS population). See src/data/rent_dataset.py."""
+    from src.data.rent_dataset import build
+    s = build(RAW, config.DATA_PROCESSED)
+    print(f"[Module 2] official dataset: {s['rows']} rows, {s['las']} LAs, rents for {s['rent_period']}, "
+          f"crime over {s['crime_months']} months ({s['las_without_crime']} LAs without police data)")
 
 
 def run_module2():

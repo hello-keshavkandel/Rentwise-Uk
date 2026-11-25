@@ -15,9 +15,9 @@ RentWise UK predicts long-term rental prices and residential sale prices across 
 
 | Module | What | Headline |
 |---|---|---|
-| **2 · Rent & affordability** (deployed, with Module 3 features) | Predicts LA-level rents, scores them vs the 30% income benchmark, explains with SHAP | XGBoost **R² 0.947** / MAE £68 for served areas (**0.817** / £136 for unseen areas); **80% interval ±£113**, coverage 80% |
+| **2 · Rent & affordability** (deployed, with Module 3 features) | **Official ONS median rent first** (Oct 2026, 316 areas × 4 types); model explains it with SHAP and estimates only where ONS publishes none; affordability vs the 30% benchmark | Model R² **0.945** / MAE £79 for served areas, **0.858** / £152 for unseen areas; 80% interval ±£106, coverage 80% |
 | **1 · Sale price** | HM Land Registry price model enriched with **EPC floor area + rooms** (86% of sales matched) | XGBoost R² **0.568 → 0.732** with EPC; 90% conformal intervals |
-| **3 · Geospatial** | 11 OSM amenity densities (506k amenities) + historic Ofsted school quality + LA boundary maps | Unseen-LA rent R² **0.775 → 0.833**, MAE −14%; choropleths |
+| **3 · Geospatial** | 11 OSM amenity densities (506k amenities) + historic Ofsted school quality + crime per 1,000 residents + LA boundary maps | Unseen-area MAE **−8%** (£169 → £156) every repeat; R² gain small (0.847 → 0.853); choropleths |
 | **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends; rolling-origin backtest + conformal intervals | mean MAPE ~0.6%, recalibrated 80/95% bands |
 
 The dashboard has three views: a **Rent estimator** (local authority + property type → predicted rent, affordability verdict, **confidence range**, plain-English SHAP explanation and a *what's nearby* profile), an **Area map** (affordability, school quality and 11 amenity layers by local authority) and a **System results** overview — with a live **health/freshness banner**.

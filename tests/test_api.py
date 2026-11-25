@@ -33,14 +33,23 @@ class FakePredictor:
     def spatial_profile(self, name):
         return {"dens_pub_bar": 0.5, "school_quality": None if name == "Cardiff" else 3.1}
 
+    vintages = {"rents": {"period": "2026-10"}}
+
     def model_info(self):
         return {"model": "fake", "spatial": True}
+
+    official = {("Adur", "Flat")}            # ONS publishes this pair; others are modelled
 
     def predict(self, name, ptype, bedrooms=None):
         rent = self.rent[name] + (100 if ptype == "Terraced" else 0)
         inc = float(self.areas.set_index("la_name").loc[name, "income"])
-        return {"rent": rent, "region": "x", "ratio": rent * 12 / inc, "affordable": rent * 12 / inc <= 0.3,
-                "interval": {"low": rent - 100, "high": rent + 100, "level": 0.8},
+        is_off = (name, ptype) in self.official
+        iv = {"low": rent - 100, "high": rent + 100, "level": 0.8}
+        return {"rent": rent, "kind": "official" if is_off else "modelled",
+                "official_rent": rent if is_off else None, "model_rent": rent - 5,
+                "as_of": "2026-10", "source": "ONS PIPR",
+                "region": "x", "ratio": rent * 12 / inc, "affordable": rent * 12 / inc <= 0.3,
+                "interval": None if is_off else iv, "model_interval": iv,
                 "contributions": [("median_annual_income", 120.0), ("school_quality__missing", -30.0)]}
 
 
@@ -70,6 +79,12 @@ def test_health_and_model_are_public(ctx):
     assert m["served_areas"] == 2 and "grouped_cv" in m["note"]
 
 
+def test_sources_endpoint_is_public_and_dated(ctx):
+    c, *_ = ctx
+    j = c.get("/v1/sources").json()
+    assert j["vintages"]["rents"]["period"] == "2026-10" and "ODbL" in j["licences"]["openstreetmap"]
+
+
 def test_data_endpoints_require_valid_key(ctx):
     c, db, _, H = ctx
     assert c.get("/v1/areas").status_code == 401
@@ -79,12 +94,21 @@ def test_data_endpoints_require_valid_key(ctx):
     assert r.headers["X-RateLimit-Limit"] == "5"
 
 
+def test_predict_is_official_first(ctx):
+    c, _, _, H = ctx
+    j = c.post("/v1/predict", headers=H, json={"la_code": "E07000223", "property_type": "Flat"}).json()
+    assert j["kind"] == "official" and j["official_rent_gbp_month"] == j["rent_gbp_month"] == 1100
+    assert j["interval"] is None                      # an official figure carries no model range
+    assert j["model_rent_gbp_month"] == 1095 and j["as_of"] == "2026-10"
+
+
 def test_predict_contract_and_labels(ctx):
     c, _, _, H = ctx
     r = c.post("/v1/predict", headers=H, json={"la_code": "W06000015", "property_type": "Terraced"})
     assert r.status_code == 200
     j = r.json()
     assert j["rent_gbp_month"] == 1000 and j["interval"] == {"low": 900, "high": 1100, "level": 0.8}
+    assert j["kind"] == "modelled" and j["official_rent_gbp_month"] is None
     assert j["bedrooms"] == 3 and j["benchmark"] == 0.30 and "not financial advice" in j["disclaimer"]
     assert j["factors"][1]["label"].startswith("School data not available")
 
@@ -282,19 +306,21 @@ class TestAgainstRealModel:
         c, H = client
         p = RentWisePredictor()
         areas = c.get("/v1/areas", headers=H).json()["areas"]
-        assert len(areas) == len(p.areas) == 314
+        assert len(areas) == len(p.areas) >= 314
         for a in areas[::13]:                                   # every 13th area, both types
             for t in ("Flat", "Terraced"):
                 j = c.post("/v1/predict", headers=H, json={"la_code": a["la_code"], "property_type": t}).json()
-                assert j["rent_gbp_month"] == p.predict(a["la_name"], t)["rent"]
-                assert j["interval"]["low"] <= j["rent_gbp_month"] <= j["interval"]["high"]
+                ref = p.predict(a["la_name"], t)
+                assert j["rent_gbp_month"] == ref["rent"] and j["kind"] == ref["kind"]
+                if j["kind"] == "modelled":
+                    assert j["interval"]["low"] <= j["rent_gbp_month"] <= j["interval"]["high"]
 
     def test_area_detail_and_model(self, client):
         c, H = client
         d = c.get("/v1/areas/W06000015", headers=H).json()
         assert d["la_name"] == "Cardiff" and d["spatial_profile"]["school_quality"] is None
         m = c.get("/v1/model").json()
-        assert m["model"] == "xgboost-spatial" and m["served_areas"] == 314
+        assert m["model"] == "xgboost-spatial" and m["served_areas"] >= 314
 
     def test_openapi_schema_lists_all_routes(self, client):
         c, _ = client

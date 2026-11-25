@@ -99,8 +99,9 @@ def evaluate_and_calibrate(X: pd.DataFrame, y: np.ndarray, groups: np.ndarray,
     }
 
 
-FRIENDLY = {"median_annual_income": "Local income", "crime_per_1000": "Crime level", "bedrooms": "Bedrooms",
-            "property_type_ord": "Property type", "income_band": "Income band", "transport_score": "Transport",
+FRIENDLY = {"median_annual_income": "Local income", "crime_per_1000": "Crime per 1,000 residents",
+            "bedrooms": "Bedrooms",
+            "property_type_ord": "Property type", "income_band": "Income band",
             "school_quality": "School quality (Ofsted)", "share_good_or_better": "Share Good+ schools"}
 
 
@@ -145,7 +146,11 @@ Coverage for served areas {cr['0.2']*100:.0f}% / {cr['0.1']*100:.0f}% (on target
 cover only {cg['0.2']*100:.0f}% / {cg['0.1']*100:.0f}% — which is why the app and API serve only the
 {meta['n_las']} trained areas.
 
-Previous deployed model (no spatial features): R² 0.913 / MAE £89 (seen), 0.775 / £152 (unseen), 80% interval ±£140.
+Before Phase A (Nov 2026 audit) the model trained on 1,198 rows after 66 genuine high rents had been
+deleted as "outliers", with a one-month raw crime count and a constant transport placeholder:
+R² 0.947 / MAE £68 (seen), 0.817 / £136 (unseen). Phase A restored every official rent and replaced
+crime with a true rate, so the figures are not directly comparable — the restored rows are the most
+expensive in the country.
 
 *Spatial features: log density of 11 OpenStreetMap amenity types + historic Ofsted school quality.
 Associations, not causes.*

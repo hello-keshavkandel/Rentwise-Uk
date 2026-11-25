@@ -25,8 +25,17 @@ class DataCleaner:
 
     RENT_COL = "median_monthly_rent"
 
-    def __init__(self, input_name: str = "rentwise_sample.csv"):
+    # Official statistics are published medians, not noisy observations: in
+    # "official" mode (the default) nothing is trimmed as an outlier and no gap is
+    # filled with a made-up value. Only impossible rows are dropped, and reported.
+    # "synthetic" mode keeps the dissertation-era behaviour for generated dev data.
+    RENT_VALID = (100, 20_000)          # £/month bounds for a plausible median rent
+
+    def __init__(self, input_name: str = "rentwise_sample.csv", mode: str = "official"):
         # I remember which file I clean and where the result goes.
+        if mode not in ("official", "synthetic"):
+            raise ValueError("mode must be 'official' or 'synthetic'")
+        self.mode = mode
         self.input_path = config.DATA_PROCESSED / input_name
         self.output_path = config.DATA_PROCESSED / "rentwise_clean.csv"
 
@@ -74,14 +83,29 @@ class DataCleaner:
             warnings.append("Found income values <= 0.")
         return warnings
 
+    def _drop_invalid(self, df: pd.DataFrame):
+        # Official mode: drop only rows that cannot be right (no rent, rent outside
+        # plausible bounds, no income) — never a real but high/low value.
+        lo, hi = self.RENT_VALID
+        bad = (df[self.RENT_COL].isna() | ~df[self.RENT_COL].between(lo, hi)
+               | df["median_annual_income"].isna() | (df["median_annual_income"] <= 0))
+        if bad.any():
+            print(f"Dropped {int(bad.sum())} invalid rows:",
+                  df.loc[bad, ["la_name", "property_type", self.RENT_COL]].to_dict("records")[:10])
+        return df[~bad].copy(), int(bad.sum())
+
     def clean(self, df: pd.DataFrame) -> pd.DataFrame:
         # I run every cleaning step in order and print a short report.
         n_start = len(df)
         df = self._standardise_columns(df)
         dupes = int(df.duplicated().sum())
         df = df.drop_duplicates()
-        df, missing_filled = self._fill_missing(df)
-        df, outliers = self._remove_rent_outliers(df)
+        if self.mode == "synthetic":
+            df, missing_filled = self._fill_missing(df)
+            df, outliers = self._remove_rent_outliers(df)
+        else:
+            missing_filled = 0                # gaps stay gaps (shown as "no data")
+            df, outliers = self._drop_invalid(df)
         warnings = self._sanity_checks(df)
 
         print("Cleaning report")
@@ -89,7 +113,8 @@ class DataCleaner:
         print(f"Rows in                : {n_start}")
         print(f"Duplicate rows removed : {dupes}")
         print(f"Missing values filled  : {missing_filled}")
-        print(f"Rent outliers removed  : {outliers}")
+        print(f"Mode                   : {self.mode}")
+        print(f"Rows removed (outliers/invalid): {outliers}")
         print(f"Rows out               : {len(df)}")
         print(f"Sanity warnings        : {warnings if warnings else 'none'}")
         return df

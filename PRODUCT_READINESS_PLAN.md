@@ -81,13 +81,13 @@ an honest uncertainty range and a plain-English reason** — and to say clearly 
 
 ## 3. The plan (portfolio first, ASAP, free)
 
-### Phase A — Correctness *(do first; ~2–3 days)*
-- [ ] Crime: 12 months, per 1,000 residents (ONS mid-year population), missing forces → missing, not 0.
-- [ ] Remove the transport placeholder; keep OSM transport densities.
-- [ ] Official-first display: ONS median as headline where it exists; model estimate only where it doesn't.
-- [ ] Data-vintage panel + "as of" labels; refresh ONS PIPR to the latest release.
-- [ ] Affordability methodology note in the app and API docs.
-- [ ] Retrain, recalibrate, re-run the full validation (all areas × types, AppTest, API parity), update reports.
+### Phase A — Correctness *(done 25 Nov 2026 — see reports/REPORT_PHASE_A.md)*
+- [x] Crime: 12 months, per 1,000 residents (ONS mid-year population), missing forces → missing, not 0.
+- [x] Remove the transport placeholder; keep OSM transport densities.
+- [x] Official-first display: ONS median as headline where it exists; model estimate only where it doesn't.
+- [x] Data-vintage panel + "as of" labels; refresh ONS PIPR to the latest release.
+- [ ] Affordability methodology note in the app and API docs. *(moved to Phase C methodology page)*
+- [x] Retrain, recalibrate, re-run the full validation (all areas × types, AppTest, API parity), update reports.
 
 ### Phase B — A 100% reliable local environment *(~1 day)*
 - [ ] `make setup` → `make verify`: one command runs tests, the dashboard AppTest and an API smoke test.

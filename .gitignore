@@ -17,6 +17,9 @@ data/processed/*
 !data/processed/school_quality_by_la.csv
 !data/processed/osm_amenities_by_la.csv
 !data/processed/la_spatial_features.csv
+# Small outputs the deployed app reads directly
+!data/processed/affordability.csv
+!data/processed/data_vintages.json
 # The DuckDB store is the app's primary data source — committed and deployed.
 !
 # Models (large binaries)

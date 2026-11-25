@@ -1,1199 +1,1265 @@
-la_code,la_name,region,year,property_type,bedrooms,median_annual_income,crime_per_1000,transport_score,median_monthly_rent
-E07000223,Adur,South East,2026,Detached,4,30217.0,3.1,0.5,1789
-E07000223,Adur,South East,2026,Flat,2,30217.0,3.1,0.5,1144
-E07000223,Adur,South East,2026,Semi-detached,3,30217.0,3.1,0.5,1514
-E07000223,Adur,South East,2026,Terraced,3,30217.0,3.1,0.5,1478
-E07000032,Amber Valley,East Midlands,2026,Detached,4,30823.0,6.9,0.5,1052
-E07000032,Amber Valley,East Midlands,2026,Flat,2,30823.0,6.9,0.5,633
-E07000032,Amber Valley,East Midlands,2026,Semi-detached,3,30823.0,6.9,0.5,835
-E07000032,Amber Valley,East Midlands,2026,Terraced,3,30823.0,6.9,0.5,765
-E07000224,Arun,South East,2026,Detached,4,29809.0,10.6,0.5,1669
-E07000224,Arun,South East,2026,Flat,2,29809.0,10.6,0.5,975
-E07000224,Arun,South East,2026,Semi-detached,3,29809.0,10.6,0.5,1354
-E07000224,Arun,South East,2026,Terraced,3,29809.0,10.6,0.5,1265
-E07000170,Ashfield,East Midlands,2026,Detached,4,27797.0,8.8,0.5,1035
-E07000170,Ashfield,East Midlands,2026,Flat,2,27797.0,8.8,0.5,627
-E07000170,Ashfield,East Midlands,2026,Semi-detached,3,27797.0,8.8,0.5,840
-E07000170,Ashfield,East Midlands,2026,Terraced,3,27797.0,8.8,0.5,771
-E07000105,Ashford,South East,2026,Detached,4,32991.0,6.8,0.5,1776
-E07000105,Ashford,South East,2026,Flat,2,32991.0,6.8,0.5,1042
-E07000105,Ashford,South East,2026,Semi-detached,3,32991.0,6.8,0.5,1327
-E07000105,Ashford,South East,2026,Terraced,3,32991.0,6.8,0.5,1264
-E07000200,Babergh,East of England,2026,Detached,4,30118.0,3.0,0.5,1301
-E07000200,Babergh,East of England,2026,Flat,2,30118.0,3.0,0.5,806
-E07000200,Babergh,East of England,2026,Semi-detached,3,30118.0,3.0,0.5,1060
-E07000200,Babergh,East of England,2026,Terraced,3,30118.0,3.0,0.5,940
-E09000002,Barking and Dagenham,London,2026,Detached,4,32911.0,16.0,0.5,1877
-E09000002,Barking and Dagenham,London,2026,Flat,2,32911.0,16.0,0.5,1609
-E09000002,Barking and Dagenham,London,2026,Semi-detached,3,32911.0,16.0,0.5,1966
-E09000002,Barking and Dagenham,London,2026,Terraced,3,32911.0,16.0,0.5,1846
-E09000003,Barnet,London,2026,Flat,2,39239.0,24.2,0.5,1729
-E09000003,Barnet,London,2026,Terraced,3,39239.0,24.2,0.5,2219
-E08000038,Barnsley,Yorkshire and The Humber,2026,Detached,4,31359.0,8.0,0.5,937
-E08000038,Barnsley,Yorkshire and The Humber,2026,Flat,2,31359.0,8.0,0.5,571
-E08000038,Barnsley,Yorkshire and The Humber,2026,Semi-detached,3,31359.0,8.0,0.5,734
-E08000038,Barnsley,Yorkshire and The Humber,2026,Terraced,3,31359.0,8.0,0.5,661
-E07000066,Basildon,East of England,2026,Detached,4,34133.0,12.4,0.5,1953
-E07000066,Basildon,East of England,2026,Flat,2,34133.0,12.4,0.5,1124
-E07000066,Basildon,East of England,2026,Semi-detached,3,34133.0,12.4,0.5,1485
-E07000066,Basildon,East of England,2026,Terraced,3,34133.0,12.4,0.5,1426
-E07000084,Basingstoke and Deane,South East,2026,Detached,4,39279.0,9.1,0.5,1873
-E07000084,Basingstoke and Deane,South East,2026,Flat,2,39279.0,9.1,0.5,1070
-E07000084,Basingstoke and Deane,South East,2026,Semi-detached,3,39279.0,9.1,0.5,1431
-E07000084,Basingstoke and Deane,South East,2026,Terraced,3,39279.0,9.1,0.5,1304
-E07000171,Bassetlaw,East Midlands,2026,Detached,4,28314.0,8.2,0.5,955
-E07000171,Bassetlaw,East Midlands,2026,Flat,2,28314.0,8.2,0.5,562
-E07000171,Bassetlaw,East Midlands,2026,Semi-detached,3,28314.0,8.2,0.5,745
-E07000171,Bassetlaw,East Midlands,2026,Terraced,3,28314.0,8.2,0.5,708
-E06000022,Bath and North East Somerset,South West,2026,Detached,4,32481.0,12.2,0.5,2395
-E06000022,Bath and North East Somerset,South West,2026,Flat,2,32481.0,12.2,0.5,1390
-E06000022,Bath and North East Somerset,South West,2026,Semi-detached,3,32481.0,12.2,0.5,1999
-E06000022,Bath and North East Somerset,South West,2026,Terraced,3,32481.0,12.2,0.5,2020
-E06000055,Bedford,East of England,2026,Detached,4,35987.0,12.7,0.5,1594
-E06000055,Bedford,East of England,2026,Flat,2,35987.0,12.7,0.5,913
-E06000055,Bedford,East of England,2026,Semi-detached,3,35987.0,12.7,0.5,1308
-E06000055,Bedford,East of England,2026,Terraced,3,35987.0,12.7,0.5,1144
-E09000004,Bexley,London,2026,Detached,4,36883.0,13.8,0.5,2261
-E09000004,Bexley,London,2026,Flat,2,36883.0,13.8,0.5,1382
-E09000004,Bexley,London,2026,Semi-detached,3,36883.0,13.8,0.5,1971
-E09000004,Bexley,London,2026,Terraced,3,36883.0,13.8,0.5,1783
-E08000025,Birmingham,West Midlands,2026,Detached,4,30180.0,100.0,0.5,1423
-E08000025,Birmingham,West Midlands,2026,Flat,2,30180.0,100.0,0.5,912
-E08000025,Birmingham,West Midlands,2026,Semi-detached,3,30180.0,100.0,0.5,1141
-E08000025,Birmingham,West Midlands,2026,Terraced,3,30180.0,100.0,0.5,1086
-E07000129,Blaby,East Midlands,2026,Detached,4,31950.0,5.1,0.5,1319
-E07000129,Blaby,East Midlands,2026,Flat,2,31950.0,5.1,0.5,783
-E07000129,Blaby,East Midlands,2026,Semi-detached,3,31950.0,5.1,0.5,1018
-E07000129,Blaby,East Midlands,2026,Terraced,3,31950.0,5.1,0.5,988
-E06000008,Blackburn with Darwen,North West,2026,Detached,4,27502.0,11.7,0.5,1018
-E06000008,Blackburn with Darwen,North West,2026,Flat,2,27502.0,11.7,0.5,600
-E06000008,Blackburn with Darwen,North West,2026,Semi-detached,3,27502.0,11.7,0.5,764
-E06000008,Blackburn with Darwen,North West,2026,Terraced,3,27502.0,11.7,0.5,719
-E06000009,Blackpool,North West,2026,Detached,4,27979.0,18.2,0.5,967
-E06000009,Blackpool,North West,2026,Flat,2,27979.0,18.2,0.5,559
-E06000009,Blackpool,North West,2026,Semi-detached,3,27979.0,18.2,0.5,800
-E06000009,Blackpool,North West,2026,Terraced,3,27979.0,18.2,0.5,733
-W06000019,Blaenau Gwent,Wales,2026,Detached,4,30734.0,6.6,0.5,914
-W06000019,Blaenau Gwent,Wales,2026,Flat,2,30734.0,6.6,0.5,538
-W06000019,Blaenau Gwent,Wales,2026,Semi-detached,3,30734.0,6.6,0.5,715
-W06000019,Blaenau Gwent,Wales,2026,Terraced,3,30734.0,6.6,0.5,641
-E07000033,Bolsover,East Midlands,2026,Detached,4,29674.0,4.9,0.5,958
-E07000033,Bolsover,East Midlands,2026,Flat,2,29674.0,4.9,0.5,567
-E07000033,Bolsover,East Midlands,2026,Semi-detached,3,29674.0,4.9,0.5,738
-E07000033,Bolsover,East Midlands,2026,Terraced,3,29674.0,4.9,0.5,693
-E08000001,Bolton,North West,2026,Detached,4,29409.0,0.0,0.5,1336
-E08000001,Bolton,North West,2026,Flat,2,29409.0,0.0,0.5,774
-E08000001,Bolton,North West,2026,Semi-detached,3,29409.0,0.0,0.5,955
-E08000001,Bolton,North West,2026,Terraced,3,29409.0,0.0,0.5,848
-E07000136,Boston,East Midlands,2026,Detached,4,27729.0,4.6,0.5,1027
-E07000136,Boston,East Midlands,2026,Flat,2,27729.0,4.6,0.5,641
-E07000136,Boston,East Midlands,2026,Semi-detached,3,27729.0,4.6,0.5,854
-E07000136,Boston,East Midlands,2026,Terraced,3,27729.0,4.6,0.5,788
-E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Detached,4,31848.0,24.8,0.5,1879
-E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Flat,2,31848.0,24.8,0.5,1080
-E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Semi-detached,3,31848.0,24.8,0.5,1520
-E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Terraced,3,31848.0,24.8,0.5,1350
-E06000036,Bracknell Forest,South East,2026,Detached,4,36067.0,5.8,0.5,2206
-E06000036,Bracknell Forest,South East,2026,Flat,2,36067.0,5.8,0.5,1185
-E06000036,Bracknell Forest,South East,2026,Semi-detached,3,36067.0,5.8,0.5,1634
-E06000036,Bracknell Forest,South East,2026,Terraced,3,36067.0,5.8,0.5,1430
-E08000032,Bradford,Yorkshire and The Humber,2026,Detached,4,28424.0,47.5,0.5,1060
-E08000032,Bradford,Yorkshire and The Humber,2026,Flat,2,28424.0,47.5,0.5,627
-E08000032,Bradford,Yorkshire and The Humber,2026,Semi-detached,3,28424.0,47.5,0.5,792
-E08000032,Bradford,Yorkshire and The Humber,2026,Terraced,3,28424.0,47.5,0.5,723
-E07000067,Braintree,East of England,2026,Detached,4,34546.0,6.9,0.5,1697
-E07000067,Braintree,East of England,2026,Flat,2,34546.0,6.9,0.5,979
-E07000067,Braintree,East of England,2026,Semi-detached,3,34546.0,6.9,0.5,1313
-E07000067,Braintree,East of England,2026,Terraced,3,34546.0,6.9,0.5,1196
-E07000143,Breckland,East of England,2026,Detached,4,28930.0,6.0,0.5,1315
-E07000143,Breckland,East of England,2026,Flat,2,28930.0,6.0,0.5,700
-E07000143,Breckland,East of England,2026,Semi-detached,3,28930.0,6.0,0.5,990
-E07000143,Breckland,East of England,2026,Terraced,3,28930.0,6.0,0.5,909
-E09000005,Brent,London,2026,Flat,2,34871.0,27.2,0.5,1798
-E09000005,Brent,London,2026,Terraced,3,34871.0,27.2,0.5,2328
-E07000068,Brentwood,East of England,2026,Detached,4,39864.0,3.8,0.5,2196
-E07000068,Brentwood,East of England,2026,Flat,2,39864.0,3.8,0.5,1271
-E07000068,Brentwood,East of England,2026,Semi-detached,3,39864.0,3.8,0.5,1776
-E07000068,Brentwood,East of England,2026,Terraced,3,39864.0,3.8,0.5,1562
-W06000013,Bridgend,Wales,2026,Detached,4,31475.0,8.5,0.5,996
-W06000013,Bridgend,Wales,2026,Flat,2,31475.0,8.5,0.5,614
-W06000013,Bridgend,Wales,2026,Semi-detached,3,31475.0,8.5,0.5,803
-W06000013,Bridgend,Wales,2026,Terraced,3,31475.0,8.5,0.5,743
-E06000043,Brighton and Hove,South East,2026,Detached,4,33506.0,23.9,0.5,2225
-E06000043,Brighton and Hove,South East,2026,Flat,2,33506.0,23.9,0.5,1383
-E06000043,Brighton and Hove,South East,2026,Semi-detached,3,33506.0,23.9,0.5,2027
-E06000043,Brighton and Hove,South East,2026,Terraced,3,33506.0,23.9,0.5,1991
-E06000023,"Bristol, City of",South West,2026,Detached,4,34051.0,44.9,0.5,2104
-E06000023,"Bristol, City of",South West,2026,Flat,2,34051.0,44.9,0.5,1508
-E06000023,"Bristol, City of",South West,2026,Semi-detached,3,34051.0,44.9,0.5,2089
-E06000023,"Bristol, City of",South West,2026,Terraced,3,34051.0,44.9,0.5,2009
-E07000144,Broadland,East of England,2026,Detached,4,30920.0,3.7,0.5,1237
-E07000144,Broadland,East of England,2026,Flat,2,30920.0,3.7,0.5,765
-E07000144,Broadland,East of England,2026,Semi-detached,3,30920.0,3.7,0.5,1002
-E07000144,Broadland,East of England,2026,Terraced,3,30920.0,3.7,0.5,945
-E09000006,Bromley,London,2026,Flat,2,43981.0,18.4,0.5,1505
-E09000006,Bromley,London,2026,Semi-detached,3,43981.0,18.4,0.5,2150
-E09000006,Bromley,London,2026,Terraced,3,43981.0,18.4,0.5,1907
-E07000234,Bromsgrove,West Midlands,2026,Detached,4,36409.0,4.0,0.5,1327
-E07000234,Bromsgrove,West Midlands,2026,Flat,2,36409.0,4.0,0.5,780
-E07000234,Bromsgrove,West Midlands,2026,Semi-detached,3,36409.0,4.0,0.5,1029
-E07000234,Bromsgrove,West Midlands,2026,Terraced,3,36409.0,4.0,0.5,966
-E07000095,Broxbourne,East of England,2026,Detached,4,37283.0,6.3,0.5,2290
-E07000095,Broxbourne,East of England,2026,Flat,2,37283.0,6.3,0.5,1302
-E07000095,Broxbourne,East of England,2026,Semi-detached,3,37283.0,6.3,0.5,1843
-E07000095,Broxbourne,East of England,2026,Terraced,3,37283.0,6.3,0.5,1651
-E07000172,Broxtowe,East Midlands,2026,Detached,4,30966.0,6.2,0.5,1195
-E07000172,Broxtowe,East Midlands,2026,Flat,2,30966.0,6.2,0.5,782
-E07000172,Broxtowe,East Midlands,2026,Semi-detached,3,30966.0,6.2,0.5,1027
-E07000172,Broxtowe,East Midlands,2026,Terraced,3,30966.0,6.2,0.5,917
-E06000060,Buckinghamshire,South East,2026,Detached,4,35937.0,24.7,0.5,2165
-E06000060,Buckinghamshire,South East,2026,Flat,2,35937.0,24.7,0.5,1212
-E06000060,Buckinghamshire,South East,2026,Semi-detached,3,35937.0,24.7,0.5,1578
-E06000060,Buckinghamshire,South East,2026,Terraced,3,35937.0,24.7,0.5,1422
-E07000117,Burnley,North West,2026,Detached,4,29680.0,9.3,0.5,921
-E07000117,Burnley,North West,2026,Flat,2,29680.0,9.3,0.5,523
-E07000117,Burnley,North West,2026,Semi-detached,3,29680.0,9.3,0.5,696
-E07000117,Burnley,North West,2026,Terraced,3,29680.0,9.3,0.5,617
-E08000002,Bury,North West,2026,Detached,4,31687.0,0.0,0.5,1444
-E08000002,Bury,North West,2026,Flat,2,31687.0,0.0,0.5,832
-E08000002,Bury,North West,2026,Semi-detached,3,31687.0,0.0,0.5,1058
-E08000002,Bury,North West,2026,Terraced,3,31687.0,0.0,0.5,944
-W06000018,Caerphilly,Wales,2026,Detached,4,30854.0,12.4,0.5,945
-W06000018,Caerphilly,Wales,2026,Flat,2,30854.0,12.4,0.5,611
-W06000018,Caerphilly,Wales,2026,Semi-detached,3,30854.0,12.4,0.5,777
-W06000018,Caerphilly,Wales,2026,Terraced,3,30854.0,12.4,0.5,736
-E08000033,Calderdale,Yorkshire and The Humber,2026,Detached,4,31708.0,16.3,0.5,1069
-E08000033,Calderdale,Yorkshire and The Humber,2026,Flat,2,31708.0,16.3,0.5,624
-E08000033,Calderdale,Yorkshire and The Humber,2026,Semi-detached,3,31708.0,16.3,0.5,820
-E08000033,Calderdale,Yorkshire and The Humber,2026,Terraced,3,31708.0,16.3,0.5,707
-E07000008,Cambridge,East of England,2026,Detached,4,38711.0,12.0,0.5,2341
-E07000008,Cambridge,East of England,2026,Flat,2,38711.0,12.0,0.5,1454
-E07000008,Cambridge,East of England,2026,Semi-detached,3,38711.0,12.0,0.5,2006
-E07000008,Cambridge,East of England,2026,Terraced,3,38711.0,12.0,0.5,1833
-E09000007,Camden,London,2026,Flat,2,44088.0,29.9,0.5,2383
-E07000192,Cannock Chase,West Midlands,2026,Detached,4,30178.0,5.8,0.5,1152
-E07000192,Cannock Chase,West Midlands,2026,Flat,2,30178.0,5.8,0.5,666
-E07000192,Cannock Chase,West Midlands,2026,Semi-detached,3,30178.0,5.8,0.5,896
-E07000192,Cannock Chase,West Midlands,2026,Terraced,3,30178.0,5.8,0.5,863
-E07000106,Canterbury,South East,2026,Detached,4,30188.0,11.4,0.5,1664
-E07000106,Canterbury,South East,2026,Flat,2,30188.0,11.4,0.5,1025
-E07000106,Canterbury,South East,2026,Semi-detached,3,30188.0,11.4,0.5,1467
-E07000106,Canterbury,South East,2026,Terraced,3,30188.0,11.4,0.5,1336
-W06000015,Cardiff,Wales,2026,Detached,4,32756.0,28.6,0.5,1496
-W06000015,Cardiff,Wales,2026,Flat,2,32756.0,28.6,0.5,984
-W06000015,Cardiff,Wales,2026,Semi-detached,3,32756.0,28.6,0.5,1170
-W06000015,Cardiff,Wales,2026,Terraced,3,32756.0,28.6,0.5,1162
-W06000010,Carmarthenshire,Wales,2026,Detached,4,30774.0,11.1,0.5,848
-W06000010,Carmarthenshire,Wales,2026,Flat,2,30774.0,11.1,0.5,560
-W06000010,Carmarthenshire,Wales,2026,Semi-detached,3,30774.0,11.1,0.5,725
-W06000010,Carmarthenshire,Wales,2026,Terraced,3,30774.0,11.1,0.5,691
-E07000069,Castle Point,East of England,2026,Detached,4,35975.0,3.9,0.5,1428
-E07000069,Castle Point,East of England,2026,Flat,2,35975.0,3.9,0.5,1044
-E07000069,Castle Point,East of England,2026,Semi-detached,3,35975.0,3.9,0.5,1350
-E07000069,Castle Point,East of England,2026,Terraced,3,35975.0,3.9,0.5,1325
-E06000056,Central Bedfordshire,East of England,2026,Detached,4,36622.0,12.2,0.5,1760
-E06000056,Central Bedfordshire,East of England,2026,Flat,2,36622.0,12.2,0.5,989
-E06000056,Central Bedfordshire,East of England,2026,Semi-detached,3,36622.0,12.2,0.5,1350
-E06000056,Central Bedfordshire,East of England,2026,Terraced,3,36622.0,12.2,0.5,1204
-W06000008,Ceredigion,Wales,2026,Detached,4,29326.0,3.6,0.5,816
-W06000008,Ceredigion,Wales,2026,Flat,2,29326.0,3.6,0.5,608
-W06000008,Ceredigion,Wales,2026,Semi-detached,3,29326.0,3.6,0.5,726
-W06000008,Ceredigion,Wales,2026,Terraced,3,29326.0,3.6,0.5,765
-E07000130,Charnwood,East Midlands,2026,Detached,4,33550.0,10.4,0.5,1271
-E07000130,Charnwood,East Midlands,2026,Flat,2,33550.0,10.4,0.5,768
-E07000130,Charnwood,East Midlands,2026,Semi-detached,3,33550.0,10.4,0.5,1003
-E07000130,Charnwood,East Midlands,2026,Terraced,3,33550.0,10.4,0.5,928
-E07000070,Chelmsford,East of England,2026,Detached,4,35791.0,10.6,0.5,2005
-E07000070,Chelmsford,East of England,2026,Flat,2,35791.0,10.6,0.5,1217
-E07000070,Chelmsford,East of England,2026,Semi-detached,3,35791.0,10.6,0.5,1529
-E07000070,Chelmsford,East of England,2026,Terraced,3,35791.0,10.6,0.5,1378
-E07000078,Cheltenham,South West,2026,Detached,4,36014.0,8.0,0.5,1744
-E07000078,Cheltenham,South West,2026,Flat,2,36014.0,8.0,0.5,980
-E07000078,Cheltenham,South West,2026,Semi-detached,3,36014.0,8.0,0.5,1329
-E07000078,Cheltenham,South West,2026,Terraced,3,36014.0,8.0,0.5,1209
-E07000177,Cherwell,South East,2026,Detached,4,36568.0,8.0,0.5,1845
-E07000177,Cherwell,South East,2026,Flat,2,36568.0,8.0,0.5,1070
-E07000177,Cherwell,South East,2026,Semi-detached,3,36568.0,8.0,0.5,1391
-E07000177,Cherwell,South East,2026,Terraced,3,36568.0,8.0,0.5,1284
-E06000049,Cheshire East,North West,2026,Detached,4,33221.0,20.3,0.5,1429
-E06000049,Cheshire East,North West,2026,Flat,2,33221.0,20.3,0.5,819
-E06000049,Cheshire East,North West,2026,Semi-detached,3,33221.0,20.3,0.5,1085
-E06000049,Cheshire East,North West,2026,Terraced,3,33221.0,20.3,0.5,966
-E06000050,Cheshire West and Chester,North West,2026,Detached,4,32391.0,18.8,0.5,1385
-E06000050,Cheshire West and Chester,North West,2026,Flat,2,32391.0,18.8,0.5,841
-E06000050,Cheshire West and Chester,North West,2026,Semi-detached,3,32391.0,18.8,0.5,1111
-E06000050,Cheshire West and Chester,North West,2026,Terraced,3,32391.0,18.8,0.5,969
-E07000034,Chesterfield,East Midlands,2026,Detached,4,30621.0,8.3,0.5,959
-E07000034,Chesterfield,East Midlands,2026,Flat,2,30621.0,8.3,0.5,606
-E07000034,Chesterfield,East Midlands,2026,Semi-detached,3,30621.0,8.3,0.5,794
-E07000034,Chesterfield,East Midlands,2026,Terraced,3,30621.0,8.3,0.5,721
-E07000225,Chichester,South East,2026,Detached,4,28585.0,7.2,0.5,1753
-E07000225,Chichester,South East,2026,Flat,2,28585.0,7.2,0.5,1094
-E07000225,Chichester,South East,2026,Semi-detached,3,28585.0,7.2,0.5,1456
-E07000225,Chichester,South East,2026,Terraced,3,28585.0,7.2,0.5,1351
-E07000118,Chorley,North West,2026,Detached,4,33337.0,6.6,0.5,1077
-E07000118,Chorley,North West,2026,Flat,2,33337.0,6.6,0.5,675
-E07000118,Chorley,North West,2026,Semi-detached,3,33337.0,6.6,0.5,876
-E07000118,Chorley,North West,2026,Terraced,3,33337.0,6.6,0.5,776
-E07000071,Colchester,East of England,2026,Detached,4,31589.0,13.0,0.5,1574
-E07000071,Colchester,East of England,2026,Flat,2,31589.0,13.0,0.5,960
-E07000071,Colchester,East of England,2026,Semi-detached,3,31589.0,13.0,0.5,1274
-E07000071,Colchester,East of England,2026,Terraced,3,31589.0,13.0,0.5,1235
-W06000003,Conwy,Wales,2026,Detached,4,28113.0,7.7,0.5,1003
-W06000003,Conwy,Wales,2026,Flat,2,28113.0,7.7,0.5,654
-W06000003,Conwy,Wales,2026,Semi-detached,3,28113.0,7.7,0.5,824
-W06000003,Conwy,Wales,2026,Terraced,3,28113.0,7.7,0.5,761
-E06000052,Cornwall,South West,2026,Detached,4,28210.0,26.8,0.5,1285
-E06000052,Cornwall,South West,2026,Flat,2,28210.0,26.8,0.5,815
-E06000052,Cornwall,South West,2026,Semi-detached,3,28210.0,26.8,0.5,1075
-E06000052,Cornwall,South West,2026,Terraced,3,28210.0,26.8,0.5,1040
-E07000079,Cotswold,South West,2026,Detached,4,32927.0,0.0,0.5,1738
-E07000079,Cotswold,South West,2026,Flat,2,32927.0,0.0,0.5,968
-E07000079,Cotswold,South West,2026,Semi-detached,3,32927.0,0.0,0.5,1330
-E07000079,Cotswold,South West,2026,Terraced,3,32927.0,0.0,0.5,1207
-E06000047,County Durham,North East,2026,Detached,4,29718.0,42.5,0.5,867
-E06000047,County Durham,North East,2026,Flat,2,29718.0,42.5,0.5,540
-E06000047,County Durham,North East,2026,Semi-detached,3,29718.0,42.5,0.5,674
-E06000047,County Durham,North East,2026,Terraced,3,29718.0,42.5,0.5,673
-E08000026,Coventry,West Midlands,2026,Detached,4,33063.0,24.0,0.5,1231
-E08000026,Coventry,West Midlands,2026,Flat,2,33063.0,24.0,0.5,852
-E08000026,Coventry,West Midlands,2026,Semi-detached,3,33063.0,24.0,0.5,1072
-E08000026,Coventry,West Midlands,2026,Terraced,3,33063.0,24.0,0.5,1038
-E07000226,Crawley,South East,2026,Detached,4,34225.0,10.6,0.5,2158
-E07000226,Crawley,South East,2026,Flat,2,34225.0,10.6,0.5,1223
-E07000226,Crawley,South East,2026,Semi-detached,3,34225.0,10.6,0.5,1620
-E07000226,Crawley,South East,2026,Terraced,3,34225.0,10.6,0.5,1470
-E09000008,Croydon,London,2026,Flat,2,38080.0,27.7,0.5,1435
-E09000008,Croydon,London,2026,Semi-detached,3,38080.0,27.7,0.5,1995
-E09000008,Croydon,London,2026,Terraced,3,38080.0,27.7,0.5,1792
-E06000063,Cumberland,North West,2026,Detached,4,33840.0,15.1,0.5,923
-E06000063,Cumberland,North West,2026,Flat,2,33840.0,15.1,0.5,576
-E06000063,Cumberland,North West,2026,Semi-detached,3,33840.0,15.1,0.5,747
-E06000063,Cumberland,North West,2026,Terraced,3,33840.0,15.1,0.5,668
-E07000096,Dacorum,East of England,2026,Detached,4,36473.0,9.2,0.5,2176
-E07000096,Dacorum,East of England,2026,Flat,2,36473.0,9.2,0.5,1240
-E07000096,Dacorum,East of England,2026,Semi-detached,3,36473.0,9.2,0.5,1721
-E07000096,Dacorum,East of England,2026,Terraced,3,36473.0,9.2,0.5,1513
-E06000005,Darlington,North East,2026,Detached,4,30100.0,10.1,0.5,1000
-E06000005,Darlington,North East,2026,Flat,2,30100.0,10.1,0.5,573
-E06000005,Darlington,North East,2026,Semi-detached,3,30100.0,10.1,0.5,742
-E06000005,Darlington,North East,2026,Terraced,3,30100.0,10.1,0.5,682
-E07000107,Dartford,South East,2026,Detached,4,36210.0,8.1,0.5,2285
-E07000107,Dartford,South East,2026,Flat,2,36210.0,8.1,0.5,1270
-E07000107,Dartford,South East,2026,Semi-detached,3,36210.0,8.1,0.5,1695
-E07000107,Dartford,South East,2026,Terraced,3,36210.0,8.1,0.5,1569
-W06000004,Denbighshire,Wales,2026,Detached,4,26812.0,6.9,0.5,859
-W06000004,Denbighshire,Wales,2026,Flat,2,26812.0,6.9,0.5,634
-W06000004,Denbighshire,Wales,2026,Semi-detached,3,26812.0,6.9,0.5,749
-W06000004,Denbighshire,Wales,2026,Terraced,3,26812.0,6.9,0.5,676
-E06000015,Derby,East Midlands,2026,Detached,4,30467.0,24.9,0.5,1072
-E06000015,Derby,East Midlands,2026,Flat,2,30467.0,24.9,0.5,704
-E06000015,Derby,East Midlands,2026,Semi-detached,3,30467.0,24.9,0.5,907
-E06000015,Derby,East Midlands,2026,Terraced,3,30467.0,24.9,0.5,839
-E07000035,Derbyshire Dales,East Midlands,2026,Detached,4,33700.0,2.8,0.5,1073
-E07000035,Derbyshire Dales,East Midlands,2026,Flat,2,33700.0,2.8,0.5,642
-E07000035,Derbyshire Dales,East Midlands,2026,Semi-detached,3,33700.0,2.8,0.5,873
-E07000035,Derbyshire Dales,East Midlands,2026,Terraced,3,33700.0,2.8,0.5,757
-E08000017,Doncaster,Yorkshire and The Humber,2026,Detached,4,31119.0,27.6,0.5,920
-E08000017,Doncaster,Yorkshire and The Humber,2026,Flat,2,31119.0,27.6,0.5,548
-E08000017,Doncaster,Yorkshire and The Humber,2026,Semi-detached,3,31119.0,27.6,0.5,745
-E08000017,Doncaster,Yorkshire and The Humber,2026,Terraced,3,31119.0,27.6,0.5,693
-E06000059,Dorset,South West,2026,Detached,4,31444.0,13.4,0.5,1427
-E06000059,Dorset,South West,2026,Flat,2,31444.0,13.4,0.5,832
-E06000059,Dorset,South West,2026,Semi-detached,3,31444.0,13.4,0.5,1138
-E06000059,Dorset,South West,2026,Terraced,3,31444.0,13.4,0.5,1035
-E07000108,Dover,South East,2026,Detached,4,33704.0,6.6,0.5,1395
-E07000108,Dover,South East,2026,Flat,2,33704.0,6.6,0.5,843
-E07000108,Dover,South East,2026,Semi-detached,3,33704.0,6.6,0.5,1152
-E07000108,Dover,South East,2026,Terraced,3,33704.0,6.6,0.5,1040
-E08000027,Dudley,West Midlands,2026,Detached,4,30822.0,18.0,0.5,1076
-E08000027,Dudley,West Midlands,2026,Flat,2,30822.0,18.0,0.5,676
-E08000027,Dudley,West Midlands,2026,Semi-detached,3,30822.0,18.0,0.5,906
-E08000027,Dudley,West Midlands,2026,Terraced,3,30822.0,18.0,0.5,864
-E09000009,Ealing,London,2026,Flat,2,35665.0,27.9,0.5,1826
-E09000009,Ealing,London,2026,Terraced,3,35665.0,27.9,0.5,2472
-E07000009,East Cambridgeshire,East of England,2026,Detached,4,34311.0,3.9,0.5,1436
-E07000009,East Cambridgeshire,East of England,2026,Flat,2,34311.0,3.9,0.5,824
-E07000009,East Cambridgeshire,East of England,2026,Semi-detached,3,34311.0,3.9,0.5,1076
-E07000009,East Cambridgeshire,East of England,2026,Terraced,3,34311.0,3.9,0.5,1016
-E07000040,East Devon,South West,2026,Detached,4,32154.0,4.8,0.5,1305
-E07000040,East Devon,South West,2026,Flat,2,32154.0,4.8,0.5,775
-E07000040,East Devon,South West,2026,Semi-detached,3,32154.0,4.8,0.5,1036
-E07000040,East Devon,South West,2026,Terraced,3,32154.0,4.8,0.5,972
-E07000085,East Hampshire,South East,2026,Detached,4,39682.0,4.2,0.5,1751
-E07000085,East Hampshire,South East,2026,Flat,2,39682.0,4.2,0.5,995
-E07000085,East Hampshire,South East,2026,Semi-detached,3,39682.0,4.2,0.5,1425
-E07000085,East Hampshire,South East,2026,Terraced,3,39682.0,4.2,0.5,1283
-E07000242,East Hertfordshire,East of England,2026,Detached,4,44154.0,7.6,0.5,2117
-E07000242,East Hertfordshire,East of England,2026,Flat,2,44154.0,7.6,0.5,1232
-E07000242,East Hertfordshire,East of England,2026,Semi-detached,3,44154.0,7.6,0.5,1630
-E07000242,East Hertfordshire,East of England,2026,Terraced,3,44154.0,7.6,0.5,1398
-E07000137,East Lindsey,East Midlands,2026,Detached,4,26705.0,9.5,0.5,813
-E07000137,East Lindsey,East Midlands,2026,Flat,2,26705.0,9.5,0.5,566
-E07000137,East Lindsey,East Midlands,2026,Semi-detached,3,26705.0,9.5,0.5,752
-E07000137,East Lindsey,East Midlands,2026,Terraced,3,26705.0,9.5,0.5,691
-E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Detached,4,31881.0,14.4,0.5,1029
-E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Flat,2,31881.0,14.4,0.5,573
-E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Semi-detached,3,31881.0,14.4,0.5,773
-E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Terraced,3,31881.0,14.4,0.5,701
-E07000193,East Staffordshire,West Midlands,2026,Detached,4,31517.0,7.0,0.5,1155
-E07000193,East Staffordshire,West Midlands,2026,Flat,2,31517.0,7.0,0.5,671
-E07000193,East Staffordshire,West Midlands,2026,Semi-detached,3,31517.0,7.0,0.5,902
-E07000193,East Staffordshire,West Midlands,2026,Terraced,3,31517.0,7.0,0.5,825
-E07000244,East Suffolk,East of England,2026,Detached,4,30261.0,9.9,0.5,1113
-E07000244,East Suffolk,East of England,2026,Flat,2,30261.0,9.9,0.5,646
-E07000244,East Suffolk,East of England,2026,Semi-detached,3,30261.0,9.9,0.5,913
-E07000244,East Suffolk,East of England,2026,Terraced,3,30261.0,9.9,0.5,837
-E07000061,Eastbourne,South East,2026,Detached,4,31199.0,9.6,0.5,1471
-E07000061,Eastbourne,South East,2026,Flat,2,31199.0,9.6,0.5,1012
-E07000061,Eastbourne,South East,2026,Semi-detached,3,31199.0,9.6,0.5,1289
-E07000061,Eastbourne,South East,2026,Terraced,3,31199.0,9.6,0.5,1169
-E07000086,Eastleigh,South East,2026,Detached,4,34474.0,6.2,0.5,1635
-E07000086,Eastleigh,South East,2026,Flat,2,34474.0,6.2,0.5,1019
-E07000086,Eastleigh,South East,2026,Semi-detached,3,34474.0,6.2,0.5,1332
-E07000086,Eastleigh,South East,2026,Terraced,3,34474.0,6.2,0.5,1211
-E07000207,Elmbridge,South East,2026,Flat,2,42607.0,5.8,0.5,1464
-E07000207,Elmbridge,South East,2026,Semi-detached,3,42607.0,5.8,0.5,1914
-E07000207,Elmbridge,South East,2026,Terraced,3,42607.0,5.8,0.5,1860
-E09000010,Enfield,London,2026,Flat,2,34962.0,24.2,0.5,1634
-E09000010,Enfield,London,2026,Semi-detached,3,34962.0,24.2,0.5,2398
-E09000010,Enfield,London,2026,Terraced,3,34962.0,24.2,0.5,2010
-E07000072,Epping Forest,East of England,2026,Flat,2,38171.0,7.5,0.5,1435
-E07000072,Epping Forest,East of England,2026,Semi-detached,3,38171.0,7.5,0.5,1968
-E07000072,Epping Forest,East of England,2026,Terraced,3,38171.0,7.5,0.5,1820
-E07000208,Epsom and Ewell,South East,2026,Detached,4,43006.0,5.3,0.5,2472
-E07000208,Epsom and Ewell,South East,2026,Flat,2,43006.0,5.3,0.5,1347
-E07000208,Epsom and Ewell,South East,2026,Semi-detached,3,43006.0,5.3,0.5,1883
-E07000208,Epsom and Ewell,South East,2026,Terraced,3,43006.0,5.3,0.5,1660
-E07000036,Erewash,East Midlands,2026,Detached,4,31673.0,6.5,0.5,1088
-E07000036,Erewash,East Midlands,2026,Flat,2,31673.0,6.5,0.5,671
-E07000036,Erewash,East Midlands,2026,Semi-detached,3,31673.0,6.5,0.5,896
-E07000036,Erewash,East Midlands,2026,Terraced,3,31673.0,6.5,0.5,807
-E07000041,Exeter,South West,2026,Detached,4,29531.0,10.2,0.5,1709
-E07000041,Exeter,South West,2026,Flat,2,29531.0,10.2,0.5,1046
-E07000041,Exeter,South West,2026,Semi-detached,3,29531.0,10.2,0.5,1383
-E07000041,Exeter,South West,2026,Terraced,3,29531.0,10.2,0.5,1351
-E07000087,Fareham,South East,2026,Detached,4,38851.0,4.7,0.5,1753
-E07000087,Fareham,South East,2026,Flat,2,38851.0,4.7,0.5,995
-E07000087,Fareham,South East,2026,Semi-detached,3,38851.0,4.7,0.5,1311
-E07000087,Fareham,South East,2026,Terraced,3,38851.0,4.7,0.5,1173
-E07000010,Fenland,East of England,2026,Detached,4,30125.0,6.4,0.5,1101
-E07000010,Fenland,East of England,2026,Flat,2,30125.0,6.4,0.5,666
-E07000010,Fenland,East of England,2026,Semi-detached,3,30125.0,6.4,0.5,922
-E07000010,Fenland,East of England,2026,Terraced,3,30125.0,6.4,0.5,834
-W06000005,Flintshire,Wales,2026,Detached,4,32675.0,7.7,0.5,1025
-W06000005,Flintshire,Wales,2026,Flat,2,32675.0,7.7,0.5,657
-W06000005,Flintshire,Wales,2026,Semi-detached,3,32675.0,7.7,0.5,827
-W06000005,Flintshire,Wales,2026,Terraced,3,32675.0,7.7,0.5,787
-E07000112,Folkestone and Hythe,South East,2026,Detached,4,33355.0,6.6,0.5,1602
-E07000112,Folkestone and Hythe,South East,2026,Flat,2,33355.0,6.6,0.5,915
-E07000112,Folkestone and Hythe,South East,2026,Semi-detached,3,33355.0,6.6,0.5,1321
-E07000112,Folkestone and Hythe,South East,2026,Terraced,3,33355.0,6.6,0.5,1195
-E07000080,Forest of Dean,South West,2026,Detached,4,36589.0,0.0,0.5,1115
-E07000080,Forest of Dean,South West,2026,Flat,2,36589.0,0.0,0.5,619
-E07000080,Forest of Dean,South West,2026,Semi-detached,3,36589.0,0.0,0.5,906
-E07000080,Forest of Dean,South West,2026,Terraced,3,36589.0,0.0,0.5,827
-E07000119,Fylde,North West,2026,Detached,4,36020.0,4.1,0.5,1261
-E07000119,Fylde,North West,2026,Flat,2,36020.0,4.1,0.5,706
-E07000119,Fylde,North West,2026,Semi-detached,3,36020.0,4.1,0.5,947
-E07000119,Fylde,North West,2026,Terraced,3,36020.0,4.1,0.5,865
-E08000037,Gateshead,North East,2026,Detached,4,29494.0,13.7,0.5,1088
-E08000037,Gateshead,North East,2026,Flat,2,29494.0,13.7,0.5,699
-E08000037,Gateshead,North East,2026,Semi-detached,3,29494.0,13.7,0.5,831
-E08000037,Gateshead,North East,2026,Terraced,3,29494.0,13.7,0.5,801
-E07000173,Gedling,East Midlands,2026,Detached,4,30051.0,6.4,0.5,1159
-E07000173,Gedling,East Midlands,2026,Flat,2,30051.0,6.4,0.5,742
-E07000173,Gedling,East Midlands,2026,Semi-detached,3,30051.0,6.4,0.5,938
-E07000173,Gedling,East Midlands,2026,Terraced,3,30051.0,6.4,0.5,876
-E07000081,Gloucester,South West,2026,Detached,4,30455.0,0.0,0.5,1555
-E07000081,Gloucester,South West,2026,Flat,2,30455.0,0.0,0.5,844
-E07000081,Gloucester,South West,2026,Semi-detached,3,30455.0,0.0,0.5,1208
-E07000081,Gloucester,South West,2026,Terraced,3,30455.0,0.0,0.5,1117
-E07000088,Gosport,South East,2026,Detached,4,34256.0,4.2,0.5,1562
-E07000088,Gosport,South East,2026,Flat,2,34256.0,4.2,0.5,955
-E07000088,Gosport,South East,2026,Semi-detached,3,34256.0,4.2,0.5,1312
-E07000088,Gosport,South East,2026,Terraced,3,34256.0,4.2,0.5,1164
-E07000109,Gravesham,South East,2026,Detached,4,35065.0,6.2,0.5,1920
-E07000109,Gravesham,South East,2026,Flat,2,35065.0,6.2,0.5,1026
-E07000109,Gravesham,South East,2026,Semi-detached,3,35065.0,6.2,0.5,1538
-E07000109,Gravesham,South East,2026,Terraced,3,35065.0,6.2,0.5,1347
-E07000145,Great Yarmouth,East of England,2026,Detached,4,28808.0,7.7,0.5,1139
-E07000145,Great Yarmouth,East of England,2026,Flat,2,28808.0,7.7,0.5,658
-E07000145,Great Yarmouth,East of England,2026,Semi-detached,3,28808.0,7.7,0.5,902
-E07000145,Great Yarmouth,East of England,2026,Terraced,3,28808.0,7.7,0.5,837
-E09000011,Greenwich,London,2026,Flat,2,39984.0,22.6,0.5,1806
-E09000011,Greenwich,London,2026,Semi-detached,3,39984.0,22.6,0.5,2429
-E09000011,Greenwich,London,2026,Terraced,3,39984.0,22.6,0.5,2217
-E07000209,Guildford,South East,2026,Flat,2,39985.0,8.1,0.5,1367
-E07000209,Guildford,South East,2026,Semi-detached,3,39985.0,8.1,0.5,1917
-E07000209,Guildford,South East,2026,Terraced,3,39985.0,8.1,0.5,1743
-W06000002,Gwynedd,Wales,2026,Detached,4,25179.0,6.8,0.5,879
-W06000002,Gwynedd,Wales,2026,Flat,2,25179.0,6.8,0.5,627
-W06000002,Gwynedd,Wales,2026,Semi-detached,3,25179.0,6.8,0.5,764
-W06000002,Gwynedd,Wales,2026,Terraced,3,25179.0,6.8,0.5,698
-E09000012,Hackney,London,2026,Flat,2,40237.0,24.7,0.5,2339
-E06000006,Halton,North West,2026,Detached,4,29819.0,7.8,0.5,1055
-E06000006,Halton,North West,2026,Flat,2,29819.0,7.8,0.5,626
-E06000006,Halton,North West,2026,Semi-detached,3,29819.0,7.8,0.5,804
-E06000006,Halton,North West,2026,Terraced,3,29819.0,7.8,0.5,743
-E09000013,Hammersmith and Fulham,London,2026,Flat,2,42811.0,16.8,0.5,2307
-E07000131,Harborough,East Midlands,2026,Detached,4,34321.0,3.6,0.5,1275
-E07000131,Harborough,East Midlands,2026,Flat,2,34321.0,3.6,0.5,813
-E07000131,Harborough,East Midlands,2026,Semi-detached,3,34321.0,3.6,0.5,1008
-E07000131,Harborough,East Midlands,2026,Terraced,3,34321.0,3.6,0.5,919
-E09000014,Haringey,London,2026,Flat,2,37563.0,23.0,0.5,1910
-E07000073,Harlow,East of England,2026,Detached,4,30654.0,8.1,0.5,2176
-E07000073,Harlow,East of England,2026,Flat,2,30654.0,8.1,0.5,1124
-E07000073,Harlow,East of England,2026,Semi-detached,3,30654.0,8.1,0.5,1678
-E07000073,Harlow,East of England,2026,Terraced,3,30654.0,8.1,0.5,1503
-E09000015,Harrow,London,2026,Flat,2,36000.0,13.7,0.5,1604
-E09000015,Harrow,London,2026,Semi-detached,3,36000.0,13.7,0.5,2232
-E09000015,Harrow,London,2026,Terraced,3,36000.0,13.7,0.5,1999
-E07000089,Hart,South East,2026,Detached,4,39341.0,2.7,0.5,2111
-E07000089,Hart,South East,2026,Flat,2,39341.0,2.7,0.5,1161
-E07000089,Hart,South East,2026,Semi-detached,3,39341.0,2.7,0.5,1497
-E07000089,Hart,South East,2026,Terraced,3,39341.0,2.7,0.5,1394
-E06000001,Hartlepool,North East,2026,Detached,4,28830.0,10.4,0.5,798
-E06000001,Hartlepool,North East,2026,Flat,2,28830.0,10.4,0.5,480
-E06000001,Hartlepool,North East,2026,Semi-detached,3,28830.0,10.4,0.5,617
-E06000001,Hartlepool,North East,2026,Terraced,3,28830.0,10.4,0.5,550
-E07000062,Hastings,South East,2026,Detached,4,29323.0,8.9,0.5,1370
-E07000062,Hastings,South East,2026,Flat,2,29323.0,8.9,0.5,792
-E07000062,Hastings,South East,2026,Semi-detached,3,29323.0,8.9,0.5,1136
-E07000062,Hastings,South East,2026,Terraced,3,29323.0,8.9,0.5,1034
-E07000090,Havant,South East,2026,Detached,4,30819.0,7.0,0.5,1531
-E07000090,Havant,South East,2026,Flat,2,30819.0,7.0,0.5,934
-E07000090,Havant,South East,2026,Semi-detached,3,30819.0,7.0,0.5,1302
-E07000090,Havant,South East,2026,Terraced,3,30819.0,7.0,0.5,1161
-E09000016,Havering,London,2026,Detached,4,40726.0,15.9,0.5,2398
-E09000016,Havering,London,2026,Flat,2,40726.0,15.9,0.5,1421
-E09000016,Havering,London,2026,Semi-detached,3,40726.0,15.9,0.5,1926
-E09000016,Havering,London,2026,Terraced,3,40726.0,15.9,0.5,1799
-E06000019,"Herefordshire, County of",West Midlands,2026,Detached,4,29361.0,7.8,0.5,1115
-E06000019,"Herefordshire, County of",West Midlands,2026,Flat,2,29361.0,7.8,0.5,645
-E06000019,"Herefordshire, County of",West Midlands,2026,Semi-detached,3,29361.0,7.8,0.5,895
-E06000019,"Herefordshire, County of",West Midlands,2026,Terraced,3,29361.0,7.8,0.5,770
-E07000098,Hertsmere,East of England,2026,Flat,2,36159.0,6.4,0.5,1429
-E07000098,Hertsmere,East of England,2026,Semi-detached,3,36159.0,6.4,0.5,2004
-E07000098,Hertsmere,East of England,2026,Terraced,3,36159.0,6.4,0.5,1716
-E07000037,High Peak,East Midlands,2026,Detached,4,32258.0,4.4,0.5,1284
-E07000037,High Peak,East Midlands,2026,Flat,2,32258.0,4.4,0.5,714
-E07000037,High Peak,East Midlands,2026,Semi-detached,3,32258.0,4.4,0.5,950
-E07000037,High Peak,East Midlands,2026,Terraced,3,32258.0,4.4,0.5,875
-E09000017,Hillingdon,London,2026,Detached,4,36429.0,24.9,0.5,2362
-E09000017,Hillingdon,London,2026,Flat,2,36429.0,24.9,0.5,1437
-E09000017,Hillingdon,London,2026,Semi-detached,3,36429.0,24.9,0.5,2007
-E09000017,Hillingdon,London,2026,Terraced,3,36429.0,24.9,0.5,1727
-E07000132,Hinckley and Bosworth,East Midlands,2026,Detached,4,31591.0,5.0,0.5,1233
-E07000132,Hinckley and Bosworth,East Midlands,2026,Flat,2,31591.0,5.0,0.5,731
-E07000132,Hinckley and Bosworth,East Midlands,2026,Semi-detached,3,31591.0,5.0,0.5,976
-E07000132,Hinckley and Bosworth,East Midlands,2026,Terraced,3,31591.0,5.0,0.5,910
-E07000227,Horsham,South East,2026,Detached,4,36448.0,6.3,0.5,2085
-E07000227,Horsham,South East,2026,Flat,2,36448.0,6.3,0.5,1148
-E07000227,Horsham,South East,2026,Semi-detached,3,36448.0,6.3,0.5,1620
-E07000227,Horsham,South East,2026,Terraced,3,36448.0,6.3,0.5,1465
-E09000018,Hounslow,London,2026,Flat,2,35301.0,21.4,0.5,1790
-E09000018,Hounslow,London,2026,Semi-detached,3,35301.0,21.4,0.5,2398
-E09000018,Hounslow,London,2026,Terraced,3,35301.0,21.4,0.5,2209
-E07000011,Huntingdonshire,East of England,2026,Detached,4,33375.0,9.2,0.5,1485
-E07000011,Huntingdonshire,East of England,2026,Flat,2,33375.0,9.2,0.5,850
-E07000011,Huntingdonshire,East of England,2026,Semi-detached,3,33375.0,9.2,0.5,1124
-E07000011,Huntingdonshire,East of England,2026,Terraced,3,33375.0,9.2,0.5,1001
-E07000120,Hyndburn,North West,2026,Detached,4,29647.0,7.0,0.5,884
-E07000120,Hyndburn,North West,2026,Flat,2,29647.0,7.0,0.5,537
-E07000120,Hyndburn,North West,2026,Semi-detached,3,29647.0,7.0,0.5,710
-E07000120,Hyndburn,North West,2026,Terraced,3,29647.0,7.0,0.5,642
-E07000202,Ipswich,East of England,2026,Detached,4,30928.0,9.1,0.5,1286
-E07000202,Ipswich,East of England,2026,Flat,2,30928.0,9.1,0.5,868
-E07000202,Ipswich,East of England,2026,Semi-detached,3,30928.0,9.1,0.5,1049
-E07000202,Ipswich,East of England,2026,Terraced,3,30928.0,9.1,0.5,959
-W06000001,Isle of Anglesey,Wales,2026,Detached,4,29944.0,3.1,0.5,871
-W06000001,Isle of Anglesey,Wales,2026,Flat,2,29944.0,3.1,0.5,612
-W06000001,Isle of Anglesey,Wales,2026,Semi-detached,3,29944.0,3.1,0.5,735
-W06000001,Isle of Anglesey,Wales,2026,Terraced,3,29944.0,3.1,0.5,701
-E06000046,Isle of Wight,South East,2026,Detached,4,26740.0,7.5,0.5,1266
-E06000046,Isle of Wight,South East,2026,Flat,2,26740.0,7.5,0.5,763
-E06000046,Isle of Wight,South East,2026,Semi-detached,3,26740.0,7.5,0.5,1044
-E06000046,Isle of Wight,South East,2026,Terraced,3,26740.0,7.5,0.5,985
-E09000019,Islington,London,2026,Flat,2,47411.0,27.0,0.5,2460
-E07000146,King's Lynn and West Norfolk,East of England,2026,Detached,4,30581.0,7.3,0.5,1272
-E07000146,King's Lynn and West Norfolk,East of England,2026,Flat,2,30581.0,7.3,0.5,733
-E07000146,King's Lynn and West Norfolk,East of England,2026,Semi-detached,3,30581.0,7.3,0.5,1000
-E07000146,King's Lynn and West Norfolk,East of England,2026,Terraced,3,30581.0,7.3,0.5,942
-E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Detached,4,27309.0,25.5,0.5,950
-E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Flat,2,27309.0,25.5,0.5,560
-E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Semi-detached,3,27309.0,25.5,0.5,734
-E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Terraced,3,27309.0,25.5,0.5,683
-E09000021,Kingston upon Thames,London,2026,Flat,2,41833.0,9.0,0.5,1600
-E09000021,Kingston upon Thames,London,2026,Semi-detached,3,41833.0,9.0,0.5,2352
-E09000021,Kingston upon Thames,London,2026,Terraced,3,41833.0,9.0,0.5,2138
-E08000034,Kirklees,Yorkshire and The Humber,2026,Detached,4,30238.0,29.9,0.5,1101
-E08000034,Kirklees,Yorkshire and The Humber,2026,Flat,2,30238.0,29.9,0.5,665
-E08000034,Kirklees,Yorkshire and The Humber,2026,Semi-detached,3,30238.0,29.9,0.5,845
-E08000034,Kirklees,Yorkshire and The Humber,2026,Terraced,3,30238.0,29.9,0.5,732
-E08000011,Knowsley,North West,2026,Detached,4,32542.0,10.4,0.5,1238
-E08000011,Knowsley,North West,2026,Flat,2,32542.0,10.4,0.5,669
-E08000011,Knowsley,North West,2026,Semi-detached,3,32542.0,10.4,0.5,899
-E08000011,Knowsley,North West,2026,Terraced,3,32542.0,10.4,0.5,845
-E09000022,Lambeth,London,2026,Flat,2,43666.0,34.3,0.5,2185
-E07000121,Lancaster,North West,2026,Detached,4,29651.0,10.3,0.5,1149
-E07000121,Lancaster,North West,2026,Flat,2,29651.0,10.3,0.5,688
-E07000121,Lancaster,North West,2026,Semi-detached,3,29651.0,10.3,0.5,882
-E07000121,Lancaster,North West,2026,Terraced,3,29651.0,10.3,0.5,822
-E08000035,Leeds,Yorkshire and The Humber,2026,Detached,4,31679.0,69.2,0.5,1494
-E08000035,Leeds,Yorkshire and The Humber,2026,Flat,2,31679.0,69.2,0.5,898
-E08000035,Leeds,Yorkshire and The Humber,2026,Semi-detached,3,31679.0,69.2,0.5,1215
-E08000035,Leeds,Yorkshire and The Humber,2026,Terraced,3,31679.0,69.2,0.5,1148
-E06000016,Leicester,East Midlands,2026,Detached,4,27858.0,31.2,0.5,1359
-E06000016,Leicester,East Midlands,2026,Flat,2,27858.0,31.2,0.5,802
-E06000016,Leicester,East Midlands,2026,Semi-detached,3,27858.0,31.2,0.5,1075
-E06000016,Leicester,East Midlands,2026,Terraced,3,27858.0,31.2,0.5,1011
-E07000063,Lewes,South East,2026,Detached,4,33088.0,5.6,0.5,1809
-E07000063,Lewes,South East,2026,Flat,2,33088.0,5.6,0.5,1053
-E07000063,Lewes,South East,2026,Semi-detached,3,33088.0,5.6,0.5,1456
-E07000063,Lewes,South East,2026,Terraced,3,33088.0,5.6,0.5,1362
-E09000023,Lewisham,London,2026,Flat,2,39505.0,24.7,0.5,1654
-E09000023,Lewisham,London,2026,Semi-detached,3,39505.0,24.7,0.5,2352
-E09000023,Lewisham,London,2026,Terraced,3,39505.0,24.7,0.5,2082
-E07000194,Lichfield,West Midlands,2026,Detached,4,33763.0,5.6,0.5,1513
-E07000194,Lichfield,West Midlands,2026,Flat,2,33763.0,5.6,0.5,884
-E07000194,Lichfield,West Midlands,2026,Semi-detached,3,33763.0,5.6,0.5,1133
-E07000194,Lichfield,West Midlands,2026,Terraced,3,33763.0,5.6,0.5,1091
-E07000138,Lincoln,East Midlands,2026,Detached,4,29824.0,10.7,0.5,1192
-E07000138,Lincoln,East Midlands,2026,Flat,2,29824.0,10.7,0.5,779
-E07000138,Lincoln,East Midlands,2026,Semi-detached,3,29824.0,10.7,0.5,998
-E07000138,Lincoln,East Midlands,2026,Terraced,3,29824.0,10.7,0.5,945
-E08000012,Liverpool,North West,2026,Detached,4,30947.0,44.8,0.5,1216
-E08000012,Liverpool,North West,2026,Flat,2,30947.0,44.8,0.5,780
-E08000012,Liverpool,North West,2026,Semi-detached,3,30947.0,44.8,0.5,999
-E08000012,Liverpool,North West,2026,Terraced,3,30947.0,44.8,0.5,908
-E06000032,Luton,East of England,2026,Detached,4,28741.0,13.9,0.5,1601
-E06000032,Luton,East of England,2026,Flat,2,28741.0,13.9,0.5,974
-E06000032,Luton,East of England,2026,Semi-detached,3,28741.0,13.9,0.5,1326
-E06000032,Luton,East of England,2026,Terraced,3,28741.0,13.9,0.5,1214
-E07000110,Maidstone,South East,2026,Detached,4,34151.0,10.6,0.5,1785
-E07000110,Maidstone,South East,2026,Flat,2,34151.0,10.6,0.5,1054
-E07000110,Maidstone,South East,2026,Semi-detached,3,34151.0,10.6,0.5,1440
-E07000110,Maidstone,South East,2026,Terraced,3,34151.0,10.6,0.5,1296
-E07000074,Maldon,East of England,2026,Detached,4,32599.0,2.3,0.5,1653
-E07000074,Maldon,East of England,2026,Flat,2,32599.0,2.3,0.5,868
-E07000074,Maldon,East of England,2026,Semi-detached,3,32599.0,2.3,0.5,1260
-E07000074,Maldon,East of England,2026,Terraced,3,32599.0,2.3,0.5,1092
-E07000235,Malvern Hills,West Midlands,2026,Detached,4,28167.0,3.0,0.5,1224
-E07000235,Malvern Hills,West Midlands,2026,Flat,2,28167.0,3.0,0.5,801
-E07000235,Malvern Hills,West Midlands,2026,Semi-detached,3,28167.0,3.0,0.5,1007
-E07000235,Malvern Hills,West Midlands,2026,Terraced,3,28167.0,3.0,0.5,909
-E08000003,Manchester,North West,2026,Detached,4,30067.0,0.0,0.5,1858
-E08000003,Manchester,North West,2026,Flat,2,30067.0,0.0,0.5,1136
-E08000003,Manchester,North West,2026,Semi-detached,3,30067.0,0.0,0.5,1479
-E08000003,Manchester,North West,2026,Terraced,3,30067.0,0.0,0.5,1390
-E07000174,Mansfield,East Midlands,2026,Detached,4,28170.0,9.0,0.5,974
-E07000174,Mansfield,East Midlands,2026,Flat,2,28170.0,9.0,0.5,631
-E07000174,Mansfield,East Midlands,2026,Semi-detached,3,28170.0,9.0,0.5,816
-E07000174,Mansfield,East Midlands,2026,Terraced,3,28170.0,9.0,0.5,788
-E06000035,Medway,South East,2026,Detached,4,33857.0,18.6,0.5,1656
-E06000035,Medway,South East,2026,Flat,2,33857.0,18.6,0.5,1018
-E06000035,Medway,South East,2026,Semi-detached,3,33857.0,18.6,0.5,1382
-E06000035,Medway,South East,2026,Terraced,3,33857.0,18.6,0.5,1251
-E07000133,Melton,East Midlands,2026,Detached,4,26633.0,2.8,0.5,1082
-E07000133,Melton,East Midlands,2026,Flat,2,26633.0,2.8,0.5,620
-E07000133,Melton,East Midlands,2026,Semi-detached,3,26633.0,2.8,0.5,826
-E07000133,Melton,East Midlands,2026,Terraced,3,26633.0,2.8,0.5,748
-W06000024,Merthyr Tydfil,Wales,2026,Detached,4,31504.0,4.2,0.5,1084
-W06000024,Merthyr Tydfil,Wales,2026,Flat,2,31504.0,4.2,0.5,602
-W06000024,Merthyr Tydfil,Wales,2026,Semi-detached,3,31504.0,4.2,0.5,765
-W06000024,Merthyr Tydfil,Wales,2026,Terraced,3,31504.0,4.2,0.5,684
-E09000024,Merton,London,2026,Flat,2,43507.0,10.2,0.5,1898
-E09000024,Merton,London,2026,Terraced,3,43507.0,10.2,0.5,2419
-E07000042,Mid Devon,South West,2026,Detached,4,31908.0,3.4,0.5,1167
-E07000042,Mid Devon,South West,2026,Flat,2,31908.0,3.4,0.5,710
-E07000042,Mid Devon,South West,2026,Semi-detached,3,31908.0,3.4,0.5,944
-E07000042,Mid Devon,South West,2026,Terraced,3,31908.0,3.4,0.5,861
-E07000203,Mid Suffolk,East of England,2026,Detached,4,31507.0,3.0,0.5,1363
-E07000203,Mid Suffolk,East of England,2026,Flat,2,31507.0,3.0,0.5,795
-E07000203,Mid Suffolk,East of England,2026,Semi-detached,3,31507.0,3.0,0.5,1061
-E07000203,Mid Suffolk,East of England,2026,Terraced,3,31507.0,3.0,0.5,984
-E07000228,Mid Sussex,South East,2026,Detached,4,37705.0,7.0,0.5,2036
-E07000228,Mid Sussex,South East,2026,Flat,2,37705.0,7.0,0.5,1139
-E07000228,Mid Sussex,South East,2026,Semi-detached,3,37705.0,7.0,0.5,1599
-E07000228,Mid Sussex,South East,2026,Terraced,3,37705.0,7.0,0.5,1407
-E06000002,Middlesbrough,North East,2026,Detached,4,30253.0,19.2,0.5,956
-E06000002,Middlesbrough,North East,2026,Flat,2,30253.0,19.2,0.5,601
-E06000002,Middlesbrough,North East,2026,Semi-detached,3,30253.0,19.2,0.5,761
-E06000002,Middlesbrough,North East,2026,Terraced,3,30253.0,19.2,0.5,713
-E06000042,Milton Keynes,South East,2026,Detached,4,36061.0,21.9,0.5,1950
-E06000042,Milton Keynes,South East,2026,Flat,2,36061.0,21.9,0.5,1135
-E06000042,Milton Keynes,South East,2026,Semi-detached,3,36061.0,21.9,0.5,1418
-E06000042,Milton Keynes,South East,2026,Terraced,3,36061.0,21.9,0.5,1341
-E07000210,Mole Valley,South East,2026,Detached,4,35341.0,3.7,0.5,2195
-E07000210,Mole Valley,South East,2026,Flat,2,35341.0,3.7,0.5,1267
-E07000210,Mole Valley,South East,2026,Semi-detached,3,35341.0,3.7,0.5,1744
-E07000210,Mole Valley,South East,2026,Terraced,3,35341.0,3.7,0.5,1458
-W06000021,Monmouthshire,Wales,2026,Detached,4,35020.0,4.7,0.5,1305
-W06000021,Monmouthshire,Wales,2026,Flat,2,35020.0,4.7,0.5,825
-W06000021,Monmouthshire,Wales,2026,Semi-detached,3,35020.0,4.7,0.5,1024
-W06000021,Monmouthshire,Wales,2026,Terraced,3,35020.0,4.7,0.5,958
-W06000012,Neath Port Talbot,Wales,2026,Detached,4,30709.0,7.6,0.5,876
-W06000012,Neath Port Talbot,Wales,2026,Flat,2,30709.0,7.6,0.5,553
-W06000012,Neath Port Talbot,Wales,2026,Semi-detached,3,30709.0,7.6,0.5,725
-W06000012,Neath Port Talbot,Wales,2026,Terraced,3,30709.0,7.6,0.5,687
-E07000091,New Forest,South East,2026,Detached,4,31344.0,6.9,0.5,1684
-E07000091,New Forest,South East,2026,Flat,2,31344.0,6.9,0.5,1009
-E07000091,New Forest,South East,2026,Semi-detached,3,31344.0,6.9,0.5,1337
-E07000091,New Forest,South East,2026,Terraced,3,31344.0,6.9,0.5,1264
-E07000175,Newark and Sherwood,East Midlands,2026,Detached,4,29806.0,7.5,0.5,1049
-E07000175,Newark and Sherwood,East Midlands,2026,Flat,2,29806.0,7.5,0.5,647
-E07000175,Newark and Sherwood,East Midlands,2026,Semi-detached,3,29806.0,7.5,0.5,845
-E07000175,Newark and Sherwood,East Midlands,2026,Terraced,3,29806.0,7.5,0.5,783
-E08000021,Newcastle upon Tyne,North East,2026,Detached,4,30144.0,24.3,0.5,1684
-E08000021,Newcastle upon Tyne,North East,2026,Flat,2,30144.0,24.3,0.5,986
-E08000021,Newcastle upon Tyne,North East,2026,Semi-detached,3,30144.0,24.3,0.5,1252
-E08000021,Newcastle upon Tyne,North East,2026,Terraced,3,30144.0,24.3,0.5,1283
-E07000195,Newcastle-under-Lyme,West Midlands,2026,Detached,4,31205.0,7.9,0.5,1131
-E07000195,Newcastle-under-Lyme,West Midlands,2026,Flat,2,31205.0,7.9,0.5,658
-E07000195,Newcastle-under-Lyme,West Midlands,2026,Semi-detached,3,31205.0,7.9,0.5,859
-E07000195,Newcastle-under-Lyme,West Midlands,2026,Terraced,3,31205.0,7.9,0.5,829
-E09000025,Newham,London,2026,Detached,4,36080.0,31.5,0.5,2178
-E09000025,Newham,London,2026,Flat,2,36080.0,31.5,0.5,1837
-E09000025,Newham,London,2026,Semi-detached,3,36080.0,31.5,0.5,2327
-E09000025,Newham,London,2026,Terraced,3,36080.0,31.5,0.5,2065
-W06000022,Newport,Wales,2026,Detached,4,31495.0,15.7,0.5,1272
-W06000022,Newport,Wales,2026,Flat,2,31495.0,15.7,0.5,793
-W06000022,Newport,Wales,2026,Semi-detached,3,31495.0,15.7,0.5,998
-W06000022,Newport,Wales,2026,Terraced,3,31495.0,15.7,0.5,917
-E07000043,North Devon,South West,2026,Detached,4,28386.0,4.7,0.5,1120
-E07000043,North Devon,South West,2026,Flat,2,28386.0,4.7,0.5,665
-E07000043,North Devon,South West,2026,Semi-detached,3,28386.0,4.7,0.5,912
-E07000043,North Devon,South West,2026,Terraced,3,28386.0,4.7,0.5,854
-E07000038,North East Derbyshire,East Midlands,2026,Detached,4,30931.0,5.0,0.5,1024
-E07000038,North East Derbyshire,East Midlands,2026,Flat,2,30931.0,5.0,0.5,646
-E07000038,North East Derbyshire,East Midlands,2026,Semi-detached,3,30931.0,5.0,0.5,839
-E07000038,North East Derbyshire,East Midlands,2026,Terraced,3,30931.0,5.0,0.5,734
-E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Detached,4,28898.0,15.7,0.5,835
-E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Flat,2,28898.0,15.7,0.5,485
-E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Semi-detached,3,28898.0,15.7,0.5,681
-E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Terraced,3,28898.0,15.7,0.5,621
-E07000099,North Hertfordshire,East of England,2026,Detached,4,42703.0,6.1,0.5,1924
-E07000099,North Hertfordshire,East of England,2026,Flat,2,42703.0,6.1,0.5,1149
-E07000099,North Hertfordshire,East of England,2026,Semi-detached,3,42703.0,6.1,0.5,1538
-E07000099,North Hertfordshire,East of England,2026,Terraced,3,42703.0,6.1,0.5,1369
-E07000139,North Kesteven,East Midlands,2026,Detached,4,30585.0,4.7,0.5,1065
-E07000139,North Kesteven,East Midlands,2026,Flat,2,30585.0,4.7,0.5,687
-E07000139,North Kesteven,East Midlands,2026,Semi-detached,3,30585.0,4.7,0.5,832
-E07000139,North Kesteven,East Midlands,2026,Terraced,3,30585.0,4.7,0.5,804
-E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Detached,4,30012.0,11.3,0.5,876
-E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Flat,2,30012.0,11.3,0.5,519
-E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Semi-detached,3,30012.0,11.3,0.5,700
-E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Terraced,3,30012.0,11.3,0.5,654
-E07000147,North Norfolk,East of England,2026,Detached,4,28421.0,3.9,0.5,1125
-E07000147,North Norfolk,East of England,2026,Flat,2,28421.0,3.9,0.5,705
-E07000147,North Norfolk,East of England,2026,Semi-detached,3,28421.0,3.9,0.5,944
-E07000147,North Norfolk,East of England,2026,Terraced,3,28421.0,3.9,0.5,847
-E06000061,North Northamptonshire,East Midlands,2026,Detached,4,32882.0,22.0,0.5,1322
-E06000061,North Northamptonshire,East Midlands,2026,Flat,2,32882.0,22.0,0.5,791
-E06000061,North Northamptonshire,East Midlands,2026,Semi-detached,3,32882.0,22.0,0.5,1022
-E06000061,North Northamptonshire,East Midlands,2026,Terraced,3,32882.0,22.0,0.5,959
-E06000024,North Somerset,South West,2026,Detached,4,32996.0,12.2,0.5,1584
-E06000024,North Somerset,South West,2026,Flat,2,32996.0,12.2,0.5,982
-E06000024,North Somerset,South West,2026,Semi-detached,3,32996.0,12.2,0.5,1301
-E06000024,North Somerset,South West,2026,Terraced,3,32996.0,12.2,0.5,1205
-E08000022,North Tyneside,North East,2026,Detached,4,31106.0,12.7,0.5,1151
-E08000022,North Tyneside,North East,2026,Flat,2,31106.0,12.7,0.5,708
-E08000022,North Tyneside,North East,2026,Semi-detached,3,31106.0,12.7,0.5,895
-E08000022,North Tyneside,North East,2026,Terraced,3,31106.0,12.7,0.5,871
-E07000218,North Warwickshire,West Midlands,2026,Detached,4,35067.0,3.5,0.5,1343
-E07000218,North Warwickshire,West Midlands,2026,Flat,2,35067.0,3.5,0.5,799
-E07000218,North Warwickshire,West Midlands,2026,Semi-detached,3,35067.0,3.5,0.5,1026
-E07000218,North Warwickshire,West Midlands,2026,Terraced,3,35067.0,3.5,0.5,931
-E07000134,North West Leicestershire,East Midlands,2026,Detached,4,32252.0,6.2,0.5,1227
-E07000134,North West Leicestershire,East Midlands,2026,Flat,2,32252.0,6.2,0.5,732
-E07000134,North West Leicestershire,East Midlands,2026,Semi-detached,3,32252.0,6.2,0.5,954
-E07000134,North West Leicestershire,East Midlands,2026,Terraced,3,32252.0,6.2,0.5,868
-E06000065,North Yorkshire,Yorkshire and The Humber,2026,Detached,4,30683.0,29.1,0.5,1171
-E06000065,North Yorkshire,Yorkshire and The Humber,2026,Flat,2,30683.0,29.1,0.5,677
-E06000065,North Yorkshire,Yorkshire and The Humber,2026,Semi-detached,3,30683.0,29.1,0.5,888
-E06000065,North Yorkshire,Yorkshire and The Humber,2026,Terraced,3,30683.0,29.1,0.5,822
-E06000057,Northumberland,North East,2026,Detached,4,30456.0,15.6,0.5,992
-E06000057,Northumberland,North East,2026,Flat,2,30456.0,15.6,0.5,580
-E06000057,Northumberland,North East,2026,Semi-detached,3,30456.0,15.6,0.5,738
-E06000057,Northumberland,North East,2026,Terraced,3,30456.0,15.6,0.5,689
-E07000148,Norwich,East of England,2026,Detached,4,30421.0,11.5,0.5,1590
-E07000148,Norwich,East of England,2026,Flat,2,30421.0,11.5,0.5,886
-E07000148,Norwich,East of England,2026,Semi-detached,3,30421.0,11.5,0.5,1245
-E07000148,Norwich,East of England,2026,Terraced,3,30421.0,11.5,0.5,1160
-E06000018,Nottingham,East Midlands,2026,Detached,4,26512.0,36.3,0.5,1300
-E06000018,Nottingham,East Midlands,2026,Flat,2,26512.0,36.3,0.5,834
-E06000018,Nottingham,East Midlands,2026,Semi-detached,3,26512.0,36.3,0.5,1054
-E06000018,Nottingham,East Midlands,2026,Terraced,3,26512.0,36.3,0.5,988
-E07000219,Nuneaton and Bedworth,West Midlands,2026,Detached,4,32402.0,9.3,0.5,1228
-E07000219,Nuneaton and Bedworth,West Midlands,2026,Flat,2,32402.0,9.3,0.5,740
-E07000219,Nuneaton and Bedworth,West Midlands,2026,Semi-detached,3,32402.0,9.3,0.5,983
-E07000219,Nuneaton and Bedworth,West Midlands,2026,Terraced,3,32402.0,9.3,0.5,903
-E07000135,Oadby and Wigston,East Midlands,2026,Detached,4,28368.0,2.7,0.5,1420
-E07000135,Oadby and Wigston,East Midlands,2026,Flat,2,28368.0,2.7,0.5,801
-E07000135,Oadby and Wigston,East Midlands,2026,Semi-detached,3,28368.0,2.7,0.5,1108
-E07000135,Oadby and Wigston,East Midlands,2026,Terraced,3,28368.0,2.7,0.5,974
-E08000004,Oldham,North West,2026,Detached,4,29124.0,0.0,0.5,1324
-E08000004,Oldham,North West,2026,Flat,2,29124.0,0.0,0.5,791
-E08000004,Oldham,North West,2026,Semi-detached,3,29124.0,0.0,0.5,1019
-E08000004,Oldham,North West,2026,Terraced,3,29124.0,0.0,0.5,903
-E07000178,Oxford,South East,2026,Flat,2,36517.0,11.7,0.5,1556
-E07000178,Oxford,South East,2026,Semi-detached,3,36517.0,11.7,0.5,2186
-E07000178,Oxford,South East,2026,Terraced,3,36517.0,11.7,0.5,2021
-W06000009,Pembrokeshire,Wales,2026,Detached,4,27243.0,7.2,0.5,847
-W06000009,Pembrokeshire,Wales,2026,Flat,2,27243.0,7.2,0.5,572
-W06000009,Pembrokeshire,Wales,2026,Semi-detached,3,27243.0,7.2,0.5,719
-W06000009,Pembrokeshire,Wales,2026,Terraced,3,27243.0,7.2,0.5,699
-E07000122,Pendle,North West,2026,Detached,4,26742.0,5.7,0.5,1051
-E07000122,Pendle,North West,2026,Flat,2,26742.0,5.7,0.5,530
-E07000122,Pendle,North West,2026,Semi-detached,3,26742.0,5.7,0.5,751
-E07000122,Pendle,North West,2026,Terraced,3,26742.0,5.7,0.5,644
-E06000031,Peterborough,East of England,2026,Detached,4,29828.0,17.7,0.5,1379
-E06000031,Peterborough,East of England,2026,Flat,2,29828.0,17.7,0.5,790
-E06000031,Peterborough,East of England,2026,Semi-detached,3,29828.0,17.7,0.5,1041
-E06000031,Peterborough,East of England,2026,Terraced,3,29828.0,17.7,0.5,998
-E06000026,Plymouth,South West,2026,Detached,4,28992.0,19.7,0.5,1309
-E06000026,Plymouth,South West,2026,Flat,2,28992.0,19.7,0.5,795
-E06000026,Plymouth,South West,2026,Semi-detached,3,28992.0,19.7,0.5,1055
-E06000026,Plymouth,South West,2026,Terraced,3,28992.0,19.7,0.5,1039
-E06000044,Portsmouth,South East,2026,Detached,4,30962.0,17.5,0.5,1834
-E06000044,Portsmouth,South East,2026,Flat,2,30962.0,17.5,0.5,1044
-E06000044,Portsmouth,South East,2026,Semi-detached,3,30962.0,17.5,0.5,1558
-E06000044,Portsmouth,South East,2026,Terraced,3,30962.0,17.5,0.5,1403
-W06000023,Powys,Wales,2026,Detached,4,30275.0,6.7,0.5,799
-W06000023,Powys,Wales,2026,Flat,2,30275.0,6.7,0.5,486
-W06000023,Powys,Wales,2026,Semi-detached,3,30275.0,6.7,0.5,663
-W06000023,Powys,Wales,2026,Terraced,3,30275.0,6.7,0.5,610
-E07000123,Preston,North West,2026,Detached,4,30038.0,13.4,0.5,1111
-E07000123,Preston,North West,2026,Flat,2,30038.0,13.4,0.5,663
-E07000123,Preston,North West,2026,Semi-detached,3,30038.0,13.4,0.5,852
-E07000123,Preston,North West,2026,Terraced,3,30038.0,13.4,0.5,793
-E06000038,Reading,South East,2026,Detached,4,35454.0,13.8,0.5,2171
-E06000038,Reading,South East,2026,Flat,2,35454.0,13.8,0.5,1271
-E06000038,Reading,South East,2026,Semi-detached,3,35454.0,13.8,0.5,1753
-E06000038,Reading,South East,2026,Terraced,3,35454.0,13.8,0.5,1604
-E09000026,Redbridge,London,2026,Flat,2,37190.0,18.9,0.5,1549
-E09000026,Redbridge,London,2026,Semi-detached,3,37190.0,18.9,0.5,2173
-E09000026,Redbridge,London,2026,Terraced,3,37190.0,18.9,0.5,2015
-E06000003,Redcar and Cleveland,North East,2026,Detached,4,28630.0,12.1,0.5,913
-E06000003,Redcar and Cleveland,North East,2026,Flat,2,28630.0,12.1,0.5,526
-E06000003,Redcar and Cleveland,North East,2026,Semi-detached,3,28630.0,12.1,0.5,716
-E06000003,Redcar and Cleveland,North East,2026,Terraced,3,28630.0,12.1,0.5,653
-E07000236,Redditch,West Midlands,2026,Detached,4,29113.0,5.3,0.5,1265
-E07000236,Redditch,West Midlands,2026,Flat,2,29113.0,5.3,0.5,716
-E07000236,Redditch,West Midlands,2026,Semi-detached,3,29113.0,5.3,0.5,973
-E07000236,Redditch,West Midlands,2026,Terraced,3,29113.0,5.3,0.5,940
-E07000211,Reigate and Banstead,South East,2026,Detached,4,40014.0,7.2,0.5,2392
-E07000211,Reigate and Banstead,South East,2026,Flat,2,40014.0,7.2,0.5,1317
-E07000211,Reigate and Banstead,South East,2026,Semi-detached,3,40014.0,7.2,0.5,1748
-E07000211,Reigate and Banstead,South East,2026,Terraced,3,40014.0,7.2,0.5,1651
-W06000016,Rhondda Cynon Taf,Wales,2026,Detached,4,29802.0,14.4,0.5,968
-W06000016,Rhondda Cynon Taf,Wales,2026,Flat,2,29802.0,14.4,0.5,589
-W06000016,Rhondda Cynon Taf,Wales,2026,Semi-detached,3,29802.0,14.4,0.5,802
-W06000016,Rhondda Cynon Taf,Wales,2026,Terraced,3,29802.0,14.4,0.5,733
-E07000124,Ribble Valley,North West,2026,Detached,4,34077.0,2.0,0.5,1073
-E07000124,Ribble Valley,North West,2026,Flat,2,34077.0,2.0,0.5,690
-E07000124,Ribble Valley,North West,2026,Semi-detached,3,34077.0,2.0,0.5,913
-E07000124,Ribble Valley,North West,2026,Terraced,3,34077.0,2.0,0.5,811
-E09000027,Richmond upon Thames,London,2026,Flat,2,46594.0,9.9,0.5,2025
-E08000005,Rochdale,North West,2026,Detached,4,29535.0,0.0,0.5,1243
-E08000005,Rochdale,North West,2026,Flat,2,29535.0,0.0,0.5,690
-E08000005,Rochdale,North West,2026,Semi-detached,3,29535.0,0.0,0.5,925
-E08000005,Rochdale,North West,2026,Terraced,3,29535.0,0.0,0.5,822
-E07000075,Rochford,East of England,2026,Detached,4,38107.0,3.1,0.5,1711
-E07000075,Rochford,East of England,2026,Flat,2,38107.0,3.1,0.5,1063
-E07000075,Rochford,East of England,2026,Semi-detached,3,38107.0,3.1,0.5,1356
-E07000075,Rochford,East of England,2026,Terraced,3,38107.0,3.1,0.5,1294
-E07000125,Rossendale,North West,2026,Detached,4,30487.0,3.9,0.5,1158
-E07000125,Rossendale,North West,2026,Flat,2,30487.0,3.9,0.5,702
-E07000125,Rossendale,North West,2026,Semi-detached,3,30487.0,3.9,0.5,906
-E07000125,Rossendale,North West,2026,Terraced,3,30487.0,3.9,0.5,787
-E07000064,Rother,South East,2026,Detached,4,30790.0,5.1,0.5,1590
-E07000064,Rother,South East,2026,Flat,2,30790.0,5.1,0.5,925
-E07000064,Rother,South East,2026,Semi-detached,3,30790.0,5.1,0.5,1291
-E07000064,Rother,South East,2026,Terraced,3,30790.0,5.1,0.5,1181
-E08000018,Rotherham,Yorkshire and The Humber,2026,Detached,4,29664.0,21.3,0.5,910
-E08000018,Rotherham,Yorkshire and The Humber,2026,Flat,2,29664.0,21.3,0.5,552
-E08000018,Rotherham,Yorkshire and The Humber,2026,Semi-detached,3,29664.0,21.3,0.5,733
-E08000018,Rotherham,Yorkshire and The Humber,2026,Terraced,3,29664.0,21.3,0.5,673
-E07000220,Rugby,West Midlands,2026,Detached,4,41814.0,5.8,0.5,1517
-E07000220,Rugby,West Midlands,2026,Flat,2,41814.0,5.8,0.5,835
-E07000220,Rugby,West Midlands,2026,Semi-detached,3,41814.0,5.8,0.5,1090
-E07000220,Rugby,West Midlands,2026,Terraced,3,41814.0,5.8,0.5,995
-E07000212,Runnymede,South East,2026,Detached,4,42203.0,5.3,0.5,2209
-E07000212,Runnymede,South East,2026,Flat,2,42203.0,5.3,0.5,1274
-E07000212,Runnymede,South East,2026,Semi-detached,3,42203.0,5.3,0.5,1784
-E07000212,Runnymede,South East,2026,Terraced,3,42203.0,5.3,0.5,1546
-E07000176,Rushcliffe,East Midlands,2026,Detached,4,36705.0,4.9,0.5,1348
-E07000176,Rushcliffe,East Midlands,2026,Flat,2,36705.0,4.9,0.5,856
-E07000176,Rushcliffe,East Midlands,2026,Semi-detached,3,36705.0,4.9,0.5,1077
-E07000176,Rushcliffe,East Midlands,2026,Terraced,3,36705.0,4.9,0.5,1008
-E07000092,Rushmoor,South East,2026,Detached,4,33734.0,5.6,0.5,1930
-E07000092,Rushmoor,South East,2026,Flat,2,33734.0,5.6,0.5,1137
-E07000092,Rushmoor,South East,2026,Semi-detached,3,33734.0,5.6,0.5,1524
-E07000092,Rushmoor,South East,2026,Terraced,3,33734.0,5.6,0.5,1382
-E06000017,Rutland,East Midlands,2026,Detached,4,39559.0,1.3,0.5,1388
-E06000017,Rutland,East Midlands,2026,Flat,2,39559.0,1.3,0.5,770
-E06000017,Rutland,East Midlands,2026,Semi-detached,3,39559.0,1.3,0.5,951
-E06000017,Rutland,East Midlands,2026,Terraced,3,39559.0,1.3,0.5,910
-E08000006,Salford,North West,2026,Detached,4,30495.0,0.0,0.5,1526
-E08000006,Salford,North West,2026,Flat,2,30495.0,0.0,0.5,1016
-E08000006,Salford,North West,2026,Semi-detached,3,30495.0,0.0,0.5,1308
-E08000006,Salford,North West,2026,Terraced,3,30495.0,0.0,0.5,1165
-E08000028,Sandwell,West Midlands,2026,Detached,4,27652.0,23.2,0.5,1237
-E08000028,Sandwell,West Midlands,2026,Flat,2,27652.0,23.2,0.5,757
-E08000028,Sandwell,West Midlands,2026,Semi-detached,3,27652.0,23.2,0.5,1015
-E08000028,Sandwell,West Midlands,2026,Terraced,3,27652.0,23.2,0.5,936
-E08000014,Sefton,North West,2026,Detached,4,29335.0,16.5,0.5,1305
-E08000014,Sefton,North West,2026,Flat,2,29335.0,16.5,0.5,738
-E08000014,Sefton,North West,2026,Semi-detached,3,29335.0,16.5,0.5,1008
-E08000014,Sefton,North West,2026,Terraced,3,29335.0,16.5,0.5,959
-E07000111,Sevenoaks,South East,2026,Flat,2,34969.0,4.9,0.5,1466
-E07000111,Sevenoaks,South East,2026,Semi-detached,3,34969.0,4.9,0.5,1890
-E07000111,Sevenoaks,South East,2026,Terraced,3,34969.0,4.9,0.5,1645
-E08000039,Sheffield,Yorkshire and The Humber,2026,Detached,4,31816.0,8.0,0.5,1226
-E08000039,Sheffield,Yorkshire and The Humber,2026,Flat,2,31816.0,8.0,0.5,769
-E08000039,Sheffield,Yorkshire and The Humber,2026,Semi-detached,3,31816.0,8.0,0.5,983
-E08000039,Sheffield,Yorkshire and The Humber,2026,Terraced,3,31816.0,8.0,0.5,916
-E06000051,Shropshire,West Midlands,2026,Detached,4,29603.0,13.2,0.5,1114
-E06000051,Shropshire,West Midlands,2026,Flat,2,29603.0,13.2,0.5,669
-E06000051,Shropshire,West Midlands,2026,Semi-detached,3,29603.0,13.2,0.5,872
-E06000051,Shropshire,West Midlands,2026,Terraced,3,29603.0,13.2,0.5,789
-E06000039,Slough,South East,2026,Detached,4,35521.0,11.4,0.5,2149
-E06000039,Slough,South East,2026,Flat,2,35521.0,11.4,0.5,1261
-E06000039,Slough,South East,2026,Semi-detached,3,35521.0,11.4,0.5,1773
-E06000039,Slough,South East,2026,Terraced,3,35521.0,11.4,0.5,1579
-E08000029,Solihull,West Midlands,2026,Detached,4,36672.0,13.1,0.5,1789
-E08000029,Solihull,West Midlands,2026,Flat,2,36672.0,13.1,0.5,1003
-E08000029,Solihull,West Midlands,2026,Semi-detached,3,36672.0,13.1,0.5,1304
-E08000029,Solihull,West Midlands,2026,Terraced,3,36672.0,13.1,0.5,1218
-E06000066,Somerset,South West,2026,Detached,4,29908.0,32.4,0.5,1370
-E06000066,Somerset,South West,2026,Flat,2,29908.0,32.4,0.5,776
-E06000066,Somerset,South West,2026,Semi-detached,3,29908.0,32.4,0.5,1079
-E06000066,Somerset,South West,2026,Terraced,3,29908.0,32.4,0.5,1001
-E07000012,South Cambridgeshire,East of England,2026,Detached,4,42690.0,7.0,0.5,1927
-E07000012,South Cambridgeshire,East of England,2026,Flat,2,42690.0,7.0,0.5,1170
-E07000012,South Cambridgeshire,East of England,2026,Semi-detached,3,42690.0,7.0,0.5,1468
-E07000012,South Cambridgeshire,East of England,2026,Terraced,3,42690.0,7.0,0.5,1400
-E07000039,South Derbyshire,East Midlands,2026,Detached,4,35452.0,4.9,0.5,1154
-E07000039,South Derbyshire,East Midlands,2026,Flat,2,35452.0,4.9,0.5,687
-E07000039,South Derbyshire,East Midlands,2026,Semi-detached,3,35452.0,4.9,0.5,919
-E07000039,South Derbyshire,East Midlands,2026,Terraced,3,35452.0,4.9,0.5,863
-E06000025,South Gloucestershire,South West,2026,Detached,4,35002.0,13.6,0.5,1963
-E06000025,South Gloucestershire,South West,2026,Flat,2,35002.0,13.6,0.5,1147
-E06000025,South Gloucestershire,South West,2026,Semi-detached,3,35002.0,13.6,0.5,1559
-E06000025,South Gloucestershire,South West,2026,Terraced,3,35002.0,13.6,0.5,1457
-E07000044,South Hams,South West,2026,Detached,4,29721.0,2.8,0.5,1383
-E07000044,South Hams,South West,2026,Flat,2,29721.0,2.8,0.5,847
-E07000044,South Hams,South West,2026,Semi-detached,3,29721.0,2.8,0.5,1094
-E07000044,South Hams,South West,2026,Terraced,3,29721.0,2.8,0.5,942
-E07000140,South Holland,East Midlands,2026,Detached,4,30196.0,5.3,0.5,949
-E07000140,South Holland,East Midlands,2026,Flat,2,30196.0,5.3,0.5,626
-E07000140,South Holland,East Midlands,2026,Semi-detached,3,30196.0,5.3,0.5,824
-E07000140,South Holland,East Midlands,2026,Terraced,3,30196.0,5.3,0.5,746
-E07000141,South Kesteven,East Midlands,2026,Detached,4,29071.0,7.2,0.5,1101
-E07000141,South Kesteven,East Midlands,2026,Flat,2,29071.0,7.2,0.5,645
-E07000141,South Kesteven,East Midlands,2026,Semi-detached,3,29071.0,7.2,0.5,882
-E07000141,South Kesteven,East Midlands,2026,Terraced,3,29071.0,7.2,0.5,826
-E07000149,South Norfolk,East of England,2026,Detached,4,32934.0,5.6,0.5,1307
-E07000149,South Norfolk,East of England,2026,Flat,2,32934.0,5.6,0.5,822
-E07000149,South Norfolk,East of England,2026,Semi-detached,3,32934.0,5.6,0.5,1018
-E07000149,South Norfolk,East of England,2026,Terraced,3,32934.0,5.6,0.5,985
-E07000179,South Oxfordshire,South East,2026,Detached,4,43026.0,4.8,0.5,1998
-E07000179,South Oxfordshire,South East,2026,Flat,2,43026.0,4.8,0.5,1156
-E07000179,South Oxfordshire,South East,2026,Semi-detached,3,43026.0,4.8,0.5,1531
-E07000179,South Oxfordshire,South East,2026,Terraced,3,43026.0,4.8,0.5,1312
-E07000126,South Ribble,North West,2026,Detached,4,32740.0,5.8,0.5,1063
-E07000126,South Ribble,North West,2026,Flat,2,32740.0,5.8,0.5,658
-E07000126,South Ribble,North West,2026,Semi-detached,3,32740.0,5.8,0.5,841
-E07000126,South Ribble,North West,2026,Terraced,3,32740.0,5.8,0.5,824
-E07000196,South Staffordshire,West Midlands,2026,Detached,4,31766.0,4.8,0.5,1319
-E07000196,South Staffordshire,West Midlands,2026,Flat,2,31766.0,4.8,0.5,770
-E07000196,South Staffordshire,West Midlands,2026,Semi-detached,3,31766.0,4.8,0.5,959
-E07000196,South Staffordshire,West Midlands,2026,Terraced,3,31766.0,4.8,0.5,928
-E08000023,South Tyneside,North East,2026,Detached,4,28784.0,10.6,0.5,1069
-E08000023,South Tyneside,North East,2026,Flat,2,28784.0,10.6,0.5,627
-E08000023,South Tyneside,North East,2026,Semi-detached,3,28784.0,10.6,0.5,771
-E08000023,South Tyneside,North East,2026,Terraced,3,28784.0,10.6,0.5,731
-E06000045,Southampton,South East,2026,Detached,4,32907.0,23.1,0.5,1611
-E06000045,Southampton,South East,2026,Flat,2,32907.0,23.1,0.5,997
-E06000045,Southampton,South East,2026,Semi-detached,3,32907.0,23.1,0.5,1419
-E06000045,Southampton,South East,2026,Terraced,3,32907.0,23.1,0.5,1325
-E06000033,Southend-on-Sea,East of England,2026,Detached,4,33594.0,15.5,0.5,1647
-E06000033,Southend-on-Sea,East of England,2026,Flat,2,33594.0,15.5,0.5,1024
-E06000033,Southend-on-Sea,East of England,2026,Semi-detached,3,33594.0,15.5,0.5,1404
-E06000033,Southend-on-Sea,East of England,2026,Terraced,3,33594.0,15.5,0.5,1307
-E09000028,Southwark,London,2026,Flat,2,43006.0,32.6,0.5,2115
-E07000213,Spelthorne,South East,2026,Detached,4,37918.0,6.1,0.5,2159
-E07000213,Spelthorne,South East,2026,Flat,2,37918.0,6.1,0.5,1417
-E07000213,Spelthorne,South East,2026,Semi-detached,3,37918.0,6.1,0.5,1817
-E07000213,Spelthorne,South East,2026,Terraced,3,37918.0,6.1,0.5,1585
-E07000240,St Albans,East of England,2026,Flat,2,45543.0,7.8,0.5,1485
-E07000240,St Albans,East of England,2026,Semi-detached,3,45543.0,7.8,0.5,2167
-E07000240,St Albans,East of England,2026,Terraced,3,45543.0,7.8,0.5,1799
-E08000013,St. Helens,North West,2026,Detached,4,31443.0,12.0,0.5,1153
-E08000013,St. Helens,North West,2026,Flat,2,31443.0,12.0,0.5,679
-E08000013,St. Helens,North West,2026,Semi-detached,3,31443.0,12.0,0.5,871
-E08000013,St. Helens,North West,2026,Terraced,3,31443.0,12.0,0.5,789
-E07000197,Stafford,West Midlands,2026,Detached,4,33872.0,8.7,0.5,1179
-E07000197,Stafford,West Midlands,2026,Flat,2,33872.0,8.7,0.5,704
-E07000197,Stafford,West Midlands,2026,Semi-detached,3,33872.0,8.7,0.5,950
-E07000197,Stafford,West Midlands,2026,Terraced,3,33872.0,8.7,0.5,908
-E07000198,Staffordshire Moorlands,West Midlands,2026,Detached,4,31065.0,4.3,0.5,951
-E07000198,Staffordshire Moorlands,West Midlands,2026,Flat,2,31065.0,4.3,0.5,576
-E07000198,Staffordshire Moorlands,West Midlands,2026,Semi-detached,3,31065.0,4.3,0.5,800
-E07000198,Staffordshire Moorlands,West Midlands,2026,Terraced,3,31065.0,4.3,0.5,681
-E07000243,Stevenage,East of England,2026,Detached,4,35747.0,7.0,0.5,1952
-E07000243,Stevenage,East of England,2026,Flat,2,35747.0,7.0,0.5,1160
-E07000243,Stevenage,East of England,2026,Semi-detached,3,35747.0,7.0,0.5,1451
-E07000243,Stevenage,East of England,2026,Terraced,3,35747.0,7.0,0.5,1458
-E08000007,Stockport,North West,2026,Detached,4,33565.0,0.0,0.5,1542
-E08000007,Stockport,North West,2026,Flat,2,33565.0,0.0,0.5,942
-E08000007,Stockport,North West,2026,Semi-detached,3,33565.0,0.0,0.5,1209
-E08000007,Stockport,North West,2026,Terraced,3,33565.0,0.0,0.5,1105
-E06000004,Stockton-on-Tees,North East,2026,Detached,4,29877.0,20.3,0.5,1088
-E06000004,Stockton-on-Tees,North East,2026,Flat,2,29877.0,20.3,0.5,628
-E06000004,Stockton-on-Tees,North East,2026,Semi-detached,3,29877.0,20.3,0.5,787
-E06000004,Stockton-on-Tees,North East,2026,Terraced,3,29877.0,20.3,0.5,742
-E06000021,Stoke-on-Trent,West Midlands,2026,Detached,4,29041.0,26.6,0.5,896
-E06000021,Stoke-on-Trent,West Midlands,2026,Flat,2,29041.0,26.6,0.5,570
-E06000021,Stoke-on-Trent,West Midlands,2026,Semi-detached,3,29041.0,26.6,0.5,754
-E06000021,Stoke-on-Trent,West Midlands,2026,Terraced,3,29041.0,26.6,0.5,715
-E07000221,Stratford-on-Avon,West Midlands,2026,Detached,4,34847.0,6.4,0.5,1566
-E07000221,Stratford-on-Avon,West Midlands,2026,Flat,2,34847.0,6.4,0.5,922
-E07000221,Stratford-on-Avon,West Midlands,2026,Semi-detached,3,34847.0,6.4,0.5,1217
-E07000221,Stratford-on-Avon,West Midlands,2026,Terraced,3,34847.0,6.4,0.5,1098
-E07000082,Stroud,South West,2026,Detached,4,33495.0,0.0,0.5,1392
-E07000082,Stroud,South West,2026,Flat,2,33495.0,0.0,0.5,833
-E07000082,Stroud,South West,2026,Semi-detached,3,33495.0,0.0,0.5,1109
-E07000082,Stroud,South West,2026,Terraced,3,33495.0,0.0,0.5,1021
-E08000024,Sunderland,North East,2026,Detached,4,27989.0,18.2,0.5,1044
-E08000024,Sunderland,North East,2026,Flat,2,27989.0,18.2,0.5,606
-E08000024,Sunderland,North East,2026,Semi-detached,3,27989.0,18.2,0.5,728
-E08000024,Sunderland,North East,2026,Terraced,3,27989.0,18.2,0.5,719
-E07000214,Surrey Heath,South East,2026,Detached,4,37793.0,4.2,0.5,2250
-E07000214,Surrey Heath,South East,2026,Flat,2,37793.0,4.2,0.5,1221
-E07000214,Surrey Heath,South East,2026,Semi-detached,3,37793.0,4.2,0.5,1613
-E07000214,Surrey Heath,South East,2026,Terraced,3,37793.0,4.2,0.5,1461
-E09000029,Sutton,London,2026,Detached,4,38359.0,10.8,0.5,2418
-E09000029,Sutton,London,2026,Flat,2,38359.0,10.8,0.5,1400
-E09000029,Sutton,London,2026,Semi-detached,3,38359.0,10.8,0.5,2011
-E09000029,Sutton,London,2026,Terraced,3,38359.0,10.8,0.5,1742
-E07000113,Swale,South East,2026,Detached,4,33647.0,9.9,0.5,1551
-E07000113,Swale,South East,2026,Flat,2,33647.0,9.9,0.5,854
-E07000113,Swale,South East,2026,Semi-detached,3,33647.0,9.9,0.5,1221
-E07000113,Swale,South East,2026,Terraced,3,33647.0,9.9,0.5,1131
-W06000011,Swansea,Wales,2026,Detached,4,32091.0,14.7,0.5,1078
-W06000011,Swansea,Wales,2026,Flat,2,32091.0,14.7,0.5,743
-W06000011,Swansea,Wales,2026,Semi-detached,3,32091.0,14.7,0.5,868
-W06000011,Swansea,Wales,2026,Terraced,3,32091.0,14.7,0.5,815
-E06000030,Swindon,South West,2026,Detached,4,33135.0,11.3,0.5,1508
-E06000030,Swindon,South West,2026,Flat,2,33135.0,11.3,0.5,904
-E06000030,Swindon,South West,2026,Semi-detached,3,33135.0,11.3,0.5,1169
-E06000030,Swindon,South West,2026,Terraced,3,33135.0,11.3,0.5,1062
-E08000008,Tameside,North West,2026,Detached,4,29877.0,0.0,0.5,1223
-E08000008,Tameside,North West,2026,Flat,2,29877.0,0.0,0.5,784
-E08000008,Tameside,North West,2026,Semi-detached,3,29877.0,0.0,0.5,1047
-E08000008,Tameside,North West,2026,Terraced,3,29877.0,0.0,0.5,918
-E07000199,Tamworth,West Midlands,2026,Detached,4,33167.0,4.5,0.5,1233
-E07000199,Tamworth,West Midlands,2026,Flat,2,33167.0,4.5,0.5,751
-E07000199,Tamworth,West Midlands,2026,Semi-detached,3,33167.0,4.5,0.5,967
-E07000199,Tamworth,West Midlands,2026,Terraced,3,33167.0,4.5,0.5,907
-E07000215,Tandridge,South East,2026,Detached,4,33316.0,4.2,0.5,2226
-E07000215,Tandridge,South East,2026,Flat,2,33316.0,4.2,0.5,1340
-E07000215,Tandridge,South East,2026,Semi-detached,3,33316.0,4.2,0.5,1737
-E07000215,Tandridge,South East,2026,Terraced,3,33316.0,4.2,0.5,1673
-E07000045,Teignbridge,South West,2026,Detached,4,28911.0,5.5,0.5,1334
-E07000045,Teignbridge,South West,2026,Flat,2,28911.0,5.5,0.5,727
-E07000045,Teignbridge,South West,2026,Semi-detached,3,28911.0,5.5,0.5,1040
-E07000045,Teignbridge,South West,2026,Terraced,3,28911.0,5.5,0.5,952
-E06000020,Telford and Wrekin,West Midlands,2026,Detached,4,31459.0,12.0,0.5,1195
-E06000020,Telford and Wrekin,West Midlands,2026,Flat,2,31459.0,12.0,0.5,683
-E06000020,Telford and Wrekin,West Midlands,2026,Semi-detached,3,31459.0,12.0,0.5,909
-E06000020,Telford and Wrekin,West Midlands,2026,Terraced,3,31459.0,12.0,0.5,842
-E07000076,Tendring,East of England,2026,Detached,4,29545.0,11.5,0.5,1310
-E07000076,Tendring,East of England,2026,Flat,2,29545.0,11.5,0.5,882
-E07000076,Tendring,East of England,2026,Semi-detached,3,29545.0,11.5,0.5,1133
-E07000076,Tendring,East of England,2026,Terraced,3,29545.0,11.5,0.5,1059
-E07000093,Test Valley,South East,2026,Detached,4,35314.0,5.5,0.5,1726
-E07000093,Test Valley,South East,2026,Flat,2,35314.0,5.5,0.5,978
-E07000093,Test Valley,South East,2026,Semi-detached,3,35314.0,5.5,0.5,1357
-E07000093,Test Valley,South East,2026,Terraced,3,35314.0,5.5,0.5,1249
-E07000083,Tewkesbury,South West,2026,Detached,4,31603.0,0.0,0.5,1485
-E07000083,Tewkesbury,South West,2026,Flat,2,31603.0,0.0,0.5,789
-E07000083,Tewkesbury,South West,2026,Semi-detached,3,31603.0,0.0,0.5,1141
-E07000083,Tewkesbury,South West,2026,Terraced,3,31603.0,0.0,0.5,1024
-E07000114,Thanet,South East,2026,Detached,4,28323.0,10.4,0.5,1456
-E07000114,Thanet,South East,2026,Flat,2,28323.0,10.4,0.5,901
-E07000114,Thanet,South East,2026,Semi-detached,3,28323.0,10.4,0.5,1267
-E07000114,Thanet,South East,2026,Terraced,3,28323.0,10.4,0.5,1152
-E07000102,Three Rivers,East of England,2026,Flat,2,39615.0,4.2,0.5,1452
-E07000102,Three Rivers,East of England,2026,Semi-detached,3,39615.0,4.2,0.5,1983
-E07000102,Three Rivers,East of England,2026,Terraced,3,39615.0,4.2,0.5,1661
-E06000034,Thurrock,East of England,2026,Detached,4,36407.0,11.7,0.5,1919
-E06000034,Thurrock,East of England,2026,Flat,2,36407.0,11.7,0.5,1072
-E06000034,Thurrock,East of England,2026,Semi-detached,3,36407.0,11.7,0.5,1492
-E06000034,Thurrock,East of England,2026,Terraced,3,36407.0,11.7,0.5,1341
-E07000115,Tonbridge and Malling,South East,2026,Detached,4,35106.0,6.1,0.5,2187
-E07000115,Tonbridge and Malling,South East,2026,Flat,2,35106.0,6.1,0.5,1213
-E07000115,Tonbridge and Malling,South East,2026,Semi-detached,3,35106.0,6.1,0.5,1583
-E07000115,Tonbridge and Malling,South East,2026,Terraced,3,35106.0,6.1,0.5,1419
-E06000027,Torbay,South West,2026,Detached,4,28963.0,10.6,0.5,1206
-E06000027,Torbay,South West,2026,Flat,2,28963.0,10.6,0.5,707
-E06000027,Torbay,South West,2026,Semi-detached,3,28963.0,10.6,0.5,987
-E06000027,Torbay,South West,2026,Terraced,3,28963.0,10.6,0.5,931
-W06000020,Torfaen,Wales,2026,Detached,4,33201.0,7.1,0.5,1140
-W06000020,Torfaen,Wales,2026,Flat,2,33201.0,7.1,0.5,684
-W06000020,Torfaen,Wales,2026,Semi-detached,3,33201.0,7.1,0.5,908
-W06000020,Torfaen,Wales,2026,Terraced,3,33201.0,7.1,0.5,822
-E07000046,Torridge,South West,2026,Detached,4,28752.0,2.7,0.5,1034
-E07000046,Torridge,South West,2026,Flat,2,28752.0,2.7,0.5,639
-E07000046,Torridge,South West,2026,Semi-detached,3,28752.0,2.7,0.5,857
-E07000046,Torridge,South West,2026,Terraced,3,28752.0,2.7,0.5,787
-E09000030,Tower Hamlets,London,2026,Flat,2,45183.0,31.7,0.5,2262
-E08000009,Trafford,North West,2026,Detached,4,35593.0,0.0,0.5,2038
-E08000009,Trafford,North West,2026,Flat,2,35593.0,0.0,0.5,1116
-E08000009,Trafford,North West,2026,Semi-detached,3,35593.0,0.0,0.5,1516
-E08000009,Trafford,North West,2026,Terraced,3,35593.0,0.0,0.5,1352
-E07000116,Tunbridge Wells,South East,2026,Detached,4,35319.0,5.1,0.5,2191
-E07000116,Tunbridge Wells,South East,2026,Flat,2,35319.0,5.1,0.5,1219
-E07000116,Tunbridge Wells,South East,2026,Semi-detached,3,35319.0,5.1,0.5,1654
-E07000116,Tunbridge Wells,South East,2026,Terraced,3,35319.0,5.1,0.5,1513
-E07000077,Uttlesford,East of England,2026,Detached,4,41006.0,4.2,0.5,1760
-E07000077,Uttlesford,East of England,2026,Flat,2,41006.0,4.2,0.5,1006
-E07000077,Uttlesford,East of England,2026,Semi-detached,3,41006.0,4.2,0.5,1409
-E07000077,Uttlesford,East of England,2026,Terraced,3,41006.0,4.2,0.5,1276
-W06000014,Vale of Glamorgan,Wales,2026,Detached,4,31410.0,7.2,0.5,1343
-W06000014,Vale of Glamorgan,Wales,2026,Flat,2,31410.0,7.2,0.5,809
-W06000014,Vale of Glamorgan,Wales,2026,Semi-detached,3,31410.0,7.2,0.5,998
-W06000014,Vale of Glamorgan,Wales,2026,Terraced,3,31410.0,7.2,0.5,949
-E07000180,Vale of White Horse,South East,2026,Detached,4,38859.0,5.2,0.5,1876
-E07000180,Vale of White Horse,South East,2026,Flat,2,38859.0,5.2,0.5,1127
-E07000180,Vale of White Horse,South East,2026,Semi-detached,3,38859.0,5.2,0.5,1418
-E07000180,Vale of White Horse,South East,2026,Terraced,3,38859.0,5.2,0.5,1340
-E08000036,Wakefield,Yorkshire and The Humber,2026,Detached,4,29954.0,28.9,0.5,1093
-E08000036,Wakefield,Yorkshire and The Humber,2026,Flat,2,29954.0,28.9,0.5,658
-E08000036,Wakefield,Yorkshire and The Humber,2026,Semi-detached,3,29954.0,28.9,0.5,858
-E08000036,Wakefield,Yorkshire and The Humber,2026,Terraced,3,29954.0,28.9,0.5,776
-E08000030,Walsall,West Midlands,2026,Detached,4,29112.0,19.3,0.5,1215
-E08000030,Walsall,West Midlands,2026,Flat,2,29112.0,19.3,0.5,741
-E08000030,Walsall,West Midlands,2026,Semi-detached,3,29112.0,19.3,0.5,950
-E08000030,Walsall,West Midlands,2026,Terraced,3,29112.0,19.3,0.5,901
-E09000031,Waltham Forest,London,2026,Detached,4,37971.0,18.9,0.5,2142
-E09000031,Waltham Forest,London,2026,Flat,2,37971.0,18.9,0.5,1595
-E09000031,Waltham Forest,London,2026,Semi-detached,3,37971.0,18.9,0.5,2307
-E09000031,Waltham Forest,London,2026,Terraced,3,37971.0,18.9,0.5,2051
-E09000032,Wandsworth,London,2026,Flat,2,49310.0,20.6,0.5,2315
-E06000007,Warrington,North West,2026,Detached,4,34144.0,11.6,0.5,1285
-E06000007,Warrington,North West,2026,Flat,2,34144.0,11.6,0.5,769
-E06000007,Warrington,North West,2026,Semi-detached,3,34144.0,11.6,0.5,963
-E06000007,Warrington,North West,2026,Terraced,3,34144.0,11.6,0.5,877
-E07000222,Warwick,West Midlands,2026,Detached,4,39797.0,8.9,0.5,1724
-E07000222,Warwick,West Midlands,2026,Flat,2,39797.0,8.9,0.5,1020
-E07000222,Warwick,West Midlands,2026,Semi-detached,3,39797.0,8.9,0.5,1291
-E07000222,Warwick,West Midlands,2026,Terraced,3,39797.0,8.9,0.5,1206
-E07000103,Watford,East of England,2026,Flat,2,37172.0,8.6,0.5,1425
-E07000103,Watford,East of England,2026,Semi-detached,3,37172.0,8.6,0.5,2001
-E07000103,Watford,East of England,2026,Terraced,3,37172.0,8.6,0.5,1735
-E07000216,Waverley,South East,2026,Detached,4,42326.0,3.8,0.5,2113
-E07000216,Waverley,South East,2026,Flat,2,42326.0,3.8,0.5,1185
-E07000216,Waverley,South East,2026,Semi-detached,3,42326.0,3.8,0.5,1540
-E07000216,Waverley,South East,2026,Terraced,3,42326.0,3.8,0.5,1397
-E07000065,Wealden,South East,2026,Detached,4,33376.0,6.0,0.5,1853
-E07000065,Wealden,South East,2026,Flat,2,33376.0,6.0,0.5,996
-E07000065,Wealden,South East,2026,Semi-detached,3,33376.0,6.0,0.5,1375
-E07000065,Wealden,South East,2026,Terraced,3,33376.0,6.0,0.5,1264
-E07000241,Welwyn Hatfield,East of England,2026,Detached,4,37805.0,8.0,0.5,1902
-E07000241,Welwyn Hatfield,East of England,2026,Flat,2,37805.0,8.0,0.5,1186
-E07000241,Welwyn Hatfield,East of England,2026,Semi-detached,3,37805.0,8.0,0.5,1651
-E07000241,Welwyn Hatfield,East of England,2026,Terraced,3,37805.0,8.0,0.5,1512
-E06000037,West Berkshire,South East,2026,Detached,4,38513.0,6.9,0.5,1959
-E06000037,West Berkshire,South East,2026,Flat,2,38513.0,6.9,0.5,1075
-E06000037,West Berkshire,South East,2026,Semi-detached,3,38513.0,6.9,0.5,1408
-E06000037,West Berkshire,South East,2026,Terraced,3,38513.0,6.9,0.5,1238
-E07000047,West Devon,South West,2026,Detached,4,26556.0,1.4,0.5,1139
-E07000047,West Devon,South West,2026,Flat,2,26556.0,1.4,0.5,667
-E07000047,West Devon,South West,2026,Semi-detached,3,26556.0,1.4,0.5,903
-E07000047,West Devon,South West,2026,Terraced,3,26556.0,1.4,0.5,836
-E07000127,West Lancashire,North West,2026,Detached,4,31884.0,4.8,0.5,1144
-E07000127,West Lancashire,North West,2026,Flat,2,31884.0,4.8,0.5,690
-E07000127,West Lancashire,North West,2026,Semi-detached,3,31884.0,4.8,0.5,829
-E07000127,West Lancashire,North West,2026,Terraced,3,31884.0,4.8,0.5,812
-E07000142,West Lindsey,East Midlands,2026,Detached,4,30741.0,5.5,0.5,963
-E07000142,West Lindsey,East Midlands,2026,Flat,2,30741.0,5.5,0.5,579
-E07000142,West Lindsey,East Midlands,2026,Semi-detached,3,30741.0,5.5,0.5,777
-E07000142,West Lindsey,East Midlands,2026,Terraced,3,30741.0,5.5,0.5,724
-E06000062,West Northamptonshire,East Midlands,2026,Detached,4,33059.0,28.1,0.5,1459
-E06000062,West Northamptonshire,East Midlands,2026,Flat,2,33059.0,28.1,0.5,852
-E06000062,West Northamptonshire,East Midlands,2026,Semi-detached,3,33059.0,28.1,0.5,1098
-E06000062,West Northamptonshire,East Midlands,2026,Terraced,3,33059.0,28.1,0.5,1054
-E07000181,West Oxfordshire,South East,2026,Detached,4,35388.0,4.0,0.5,1710
-E07000181,West Oxfordshire,South East,2026,Flat,2,35388.0,4.0,0.5,1032
-E07000181,West Oxfordshire,South East,2026,Semi-detached,3,35388.0,4.0,0.5,1434
-E07000181,West Oxfordshire,South East,2026,Terraced,3,35388.0,4.0,0.5,1299
-E07000245,West Suffolk,East of England,2026,Detached,4,33437.0,7.4,0.5,1661
-E07000245,West Suffolk,East of England,2026,Flat,2,33437.0,7.4,0.5,948
-E07000245,West Suffolk,East of England,2026,Semi-detached,3,33437.0,7.4,0.5,1256
-E07000245,West Suffolk,East of England,2026,Terraced,3,33437.0,7.4,0.5,1158
-E06000064,Westmorland and Furness,North West,2026,Detached,4,33988.0,11.7,0.5,1122
-E06000064,Westmorland and Furness,North West,2026,Flat,2,33988.0,11.7,0.5,687
-E06000064,Westmorland and Furness,North West,2026,Semi-detached,3,33988.0,11.7,0.5,906
-E06000064,Westmorland and Furness,North West,2026,Terraced,3,33988.0,11.7,0.5,807
-E08000010,Wigan,North West,2026,Detached,4,31615.0,0.1,0.5,997
-E08000010,Wigan,North West,2026,Flat,2,31615.0,0.1,0.5,634
-E08000010,Wigan,North West,2026,Semi-detached,3,31615.0,0.1,0.5,827
-E08000010,Wigan,North West,2026,Terraced,3,31615.0,0.1,0.5,745
-E06000054,Wiltshire,South West,2026,Detached,4,31873.0,20.6,0.5,1477
-E06000054,Wiltshire,South West,2026,Flat,2,31873.0,20.6,0.5,842
-E06000054,Wiltshire,South West,2026,Semi-detached,3,31873.0,20.6,0.5,1176
-E06000054,Wiltshire,South West,2026,Terraced,3,31873.0,20.6,0.5,1049
-E07000094,Winchester,South East,2026,Detached,4,38352.0,5.4,0.5,2014
-E07000094,Winchester,South East,2026,Flat,2,38352.0,5.4,0.5,1208
-E07000094,Winchester,South East,2026,Semi-detached,3,38352.0,5.4,0.5,1694
-E07000094,Winchester,South East,2026,Terraced,3,38352.0,5.4,0.5,1552
-E06000040,Windsor and Maidenhead,South East,2026,Flat,2,37653.0,7.0,0.5,1459
-E06000040,Windsor and Maidenhead,South East,2026,Semi-detached,3,37653.0,7.0,0.5,1951
-E06000040,Windsor and Maidenhead,South East,2026,Terraced,3,37653.0,7.0,0.5,1835
-E08000015,Wirral,North West,2026,Detached,4,32959.0,17.4,0.5,1171
-E08000015,Wirral,North West,2026,Flat,2,32959.0,17.4,0.5,703
-E08000015,Wirral,North West,2026,Semi-detached,3,32959.0,17.4,0.5,932
-E08000015,Wirral,North West,2026,Terraced,3,32959.0,17.4,0.5,854
-E07000217,Woking,South East,2026,Flat,2,38172.0,5.4,0.5,1291
-E07000217,Woking,South East,2026,Semi-detached,3,38172.0,5.4,0.5,1760
-E07000217,Woking,South East,2026,Terraced,3,38172.0,5.4,0.5,1490
-E06000041,Wokingham,South East,2026,Detached,4,43538.0,5.9,0.5,2134
-E06000041,Wokingham,South East,2026,Flat,2,43538.0,5.9,0.5,1215
-E06000041,Wokingham,South East,2026,Semi-detached,3,43538.0,5.9,0.5,1689
-E06000041,Wokingham,South East,2026,Terraced,3,43538.0,5.9,0.5,1411
-E08000031,Wolverhampton,West Midlands,2026,Detached,4,31308.0,18.7,0.5,1265
-E08000031,Wolverhampton,West Midlands,2026,Flat,2,31308.0,18.7,0.5,731
-E08000031,Wolverhampton,West Midlands,2026,Semi-detached,3,31308.0,18.7,0.5,993
-E08000031,Wolverhampton,West Midlands,2026,Terraced,3,31308.0,18.7,0.5,936
-E07000237,Worcester,West Midlands,2026,Detached,4,32997.0,7.6,0.5,1332
-E07000237,Worcester,West Midlands,2026,Flat,2,32997.0,7.6,0.5,790
-E07000237,Worcester,West Midlands,2026,Semi-detached,3,32997.0,7.6,0.5,1034
-E07000237,Worcester,West Midlands,2026,Terraced,3,32997.0,7.6,0.5,947
-E07000229,Worthing,South East,2026,Detached,4,32823.0,7.5,0.5,1727
-E07000229,Worthing,South East,2026,Flat,2,32823.0,7.5,0.5,1050
-E07000229,Worthing,South East,2026,Semi-detached,3,32823.0,7.5,0.5,1458
-E07000229,Worthing,South East,2026,Terraced,3,32823.0,7.5,0.5,1367
-W06000006,Wrexham,Wales,2026,Detached,4,29752.0,8.2,0.5,986
-W06000006,Wrexham,Wales,2026,Flat,2,29752.0,8.2,0.5,642
-W06000006,Wrexham,Wales,2026,Semi-detached,3,29752.0,8.2,0.5,793
-W06000006,Wrexham,Wales,2026,Terraced,3,29752.0,8.2,0.5,722
-E07000238,Wychavon,West Midlands,2026,Detached,4,29661.0,5.6,0.5,1342
-E07000238,Wychavon,West Midlands,2026,Flat,2,29661.0,5.6,0.5,742
-E07000238,Wychavon,West Midlands,2026,Semi-detached,3,29661.0,5.6,0.5,1009
-E07000238,Wychavon,West Midlands,2026,Terraced,3,29661.0,5.6,0.5,909
-E07000128,Wyre,North West,2026,Detached,4,29814.0,6.4,0.5,1008
-E07000128,Wyre,North West,2026,Flat,2,29814.0,6.4,0.5,613
-E07000128,Wyre,North West,2026,Semi-detached,3,29814.0,6.4,0.5,801
-E07000128,Wyre,North West,2026,Terraced,3,29814.0,6.4,0.5,744
-E07000239,Wyre Forest,West Midlands,2026,Detached,4,29408.0,6.1,0.5,1070
-E07000239,Wyre Forest,West Midlands,2026,Flat,2,29408.0,6.1,0.5,639
-E07000239,Wyre Forest,West Midlands,2026,Semi-detached,3,29408.0,6.1,0.5,915
-E07000239,Wyre Forest,West Midlands,2026,Terraced,3,29408.0,6.1,0.5,809
-E06000014,York,Yorkshire and The Humber,2026,Detached,4,32961.0,13.4,0.5,1544
-E06000014,York,Yorkshire and The Humber,2026,Flat,2,32961.0,13.4,0.5,999
-E06000014,York,Yorkshire and The Humber,2026,Semi-detached,3,32961.0,13.4,0.5,1273
-E06000014,York,Yorkshire and The Humber,2026,Terraced,3,32961.0,13.4,0.5,1178
+la_code,la_name,region,year,property_type,bedrooms,median_annual_income,crime_per_1000,median_monthly_rent
+E07000223,Adur,South East,2026,Detached,4,30217.0,73.43909138606833,1839
+E07000223,Adur,South East,2026,Flat,2,30217.0,73.43909138606833,1175
+E07000223,Adur,South East,2026,Semi-detached,3,30217.0,73.43909138606833,1558
+E07000223,Adur,South East,2026,Terraced,3,30217.0,73.43909138606833,1520
+E07000032,Amber Valley,East Midlands,2026,Detached,4,30823.0,80.19318543679015,1083
+E07000032,Amber Valley,East Midlands,2026,Flat,2,30823.0,80.19318543679015,651
+E07000032,Amber Valley,East Midlands,2026,Semi-detached,3,30823.0,80.19318543679015,862
+E07000032,Amber Valley,East Midlands,2026,Terraced,3,30823.0,80.19318543679015,787
+E07000224,Arun,South East,2026,Detached,4,29809.0,88.53568236946253,1702
+E07000224,Arun,South East,2026,Flat,2,29809.0,88.53568236946253,993
+E07000224,Arun,South East,2026,Semi-detached,3,29809.0,88.53568236946253,1382
+E07000224,Arun,South East,2026,Terraced,3,29809.0,88.53568236946253,1289
+E07000170,Ashfield,East Midlands,2026,Detached,4,27797.0,98.46761780044572,1052
+E07000170,Ashfield,East Midlands,2026,Flat,2,27797.0,98.46761780044572,636
+E07000170,Ashfield,East Midlands,2026,Semi-detached,3,27797.0,98.46761780044572,857
+E07000170,Ashfield,East Midlands,2026,Terraced,3,27797.0,98.46761780044572,784
+E07000105,Ashford,South East,2026,Detached,4,32991.0,77.13141036885276,1798
+E07000105,Ashford,South East,2026,Flat,2,32991.0,77.13141036885276,1051
+E07000105,Ashford,South East,2026,Semi-detached,3,32991.0,77.13141036885276,1346
+E07000105,Ashford,South East,2026,Terraced,3,32991.0,77.13141036885276,1278
+E07000200,Babergh,East of England,2026,Detached,4,30118.0,46.374945059438026,1306
+E07000200,Babergh,East of England,2026,Flat,2,30118.0,46.374945059438026,808
+E07000200,Babergh,East of England,2026,Semi-detached,3,30118.0,46.374945059438026,1065
+E07000200,Babergh,East of England,2026,Terraced,3,30118.0,46.374945059438026,944
+E09000002,Barking and Dagenham,London,2026,Detached,4,32911.0,102.22623219119158,1893
+E09000002,Barking and Dagenham,London,2026,Flat,2,32911.0,102.22623219119158,1618
+E09000002,Barking and Dagenham,London,2026,Semi-detached,3,32911.0,102.22623219119158,1985
+E09000002,Barking and Dagenham,London,2026,Terraced,3,32911.0,102.22623219119158,1859
+E09000003,Barnet,London,2026,Detached,4,39239.0,91.30896107937768,3039
+E09000003,Barnet,London,2026,Flat,2,39239.0,91.30896107937768,1745
+E09000003,Barnet,London,2026,Semi-detached,3,39239.0,91.30896107937768,2591
+E09000003,Barnet,London,2026,Terraced,3,39239.0,91.30896107937768,2244
+E08000038,Barnsley,Yorkshire and The Humber,2026,Detached,4,31359.0,106.87385277549213,956
+E08000038,Barnsley,Yorkshire and The Humber,2026,Flat,2,31359.0,106.87385277549213,580
+E08000038,Barnsley,Yorkshire and The Humber,2026,Semi-detached,3,31359.0,106.87385277549213,751
+E08000038,Barnsley,Yorkshire and The Humber,2026,Terraced,3,31359.0,106.87385277549213,675
+E07000066,Basildon,East of England,2026,Detached,4,34133.0,98.98237109086304,1976
+E07000066,Basildon,East of England,2026,Flat,2,34133.0,98.98237109086304,1135
+E07000066,Basildon,East of England,2026,Semi-detached,3,34133.0,98.98237109086304,1505
+E07000066,Basildon,East of England,2026,Terraced,3,34133.0,98.98237109086304,1445
+E07000084,Basingstoke and Deane,South East,2026,Detached,4,39279.0,70.09487881177301,1884
+E07000084,Basingstoke and Deane,South East,2026,Flat,2,39279.0,70.09487881177301,1073
+E07000084,Basingstoke and Deane,South East,2026,Semi-detached,3,39279.0,70.09487881177301,1441
+E07000084,Basingstoke and Deane,South East,2026,Terraced,3,39279.0,70.09487881177301,1311
+E07000171,Bassetlaw,East Midlands,2026,Detached,4,28314.0,95.49717683900866,985
+E07000171,Bassetlaw,East Midlands,2026,Flat,2,28314.0,95.49717683900866,579
+E07000171,Bassetlaw,East Midlands,2026,Semi-detached,3,28314.0,95.49717683900866,770
+E07000171,Bassetlaw,East Midlands,2026,Terraced,3,28314.0,95.49717683900866,730
+E06000022,Bath and North East Somerset,South West,2026,Detached,4,32481.0,89.32393552947266,2427
+E06000022,Bath and North East Somerset,South West,2026,Flat,2,32481.0,89.32393552947266,1405
+E06000022,Bath and North East Somerset,South West,2026,Semi-detached,3,32481.0,89.32393552947266,2029
+E06000022,Bath and North East Somerset,South West,2026,Terraced,3,32481.0,89.32393552947266,2044
+E06000055,Bedford,East of England,2026,Detached,4,35987.0,95.05697614028657,1612
+E06000055,Bedford,East of England,2026,Flat,2,35987.0,95.05697614028657,920
+E06000055,Bedford,East of England,2026,Semi-detached,3,35987.0,95.05697614028657,1325
+E06000055,Bedford,East of England,2026,Terraced,3,35987.0,95.05697614028657,1156
+E09000004,Bexley,London,2026,Detached,4,36883.0,77.49423382846564,2284
+E09000004,Bexley,London,2026,Flat,2,36883.0,77.49423382846564,1394
+E09000004,Bexley,London,2026,Semi-detached,3,36883.0,77.49423382846564,1992
+E09000004,Bexley,London,2026,Terraced,3,36883.0,77.49423382846564,1803
+E08000025,Birmingham,West Midlands,2026,Detached,4,30180.0,124.85640973355083,1451
+E08000025,Birmingham,West Midlands,2026,Flat,2,30180.0,124.85640973355083,928
+E08000025,Birmingham,West Midlands,2026,Semi-detached,3,30180.0,124.85640973355083,1166
+E08000025,Birmingham,West Midlands,2026,Terraced,3,30180.0,124.85640973355083,1109
+E07000129,Blaby,East Midlands,2026,Detached,4,31950.0,69.71767982808076,1332
+E07000129,Blaby,East Midlands,2026,Flat,2,31950.0,69.71767982808076,790
+E07000129,Blaby,East Midlands,2026,Semi-detached,3,31950.0,69.71767982808076,1030
+E07000129,Blaby,East Midlands,2026,Terraced,3,31950.0,69.71767982808076,998
+E06000008,Blackburn with Darwen,North West,2026,Detached,4,27502.0,108.02742352000293,1022
+E06000008,Blackburn with Darwen,North West,2026,Flat,2,27502.0,108.02742352000293,602
+E06000008,Blackburn with Darwen,North West,2026,Semi-detached,3,27502.0,108.02742352000293,769
+E06000008,Blackburn with Darwen,North West,2026,Terraced,3,27502.0,108.02742352000293,724
+E06000009,Blackpool,North West,2026,Detached,4,27979.0,181.61291221810276,991
+E06000009,Blackpool,North West,2026,Flat,2,27979.0,181.61291221810276,571
+E06000009,Blackpool,North West,2026,Semi-detached,3,27979.0,181.61291221810276,821
+E06000009,Blackpool,North West,2026,Terraced,3,27979.0,181.61291221810276,751
+W06000019,Blaenau Gwent,Wales,2026,Detached,4,30734.0,149.73443995680026,926
+W06000019,Blaenau Gwent,Wales,2026,Flat,2,30734.0,149.73443995680026,543
+W06000019,Blaenau Gwent,Wales,2026,Semi-detached,3,30734.0,149.73443995680026,723
+W06000019,Blaenau Gwent,Wales,2026,Terraced,3,30734.0,149.73443995680026,647
+E07000033,Bolsover,East Midlands,2026,Detached,4,29674.0,83.82999395713117,942
+E07000033,Bolsover,East Midlands,2026,Flat,2,29674.0,83.82999395713117,557
+E07000033,Bolsover,East Midlands,2026,Semi-detached,3,29674.0,83.82999395713117,727
+E07000033,Bolsover,East Midlands,2026,Terraced,3,29674.0,83.82999395713117,683
+E08000001,Bolton,North West,2026,Detached,4,29409.0,,1376
+E08000001,Bolton,North West,2026,Flat,2,29409.0,,795
+E08000001,Bolton,North West,2026,Semi-detached,3,29409.0,,985
+E08000001,Bolton,North West,2026,Terraced,3,29409.0,,874
+E07000136,Boston,East Midlands,2026,Detached,4,27729.0,107.68185096820729,1045
+E07000136,Boston,East Midlands,2026,Flat,2,27729.0,107.68185096820729,649
+E07000136,Boston,East Midlands,2026,Semi-detached,3,27729.0,107.68185096820729,869
+E07000136,Boston,East Midlands,2026,Terraced,3,27729.0,107.68185096820729,801
+E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Detached,4,31848.0,90.08966830857332,1879
+E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Flat,2,31848.0,90.08966830857332,1077
+E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Semi-detached,3,31848.0,90.08966830857332,1524
+E06000058,"Bournemouth, Christchurch and Poole",South West,2026,Terraced,3,31848.0,90.08966830857332,1350
+E06000036,Bracknell Forest,South East,2026,Detached,4,36067.0,65.92757955276402,2255
+E06000036,Bracknell Forest,South East,2026,Flat,2,36067.0,65.92757955276402,1209
+E06000036,Bracknell Forest,South East,2026,Semi-detached,3,36067.0,65.92757955276402,1673
+E06000036,Bracknell Forest,South East,2026,Terraced,3,36067.0,65.92757955276402,1463
+E08000032,Bradford,Yorkshire and The Humber,2026,Detached,4,28424.0,129.37510533242016,1050
+E08000032,Bradford,Yorkshire and The Humber,2026,Flat,2,28424.0,129.37510533242016,619
+E08000032,Bradford,Yorkshire and The Humber,2026,Semi-detached,3,28424.0,129.37510533242016,786
+E08000032,Bradford,Yorkshire and The Humber,2026,Terraced,3,28424.0,129.37510533242016,716
+E07000067,Braintree,East of England,2026,Detached,4,34546.0,61.38606724294322,1711
+E07000067,Braintree,East of England,2026,Flat,2,34546.0,61.38606724294322,983
+E07000067,Braintree,East of England,2026,Semi-detached,3,34546.0,61.38606724294322,1325
+E07000067,Braintree,East of England,2026,Terraced,3,34546.0,61.38606724294322,1204
+E07000143,Breckland,East of England,2026,Detached,4,28930.0,57.7804787467504,1343
+E07000143,Breckland,East of England,2026,Flat,2,28930.0,57.7804787467504,714
+E07000143,Breckland,East of England,2026,Semi-detached,3,28930.0,57.7804787467504,1012
+E07000143,Breckland,East of England,2026,Terraced,3,28930.0,57.7804787467504,928
+E09000005,Brent,London,2026,Detached,4,34871.0,119.95423068077602,3207
+E09000005,Brent,London,2026,Flat,2,34871.0,119.95423068077602,1806
+E09000005,Brent,London,2026,Semi-detached,3,34871.0,119.95423068077602,2646
+E09000005,Brent,London,2026,Terraced,3,34871.0,119.95423068077602,2345
+E07000068,Brentwood,East of England,2026,Detached,4,39864.0,72.95515829421751,2210
+E07000068,Brentwood,East of England,2026,Flat,2,39864.0,72.95515829421751,1276
+E07000068,Brentwood,East of England,2026,Semi-detached,3,39864.0,72.95515829421751,1791
+E07000068,Brentwood,East of England,2026,Terraced,3,39864.0,72.95515829421751,1572
+W06000013,Bridgend,Wales,2026,Detached,4,31475.0,85.89933735185663,1015
+W06000013,Bridgend,Wales,2026,Flat,2,31475.0,85.89933735185663,623
+W06000013,Bridgend,Wales,2026,Semi-detached,3,31475.0,85.89933735185663,817
+W06000013,Bridgend,Wales,2026,Terraced,3,31475.0,85.89933735185663,755
+E06000043,Brighton and Hove,South East,2026,Detached,4,33506.0,125.75570961044448,2240
+E06000043,Brighton and Hove,South East,2026,Flat,2,33506.0,125.75570961044448,1390
+E06000043,Brighton and Hove,South East,2026,Semi-detached,3,33506.0,125.75570961044448,2044
+E06000043,Brighton and Hove,South East,2026,Terraced,3,33506.0,125.75570961044448,2003
+E06000023,"Bristol, City of",South West,2026,Detached,4,34051.0,146.76735452085774,2133
+E06000023,"Bristol, City of",South West,2026,Flat,2,34051.0,146.76735452085774,1524
+E06000023,"Bristol, City of",South West,2026,Semi-detached,3,34051.0,146.76735452085774,2121
+E06000023,"Bristol, City of",South West,2026,Terraced,3,34051.0,146.76735452085774,2035
+E07000144,Broadland,East of England,2026,Detached,4,30920.0,39.369289376450034,1246
+E07000144,Broadland,East of England,2026,Flat,2,30920.0,39.369289376450034,769
+E07000144,Broadland,East of England,2026,Semi-detached,3,30920.0,39.369289376450034,1011
+E07000144,Broadland,East of England,2026,Terraced,3,30920.0,39.369289376450034,951
+E09000006,Bromley,London,2026,Detached,4,43981.0,86.16031043184306,2939
+E09000006,Bromley,London,2026,Flat,2,43981.0,86.16031043184306,1529
+E09000006,Bromley,London,2026,Semi-detached,3,43981.0,86.16031043184306,2192
+E09000006,Bromley,London,2026,Terraced,3,43981.0,86.16031043184306,1940
+E07000234,Bromsgrove,West Midlands,2026,Detached,4,36409.0,60.61408412030635,1356
+E07000234,Bromsgrove,West Midlands,2026,Flat,2,36409.0,60.61408412030635,797
+E07000234,Bromsgrove,West Midlands,2026,Semi-detached,3,36409.0,60.61408412030635,1054
+E07000234,Bromsgrove,West Midlands,2026,Terraced,3,36409.0,60.61408412030635,987
+E07000095,Broxbourne,East of England,2026,Detached,4,37283.0,93.72636478231358,2316
+E07000095,Broxbourne,East of England,2026,Flat,2,37283.0,93.72636478231358,1314
+E07000095,Broxbourne,East of England,2026,Semi-detached,3,37283.0,93.72636478231358,1866
+E07000095,Broxbourne,East of England,2026,Terraced,3,37283.0,93.72636478231358,1669
+E07000172,Broxtowe,East Midlands,2026,Detached,4,30966.0,80.29799145336644,1188
+E07000172,Broxtowe,East Midlands,2026,Flat,2,30966.0,80.29799145336644,775
+E07000172,Broxtowe,East Midlands,2026,Semi-detached,3,30966.0,80.29799145336644,1022
+E07000172,Broxtowe,East Midlands,2026,Terraced,3,30966.0,80.29799145336644,912
+E06000060,Buckinghamshire,South East,2026,Detached,4,35937.0,60.53267521940934,2201
+E06000060,Buckinghamshire,South East,2026,Flat,2,35937.0,60.53267521940934,1230
+E06000060,Buckinghamshire,South East,2026,Semi-detached,3,35937.0,60.53267521940934,1606
+E06000060,Buckinghamshire,South East,2026,Terraced,3,35937.0,60.53267521940934,1446
+E07000117,Burnley,North West,2026,Detached,4,29680.0,138.1035405068056,935
+E07000117,Burnley,North West,2026,Flat,2,29680.0,138.1035405068056,530
+E07000117,Burnley,North West,2026,Semi-detached,3,29680.0,138.1035405068056,708
+E07000117,Burnley,North West,2026,Terraced,3,29680.0,138.1035405068056,627
+E08000002,Bury,North West,2026,Detached,4,31687.0,,1455
+E08000002,Bury,North West,2026,Flat,2,31687.0,,837
+E08000002,Bury,North West,2026,Semi-detached,3,31687.0,,1068
+E08000002,Bury,North West,2026,Terraced,3,31687.0,,953
+W06000018,Caerphilly,Wales,2026,Detached,4,30854.0,108.19636751894048,965
+W06000018,Caerphilly,Wales,2026,Flat,2,30854.0,108.19636751894048,620
+W06000018,Caerphilly,Wales,2026,Semi-detached,3,30854.0,108.19636751894048,793
+W06000018,Caerphilly,Wales,2026,Terraced,3,30854.0,108.19636751894048,749
+E08000033,Calderdale,Yorkshire and The Humber,2026,Detached,4,31708.0,114.2910019265994,1088
+E08000033,Calderdale,Yorkshire and The Humber,2026,Flat,2,31708.0,114.2910019265994,633
+E08000033,Calderdale,Yorkshire and The Humber,2026,Semi-detached,3,31708.0,114.2910019265994,835
+E08000033,Calderdale,Yorkshire and The Humber,2026,Terraced,3,31708.0,114.2910019265994,719
+E07000008,Cambridge,East of England,2026,Detached,4,38711.0,113.0698195793744,2344
+E07000008,Cambridge,East of England,2026,Flat,2,38711.0,113.0698195793744,1452
+E07000008,Cambridge,East of England,2026,Semi-detached,3,38711.0,113.0698195793744,2011
+E07000008,Cambridge,East of England,2026,Terraced,3,38711.0,113.0698195793744,1833
+E09000007,Camden,London,2026,Detached,4,44088.0,212.4915765861404,2943
+E09000007,Camden,London,2026,Flat,2,44088.0,212.4915765861404,2425
+E09000007,Camden,London,2026,Semi-detached,3,44088.0,212.4915765861404,3783
+E09000007,Camden,London,2026,Terraced,3,44088.0,212.4915765861404,3464
+E07000192,Cannock Chase,West Midlands,2026,Detached,4,30178.0,85.51376331508452,1134
+E07000192,Cannock Chase,West Midlands,2026,Flat,2,30178.0,85.51376331508452,655
+E07000192,Cannock Chase,West Midlands,2026,Semi-detached,3,30178.0,85.51376331508452,883
+E07000192,Cannock Chase,West Midlands,2026,Terraced,3,30178.0,85.51376331508452,850
+E07000106,Canterbury,South East,2026,Detached,4,30188.0,107.89486630752958,1689
+E07000106,Canterbury,South East,2026,Flat,2,30188.0,107.89486630752958,1037
+E07000106,Canterbury,South East,2026,Semi-detached,3,30188.0,107.89486630752958,1490
+E07000106,Canterbury,South East,2026,Terraced,3,30188.0,107.89486630752958,1356
+W06000015,Cardiff,Wales,2026,Detached,4,32756.0,113.22460919070237,1523
+W06000015,Cardiff,Wales,2026,Flat,2,32756.0,113.22460919070237,996
+W06000015,Cardiff,Wales,2026,Semi-detached,3,32756.0,113.22460919070237,1190
+W06000015,Cardiff,Wales,2026,Terraced,3,32756.0,113.22460919070237,1177
+W06000010,Carmarthenshire,Wales,2026,Detached,4,30774.0,86.42527507801113,861
+W06000010,Carmarthenshire,Wales,2026,Flat,2,30774.0,86.42527507801113,567
+W06000010,Carmarthenshire,Wales,2026,Semi-detached,3,30774.0,86.42527507801113,737
+W06000010,Carmarthenshire,Wales,2026,Terraced,3,30774.0,86.42527507801113,701
+E07000069,Castle Point,East of England,2026,Detached,4,35975.0,62.4744793793385,1447
+E07000069,Castle Point,East of England,2026,Flat,2,35975.0,62.4744793793385,1056
+E07000069,Castle Point,East of England,2026,Semi-detached,3,35975.0,62.4744793793385,1369
+E07000069,Castle Point,East of England,2026,Terraced,3,35975.0,62.4744793793385,1343
+E06000056,Central Bedfordshire,East of England,2026,Detached,4,36622.0,60.62094805739961,1785
+E06000056,Central Bedfordshire,East of England,2026,Flat,2,36622.0,60.62094805739961,1001
+E06000056,Central Bedfordshire,East of England,2026,Semi-detached,3,36622.0,60.62094805739961,1373
+E06000056,Central Bedfordshire,East of England,2026,Terraced,3,36622.0,60.62094805739961,1222
+W06000008,Ceredigion,Wales,2026,Detached,4,29326.0,67.6653460988225,823
+W06000008,Ceredigion,Wales,2026,Flat,2,29326.0,67.6653460988225,612
+W06000008,Ceredigion,Wales,2026,Semi-detached,3,29326.0,67.6653460988225,732
+W06000008,Ceredigion,Wales,2026,Terraced,3,29326.0,67.6653460988225,772
+E07000130,Charnwood,East Midlands,2026,Detached,4,33550.0,79.02782023845919,1297
+E07000130,Charnwood,East Midlands,2026,Flat,2,33550.0,79.02782023845919,782
+E07000130,Charnwood,East Midlands,2026,Semi-detached,3,33550.0,79.02782023845919,1025
+E07000130,Charnwood,East Midlands,2026,Terraced,3,33550.0,79.02782023845919,946
+E07000070,Chelmsford,East of England,2026,Detached,4,35791.0,84.16854699060713,2004
+E07000070,Chelmsford,East of England,2026,Flat,2,35791.0,84.16854699060713,1213
+E07000070,Chelmsford,East of England,2026,Semi-detached,3,35791.0,84.16854699060713,1531
+E07000070,Chelmsford,East of England,2026,Terraced,3,35791.0,84.16854699060713,1377
+E07000078,Cheltenham,South West,2026,Detached,4,36014.0,103.94229819187828,1784
+E07000078,Cheltenham,South West,2026,Flat,2,36014.0,103.94229819187828,999
+E07000078,Cheltenham,South West,2026,Semi-detached,3,36014.0,103.94229819187828,1362
+E07000078,Cheltenham,South West,2026,Terraced,3,36014.0,103.94229819187828,1238
+E07000177,Cherwell,South East,2026,Detached,4,36568.0,70.88594361648991,1901
+E07000177,Cherwell,South East,2026,Flat,2,36568.0,70.88594361648991,1099
+E07000177,Cherwell,South East,2026,Semi-detached,3,36568.0,70.88594361648991,1435
+E07000177,Cherwell,South East,2026,Terraced,3,36568.0,70.88594361648991,1323
+E06000049,Cheshire East,North West,2026,Detached,4,33221.0,66.3612710037865,1456
+E06000049,Cheshire East,North West,2026,Flat,2,33221.0,66.3612710037865,833
+E06000049,Cheshire East,North West,2026,Semi-detached,3,33221.0,66.3612710037865,1108
+E06000049,Cheshire East,North West,2026,Terraced,3,33221.0,66.3612710037865,985
+E06000050,Cheshire West and Chester,North West,2026,Detached,4,32391.0,73.41870993793304,1427
+E06000050,Cheshire West and Chester,North West,2026,Flat,2,32391.0,73.41870993793304,864
+E06000050,Cheshire West and Chester,North West,2026,Semi-detached,3,32391.0,73.41870993793304,1146
+E06000050,Cheshire West and Chester,North West,2026,Terraced,3,32391.0,73.41870993793304,998
+E07000034,Chesterfield,East Midlands,2026,Detached,4,30621.0,120.98403480581476,980
+E07000034,Chesterfield,East Midlands,2026,Flat,2,30621.0,120.98403480581476,616
+E07000034,Chesterfield,East Midlands,2026,Semi-detached,3,30621.0,120.98403480581476,813
+E07000034,Chesterfield,East Midlands,2026,Terraced,3,30621.0,120.98403480581476,737
+E07000225,Chichester,South East,2026,Detached,4,28585.0,81.88966703526232,1784
+E07000225,Chichester,South East,2026,Flat,2,28585.0,81.88966703526232,1110
+E07000225,Chichester,South East,2026,Semi-detached,3,28585.0,81.88966703526232,1484
+E07000225,Chichester,South East,2026,Terraced,3,28585.0,81.88966703526232,1374
+E07000118,Chorley,North West,2026,Detached,4,33337.0,76.78920321145353,1106
+E07000118,Chorley,North West,2026,Flat,2,33337.0,76.78920321145353,692
+E07000118,Chorley,North West,2026,Semi-detached,3,33337.0,76.78920321145353,901
+E07000118,Chorley,North West,2026,Terraced,3,33337.0,76.78920321145353,798
+E07000071,Colchester,East of England,2026,Detached,4,31589.0,95.01250229913056,1579
+E07000071,Colchester,East of England,2026,Flat,2,31589.0,95.01250229913056,960
+E07000071,Colchester,East of England,2026,Semi-detached,3,31589.0,95.01250229913056,1279
+E07000071,Colchester,East of England,2026,Terraced,3,31589.0,95.01250229913056,1238
+W06000003,Conwy,Wales,2026,Detached,4,28113.0,107.7686788264392,1027
+W06000003,Conwy,Wales,2026,Flat,2,28113.0,107.7686788264392,667
+W06000003,Conwy,Wales,2026,Semi-detached,3,28113.0,107.7686788264392,842
+W06000003,Conwy,Wales,2026,Terraced,3,28113.0,107.7686788264392,777
+E06000052,Cornwall,South West,2026,Detached,4,28210.0,70.88966486656565,1273
+E06000052,Cornwall,South West,2026,Flat,2,28210.0,70.88966486656565,806
+E06000052,Cornwall,South West,2026,Semi-detached,3,28210.0,70.88966486656565,1067
+E06000052,Cornwall,South West,2026,Terraced,3,28210.0,70.88966486656565,1029
+E07000079,Cotswold,South West,2026,Detached,4,32927.0,56.68228432882278,1771
+E07000079,Cotswold,South West,2026,Flat,2,32927.0,56.68228432882278,984
+E07000079,Cotswold,South West,2026,Semi-detached,3,32927.0,56.68228432882278,1357
+E07000079,Cotswold,South West,2026,Terraced,3,32927.0,56.68228432882278,1229
+E06000047,County Durham,North East,2026,Detached,4,29718.0,120.85965582606568,887
+E06000047,County Durham,North East,2026,Flat,2,29718.0,120.85965582606568,552
+E06000047,County Durham,North East,2026,Semi-detached,3,29718.0,120.85965582606568,691
+E06000047,County Durham,North East,2026,Terraced,3,29718.0,120.85965582606568,690
+E08000026,Coventry,West Midlands,2026,Detached,4,33063.0,98.26299600291694,1238
+E08000026,Coventry,West Midlands,2026,Flat,2,33063.0,98.26299600291694,854
+E08000026,Coventry,West Midlands,2026,Semi-detached,3,33063.0,98.26299600291694,1080
+E08000026,Coventry,West Midlands,2026,Terraced,3,33063.0,98.26299600291694,1044
+E07000226,Crawley,South East,2026,Detached,4,34225.0,129.31657855409685,2188
+E07000226,Crawley,South East,2026,Flat,2,34225.0,129.31657855409685,1237
+E07000226,Crawley,South East,2026,Semi-detached,3,34225.0,129.31657855409685,1645
+E07000226,Crawley,South East,2026,Terraced,3,34225.0,129.31657855409685,1492
+E09000008,Croydon,London,2026,Detached,4,38080.0,102.50801663069852,2648
+E09000008,Croydon,London,2026,Flat,2,38080.0,102.50801663069852,1447
+E09000008,Croydon,London,2026,Semi-detached,3,38080.0,102.50801663069852,2019
+E09000008,Croydon,London,2026,Terraced,3,38080.0,102.50801663069852,1812
+E06000063,Cumberland,North West,2026,Detached,4,33840.0,82.02402429282502,953
+E06000063,Cumberland,North West,2026,Flat,2,33840.0,82.02402429282502,594
+E06000063,Cumberland,North West,2026,Semi-detached,3,33840.0,82.02402429282502,772
+E06000063,Cumberland,North West,2026,Terraced,3,33840.0,82.02402429282502,691
+E07000096,Dacorum,East of England,2026,Detached,4,36473.0,87.2434017595308,2247
+E07000096,Dacorum,East of England,2026,Flat,2,36473.0,87.2434017595308,1277
+E07000096,Dacorum,East of England,2026,Semi-detached,3,36473.0,87.2434017595308,1779
+E07000096,Dacorum,East of England,2026,Terraced,3,36473.0,87.2434017595308,1562
+E06000005,Darlington,North East,2026,Detached,4,30100.0,128.02243346678188,1018
+E06000005,Darlington,North East,2026,Flat,2,30100.0,128.02243346678188,582
+E06000005,Darlington,North East,2026,Semi-detached,3,30100.0,128.02243346678188,757
+E06000005,Darlington,North East,2026,Terraced,3,30100.0,128.02243346678188,695
+E07000107,Dartford,South East,2026,Detached,4,36210.0,104.80850693207282,2315
+E07000107,Dartford,South East,2026,Flat,2,36210.0,104.80850693207282,1284
+E07000107,Dartford,South East,2026,Semi-detached,3,36210.0,104.80850693207282,1720
+E07000107,Dartford,South East,2026,Terraced,3,36210.0,104.80850693207282,1592
+W06000004,Denbighshire,Wales,2026,Detached,4,26812.0,111.71842397223324,883
+W06000004,Denbighshire,Wales,2026,Flat,2,26812.0,111.71842397223324,649
+W06000004,Denbighshire,Wales,2026,Semi-detached,3,26812.0,111.71842397223324,768
+W06000004,Denbighshire,Wales,2026,Terraced,3,26812.0,111.71842397223324,693
+E06000015,Derby,East Midlands,2026,Detached,4,30467.0,133.49846010808298,1106
+E06000015,Derby,East Midlands,2026,Flat,2,30467.0,133.49846010808298,725
+E06000015,Derby,East Midlands,2026,Semi-detached,3,30467.0,133.49846010808298,938
+E06000015,Derby,East Midlands,2026,Terraced,3,30467.0,133.49846010808298,867
+E07000035,Derbyshire Dales,East Midlands,2026,Detached,4,33700.0,55.47842505692231,1101
+E07000035,Derbyshire Dales,East Midlands,2026,Flat,2,33700.0,55.47842505692231,658
+E07000035,Derbyshire Dales,East Midlands,2026,Semi-detached,3,33700.0,55.47842505692231,897
+E07000035,Derbyshire Dales,East Midlands,2026,Terraced,3,33700.0,55.47842505692231,776
+E08000017,Doncaster,Yorkshire and The Humber,2026,Detached,4,31119.0,130.5260420536444,938
+E08000017,Doncaster,Yorkshire and The Humber,2026,Flat,2,31119.0,130.5260420536444,557
+E08000017,Doncaster,Yorkshire and The Humber,2026,Semi-detached,3,31119.0,130.5260420536444,760
+E08000017,Doncaster,Yorkshire and The Humber,2026,Terraced,3,31119.0,130.5260420536444,707
+E06000059,Dorset,South West,2026,Detached,4,31444.0,54.079419797665686,1450
+E06000059,Dorset,South West,2026,Flat,2,31444.0,54.079419797665686,843
+E06000059,Dorset,South West,2026,Semi-detached,3,31444.0,54.079419797665686,1159
+E06000059,Dorset,South West,2026,Terraced,3,31444.0,54.079419797665686,1051
+E07000108,Dover,South East,2026,Detached,4,33704.0,88.73652472016852,1424
+E07000108,Dover,South East,2026,Flat,2,33704.0,88.73652472016852,860
+E07000108,Dover,South East,2026,Semi-detached,3,33704.0,88.73652472016852,1179
+E07000108,Dover,South East,2026,Terraced,3,33704.0,88.73652472016852,1063
+E08000027,Dudley,West Midlands,2026,Detached,4,30822.0,80.17883398564418,1079
+E08000027,Dudley,West Midlands,2026,Flat,2,30822.0,80.17883398564418,676
+E08000027,Dudley,West Midlands,2026,Semi-detached,3,30822.0,80.17883398564418,909
+E08000027,Dudley,West Midlands,2026,Terraced,3,30822.0,80.17883398564418,865
+E09000009,Ealing,London,2026,Detached,4,35665.0,112.9789806547619,3098
+E09000009,Ealing,London,2026,Flat,2,35665.0,112.9789806547619,1880
+E09000009,Ealing,London,2026,Semi-detached,3,35665.0,112.9789806547619,2787
+E09000009,Ealing,London,2026,Terraced,3,35665.0,112.9789806547619,2553
+E07000009,East Cambridgeshire,East of England,2026,Detached,4,34311.0,59.12324654594658,1463
+E07000009,East Cambridgeshire,East of England,2026,Flat,2,34311.0,59.12324654594658,835
+E07000009,East Cambridgeshire,East of England,2026,Semi-detached,3,34311.0,59.12324654594658,1097
+E07000009,East Cambridgeshire,East of England,2026,Terraced,3,34311.0,59.12324654594658,1034
+E07000040,East Devon,South West,2026,Detached,4,32154.0,46.637057824940335,1322
+E07000040,East Devon,South West,2026,Flat,2,32154.0,46.637057824940335,783
+E07000040,East Devon,South West,2026,Semi-detached,3,32154.0,46.637057824940335,1051
+E07000040,East Devon,South West,2026,Terraced,3,32154.0,46.637057824940335,985
+E07000085,East Hampshire,South East,2026,Detached,4,39682.0,47.5960765396366,1766
+E07000085,East Hampshire,South East,2026,Flat,2,39682.0,47.5960765396366,1002
+E07000085,East Hampshire,South East,2026,Semi-detached,3,39682.0,47.5960765396366,1440
+E07000085,East Hampshire,South East,2026,Terraced,3,39682.0,47.5960765396366,1295
+E07000242,East Hertfordshire,East of England,2026,Detached,4,44154.0,69.63102643118842,2190
+E07000242,East Hertfordshire,East of England,2026,Flat,2,44154.0,69.63102643118842,1271
+E07000242,East Hertfordshire,East of England,2026,Semi-detached,3,44154.0,69.63102643118842,1688
+E07000242,East Hertfordshire,East of England,2026,Terraced,3,44154.0,69.63102643118842,1445
+E07000137,East Lindsey,East Midlands,2026,Detached,4,26705.0,96.97048161574314,828
+E07000137,East Lindsey,East Midlands,2026,Flat,2,26705.0,96.97048161574314,576
+E07000137,East Lindsey,East Midlands,2026,Semi-detached,3,26705.0,96.97048161574314,768
+E07000137,East Lindsey,East Midlands,2026,Terraced,3,26705.0,96.97048161574314,704
+E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Detached,4,31881.0,61.32643602879551,1030
+E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Flat,2,31881.0,61.32643602879551,573
+E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Semi-detached,3,31881.0,61.32643602879551,775
+E06000011,East Riding of Yorkshire,Yorkshire and The Humber,2026,Terraced,3,31881.0,61.32643602879551,702
+E07000193,East Staffordshire,West Midlands,2026,Detached,4,31517.0,75.67982606183624,1181
+E07000193,East Staffordshire,West Midlands,2026,Flat,2,31517.0,75.67982606183624,684
+E07000193,East Staffordshire,West Midlands,2026,Semi-detached,3,31517.0,75.67982606183624,924
+E07000193,East Staffordshire,West Midlands,2026,Terraced,3,31517.0,75.67982606183624,844
+E07000244,East Suffolk,East of England,2026,Detached,4,30261.0,56.76393209279266,1133
+E07000244,East Suffolk,East of England,2026,Flat,2,30261.0,56.76393209279266,657
+E07000244,East Suffolk,East of England,2026,Semi-detached,3,30261.0,56.76393209279266,930
+E07000244,East Suffolk,East of England,2026,Terraced,3,30261.0,56.76393209279266,853
+E07000061,Eastbourne,South East,2026,Detached,4,31199.0,143.23252545864054,1495
+E07000061,Eastbourne,South East,2026,Flat,2,31199.0,143.23252545864054,1025
+E07000061,Eastbourne,South East,2026,Semi-detached,3,31199.0,143.23252545864054,1311
+E07000061,Eastbourne,South East,2026,Terraced,3,31199.0,143.23252545864054,1189
+E07000086,Eastleigh,South East,2026,Detached,4,34474.0,65.70871894788115,1664
+E07000086,Eastleigh,South East,2026,Flat,2,34474.0,65.70871894788115,1033
+E07000086,Eastleigh,South East,2026,Semi-detached,3,34474.0,65.70871894788115,1357
+E07000086,Eastleigh,South East,2026,Terraced,3,34474.0,65.70871894788115,1232
+E07000207,Elmbridge,South East,2026,Detached,4,42607.0,60.371690856517226,2759
+E07000207,Elmbridge,South East,2026,Flat,2,42607.0,60.371690856517226,1507
+E07000207,Elmbridge,South East,2026,Semi-detached,3,42607.0,60.371690856517226,1975
+E07000207,Elmbridge,South East,2026,Terraced,3,42607.0,60.371690856517226,1918
+E09000010,Enfield,London,2026,Detached,4,34962.0,110.99574984820887,2589
+E09000010,Enfield,London,2026,Flat,2,34962.0,110.99574984820887,1663
+E09000010,Enfield,London,2026,Semi-detached,3,34962.0,110.99574984820887,2448
+E09000010,Enfield,London,2026,Terraced,3,34962.0,110.99574984820887,2051
+E07000072,Epping Forest,East of England,2026,Detached,4,38171.0,74.0783559980924,2573
+E07000072,Epping Forest,East of England,2026,Flat,2,38171.0,74.0783559980924,1437
+E07000072,Epping Forest,East of England,2026,Semi-detached,3,38171.0,74.0783559980924,1978
+E07000072,Epping Forest,East of England,2026,Terraced,3,38171.0,74.0783559980924,1826
+E07000208,Epsom and Ewell,South East,2026,Detached,4,43006.0,82.93151013554035,2546
+E07000208,Epsom and Ewell,South East,2026,Flat,2,43006.0,82.93151013554035,1384
+E07000208,Epsom and Ewell,South East,2026,Semi-detached,3,43006.0,82.93151013554035,1943
+E07000208,Epsom and Ewell,South East,2026,Terraced,3,43006.0,82.93151013554035,1711
+E07000036,Erewash,East Midlands,2026,Detached,4,31673.0,91.368947952835,1099
+E07000036,Erewash,East Midlands,2026,Flat,2,31673.0,91.368947952835,676
+E07000036,Erewash,East Midlands,2026,Semi-detached,3,31673.0,91.368947952835,906
+E07000036,Erewash,East Midlands,2026,Terraced,3,31673.0,91.368947952835,815
+E07000041,Exeter,South West,2026,Detached,4,29531.0,108.56164880270352,1710
+E07000041,Exeter,South West,2026,Flat,2,29531.0,108.56164880270352,1043
+E07000041,Exeter,South West,2026,Semi-detached,3,29531.0,108.56164880270352,1386
+E07000041,Exeter,South West,2026,Terraced,3,29531.0,108.56164880270352,1350
+E07000087,Fareham,South East,2026,Detached,4,38851.0,61.84289218447991,1732
+E07000087,Fareham,South East,2026,Flat,2,38851.0,61.84289218447991,980
+E07000087,Fareham,South East,2026,Semi-detached,3,38851.0,61.84289218447991,1297
+E07000087,Fareham,South East,2026,Terraced,3,38851.0,61.84289218447991,1159
+E07000010,Fenland,East of England,2026,Detached,4,30125.0,88.89832908524498,1114
+E07000010,Fenland,East of England,2026,Flat,2,30125.0,88.89832908524498,672
+E07000010,Fenland,East of England,2026,Semi-detached,3,30125.0,88.89832908524498,934
+E07000010,Fenland,East of England,2026,Terraced,3,30125.0,88.89832908524498,843
+W06000005,Flintshire,Wales,2026,Detached,4,32675.0,78.07430396142452,1063
+W06000005,Flintshire,Wales,2026,Flat,2,32675.0,78.07430396142452,677
+W06000005,Flintshire,Wales,2026,Semi-detached,3,32675.0,78.07430396142452,855
+W06000005,Flintshire,Wales,2026,Terraced,3,32675.0,78.07430396142452,813
+E07000112,Folkestone and Hythe,South East,2026,Detached,4,33355.0,87.88994588233197,1638
+E07000112,Folkestone and Hythe,South East,2026,Flat,2,33355.0,87.88994588233197,934
+E07000112,Folkestone and Hythe,South East,2026,Semi-detached,3,33355.0,87.88994588233197,1353
+E07000112,Folkestone and Hythe,South East,2026,Terraced,3,33355.0,87.88994588233197,1223
+E07000080,Forest of Dean,South West,2026,Detached,4,36589.0,52.80787958783012,1122
+E07000080,Forest of Dean,South West,2026,Flat,2,36589.0,52.80787958783012,621
+E07000080,Forest of Dean,South West,2026,Semi-detached,3,36589.0,52.80787958783012,913
+E07000080,Forest of Dean,South West,2026,Terraced,3,36589.0,52.80787958783012,832
+E07000119,Fylde,North West,2026,Detached,4,36020.0,69.03990125621475,1284
+E07000119,Fylde,North West,2026,Flat,2,36020.0,69.03990125621475,717
+E07000119,Fylde,North West,2026,Semi-detached,3,36020.0,69.03990125621475,966
+E07000119,Fylde,North West,2026,Terraced,3,36020.0,69.03990125621475,882
+E08000037,Gateshead,North East,2026,Detached,4,29494.0,92.94895535507064,1114
+E08000037,Gateshead,North East,2026,Flat,2,29494.0,92.94895535507064,714
+E08000037,Gateshead,North East,2026,Semi-detached,3,29494.0,92.94895535507064,853
+E08000037,Gateshead,North East,2026,Terraced,3,29494.0,92.94895535507064,821
+E07000173,Gedling,East Midlands,2026,Detached,4,30051.0,69.44387102101481,1184
+E07000173,Gedling,East Midlands,2026,Flat,2,30051.0,69.44387102101481,757
+E07000173,Gedling,East Midlands,2026,Semi-detached,3,30051.0,69.44387102101481,961
+E07000173,Gedling,East Midlands,2026,Terraced,3,30051.0,69.44387102101481,896
+E07000081,Gloucester,South West,2026,Detached,4,30455.0,126.24400101035616,1583
+E07000081,Gloucester,South West,2026,Flat,2,30455.0,126.24400101035616,858
+E07000081,Gloucester,South West,2026,Semi-detached,3,30455.0,126.24400101035616,1231
+E07000081,Gloucester,South West,2026,Terraced,3,30455.0,126.24400101035616,1138
+E07000088,Gosport,South East,2026,Detached,4,34256.0,79.76470018640006,1597
+E07000088,Gosport,South East,2026,Flat,2,34256.0,79.76470018640006,974
+E07000088,Gosport,South East,2026,Semi-detached,3,34256.0,79.76470018640006,1344
+E07000088,Gosport,South East,2026,Terraced,3,34256.0,79.76470018640006,1190
+E07000109,Gravesham,South East,2026,Detached,4,35065.0,92.51849920428695,1974
+E07000109,Gravesham,South East,2026,Flat,2,35065.0,92.51849920428695,1051
+E07000109,Gravesham,South East,2026,Semi-detached,3,35065.0,92.51849920428695,1582
+E07000109,Gravesham,South East,2026,Terraced,3,35065.0,92.51849920428695,1385
+E07000145,Great Yarmouth,East of England,2026,Detached,4,28808.0,111.6217795695197,1143
+E07000145,Great Yarmouth,East of England,2026,Flat,2,28808.0,111.6217795695197,660
+E07000145,Great Yarmouth,East of England,2026,Semi-detached,3,28808.0,111.6217795695197,907
+E07000145,Great Yarmouth,East of England,2026,Terraced,3,28808.0,111.6217795695197,840
+E09000011,Greenwich,London,2026,Detached,4,39984.0,112.89899576728358,3091
+E09000011,Greenwich,London,2026,Flat,2,39984.0,112.89899576728358,1838
+E09000011,Greenwich,London,2026,Semi-detached,3,39984.0,112.89899576728358,2482
+E09000011,Greenwich,London,2026,Terraced,3,39984.0,112.89899576728358,2262
+E07000209,Guildford,South East,2026,Detached,4,39985.0,79.33065173383811,2552
+E07000209,Guildford,South East,2026,Flat,2,39985.0,79.33065173383811,1395
+E07000209,Guildford,South East,2026,Semi-detached,3,39985.0,79.33065173383811,1963
+E07000209,Guildford,South East,2026,Terraced,3,39985.0,79.33065173383811,1785
+W06000002,Gwynedd,Wales,2026,Detached,4,25179.0,90.57733072862548,887
+W06000002,Gwynedd,Wales,2026,Flat,2,25179.0,90.57733072862548,630
+W06000002,Gwynedd,Wales,2026,Semi-detached,3,25179.0,90.57733072862548,770
+W06000002,Gwynedd,Wales,2026,Terraced,3,25179.0,90.57733072862548,703
+E09000012,Hackney,London,2026,Detached,4,40237.0,144.6358750154935,3059
+E09000012,Hackney,London,2026,Flat,2,40237.0,144.6358750154935,2378
+E09000012,Hackney,London,2026,Semi-detached,3,40237.0,144.6358750154935,3323
+E09000012,Hackney,London,2026,Terraced,3,40237.0,144.6358750154935,3216
+E06000006,Halton,North West,2026,Detached,4,29819.0,90.2343986900358,1076
+E06000006,Halton,North West,2026,Flat,2,29819.0,90.2343986900358,636
+E06000006,Halton,North West,2026,Semi-detached,3,29819.0,90.2343986900358,821
+E06000006,Halton,North West,2026,Terraced,3,29819.0,90.2343986900358,759
+E09000013,Hammersmith and Fulham,London,2026,Detached,4,42811.0,137.2282037262901,3822
+E09000013,Hammersmith and Fulham,London,2026,Flat,2,42811.0,137.2282037262901,2391
+E09000013,Hammersmith and Fulham,London,2026,Semi-detached,3,42811.0,137.2282037262901,3033
+E09000013,Hammersmith and Fulham,London,2026,Terraced,3,42811.0,137.2282037262901,3843
+E07000131,Harborough,East Midlands,2026,Detached,4,34321.0,50.48931758259287,1313
+E07000131,Harborough,East Midlands,2026,Flat,2,34321.0,50.48931758259287,836
+E07000131,Harborough,East Midlands,2026,Semi-detached,3,34321.0,50.48931758259287,1040
+E07000131,Harborough,East Midlands,2026,Terraced,3,34321.0,50.48931758259287,947
+E09000014,Haringey,London,2026,Detached,4,37563.0,130.50206973232466,3403
+E09000014,Haringey,London,2026,Flat,2,37563.0,130.50206973232466,1932
+E09000014,Haringey,London,2026,Semi-detached,3,37563.0,130.50206973232466,3138
+E09000014,Haringey,London,2026,Terraced,3,37563.0,130.50206973232466,2657
+E07000073,Harlow,East of England,2026,Detached,4,30654.0,111.91053651705349,2212
+E07000073,Harlow,East of England,2026,Flat,2,30654.0,111.91053651705349,1140
+E07000073,Harlow,East of England,2026,Semi-detached,3,30654.0,111.91053651705349,1710
+E07000073,Harlow,East of England,2026,Terraced,3,30654.0,111.91053651705349,1530
+E09000015,Harrow,London,2026,Detached,4,36000.0,80.0551699851804,2770
+E09000015,Harrow,London,2026,Flat,2,36000.0,80.0551699851804,1618
+E09000015,Harrow,London,2026,Semi-detached,3,36000.0,80.0551699851804,2260
+E09000015,Harrow,London,2026,Terraced,3,36000.0,80.0551699851804,2022
+E07000089,Hart,South East,2026,Detached,4,39341.0,43.770261769971455,2125
+E07000089,Hart,South East,2026,Flat,2,39341.0,43.770261769971455,1167
+E07000089,Hart,South East,2026,Semi-detached,3,39341.0,43.770261769971455,1509
+E07000089,Hart,South East,2026,Terraced,3,39341.0,43.770261769971455,1403
+E06000001,Hartlepool,North East,2026,Detached,4,28830.0,160.27133338685076,814
+E06000001,Hartlepool,North East,2026,Flat,2,28830.0,160.27133338685076,489
+E06000001,Hartlepool,North East,2026,Semi-detached,3,28830.0,160.27133338685076,631
+E06000001,Hartlepool,North East,2026,Terraced,3,28830.0,160.27133338685076,562
+E07000062,Hastings,South East,2026,Detached,4,29323.0,148.39029222387322,1383
+E07000062,Hastings,South East,2026,Flat,2,29323.0,148.39029222387322,798
+E07000062,Hastings,South East,2026,Semi-detached,3,29323.0,148.39029222387322,1148
+E07000062,Hastings,South East,2026,Terraced,3,29323.0,148.39029222387322,1044
+E07000090,Havant,South East,2026,Detached,4,30819.0,88.68422292363499,1573
+E07000090,Havant,South East,2026,Flat,2,30819.0,88.68422292363499,959
+E07000090,Havant,South East,2026,Semi-detached,3,30819.0,88.68422292363499,1340
+E07000090,Havant,South East,2026,Terraced,3,30819.0,88.68422292363499,1194
+E09000016,Havering,London,2026,Detached,4,40726.0,86.3501515383547,2414
+E09000016,Havering,London,2026,Flat,2,40726.0,86.3501515383547,1427
+E09000016,Havering,London,2026,Semi-detached,3,40726.0,86.3501515383547,1941
+E09000016,Havering,London,2026,Terraced,3,40726.0,86.3501515383547,1812
+E06000019,"Herefordshire, County of",West Midlands,2026,Detached,4,29361.0,61.883566446278415,1156
+E06000019,"Herefordshire, County of",West Midlands,2026,Flat,2,29361.0,61.883566446278415,667
+E06000019,"Herefordshire, County of",West Midlands,2026,Semi-detached,3,29361.0,61.883566446278415,929
+E06000019,"Herefordshire, County of",West Midlands,2026,Terraced,3,29361.0,61.883566446278415,798
+E07000098,Hertsmere,East of England,2026,Detached,4,36159.0,91.68919286660255,2549
+E07000098,Hertsmere,East of England,2026,Flat,2,36159.0,91.68919286660255,1463
+E07000098,Hertsmere,East of England,2026,Semi-detached,3,36159.0,91.68919286660255,2059
+E07000098,Hertsmere,East of England,2026,Terraced,3,36159.0,91.68919286660255,1762
+E07000037,High Peak,East Midlands,2026,Detached,4,32258.0,72.60351673284175,1312
+E07000037,High Peak,East Midlands,2026,Flat,2,32258.0,72.60351673284175,729
+E07000037,High Peak,East Midlands,2026,Semi-detached,3,32258.0,72.60351673284175,972
+E07000037,High Peak,East Midlands,2026,Terraced,3,32258.0,72.60351673284175,895
+E09000017,Hillingdon,London,2026,Detached,4,36429.0,118.74026160877456,2415
+E09000017,Hillingdon,London,2026,Flat,2,36429.0,118.74026160877456,1465
+E09000017,Hillingdon,London,2026,Semi-detached,3,36429.0,118.74026160877456,2055
+E09000017,Hillingdon,London,2026,Terraced,3,36429.0,118.74026160877456,1767
+E07000132,Hinckley and Bosworth,East Midlands,2026,Detached,4,31591.0,64.85960757780785,1232
+E07000132,Hinckley and Bosworth,East Midlands,2026,Flat,2,31591.0,64.85960757780785,730
+E07000132,Hinckley and Bosworth,East Midlands,2026,Semi-detached,3,31591.0,64.85960757780785,977
+E07000132,Hinckley and Bosworth,East Midlands,2026,Terraced,3,31591.0,64.85960757780785,910
+E07000227,Horsham,South East,2026,Detached,4,36448.0,56.75718345437322,2150
+E07000227,Horsham,South East,2026,Flat,2,36448.0,56.75718345437322,1182
+E07000227,Horsham,South East,2026,Semi-detached,3,36448.0,56.75718345437322,1673
+E07000227,Horsham,South East,2026,Terraced,3,36448.0,56.75718345437322,1511
+E09000018,Hounslow,London,2026,Detached,4,35301.0,108.54931449216323,2711
+E09000018,Hounslow,London,2026,Flat,2,35301.0,108.54931449216323,1814
+E09000018,Hounslow,London,2026,Semi-detached,3,35301.0,108.54931449216323,2439
+E09000018,Hounslow,London,2026,Terraced,3,35301.0,108.54931449216323,2242
+E07000011,Huntingdonshire,East of England,2026,Detached,4,33375.0,66.9893352644823,1521
+E07000011,Huntingdonshire,East of England,2026,Flat,2,33375.0,66.9893352644823,870
+E07000011,Huntingdonshire,East of England,2026,Semi-detached,3,33375.0,66.9893352644823,1153
+E07000011,Huntingdonshire,East of England,2026,Terraced,3,33375.0,66.9893352644823,1024
+E07000120,Hyndburn,North West,2026,Detached,4,29647.0,121.19712799742256,897
+E07000120,Hyndburn,North West,2026,Flat,2,29647.0,121.19712799742256,544
+E07000120,Hyndburn,North West,2026,Semi-detached,3,29647.0,121.19712799742256,722
+E07000120,Hyndburn,North West,2026,Terraced,3,29647.0,121.19712799742256,653
+E07000202,Ipswich,East of England,2026,Detached,4,30928.0,101.60121040894325,1308
+E07000202,Ipswich,East of England,2026,Flat,2,30928.0,101.60121040894325,879
+E07000202,Ipswich,East of England,2026,Semi-detached,3,30928.0,101.60121040894325,1068
+E07000202,Ipswich,East of England,2026,Terraced,3,30928.0,101.60121040894325,975
+W06000001,Isle of Anglesey,Wales,2026,Detached,4,29944.0,73.92831635255878,892
+W06000001,Isle of Anglesey,Wales,2026,Flat,2,29944.0,73.92831635255878,625
+W06000001,Isle of Anglesey,Wales,2026,Semi-detached,3,29944.0,73.92831635255878,753
+W06000001,Isle of Anglesey,Wales,2026,Terraced,3,29944.0,73.92831635255878,718
+E06000046,Isle of Wight,South East,2026,Detached,4,26740.0,84.68712928958566,1277
+E06000046,Isle of Wight,South East,2026,Flat,2,26740.0,84.68712928958566,767
+E06000046,Isle of Wight,South East,2026,Semi-detached,3,26740.0,84.68712928958566,1055
+E06000046,Isle of Wight,South East,2026,Terraced,3,26740.0,84.68712928958566,993
+E09000019,Islington,London,2026,Detached,4,47411.0,183.60194343378564,3159
+E09000019,Islington,London,2026,Flat,2,47411.0,183.60194343378564,2503
+E09000019,Islington,London,2026,Semi-detached,3,47411.0,183.60194343378564,3159
+E09000019,Islington,London,2026,Terraced,3,47411.0,183.60194343378564,3866
+E09000020,Kensington and Chelsea,London,2026,Detached,4,46690.0,173.33635253269657,2967
+E09000020,Kensington and Chelsea,London,2026,Flat,2,46690.0,173.33635253269657,3130
+E09000020,Kensington and Chelsea,London,2026,Semi-detached,3,46690.0,173.33635253269657,4864
+E09000020,Kensington and Chelsea,London,2026,Terraced,3,46690.0,173.33635253269657,4599
+E07000146,King's Lynn and West Norfolk,East of England,2026,Detached,4,30581.0,65.62892260247351,1278
+E07000146,King's Lynn and West Norfolk,East of England,2026,Flat,2,30581.0,65.62892260247351,735
+E07000146,King's Lynn and West Norfolk,East of England,2026,Semi-detached,3,30581.0,65.62892260247351,1006
+E07000146,King's Lynn and West Norfolk,East of England,2026,Terraced,3,30581.0,65.62892260247351,946
+E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Detached,4,27309.0,139.54994748533431,959
+E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Flat,2,27309.0,139.54994748533431,565
+E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Semi-detached,3,27309.0,139.54994748533431,743
+E06000010,"Kingston upon Hull, City of",Yorkshire and The Humber,2026,Terraced,3,27309.0,139.54994748533431,690
+E09000021,Kingston upon Thames,London,2026,Detached,4,41833.0,86.98722512604118,2718
+E09000021,Kingston upon Thames,London,2026,Flat,2,41833.0,86.98722512604118,1621
+E09000021,Kingston upon Thames,London,2026,Semi-detached,3,41833.0,86.98722512604118,2392
+E09000021,Kingston upon Thames,London,2026,Terraced,3,41833.0,86.98722512604118,2172
+E08000034,Kirklees,Yorkshire and The Humber,2026,Detached,4,30238.0,97.36627249726354,1110
+E08000034,Kirklees,Yorkshire and The Humber,2026,Flat,2,30238.0,97.36627249726354,668
+E08000034,Kirklees,Yorkshire and The Humber,2026,Semi-detached,3,30238.0,97.36627249726354,853
+E08000034,Kirklees,Yorkshire and The Humber,2026,Terraced,3,30238.0,97.36627249726354,737
+E08000011,Knowsley,North West,2026,Detached,4,32542.0,91.30665819707676,1288
+E08000011,Knowsley,North West,2026,Flat,2,32542.0,91.30665819707676,694
+E08000011,Knowsley,North West,2026,Semi-detached,3,32542.0,91.30665819707676,937
+E08000011,Knowsley,North West,2026,Terraced,3,32542.0,91.30665819707676,880
+E09000022,Lambeth,London,2026,Detached,4,43666.0,155.47346785534745,3013
+E09000022,Lambeth,London,2026,Flat,2,43666.0,155.47346785534745,2213
+E09000022,Lambeth,London,2026,Semi-detached,3,43666.0,155.47346785534745,3430
+E09000022,Lambeth,London,2026,Terraced,3,43666.0,155.47346785534745,3153
+E07000121,Lancaster,North West,2026,Detached,4,29651.0,95.32006306932809,1185
+E07000121,Lancaster,North West,2026,Flat,2,29651.0,95.32006306932809,708
+E07000121,Lancaster,North West,2026,Semi-detached,3,29651.0,95.32006306932809,911
+E07000121,Lancaster,North West,2026,Terraced,3,29651.0,95.32006306932809,849
+E08000035,Leeds,Yorkshire and The Humber,2026,Detached,4,31679.0,124.98245196597466,1514
+E08000035,Leeds,Yorkshire and The Humber,2026,Flat,2,31679.0,124.98245196597466,907
+E08000035,Leeds,Yorkshire and The Humber,2026,Semi-detached,3,31679.0,124.98245196597466,1233
+E08000035,Leeds,Yorkshire and The Humber,2026,Terraced,3,31679.0,124.98245196597466,1162
+E06000016,Leicester,East Midlands,2026,Detached,4,27858.0,123.96767558650645,1352
+E06000016,Leicester,East Midlands,2026,Flat,2,27858.0,123.96767558650645,795
+E06000016,Leicester,East Midlands,2026,Semi-detached,3,27858.0,123.96767558650645,1071
+E06000016,Leicester,East Midlands,2026,Terraced,3,27858.0,123.96767558650645,1005
+E07000063,Lewes,South East,2026,Detached,4,33088.0,74.27324448601044,1856
+E07000063,Lewes,South East,2026,Flat,2,33088.0,74.27324448601044,1079
+E07000063,Lewes,South East,2026,Semi-detached,3,33088.0,74.27324448601044,1496
+E07000063,Lewes,South East,2026,Terraced,3,33088.0,74.27324448601044,1398
+E09000023,Lewisham,London,2026,Detached,4,39505.0,122.81546786607626,2513
+E09000023,Lewisham,London,2026,Flat,2,39505.0,122.81546786607626,1663
+E09000023,Lewisham,London,2026,Semi-detached,3,39505.0,122.81546786607626,2377
+E09000023,Lewisham,London,2026,Terraced,3,39505.0,122.81546786607626,2100
+E07000194,Lichfield,West Midlands,2026,Detached,4,33763.0,67.40531473470469,1480
+E07000194,Lichfield,West Midlands,2026,Flat,2,33763.0,67.40531473470469,862
+E07000194,Lichfield,West Midlands,2026,Semi-detached,3,33763.0,67.40531473470469,1110
+E07000194,Lichfield,West Midlands,2026,Terraced,3,33763.0,67.40531473470469,1066
+E07000138,Lincoln,East Midlands,2026,Detached,4,29824.0,162.19485055780785,1198
+E07000138,Lincoln,East Midlands,2026,Flat,2,29824.0,162.19485055780785,780
+E07000138,Lincoln,East Midlands,2026,Semi-detached,3,29824.0,162.19485055780785,1004
+E07000138,Lincoln,East Midlands,2026,Terraced,3,29824.0,162.19485055780785,949
+E08000012,Liverpool,North West,2026,Detached,4,30947.0,135.8534400441019,1233
+E08000012,Liverpool,North West,2026,Flat,2,30947.0,135.8534400441019,790
+E08000012,Liverpool,North West,2026,Semi-detached,3,30947.0,135.8534400441019,1016
+E08000012,Liverpool,North West,2026,Terraced,3,30947.0,135.8534400441019,924
+E06000032,Luton,East of England,2026,Detached,4,28741.0,92.90549115830444,1632
+E06000032,Luton,East of England,2026,Flat,2,28741.0,92.90549115830444,990
+E06000032,Luton,East of England,2026,Semi-detached,3,28741.0,92.90549115830444,1353
+E06000032,Luton,East of England,2026,Terraced,3,28741.0,92.90549115830444,1238
+E07000110,Maidstone,South East,2026,Detached,4,34151.0,86.12177729018102,1811
+E07000110,Maidstone,South East,2026,Flat,2,34151.0,86.12177729018102,1066
+E07000110,Maidstone,South East,2026,Semi-detached,3,34151.0,86.12177729018102,1463
+E07000110,Maidstone,South East,2026,Terraced,3,34151.0,86.12177729018102,1315
+E07000074,Maldon,East of England,2026,Detached,4,32599.0,49.90312838338367,1635
+E07000074,Maldon,East of England,2026,Flat,2,32599.0,49.90312838338367,857
+E07000074,Maldon,East of England,2026,Semi-detached,3,32599.0,49.90312838338367,1248
+E07000074,Maldon,East of England,2026,Terraced,3,32599.0,49.90312838338367,1079
+E07000235,Malvern Hills,West Midlands,2026,Detached,4,28167.0,55.96112822943826,1254
+E07000235,Malvern Hills,West Midlands,2026,Flat,2,28167.0,55.96112822943826,818
+E07000235,Malvern Hills,West Midlands,2026,Semi-detached,3,28167.0,55.96112822943826,1033
+E07000235,Malvern Hills,West Midlands,2026,Terraced,3,28167.0,55.96112822943826,932
+E08000003,Manchester,North West,2026,Detached,4,30067.0,,1896
+E08000003,Manchester,North West,2026,Flat,2,30067.0,,1156
+E08000003,Manchester,North West,2026,Semi-detached,3,30067.0,,1512
+E08000003,Manchester,North West,2026,Terraced,3,30067.0,,1419
+E07000174,Mansfield,East Midlands,2026,Detached,4,28170.0,117.94303407751448,1000
+E07000174,Mansfield,East Midlands,2026,Flat,2,28170.0,117.94303407751448,646
+E07000174,Mansfield,East Midlands,2026,Semi-detached,3,28170.0,117.94303407751448,840
+E07000174,Mansfield,East Midlands,2026,Terraced,3,28170.0,117.94303407751448,809
+E06000035,Medway,South East,2026,Detached,4,33857.0,103.55077093376428,1662
+E06000035,Medway,South East,2026,Flat,2,33857.0,103.55077093376428,1018
+E06000035,Medway,South East,2026,Semi-detached,3,33857.0,103.55077093376428,1389
+E06000035,Medway,South East,2026,Terraced,3,33857.0,103.55077093376428,1255
+E07000133,Melton,East Midlands,2026,Detached,4,26633.0,65.32709255128533,1109
+E07000133,Melton,East Midlands,2026,Flat,2,26633.0,65.32709255128533,634
+E07000133,Melton,East Midlands,2026,Semi-detached,3,26633.0,65.32709255128533,847
+E07000133,Melton,East Midlands,2026,Terraced,3,26633.0,65.32709255128533,766
+W06000024,Merthyr Tydfil,Wales,2026,Detached,4,31504.0,110.79126829101126,1087
+W06000024,Merthyr Tydfil,Wales,2026,Flat,2,31504.0,110.79126829101126,601
+W06000024,Merthyr Tydfil,Wales,2026,Semi-detached,3,31504.0,110.79126829101126,765
+W06000024,Merthyr Tydfil,Wales,2026,Terraced,3,31504.0,110.79126829101126,683
+E09000024,Merton,London,2026,Detached,4,43507.0,73.87238397193123,2952
+E09000024,Merton,London,2026,Flat,2,43507.0,73.87238397193123,1947
+E09000024,Merton,London,2026,Semi-detached,3,43507.0,73.87238397193123,3001
+E09000024,Merton,London,2026,Terraced,3,43507.0,73.87238397193123,2488
+E07000042,Mid Devon,South West,2026,Detached,4,31908.0,56.99064175808769,1177
+E07000042,Mid Devon,South West,2026,Flat,2,31908.0,56.99064175808769,715
+E07000042,Mid Devon,South West,2026,Semi-detached,3,31908.0,56.99064175808769,953
+E07000042,Mid Devon,South West,2026,Terraced,3,31908.0,56.99064175808769,868
+E07000203,Mid Suffolk,East of England,2026,Detached,4,31507.0,40.12490380107389,1393
+E07000203,Mid Suffolk,East of England,2026,Flat,2,31507.0,40.12490380107389,811
+E07000203,Mid Suffolk,East of England,2026,Semi-detached,3,31507.0,40.12490380107389,1086
+E07000203,Mid Suffolk,East of England,2026,Terraced,3,31507.0,40.12490380107389,1005
+E07000228,Mid Sussex,South East,2026,Detached,4,37705.0,60.69721091180319,2084
+E07000228,Mid Sussex,South East,2026,Flat,2,37705.0,60.69721091180319,1164
+E07000228,Mid Sussex,South East,2026,Semi-detached,3,37705.0,60.69721091180319,1638
+E07000228,Mid Sussex,South East,2026,Terraced,3,37705.0,60.69721091180319,1441
+E06000002,Middlesbrough,North East,2026,Detached,4,30253.0,190.94865669688144,950
+E06000002,Middlesbrough,North East,2026,Flat,2,30253.0,190.94865669688144,595
+E06000002,Middlesbrough,North East,2026,Semi-detached,3,30253.0,190.94865669688144,758
+E06000002,Middlesbrough,North East,2026,Terraced,3,30253.0,190.94865669688144,710
+E06000042,Milton Keynes,South East,2026,Detached,4,36061.0,98.9490588151496,1962
+E06000042,Milton Keynes,South East,2026,Flat,2,36061.0,98.9490588151496,1140
+E06000042,Milton Keynes,South East,2026,Semi-detached,3,36061.0,98.9490588151496,1430
+E06000042,Milton Keynes,South East,2026,Terraced,3,36061.0,98.9490588151496,1351
+E07000210,Mole Valley,South East,2026,Detached,4,35341.0,64.27348887487614,2247
+E07000210,Mole Valley,South East,2026,Flat,2,35341.0,64.27348887487614,1294
+E07000210,Mole Valley,South East,2026,Semi-detached,3,35341.0,64.27348887487614,1787
+E07000210,Mole Valley,South East,2026,Terraced,3,35341.0,64.27348887487614,1493
+W06000021,Monmouthshire,Wales,2026,Detached,4,35020.0,78.67490480336518,1312
+W06000021,Monmouthshire,Wales,2026,Flat,2,35020.0,78.67490480336518,825
+W06000021,Monmouthshire,Wales,2026,Semi-detached,3,35020.0,78.67490480336518,1028
+W06000021,Monmouthshire,Wales,2026,Terraced,3,35020.0,78.67490480336518,960
+W06000012,Neath Port Talbot,Wales,2026,Detached,4,30709.0,82.89914664714,889
+W06000012,Neath Port Talbot,Wales,2026,Flat,2,30709.0,82.89914664714,560
+W06000012,Neath Port Talbot,Wales,2026,Semi-detached,3,30709.0,82.89914664714,737
+W06000012,Neath Port Talbot,Wales,2026,Terraced,3,30709.0,82.89914664714,697
+E07000091,New Forest,South East,2026,Detached,4,31344.0,58.48348775080999,1704
+E07000091,New Forest,South East,2026,Flat,2,31344.0,58.48348775080999,1018
+E07000091,New Forest,South East,2026,Semi-detached,3,31344.0,58.48348775080999,1355
+E07000091,New Forest,South East,2026,Terraced,3,31344.0,58.48348775080999,1278
+E07000175,Newark and Sherwood,East Midlands,2026,Detached,4,29806.0,83.21935905007616,1068
+E07000175,Newark and Sherwood,East Midlands,2026,Flat,2,29806.0,83.21935905007616,658
+E07000175,Newark and Sherwood,East Midlands,2026,Semi-detached,3,29806.0,83.21935905007616,862
+E07000175,Newark and Sherwood,East Midlands,2026,Terraced,3,29806.0,83.21935905007616,798
+E08000021,Newcastle upon Tyne,North East,2026,Detached,4,30144.0,117.20245108123102,1710
+E08000021,Newcastle upon Tyne,North East,2026,Flat,2,30144.0,117.20245108123102,1000
+E08000021,Newcastle upon Tyne,North East,2026,Semi-detached,3,30144.0,117.20245108123102,1275
+E08000021,Newcastle upon Tyne,North East,2026,Terraced,3,30144.0,117.20245108123102,1304
+E07000195,Newcastle-under-Lyme,West Midlands,2026,Detached,4,31205.0,88.8182804680974,1157
+E07000195,Newcastle-under-Lyme,West Midlands,2026,Flat,2,31205.0,88.8182804680974,672
+E07000195,Newcastle-under-Lyme,West Midlands,2026,Semi-detached,3,31205.0,88.8182804680974,881
+E07000195,Newcastle-under-Lyme,West Midlands,2026,Terraced,3,31205.0,88.8182804680974,847
+E09000025,Newham,London,2026,Detached,4,36080.0,134.76318710794547,2193
+E09000025,Newham,London,2026,Flat,2,36080.0,134.76318710794547,1846
+E09000025,Newham,London,2026,Semi-detached,3,36080.0,134.76318710794547,2352
+E09000025,Newham,London,2026,Terraced,3,36080.0,134.76318710794547,2084
+W06000022,Newport,Wales,2026,Detached,4,31495.0,138.02021544156028,1293
+W06000022,Newport,Wales,2026,Flat,2,31495.0,138.02021544156028,800
+W06000022,Newport,Wales,2026,Semi-detached,3,31495.0,138.02021544156028,1011
+W06000022,Newport,Wales,2026,Terraced,3,31495.0,138.02021544156028,927
+E07000043,North Devon,South West,2026,Detached,4,28386.0,70.5166813123883,1130
+E07000043,North Devon,South West,2026,Flat,2,28386.0,70.5166813123883,670
+E07000043,North Devon,South West,2026,Semi-detached,3,28386.0,70.5166813123883,921
+E07000043,North Devon,South West,2026,Terraced,3,28386.0,70.5166813123883,862
+E07000038,North East Derbyshire,East Midlands,2026,Detached,4,30931.0,68.20035592466262,1040
+E07000038,North East Derbyshire,East Midlands,2026,Flat,2,30931.0,68.20035592466262,655
+E07000038,North East Derbyshire,East Midlands,2026,Semi-detached,3,30931.0,68.20035592466262,854
+E07000038,North East Derbyshire,East Midlands,2026,Terraced,3,30931.0,68.20035592466262,745
+E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Detached,4,28898.0,137.24461433719964,872
+E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Flat,2,28898.0,137.24461433719964,507
+E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Semi-detached,3,28898.0,137.24461433719964,712
+E06000012,North East Lincolnshire,Yorkshire and The Humber,2026,Terraced,3,28898.0,137.24461433719964,650
+E07000099,North Hertfordshire,East of England,2026,Detached,4,42703.0,67.54995814071998,1962
+E07000099,North Hertfordshire,East of England,2026,Flat,2,42703.0,67.54995814071998,1169
+E07000099,North Hertfordshire,East of England,2026,Semi-detached,3,42703.0,67.54995814071998,1570
+E07000099,North Hertfordshire,East of England,2026,Terraced,3,42703.0,67.54995814071998,1395
+E07000139,North Kesteven,East Midlands,2026,Detached,4,30585.0,54.91331824413671,1079
+E07000139,North Kesteven,East Midlands,2026,Flat,2,30585.0,54.91331824413671,694
+E07000139,North Kesteven,East Midlands,2026,Semi-detached,3,30585.0,54.91331824413671,843
+E07000139,North Kesteven,East Midlands,2026,Terraced,3,30585.0,54.91331824413671,814
+E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Detached,4,30012.0,94.15999206631624,881
+E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Flat,2,30012.0,94.15999206631624,522
+E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Semi-detached,3,30012.0,94.15999206631624,705
+E06000013,North Lincolnshire,Yorkshire and The Humber,2026,Terraced,3,30012.0,94.15999206631624,658
+E07000147,North Norfolk,East of England,2026,Detached,4,28421.0,52.09819878890732,1133
+E07000147,North Norfolk,East of England,2026,Flat,2,28421.0,52.09819878890732,708
+E07000147,North Norfolk,East of England,2026,Semi-detached,3,28421.0,52.09819878890732,951
+E07000147,North Norfolk,East of England,2026,Terraced,3,28421.0,52.09819878890732,852
+E06000061,North Northamptonshire,East Midlands,2026,Detached,4,32882.0,85.69192953059918,1338
+E06000061,North Northamptonshire,East Midlands,2026,Flat,2,32882.0,85.69192953059918,799
+E06000061,North Northamptonshire,East Midlands,2026,Semi-detached,3,32882.0,85.69192953059918,1035
+E06000061,North Northamptonshire,East Midlands,2026,Terraced,3,32882.0,85.69192953059918,971
+E06000024,North Somerset,South West,2026,Detached,4,32996.0,84.35023771790809,1604
+E06000024,North Somerset,South West,2026,Flat,2,32996.0,84.35023771790809,992
+E06000024,North Somerset,South West,2026,Semi-detached,3,32996.0,84.35023771790809,1320
+E06000024,North Somerset,South West,2026,Terraced,3,32996.0,84.35023771790809,1221
+E08000022,North Tyneside,North East,2026,Detached,4,31106.0,89.11286391428081,1175
+E08000022,North Tyneside,North East,2026,Flat,2,31106.0,89.11286391428081,721
+E08000022,North Tyneside,North East,2026,Semi-detached,3,31106.0,89.11286391428081,916
+E08000022,North Tyneside,North East,2026,Terraced,3,31106.0,89.11286391428081,889
+E07000218,North Warwickshire,West Midlands,2026,Detached,4,35067.0,76.61623921522279,1355
+E07000218,North Warwickshire,West Midlands,2026,Flat,2,35067.0,76.61623921522279,805
+E07000218,North Warwickshire,West Midlands,2026,Semi-detached,3,35067.0,76.61623921522279,1037
+E07000218,North Warwickshire,West Midlands,2026,Terraced,3,35067.0,76.61623921522279,939
+E07000134,North West Leicestershire,East Midlands,2026,Detached,4,32252.0,68.2747234313059,1253
+E07000134,North West Leicestershire,East Midlands,2026,Flat,2,32252.0,68.2747234313059,745
+E07000134,North West Leicestershire,East Midlands,2026,Semi-detached,3,32252.0,68.2747234313059,975
+E07000134,North West Leicestershire,East Midlands,2026,Terraced,3,32252.0,68.2747234313059,887
+E06000065,North Yorkshire,Yorkshire and The Humber,2026,Detached,4,30683.0,64.7095361998207,1194
+E06000065,North Yorkshire,Yorkshire and The Humber,2026,Flat,2,30683.0,64.7095361998207,688
+E06000065,North Yorkshire,Yorkshire and The Humber,2026,Semi-detached,3,30683.0,64.7095361998207,906
+E06000065,North Yorkshire,Yorkshire and The Humber,2026,Terraced,3,30683.0,64.7095361998207,837
+E06000057,Northumberland,North East,2026,Detached,4,30456.0,76.00568904858149,1006
+E06000057,Northumberland,North East,2026,Flat,2,30456.0,76.00568904858149,587
+E06000057,Northumberland,North East,2026,Semi-detached,3,30456.0,76.00568904858149,751
+E06000057,Northumberland,North East,2026,Terraced,3,30456.0,76.00568904858149,700
+E07000148,Norwich,East of England,2026,Detached,4,30421.0,125.05148411543426,1597
+E07000148,Norwich,East of England,2026,Flat,2,30421.0,125.05148411543426,888
+E07000148,Norwich,East of England,2026,Semi-detached,3,30421.0,125.05148411543426,1253
+E07000148,Norwich,East of England,2026,Terraced,3,30421.0,125.05148411543426,1166
+E06000018,Nottingham,East Midlands,2026,Detached,4,26512.0,160.2412782220312,1310
+E06000018,Nottingham,East Midlands,2026,Flat,2,26512.0,160.2412782220312,838
+E06000018,Nottingham,East Midlands,2026,Semi-detached,3,26512.0,160.2412782220312,1065
+E06000018,Nottingham,East Midlands,2026,Terraced,3,26512.0,160.2412782220312,997
+E07000219,Nuneaton and Bedworth,West Midlands,2026,Detached,4,32402.0,104.650032629372,1216
+E07000219,Nuneaton and Bedworth,West Midlands,2026,Flat,2,32402.0,104.650032629372,732
+E07000219,Nuneaton and Bedworth,West Midlands,2026,Semi-detached,3,32402.0,104.650032629372,974
+E07000219,Nuneaton and Bedworth,West Midlands,2026,Terraced,3,32402.0,104.650032629372,895
+E07000135,Oadby and Wigston,East Midlands,2026,Detached,4,28368.0,62.58430435701169,1412
+E07000135,Oadby and Wigston,East Midlands,2026,Flat,2,28368.0,62.58430435701169,796
+E07000135,Oadby and Wigston,East Midlands,2026,Semi-detached,3,28368.0,62.58430435701169,1104
+E07000135,Oadby and Wigston,East Midlands,2026,Terraced,3,28368.0,62.58430435701169,969
+E08000004,Oldham,North West,2026,Detached,4,29124.0,,1371
+E08000004,Oldham,North West,2026,Flat,2,29124.0,,818
+E08000004,Oldham,North West,2026,Semi-detached,3,29124.0,,1058
+E08000004,Oldham,North West,2026,Terraced,3,29124.0,,935
+E07000178,Oxford,South East,2026,Detached,4,36517.0,106.5144027961914,2587
+E07000178,Oxford,South East,2026,Flat,2,36517.0,106.5144027961914,1549
+E07000178,Oxford,South East,2026,Semi-detached,3,36517.0,106.5144027961914,2184
+E07000178,Oxford,South East,2026,Terraced,3,36517.0,106.5144027961914,2016
+W06000009,Pembrokeshire,Wales,2026,Detached,4,27243.0,91.00588800864529,858
+W06000009,Pembrokeshire,Wales,2026,Flat,2,27243.0,91.00588800864529,578
+W06000009,Pembrokeshire,Wales,2026,Semi-detached,3,27243.0,91.00588800864529,729
+W06000009,Pembrokeshire,Wales,2026,Terraced,3,27243.0,91.00588800864529,708
+E07000122,Pendle,North West,2026,Detached,4,26742.0,90.40647485604224,1078
+E07000122,Pendle,North West,2026,Flat,2,26742.0,90.40647485604224,543
+E07000122,Pendle,North West,2026,Semi-detached,3,26742.0,90.40647485604224,772
+E07000122,Pendle,North West,2026,Terraced,3,26742.0,90.40647485604224,661
+E06000031,Peterborough,East of England,2026,Detached,4,29828.0,125.34426069043457,1411
+E06000031,Peterborough,East of England,2026,Flat,2,29828.0,125.34426069043457,807
+E06000031,Peterborough,East of England,2026,Semi-detached,3,29828.0,125.34426069043457,1068
+E06000031,Peterborough,East of England,2026,Terraced,3,29828.0,125.34426069043457,1022
+E06000026,Plymouth,South West,2026,Detached,4,28992.0,110.59437428370326,1330
+E06000026,Plymouth,South West,2026,Flat,2,28992.0,110.59437428370326,806
+E06000026,Plymouth,South West,2026,Semi-detached,3,28992.0,110.59437428370326,1075
+E06000026,Plymouth,South West,2026,Terraced,3,28992.0,110.59437428370326,1056
+E06000044,Portsmouth,South East,2026,Detached,4,30962.0,128.12389171296843,1860
+E06000044,Portsmouth,South East,2026,Flat,2,30962.0,128.12389171296843,1055
+E06000044,Portsmouth,South East,2026,Semi-detached,3,30962.0,128.12389171296843,1583
+E06000044,Portsmouth,South East,2026,Terraced,3,30962.0,128.12389171296843,1423
+W06000023,Powys,Wales,2026,Detached,4,30275.0,69.36214708957824,811
+W06000023,Powys,Wales,2026,Flat,2,30275.0,69.36214708957824,492
+W06000023,Powys,Wales,2026,Semi-detached,3,30275.0,69.36214708957824,673
+W06000023,Powys,Wales,2026,Terraced,3,30275.0,69.36214708957824,619
+E07000123,Preston,North West,2026,Detached,4,30038.0,125.08966674366862,1123
+E07000123,Preston,North West,2026,Flat,2,30038.0,125.08966674366862,669
+E07000123,Preston,North West,2026,Semi-detached,3,30038.0,125.08966674366862,864
+E07000123,Preston,North West,2026,Terraced,3,30038.0,125.08966674366862,803
+E06000038,Reading,South East,2026,Detached,4,35454.0,111.72059511759775,2188
+E06000038,Reading,South East,2026,Flat,2,35454.0,111.72059511759775,1277
+E06000038,Reading,South East,2026,Semi-detached,3,35454.0,111.72059511759775,1769
+E06000038,Reading,South East,2026,Terraced,3,35454.0,111.72059511759775,1618
+E09000026,Redbridge,London,2026,Detached,4,37190.0,93.5962887123286,2785
+E09000026,Redbridge,London,2026,Flat,2,37190.0,93.5962887123286,1566
+E09000026,Redbridge,London,2026,Semi-detached,3,37190.0,93.5962887123286,2205
+E09000026,Redbridge,London,2026,Terraced,3,37190.0,93.5962887123286,2041
+E06000003,Redcar and Cleveland,North East,2026,Detached,4,28630.0,134.84208942174703,917
+E06000003,Redcar and Cleveland,North East,2026,Flat,2,28630.0,134.84208942174703,528
+E06000003,Redcar and Cleveland,North East,2026,Semi-detached,3,28630.0,134.84208942174703,721
+E06000003,Redcar and Cleveland,North East,2026,Terraced,3,28630.0,134.84208942174703,656
+E07000236,Redditch,West Midlands,2026,Detached,4,29113.0,88.35153287339517,1347
+E07000236,Redditch,West Midlands,2026,Flat,2,29113.0,88.35153287339517,761
+E07000236,Redditch,West Midlands,2026,Semi-detached,3,29113.0,88.35153287339517,1037
+E07000236,Redditch,West Midlands,2026,Terraced,3,29113.0,88.35153287339517,1002
+E07000211,Reigate and Banstead,South East,2026,Detached,4,40014.0,68.62677447886935,2444
+E07000211,Reigate and Banstead,South East,2026,Flat,2,40014.0,68.62677447886935,1341
+E07000211,Reigate and Banstead,South East,2026,Semi-detached,3,40014.0,68.62677447886935,1786
+E07000211,Reigate and Banstead,South East,2026,Terraced,3,40014.0,68.62677447886935,1687
+W06000016,Rhondda Cynon Taf,Wales,2026,Detached,4,29802.0,86.96139244445367,960
+W06000016,Rhondda Cynon Taf,Wales,2026,Flat,2,29802.0,86.96139244445367,582
+W06000016,Rhondda Cynon Taf,Wales,2026,Semi-detached,3,29802.0,86.96139244445367,795
+W06000016,Rhondda Cynon Taf,Wales,2026,Terraced,3,29802.0,86.96139244445367,725
+E07000124,Ribble Valley,North West,2026,Detached,4,34077.0,47.92494547192925,1087
+E07000124,Ribble Valley,North West,2026,Flat,2,34077.0,47.92494547192925,699
+E07000124,Ribble Valley,North West,2026,Semi-detached,3,34077.0,47.92494547192925,926
+E07000124,Ribble Valley,North West,2026,Terraced,3,34077.0,47.92494547192925,823
+E09000027,Richmond upon Thames,London,2026,Detached,4,46594.0,73.02008509859542,4019
+E09000027,Richmond upon Thames,London,2026,Flat,2,46594.0,73.02008509859542,2072
+E09000027,Richmond upon Thames,London,2026,Semi-detached,3,46594.0,73.02008509859542,3086
+E09000027,Richmond upon Thames,London,2026,Terraced,3,46594.0,73.02008509859542,2723
+E08000005,Rochdale,North West,2026,Detached,4,29535.0,,1283
+E08000005,Rochdale,North West,2026,Flat,2,29535.0,,711
+E08000005,Rochdale,North West,2026,Semi-detached,3,29535.0,,956
+E08000005,Rochdale,North West,2026,Terraced,3,29535.0,,849
+E07000075,Rochford,East of England,2026,Detached,4,38107.0,51.11282503305421,1722
+E07000075,Rochford,East of England,2026,Flat,2,38107.0,51.11282503305421,1069
+E07000075,Rochford,East of England,2026,Semi-detached,3,38107.0,51.11282503305421,1366
+E07000075,Rochford,East of England,2026,Terraced,3,38107.0,51.11282503305421,1302
+E07000125,Rossendale,North West,2026,Detached,4,30487.0,85.71273477364021,1169
+E07000125,Rossendale,North West,2026,Flat,2,30487.0,85.71273477364021,708
+E07000125,Rossendale,North West,2026,Semi-detached,3,30487.0,85.71273477364021,916
+E07000125,Rossendale,North West,2026,Terraced,3,30487.0,85.71273477364021,796
+E07000064,Rother,South East,2026,Detached,4,30790.0,71.92927717108684,1587
+E07000064,Rother,South East,2026,Flat,2,30790.0,71.92927717108684,921
+E07000064,Rother,South East,2026,Semi-detached,3,30790.0,71.92927717108684,1289
+E07000064,Rother,South East,2026,Terraced,3,30790.0,71.92927717108684,1178
+E08000018,Rotherham,Yorkshire and The Humber,2026,Detached,4,29664.0,111.83868806889215,924
+E08000018,Rotherham,Yorkshire and The Humber,2026,Flat,2,29664.0,111.83868806889215,559
+E08000018,Rotherham,Yorkshire and The Humber,2026,Semi-detached,3,29664.0,111.83868806889215,745
+E08000018,Rotherham,Yorkshire and The Humber,2026,Terraced,3,29664.0,111.83868806889215,684
+E07000220,Rugby,West Midlands,2026,Detached,4,41814.0,67.98095450419606,1532
+E07000220,Rugby,West Midlands,2026,Flat,2,41814.0,67.98095450419606,841
+E07000220,Rugby,West Midlands,2026,Semi-detached,3,41814.0,67.98095450419606,1103
+E07000220,Rugby,West Midlands,2026,Terraced,3,41814.0,67.98095450419606,1006
+E07000212,Runnymede,South East,2026,Detached,4,42203.0,85.36441142635975,2282
+E07000212,Runnymede,South East,2026,Flat,2,42203.0,85.36441142635975,1313
+E07000212,Runnymede,South East,2026,Semi-detached,3,42203.0,85.36441142635975,1842
+E07000212,Runnymede,South East,2026,Terraced,3,42203.0,85.36441142635975,1596
+E07000176,Rushcliffe,East Midlands,2026,Detached,4,36705.0,53.88832836684734,1368
+E07000176,Rushcliffe,East Midlands,2026,Flat,2,36705.0,53.88832836684734,868
+E07000176,Rushcliffe,East Midlands,2026,Semi-detached,3,36705.0,53.88832836684734,1097
+E07000176,Rushcliffe,East Midlands,2026,Terraced,3,36705.0,53.88832836684734,1023
+E07000092,Rushmoor,South East,2026,Detached,4,33734.0,77.82643499552667,1950
+E07000092,Rushmoor,South East,2026,Flat,2,33734.0,77.82643499552667,1146
+E07000092,Rushmoor,South East,2026,Semi-detached,3,33734.0,77.82643499552667,1541
+E07000092,Rushmoor,South East,2026,Terraced,3,33734.0,77.82643499552667,1396
+E06000017,Rutland,East Midlands,2026,Detached,4,39559.0,45.78538999255327,1402
+E06000017,Rutland,East Midlands,2026,Flat,2,39559.0,45.78538999255327,777
+E06000017,Rutland,East Midlands,2026,Semi-detached,3,39559.0,45.78538999255327,962
+E06000017,Rutland,East Midlands,2026,Terraced,3,39559.0,45.78538999255327,919
+E08000006,Salford,North West,2026,Detached,4,30495.0,,1543
+E08000006,Salford,North West,2026,Flat,2,30495.0,,1024
+E08000006,Salford,North West,2026,Semi-detached,3,30495.0,,1324
+E08000006,Salford,North West,2026,Terraced,3,30495.0,,1179
+E08000028,Sandwell,West Midlands,2026,Detached,4,27652.0,103.59063578508322,1248
+E08000028,Sandwell,West Midlands,2026,Flat,2,27652.0,103.59063578508322,762
+E08000028,Sandwell,West Midlands,2026,Semi-detached,3,27652.0,103.59063578508322,1026
+E08000028,Sandwell,West Midlands,2026,Terraced,3,27652.0,103.59063578508322,945
+E08000014,Sefton,North West,2026,Detached,4,29335.0,84.16005118522304,1319
+E08000014,Sefton,North West,2026,Flat,2,29335.0,84.16005118522304,744
+E08000014,Sefton,North West,2026,Semi-detached,3,29335.0,84.16005118522304,1021
+E08000014,Sefton,North West,2026,Terraced,3,29335.0,84.16005118522304,971
+E07000111,Sevenoaks,South East,2026,Detached,4,34969.0,62.84146351363419,2818
+E07000111,Sevenoaks,South East,2026,Flat,2,34969.0,62.84146351363419,1507
+E07000111,Sevenoaks,South East,2026,Semi-detached,3,34969.0,62.84146351363419,1950
+E07000111,Sevenoaks,South East,2026,Terraced,3,34969.0,62.84146351363419,1695
+E08000039,Sheffield,Yorkshire and The Humber,2026,Detached,4,31816.0,113.2684632202334,1244
+E08000039,Sheffield,Yorkshire and The Humber,2026,Flat,2,31816.0,113.2684632202334,779
+E08000039,Sheffield,Yorkshire and The Humber,2026,Semi-detached,3,31816.0,113.2684632202334,1000
+E08000039,Sheffield,Yorkshire and The Humber,2026,Terraced,3,31816.0,113.2684632202334,931
+E06000051,Shropshire,West Midlands,2026,Detached,4,29603.0,58.022823731397935,1136
+E06000051,Shropshire,West Midlands,2026,Flat,2,29603.0,58.022823731397935,680
+E06000051,Shropshire,West Midlands,2026,Semi-detached,3,29603.0,58.022823731397935,890
+E06000051,Shropshire,West Midlands,2026,Terraced,3,29603.0,58.022823731397935,804
+E06000039,Slough,South East,2026,Detached,4,35521.0,103.69065392654524,2147
+E06000039,Slough,South East,2026,Flat,2,35521.0,103.69065392654524,1257
+E06000039,Slough,South East,2026,Semi-detached,3,35521.0,103.69065392654524,1775
+E06000039,Slough,South East,2026,Terraced,3,35521.0,103.69065392654524,1580
+E08000029,Solihull,West Midlands,2026,Detached,4,36672.0,88.71117051781674,1827
+E08000029,Solihull,West Midlands,2026,Flat,2,36672.0,88.71117051781674,1022
+E08000029,Solihull,West Midlands,2026,Semi-detached,3,36672.0,88.71117051781674,1332
+E08000029,Solihull,West Midlands,2026,Terraced,3,36672.0,88.71117051781674,1244
+E06000066,Somerset,South West,2026,Detached,4,29908.0,89.763982049911,1406
+E06000066,Somerset,South West,2026,Flat,2,29908.0,89.763982049911,795
+E06000066,Somerset,South West,2026,Semi-detached,3,29908.0,89.763982049911,1109
+E06000066,Somerset,South West,2026,Terraced,3,29908.0,89.763982049911,1027
+E07000012,South Cambridgeshire,East of England,2026,Detached,4,42690.0,58.365446830927446,1926
+E07000012,South Cambridgeshire,East of England,2026,Flat,2,42690.0,58.365446830927446,1166
+E07000012,South Cambridgeshire,East of England,2026,Semi-detached,3,42690.0,58.365446830927446,1469
+E07000012,South Cambridgeshire,East of England,2026,Terraced,3,42690.0,58.365446830927446,1398
+E07000039,South Derbyshire,East Midlands,2026,Detached,4,35452.0,60.30592510109594,1175
+E07000039,South Derbyshire,East Midlands,2026,Flat,2,35452.0,60.30592510109594,698
+E07000039,South Derbyshire,East Midlands,2026,Semi-detached,3,35452.0,60.30592510109594,939
+E07000039,South Derbyshire,East Midlands,2026,Terraced,3,35452.0,60.30592510109594,880
+E06000025,South Gloucestershire,South West,2026,Detached,4,35002.0,76.57705797200012,2005
+E06000025,South Gloucestershire,South West,2026,Flat,2,35002.0,76.57705797200012,1169
+E06000025,South Gloucestershire,South West,2026,Semi-detached,3,35002.0,76.57705797200012,1595
+E06000025,South Gloucestershire,South West,2026,Terraced,3,35002.0,76.57705797200012,1488
+E07000044,South Hams,South West,2026,Detached,4,29721.0,45.90484163527278,1408
+E07000044,South Hams,South West,2026,Flat,2,29721.0,45.90484163527278,861
+E07000044,South Hams,South West,2026,Semi-detached,3,29721.0,45.90484163527278,1116
+E07000044,South Hams,South West,2026,Terraced,3,29721.0,45.90484163527278,958
+E07000140,South Holland,East Midlands,2026,Detached,4,30196.0,78.54463169177633,973
+E07000140,South Holland,East Midlands,2026,Flat,2,30196.0,78.54463169177633,641
+E07000140,South Holland,East Midlands,2026,Semi-detached,3,30196.0,78.54463169177633,846
+E07000140,South Holland,East Midlands,2026,Terraced,3,30196.0,78.54463169177633,764
+E07000141,South Kesteven,East Midlands,2026,Detached,4,29071.0,73.81693669843114,1118
+E07000141,South Kesteven,East Midlands,2026,Flat,2,29071.0,73.81693669843114,653
+E07000141,South Kesteven,East Midlands,2026,Semi-detached,3,29071.0,73.81693669843114,896
+E07000141,South Kesteven,East Midlands,2026,Terraced,3,29071.0,73.81693669843114,837
+E07000149,South Norfolk,East of England,2026,Detached,4,32934.0,48.54517407377856,1322
+E07000149,South Norfolk,East of England,2026,Flat,2,32934.0,48.54517407377856,829
+E07000149,South Norfolk,East of England,2026,Semi-detached,3,32934.0,48.54517407377856,1032
+E07000149,South Norfolk,East of England,2026,Terraced,3,32934.0,48.54517407377856,997
+E07000179,South Oxfordshire,South East,2026,Detached,4,43026.0,47.379873991042736,2068
+E07000179,South Oxfordshire,South East,2026,Flat,2,43026.0,47.379873991042736,1192
+E07000179,South Oxfordshire,South East,2026,Semi-detached,3,43026.0,47.379873991042736,1586
+E07000179,South Oxfordshire,South East,2026,Terraced,3,43026.0,47.379873991042736,1357
+E07000126,South Ribble,North West,2026,Detached,4,32740.0,74.64654541742519,1084
+E07000126,South Ribble,North West,2026,Flat,2,32740.0,74.64654541742519,670
+E07000126,South Ribble,North West,2026,Semi-detached,3,32740.0,74.64654541742519,859
+E07000126,South Ribble,North West,2026,Terraced,3,32740.0,74.64654541742519,840
+E07000196,South Staffordshire,West Midlands,2026,Detached,4,31766.0,59.13196470721447,1353
+E07000196,South Staffordshire,West Midlands,2026,Flat,2,31766.0,59.13196470721447,789
+E07000196,South Staffordshire,West Midlands,2026,Semi-detached,3,31766.0,59.13196470721447,985
+E07000196,South Staffordshire,West Midlands,2026,Terraced,3,31766.0,59.13196470721447,952
+E08000023,South Tyneside,North East,2026,Detached,4,28784.0,101.90737496281116,1096
+E08000023,South Tyneside,North East,2026,Flat,2,28784.0,101.90737496281116,641
+E08000023,South Tyneside,North East,2026,Semi-detached,3,28784.0,101.90737496281116,793
+E08000023,South Tyneside,North East,2026,Terraced,3,28784.0,101.90737496281116,749
+E06000045,Southampton,South East,2026,Detached,4,32907.0,135.32384369093083,1636
+E06000045,Southampton,South East,2026,Flat,2,32907.0,135.32384369093083,1010
+E06000045,Southampton,South East,2026,Semi-detached,3,32907.0,135.32384369093083,1443
+E06000045,Southampton,South East,2026,Terraced,3,32907.0,135.32384369093083,1346
+E06000033,Southend-on-Sea,East of England,2026,Detached,4,33594.0,115.78498385651191,1691
+E06000033,Southend-on-Sea,East of England,2026,Flat,2,33594.0,115.78498385651191,1048
+E06000033,Southend-on-Sea,East of England,2026,Semi-detached,3,33594.0,115.78498385651191,1444
+E06000033,Southend-on-Sea,East of England,2026,Terraced,3,33594.0,115.78498385651191,1343
+E09000028,Southwark,London,2026,Detached,4,43006.0,158.98977481544085,3389
+E09000028,Southwark,London,2026,Flat,2,43006.0,158.98977481544085,2232
+E09000028,Southwark,London,2026,Semi-detached,3,43006.0,158.98977481544085,3512
+E09000028,Southwark,London,2026,Terraced,3,43006.0,158.98977481544085,2925
+E07000213,Spelthorne,South East,2026,Detached,4,37918.0,86.11971489345822,2298
+E07000213,Spelthorne,South East,2026,Flat,2,37918.0,86.11971489345822,1505
+E07000213,Spelthorne,South East,2026,Semi-detached,3,37918.0,86.11971489345822,1938
+E07000213,Spelthorne,South East,2026,Terraced,3,37918.0,86.11971489345822,1688
+E07000240,St Albans,East of England,2026,Detached,4,45543.0,81.34945640998428,2681
+E07000240,St Albans,East of England,2026,Flat,2,45543.0,81.34945640998428,1490
+E07000240,St Albans,East of England,2026,Semi-detached,3,45543.0,81.34945640998428,2181
+E07000240,St Albans,East of England,2026,Terraced,3,45543.0,81.34945640998428,1805
+E08000013,St. Helens,North West,2026,Detached,4,31443.0,93.043340881563,1180
+E08000013,St. Helens,North West,2026,Flat,2,31443.0,93.043340881563,694
+E08000013,St. Helens,North West,2026,Semi-detached,3,31443.0,93.043340881563,894
+E08000013,St. Helens,North West,2026,Terraced,3,31443.0,93.043340881563,808
+E07000197,Stafford,West Midlands,2026,Detached,4,33872.0,83.36424007893466,1190
+E07000197,Stafford,West Midlands,2026,Flat,2,33872.0,83.36424007893466,708
+E07000197,Stafford,West Midlands,2026,Semi-detached,3,33872.0,83.36424007893466,960
+E07000197,Stafford,West Midlands,2026,Terraced,3,33872.0,83.36424007893466,917
+E07000198,Staffordshire Moorlands,West Midlands,2026,Detached,4,31065.0,67.09106692571618,979
+E07000198,Staffordshire Moorlands,West Midlands,2026,Flat,2,31065.0,67.09106692571618,592
+E07000198,Staffordshire Moorlands,West Midlands,2026,Semi-detached,3,31065.0,67.09106692571618,824
+E07000198,Staffordshire Moorlands,West Midlands,2026,Terraced,3,31065.0,67.09106692571618,702
+E07000243,Stevenage,East of England,2026,Detached,4,35747.0,120.68722103365516,1979
+E07000243,Stevenage,East of England,2026,Flat,2,35747.0,120.68722103365516,1172
+E07000243,Stevenage,East of England,2026,Semi-detached,3,35747.0,120.68722103365516,1475
+E07000243,Stevenage,East of England,2026,Terraced,3,35747.0,120.68722103365516,1479
+E08000007,Stockport,North West,2026,Detached,4,33565.0,,1574
+E08000007,Stockport,North West,2026,Flat,2,33565.0,,960
+E08000007,Stockport,North West,2026,Semi-detached,3,33565.0,,1236
+E08000007,Stockport,North West,2026,Terraced,3,33565.0,,1130
+E06000004,Stockton-on-Tees,North East,2026,Detached,4,29877.0,144.91837148456736,1088
+E06000004,Stockton-on-Tees,North East,2026,Flat,2,29877.0,144.91837148456736,626
+E06000004,Stockton-on-Tees,North East,2026,Semi-detached,3,29877.0,144.91837148456736,789
+E06000004,Stockton-on-Tees,North East,2026,Terraced,3,29877.0,144.91837148456736,743
+E06000021,Stoke-on-Trent,West Midlands,2026,Detached,4,29041.0,139.97987380730274,917
+E06000021,Stoke-on-Trent,West Midlands,2026,Flat,2,29041.0,139.97987380730274,583
+E06000021,Stoke-on-Trent,West Midlands,2026,Semi-detached,3,29041.0,139.97987380730274,773
+E06000021,Stoke-on-Trent,West Midlands,2026,Terraced,3,29041.0,139.97987380730274,732
+E07000221,Stratford-on-Avon,West Midlands,2026,Detached,4,34847.0,63.338531444088936,1585
+E07000221,Stratford-on-Avon,West Midlands,2026,Flat,2,34847.0,63.338531444088936,931
+E07000221,Stratford-on-Avon,West Midlands,2026,Semi-detached,3,34847.0,63.338531444088936,1234
+E07000221,Stratford-on-Avon,West Midlands,2026,Terraced,3,34847.0,63.338531444088936,1110
+E07000082,Stroud,South West,2026,Detached,4,33495.0,59.635494945340064,1408
+E07000082,Stroud,South West,2026,Flat,2,33495.0,59.635494945340064,841
+E07000082,Stroud,South West,2026,Semi-detached,3,33495.0,59.635494945340064,1123
+E07000082,Stroud,South West,2026,Terraced,3,33495.0,59.635494945340064,1032
+E08000024,Sunderland,North East,2026,Detached,4,27989.0,95.44013655206048,1059
+E08000024,Sunderland,North East,2026,Flat,2,27989.0,95.44013655206048,613
+E08000024,Sunderland,North East,2026,Semi-detached,3,27989.0,95.44013655206048,741
+E08000024,Sunderland,North East,2026,Terraced,3,27989.0,95.44013655206048,731
+E07000214,Surrey Heath,South East,2026,Detached,4,37793.0,62.26470650093592,2268
+E07000214,Surrey Heath,South East,2026,Flat,2,37793.0,62.26470650093592,1228
+E07000214,Surrey Heath,South East,2026,Semi-detached,3,37793.0,62.26470650093592,1627
+E07000214,Surrey Heath,South East,2026,Terraced,3,37793.0,62.26470650093592,1473
+E09000029,Sutton,London,2026,Detached,4,38359.0,76.55207223375021,2465
+E09000029,Sutton,London,2026,Flat,2,38359.0,76.55207223375021,1424
+E09000029,Sutton,London,2026,Semi-detached,3,38359.0,76.55207223375021,2054
+E09000029,Sutton,London,2026,Terraced,3,38359.0,76.55207223375021,1778
+E07000113,Swale,South East,2026,Detached,4,33647.0,98.42473128318116,1612
+E07000113,Swale,South East,2026,Flat,2,33647.0,98.42473128318116,886
+E07000113,Swale,South East,2026,Semi-detached,3,33647.0,98.42473128318116,1271
+E07000113,Swale,South East,2026,Terraced,3,33647.0,98.42473128318116,1176
+W06000011,Swansea,Wales,2026,Detached,4,32091.0,87.90076534805495,1095
+W06000011,Swansea,Wales,2026,Flat,2,32091.0,87.90076534805495,751
+W06000011,Swansea,Wales,2026,Semi-detached,3,32091.0,87.90076534805495,881
+W06000011,Swansea,Wales,2026,Terraced,3,32091.0,87.90076534805495,825
+E06000030,Swindon,South West,2026,Detached,4,33135.0,80.89332452728651,1538
+E06000030,Swindon,South West,2026,Flat,2,33135.0,80.89332452728651,919
+E06000030,Swindon,South West,2026,Semi-detached,3,33135.0,80.89332452728651,1193
+E06000030,Swindon,South West,2026,Terraced,3,33135.0,80.89332452728651,1083
+E08000008,Tameside,North West,2026,Detached,4,29877.0,,1242
+E08000008,Tameside,North West,2026,Flat,2,29877.0,,794
+E08000008,Tameside,North West,2026,Semi-detached,3,29877.0,,1065
+E08000008,Tameside,North West,2026,Terraced,3,29877.0,,933
+E07000199,Tamworth,West Midlands,2026,Detached,4,33167.0,80.79418124631412,1252
+E07000199,Tamworth,West Midlands,2026,Flat,2,33167.0,80.79418124631412,762
+E07000199,Tamworth,West Midlands,2026,Semi-detached,3,33167.0,80.79418124631412,984
+E07000199,Tamworth,West Midlands,2026,Terraced,3,33167.0,80.79418124631412,923
+E07000215,Tandridge,South East,2026,Detached,4,33316.0,66.77221496423905,2277
+E07000215,Tandridge,South East,2026,Flat,2,33316.0,66.77221496423905,1368
+E07000215,Tandridge,South East,2026,Semi-detached,3,33316.0,66.77221496423905,1778
+E07000215,Tandridge,South East,2026,Terraced,3,33316.0,66.77221496423905,1711
+E07000045,Teignbridge,South West,2026,Detached,4,28911.0,58.69111949612935,1352
+E07000045,Teignbridge,South West,2026,Flat,2,28911.0,58.69111949612935,735
+E07000045,Teignbridge,South West,2026,Semi-detached,3,28911.0,58.69111949612935,1055
+E07000045,Teignbridge,South West,2026,Terraced,3,28911.0,58.69111949612935,964
+E06000020,Telford and Wrekin,West Midlands,2026,Detached,4,31459.0,89.04693597086941,1199
+E06000020,Telford and Wrekin,West Midlands,2026,Flat,2,31459.0,89.04693597086941,684
+E06000020,Telford and Wrekin,West Midlands,2026,Semi-detached,3,31459.0,89.04693597086941,914
+E06000020,Telford and Wrekin,West Midlands,2026,Terraced,3,31459.0,89.04693597086941,845
+E07000076,Tendring,East of England,2026,Detached,4,29545.0,95.15905947441216,1326
+E07000076,Tendring,East of England,2026,Flat,2,29545.0,95.15905947441216,891
+E07000076,Tendring,East of England,2026,Semi-detached,3,29545.0,95.15905947441216,1148
+E07000076,Tendring,East of England,2026,Terraced,3,29545.0,95.15905947441216,1072
+E07000093,Test Valley,South East,2026,Detached,4,35314.0,60.84835443411104,1743
+E07000093,Test Valley,South East,2026,Flat,2,35314.0,60.84835443411104,986
+E07000093,Test Valley,South East,2026,Semi-detached,3,35314.0,60.84835443411104,1372
+E07000093,Test Valley,South East,2026,Terraced,3,35314.0,60.84835443411104,1259
+E07000083,Tewkesbury,South West,2026,Detached,4,31603.0,56.32608213738398,1583
+E07000083,Tewkesbury,South West,2026,Flat,2,31603.0,56.32608213738398,840
+E07000083,Tewkesbury,South West,2026,Semi-detached,3,31603.0,56.32608213738398,1218
+E07000083,Tewkesbury,South West,2026,Terraced,3,31603.0,56.32608213738398,1092
+E07000114,Thanet,South East,2026,Detached,4,28323.0,116.03002409168766,1485
+E07000114,Thanet,South East,2026,Flat,2,28323.0,116.03002409168766,917
+E07000114,Thanet,South East,2026,Semi-detached,3,28323.0,116.03002409168766,1295
+E07000114,Thanet,South East,2026,Terraced,3,28323.0,116.03002409168766,1177
+E07000102,Three Rivers,East of England,2026,Detached,4,39615.0,68.56601573885165,2618
+E07000102,Three Rivers,East of England,2026,Flat,2,39615.0,68.56601573885165,1464
+E07000102,Three Rivers,East of England,2026,Semi-detached,3,39615.0,68.56601573885165,2007
+E07000102,Three Rivers,East of England,2026,Terraced,3,39615.0,68.56601573885165,1679
+E06000034,Thurrock,East of England,2026,Detached,4,36407.0,100.88955434208208,1953
+E06000034,Thurrock,East of England,2026,Flat,2,36407.0,100.88955434208208,1087
+E06000034,Thurrock,East of England,2026,Semi-detached,3,36407.0,100.88955434208208,1520
+E06000034,Thurrock,East of England,2026,Terraced,3,36407.0,100.88955434208208,1364
+E07000115,Tonbridge and Malling,South East,2026,Detached,4,35106.0,67.57883593279821,2235
+E07000115,Tonbridge and Malling,South East,2026,Flat,2,35106.0,67.57883593279821,1235
+E07000115,Tonbridge and Malling,South East,2026,Semi-detached,3,35106.0,67.57883593279821,1619
+E07000115,Tonbridge and Malling,South East,2026,Terraced,3,35106.0,67.57883593279821,1449
+E06000027,Torbay,South West,2026,Detached,4,28963.0,109.70276586897609,1224
+E06000027,Torbay,South West,2026,Flat,2,28963.0,109.70276586897609,716
+E06000027,Torbay,South West,2026,Semi-detached,3,28963.0,109.70276586897609,1002
+E06000027,Torbay,South West,2026,Terraced,3,28963.0,109.70276586897609,944
+W06000020,Torfaen,Wales,2026,Detached,4,33201.0,125.20617624211208,1154
+W06000020,Torfaen,Wales,2026,Flat,2,33201.0,125.20617624211208,690
+W06000020,Torfaen,Wales,2026,Semi-detached,3,33201.0,125.20617624211208,917
+W06000020,Torfaen,Wales,2026,Terraced,3,33201.0,125.20617624211208,830
+E07000046,Torridge,South West,2026,Detached,4,28752.0,54.00835488362841,1045
+E07000046,Torridge,South West,2026,Flat,2,28752.0,54.00835488362841,645
+E07000046,Torridge,South West,2026,Semi-detached,3,28752.0,54.00835488362841,867
+E07000046,Torridge,South West,2026,Terraced,3,28752.0,54.00835488362841,795
+E09000030,Tower Hamlets,London,2026,Detached,4,45183.0,144.2047630445189,3101
+E09000030,Tower Hamlets,London,2026,Flat,2,45183.0,144.2047630445189,2300
+E09000030,Tower Hamlets,London,2026,Semi-detached,3,45183.0,144.2047630445189,3042
+E09000030,Tower Hamlets,London,2026,Terraced,3,45183.0,144.2047630445189,2759
+E08000009,Trafford,North West,2026,Detached,4,35593.0,,2059
+E08000009,Trafford,North West,2026,Flat,2,35593.0,,1125
+E08000009,Trafford,North West,2026,Semi-detached,3,35593.0,,1533
+E08000009,Trafford,North West,2026,Terraced,3,35593.0,,1365
+E07000116,Tunbridge Wells,South East,2026,Detached,4,35319.0,68.26924678179488,2234
+E07000116,Tunbridge Wells,South East,2026,Flat,2,35319.0,68.26924678179488,1240
+E07000116,Tunbridge Wells,South East,2026,Semi-detached,3,35319.0,68.26924678179488,1690
+E07000116,Tunbridge Wells,South East,2026,Terraced,3,35319.0,68.26924678179488,1544
+E07000077,Uttlesford,East of England,2026,Detached,4,41006.0,60.98468407019284,1822
+E07000077,Uttlesford,East of England,2026,Flat,2,41006.0,60.98468407019284,1038
+E07000077,Uttlesford,East of England,2026,Semi-detached,3,41006.0,60.98468407019284,1460
+E07000077,Uttlesford,East of England,2026,Terraced,3,41006.0,60.98468407019284,1320
+W06000014,Vale of Glamorgan,Wales,2026,Detached,4,31410.0,73.51398472244796,1332
+W06000014,Vale of Glamorgan,Wales,2026,Flat,2,31410.0,73.51398472244796,798
+W06000014,Vale of Glamorgan,Wales,2026,Semi-detached,3,31410.0,73.51398472244796,989
+W06000014,Vale of Glamorgan,Wales,2026,Terraced,3,31410.0,73.51398472244796,937
+E07000180,Vale of White Horse,South East,2026,Detached,4,38859.0,52.41858662304473,1946
+E07000180,Vale of White Horse,South East,2026,Flat,2,38859.0,52.41858662304473,1167
+E07000180,Vale of White Horse,South East,2026,Semi-detached,3,38859.0,52.41858662304473,1473
+E07000180,Vale of White Horse,South East,2026,Terraced,3,38859.0,52.41858662304473,1389
+E08000036,Wakefield,Yorkshire and The Humber,2026,Detached,4,29954.0,115.82352145080526,1123
+E08000036,Wakefield,Yorkshire and The Humber,2026,Flat,2,29954.0,115.82352145080526,673
+E08000036,Wakefield,Yorkshire and The Humber,2026,Semi-detached,3,29954.0,115.82352145080526,882
+E08000036,Wakefield,Yorkshire and The Humber,2026,Terraced,3,29954.0,115.82352145080526,796
+E08000030,Walsall,West Midlands,2026,Detached,4,29112.0,103.54657414734108,1242
+E08000030,Walsall,West Midlands,2026,Flat,2,29112.0,103.54657414734108,757
+E08000030,Walsall,West Midlands,2026,Semi-detached,3,29112.0,103.54657414734108,974
+E08000030,Walsall,West Midlands,2026,Terraced,3,29112.0,103.54657414734108,923
+E09000031,Waltham Forest,London,2026,Detached,4,37971.0,102.69180474634578,2177
+E09000031,Waltham Forest,London,2026,Flat,2,37971.0,102.69180474634578,1617
+E09000031,Waltham Forest,London,2026,Semi-detached,3,37971.0,102.69180474634578,2347
+E09000031,Waltham Forest,London,2026,Terraced,3,37971.0,102.69180474634578,2084
+E09000032,Wandsworth,London,2026,Detached,4,49310.0,97.20207497815272,2865
+E09000032,Wandsworth,London,2026,Flat,2,49310.0,97.20207497815272,2350
+E09000032,Wandsworth,London,2026,Semi-detached,3,49310.0,97.20207497815272,3388
+E09000032,Wandsworth,London,2026,Terraced,3,49310.0,97.20207497815272,3162
+E06000007,Warrington,North West,2026,Detached,4,34144.0,74.29964024602529,1311
+E06000007,Warrington,North West,2026,Flat,2,34144.0,74.29964024602529,783
+E06000007,Warrington,North West,2026,Semi-detached,3,34144.0,74.29964024602529,985
+E06000007,Warrington,North West,2026,Terraced,3,34144.0,74.29964024602529,897
+E07000222,Warwick,West Midlands,2026,Detached,4,39797.0,81.28542029444357,1738
+E07000222,Warwick,West Midlands,2026,Flat,2,39797.0,81.28542029444357,1027
+E07000222,Warwick,West Midlands,2026,Semi-detached,3,39797.0,81.28542029444357,1303
+E07000222,Warwick,West Midlands,2026,Terraced,3,39797.0,81.28542029444357,1216
+E07000103,Watford,East of England,2026,Detached,4,37172.0,113.57260955990266,2560
+E07000103,Watford,East of England,2026,Flat,2,37172.0,113.57260955990266,1438
+E07000103,Watford,East of England,2026,Semi-detached,3,37172.0,113.57260955990266,2029
+E07000103,Watford,East of England,2026,Terraced,3,37172.0,113.57260955990266,1758
+E07000216,Waverley,South East,2026,Detached,4,42326.0,42.89524697925928,2160
+E07000216,Waverley,South East,2026,Flat,2,42326.0,42.89524697925928,1209
+E07000216,Waverley,South East,2026,Semi-detached,3,42326.0,42.89524697925928,1576
+E07000216,Waverley,South East,2026,Terraced,3,42326.0,42.89524697925928,1427
+E07000065,Wealden,South East,2026,Detached,4,33376.0,54.34085129643273,1858
+E07000065,Wealden,South East,2026,Flat,2,33376.0,54.34085129643273,997
+E07000065,Wealden,South East,2026,Semi-detached,3,33376.0,54.34085129643273,1381
+E07000065,Wealden,South East,2026,Terraced,3,33376.0,54.34085129643273,1268
+E07000241,Welwyn Hatfield,East of England,2026,Detached,4,37805.0,101.76758550448469,1917
+E07000241,Welwyn Hatfield,East of England,2026,Flat,2,37805.0,101.76758550448469,1191
+E07000241,Welwyn Hatfield,East of England,2026,Semi-detached,3,37805.0,101.76758550448469,1665
+E07000241,Welwyn Hatfield,East of England,2026,Terraced,3,37805.0,101.76758550448469,1522
+E06000037,West Berkshire,South East,2026,Detached,4,38513.0,64.43213329869566,2069
+E06000037,West Berkshire,South East,2026,Flat,2,38513.0,64.43213329869566,1132
+E06000037,West Berkshire,South East,2026,Semi-detached,3,38513.0,64.43213329869566,1489
+E06000037,West Berkshire,South East,2026,Terraced,3,38513.0,64.43213329869566,1308
+E07000047,West Devon,South West,2026,Detached,4,26556.0,44.03187521193625,1171
+E07000047,West Devon,South West,2026,Flat,2,26556.0,44.03187521193625,684
+E07000047,West Devon,South West,2026,Semi-detached,3,26556.0,44.03187521193625,930
+E07000047,West Devon,South West,2026,Terraced,3,26556.0,44.03187521193625,860
+E07000127,West Lancashire,North West,2026,Detached,4,31884.0,59.82324949014277,1148
+E07000127,West Lancashire,North West,2026,Flat,2,31884.0,59.82324949014277,692
+E07000127,West Lancashire,North West,2026,Semi-detached,3,31884.0,59.82324949014277,833
+E07000127,West Lancashire,North West,2026,Terraced,3,31884.0,59.82324949014277,816
+E07000142,West Lindsey,East Midlands,2026,Detached,4,30741.0,81.54157808175218,978
+E07000142,West Lindsey,East Midlands,2026,Flat,2,30741.0,81.54157808175218,588
+E07000142,West Lindsey,East Midlands,2026,Semi-detached,3,30741.0,81.54157808175218,790
+E07000142,West Lindsey,East Midlands,2026,Terraced,3,30741.0,81.54157808175218,735
+E06000062,West Northamptonshire,East Midlands,2026,Detached,4,33059.0,92.31503451008288,1481
+E06000062,West Northamptonshire,East Midlands,2026,Flat,2,33059.0,92.31503451008288,863
+E06000062,West Northamptonshire,East Midlands,2026,Semi-detached,3,33059.0,92.31503451008288,1116
+E06000062,West Northamptonshire,East Midlands,2026,Terraced,3,33059.0,92.31503451008288,1070
+E07000181,West Oxfordshire,South East,2026,Detached,4,35388.0,48.30659242908444,1784
+E07000181,West Oxfordshire,South East,2026,Flat,2,35388.0,48.30659242908444,1074
+E07000181,West Oxfordshire,South East,2026,Semi-detached,3,35388.0,48.30659242908444,1498
+E07000181,West Oxfordshire,South East,2026,Terraced,3,35388.0,48.30659242908444,1354
+E07000245,West Suffolk,East of England,2026,Detached,4,33437.0,57.99680054063472,1686
+E07000245,West Suffolk,East of England,2026,Flat,2,33437.0,57.99680054063472,961
+E07000245,West Suffolk,East of England,2026,Semi-detached,3,33437.0,57.99680054063472,1277
+E07000245,West Suffolk,East of England,2026,Terraced,3,33437.0,57.99680054063472,1174
+E09000033,Westminster,London,2026,Detached,4,45172.0,399.3746674389147,2927
+E09000033,Westminster,London,2026,Flat,2,45172.0,399.3746674389147,2974
+E09000033,Westminster,London,2026,Semi-detached,3,45172.0,399.3746674389147,2940
+E09000033,Westminster,London,2026,Terraced,3,45172.0,399.3746674389147,3842
+E06000064,Westmorland and Furness,North West,2026,Detached,4,33988.0,71.77709906983125,1141
+E06000064,Westmorland and Furness,North West,2026,Flat,2,33988.0,71.77709906983125,697
+E06000064,Westmorland and Furness,North West,2026,Semi-detached,3,33988.0,71.77709906983125,922
+E06000064,Westmorland and Furness,North West,2026,Terraced,3,33988.0,71.77709906983125,822
+E08000010,Wigan,North West,2026,Detached,4,31615.0,,1010
+E08000010,Wigan,North West,2026,Flat,2,31615.0,,641
+E08000010,Wigan,North West,2026,Semi-detached,3,31615.0,,839
+E08000010,Wigan,North West,2026,Terraced,3,31615.0,,756
+E06000054,Wiltshire,South West,2026,Detached,4,31873.0,60.45874557364093,1521
+E06000054,Wiltshire,South West,2026,Flat,2,31873.0,60.45874557364093,864
+E06000054,Wiltshire,South West,2026,Semi-detached,3,31873.0,60.45874557364093,1211
+E06000054,Wiltshire,South West,2026,Terraced,3,31873.0,60.45874557364093,1079
+E07000094,Winchester,South East,2026,Detached,4,38352.0,60.47962822236512,2042
+E07000094,Winchester,South East,2026,Flat,2,38352.0,60.47962822236512,1221
+E07000094,Winchester,South East,2026,Semi-detached,3,38352.0,60.47962822236512,1720
+E07000094,Winchester,South East,2026,Terraced,3,38352.0,60.47962822236512,1571
+E06000040,Windsor and Maidenhead,South East,2026,Detached,4,37653.0,64.88458842379332,2533
+E06000040,Windsor and Maidenhead,South East,2026,Flat,2,37653.0,64.88458842379332,1451
+E06000040,Windsor and Maidenhead,South East,2026,Semi-detached,3,37653.0,64.88458842379332,1948
+E06000040,Windsor and Maidenhead,South East,2026,Terraced,3,37653.0,64.88458842379332,1827
+E08000015,Wirral,North West,2026,Detached,4,32959.0,78.98549846012077,1198
+E08000015,Wirral,North West,2026,Flat,2,32959.0,78.98549846012077,717
+E08000015,Wirral,North West,2026,Semi-detached,3,32959.0,78.98549846012077,954
+E08000015,Wirral,North West,2026,Terraced,3,32959.0,78.98549846012077,874
+E07000217,Woking,South East,2026,Detached,4,38172.0,71.39561381206626,2546
+E07000217,Woking,South East,2026,Flat,2,38172.0,71.39561381206626,1308
+E07000217,Woking,South East,2026,Semi-detached,3,38172.0,71.39561381206626,1789
+E07000217,Woking,South East,2026,Terraced,3,38172.0,71.39561381206626,1513
+E06000041,Wokingham,South East,2026,Detached,4,43538.0,44.84086676824107,2135
+E06000041,Wokingham,South East,2026,Flat,2,43538.0,44.84086676824107,1212
+E06000041,Wokingham,South East,2026,Semi-detached,3,43538.0,44.84086676824107,1692
+E06000041,Wokingham,South East,2026,Terraced,3,43538.0,44.84086676824107,1411
+E08000031,Wolverhampton,West Midlands,2026,Detached,4,31308.0,99.0001208098524,1281
+E08000031,Wolverhampton,West Midlands,2026,Flat,2,31308.0,99.0001208098524,739
+E08000031,Wolverhampton,West Midlands,2026,Semi-detached,3,31308.0,99.0001208098524,1007
+E08000031,Wolverhampton,West Midlands,2026,Terraced,3,31308.0,99.0001208098524,948
+E07000237,Worcester,West Midlands,2026,Detached,4,32997.0,113.815285075827,1362
+E07000237,Worcester,West Midlands,2026,Flat,2,32997.0,113.815285075827,806
+E07000237,Worcester,West Midlands,2026,Semi-detached,3,32997.0,113.815285075827,1059
+E07000237,Worcester,West Midlands,2026,Terraced,3,32997.0,113.815285075827,968
+E07000229,Worthing,South East,2026,Detached,4,32823.0,102.35058501106778,1725
+E07000229,Worthing,South East,2026,Flat,2,32823.0,102.35058501106778,1045
+E07000229,Worthing,South East,2026,Semi-detached,3,32823.0,102.35058501106778,1458
+E07000229,Worthing,South East,2026,Terraced,3,32823.0,102.35058501106778,1366
+W06000006,Wrexham,Wales,2026,Detached,4,29752.0,101.2777491900824,1007
+W06000006,Wrexham,Wales,2026,Flat,2,29752.0,101.2777491900824,653
+W06000006,Wrexham,Wales,2026,Semi-detached,3,29752.0,101.2777491900824,809
+W06000006,Wrexham,Wales,2026,Terraced,3,29752.0,101.2777491900824,736
+E07000238,Wychavon,West Midlands,2026,Detached,4,29661.0,65.07634273396802,1379
+E07000238,Wychavon,West Midlands,2026,Flat,2,29661.0,65.07634273396802,762
+E07000238,Wychavon,West Midlands,2026,Semi-detached,3,29661.0,65.07634273396802,1039
+E07000238,Wychavon,West Midlands,2026,Terraced,3,29661.0,65.07634273396802,935
+E07000128,Wyre,North West,2026,Detached,4,29814.0,76.4884508164078,1035
+E07000128,Wyre,North West,2026,Flat,2,29814.0,76.4884508164078,628
+E07000128,Wyre,North West,2026,Semi-detached,3,29814.0,76.4884508164078,824
+E07000128,Wyre,North West,2026,Terraced,3,29814.0,76.4884508164078,764
+E07000239,Wyre Forest,West Midlands,2026,Detached,4,29408.0,87.22487257508712,1107
+E07000239,Wyre Forest,West Midlands,2026,Flat,2,29408.0,87.22487257508712,659
+E07000239,Wyre Forest,West Midlands,2026,Semi-detached,3,29408.0,87.22487257508712,947
+E07000239,Wyre Forest,West Midlands,2026,Terraced,3,29408.0,87.22487257508712,837
+E06000014,York,Yorkshire and The Humber,2026,Detached,4,32961.0,94.05216193727944,1576
+E06000014,York,Yorkshire and The Humber,2026,Flat,2,32961.0,94.05216193727944,1016
+E06000014,York,Yorkshire and The Humber,2026,Semi-detached,3,32961.0,94.05216193727944,1299
+E06000014,York,Yorkshire and The Humber,2026,Terraced,3,32961.0,94.05216193727944,1201

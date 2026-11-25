@@ -10,6 +10,7 @@ import sys
 import json
 from pathlib import Path
 import joblib
+from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import Ridge
@@ -31,7 +32,11 @@ class BaselineTrainer:
 
     def __init__(self):
         self.splitter = DataSplitter()
+        # Gaps (e.g. no police data for an area) are handled INSIDE the model: a median
+        # learned from training rows only, plus a "was missing" indicator column — the
+        # data itself is never back-filled with invented values.
         self.model = Pipeline([
+            ("impute", SimpleImputer(strategy="median", add_indicator=True)),
             ("scaler", StandardScaler()),
             ("ridge", Ridge(alpha=1.0, random_state=config.RANDOM_SEED)),
         ])
