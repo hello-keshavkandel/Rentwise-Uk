@@ -89,12 +89,12 @@ an honest uncertainty range and a plain-English reason** — and to say clearly 
 - [ ] Affordability methodology note in the app and API docs. *(moved to Phase C methodology page)*
 - [x] Retrain, recalibrate, re-run the full validation (all areas × types, AppTest, API parity), update reports.
 
-### Phase B — A 100% reliable local environment *(~1 day)*
-- [ ] `make setup` → `make verify`: one command runs tests, the dashboard AppTest and an API smoke test.
-- [ ] `make demo`: starts dashboard + API with a seeded demo account and API key.
-- [ ] Build `docker compose up` on the Mac and fix anything it reveals.
-- [ ] CI runs the dashboard AppTest and the API tests on every push.
-- [ ] `.env.example` complete; troubleshooting section in the README.
+### Phase B — A 100% reliable local environment *(done 25 Nov 2026 — reports/REPORT_PHASE_B.md; Docker check on the Mac pending)*
+- [x] `make setup` → `make verify`: one command runs tests, the dashboard AppTest and an API smoke test.
+- [x] `make demo`: starts dashboard + API with a seeded demo account and API key.
+- [ ] Build `docker compose up` on the Mac and fix anything it reveals. *(Keshav — Docker unavailable in the sandbox)*
+- [x] CI runs the dashboard AppTest and the API tests on every push.
+- [x] `.env.example` complete; troubleshooting section in the README.
 
 ### Phase C — Make it genuinely useful *(~3–4 days)*
 - [ ] **Affordability calculator** with the user's own income (not just the area median).

@@ -37,19 +37,26 @@ Rent estimates with calibrated intervals, affordability and SHAP factors (`/v1/p
 ## Quickstart
 
 ```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-
-make validate     # check/validate the open data in data/raw (see DATA_SOURCES.md)
-make build        # run the real-data pipeline (all four modules)
-make store        # build the DuckDB query store
-make app          # launch the dashboard
-make api          # launch the public REST API (needs requirements-api.txt)
-make test         # run the test suite
-make health       # artifacts + data/model freshness
+git clone https://github.com/hello-keshavkandel/Rentwise-Uk.git && cd Rentwise-Uk
+make setup        # builds .venv with Python 3.11 + all dependencies (uses uv if installed)
+make verify       # proves it works: env, health, all tests, live API + live dashboard
+make demo         # dashboard http://localhost:8501 + API http://localhost:8000/docs, demo account included
 ```
 
-Run `make help` for every target. The real raw data is git-ignored — `DATA_SOURCES.md` lists exactly what to download and from where.
+`make verify` prints a PASS / WARN / FAIL table (also saved to `reports/verify_report.md`) and is what CI runs on
+every push. `make help` lists every target, including the data pipeline (`make build`, `make spatial`, …). Raw
+data is git-ignored — `DATA_SOURCES.md` lists exactly what to download and from where.
+
+### Troubleshooting
+
+| Symptom | Fix |
+|---|---|
+| `make setup` says Python 3.11 was not found | `brew install uv` (recommended — it fetches Python 3.11 for you) or `brew install python@3.11`, then `make setup` |
+| `pip` tries to compile numpy/pandas | You are on Python 3.12+; the pins need 3.11 — use `make setup`, which creates a 3.11 `.venv` |
+| `make verify` warns about package versions | Run `make setup` again inside the project; the warning lists what differs |
+| Port 8000 or 8501 already in use | `python scripts/demo.py --api-port 8010 --app-port 8510` |
+| Dashboard shows "Could not load the trained model" | Run `make verify` — the Health line names the missing file |
+| Docker: `docker compose up --build` fails | Make sure Docker Desktop is running; images use Python 3.11 and need ~2 GB free |
 
 ## Architecture
 
@@ -74,7 +81,7 @@ Open data only, no proprietary access, no ethical approval required — HM Land 
 ## Testing
 
 ```bash
-make test        # pytest — 105 tests (unit, integration, API end-to-end); data-dependent ones skip without the raw data
+make verify      # env + health + 140 tests (unit, integration, data-quality, dashboard, API) + live servers
 ```
 CI runs the suite on every push. Per-milestone test reports are in `reports/TESTING_REPORT_*.md`.
 
