@@ -55,6 +55,10 @@ runtime dependency is not pinned exactly and checks pyarrow works with the pinne
 the next free port when 8000 or 8501 is already in use, instead of failing. This is exactly why the Mac run was
 on the checklist.
 
+**Result after the fix (Mac, 26 Nov 2026 01:54):** `make verify` **PASS** — Python 3.11.18, all 17 pins match,
+136 passed / 2 skipped, live API (Camden flat £2,425, official, Oct 2026) and live dashboard healthy.
+`make demo` ran with the API moved to port 8001 automatically.
+
 ## 3. Time from clone to running app
 
 Clean environment in 26 s plus `make verify` in 40 s in the sandbox — well inside the 10-minute target. On a Mac

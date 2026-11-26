@@ -89,7 +89,7 @@ an honest uncertainty range and a plain-English reason** — and to say clearly 
 - [ ] Affordability methodology note in the app and API docs. *(moved to Phase C methodology page)*
 - [x] Retrain, recalibrate, re-run the full validation (all areas × types, AppTest, API parity), update reports.
 
-### Phase B — A 100% reliable local environment *(done 25 Nov 2026 — reports/REPORT_PHASE_B.md; Docker check on the Mac pending)*
+### Phase B — A 100% reliable local environment *(done — `make verify` PASS on the Mac, 26 Nov 2026: Python 3.11.18, 17/17 pins, 136 tests, live API + dashboard; Docker optional, pending)*
 - [x] `make setup` → `make verify`: one command runs tests, the dashboard AppTest and an API smoke test.
 - [x] `make demo`: starts dashboard + API with a seeded demo account and API key.
 - [ ] Build `docker compose up` on the Mac and fix anything it reveals. *(Keshav — Docker unavailable in the sandbox)*
