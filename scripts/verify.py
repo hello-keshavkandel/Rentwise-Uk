@@ -88,7 +88,8 @@ def check_pins():
     if missing:
         record("Packages", "FAIL", "missing: " + ", ".join(missing) + " — run `make setup`")
     elif wrong:
-        record("Packages", "WARN", f"{len(wrong)} differ from pins: " + ", ".join(wrong[:4]))
+        record("Packages", "WARN", f"{len(wrong)} differ from pins: " + ", ".join(wrong[:4])
+               + " — run `make setup` to match them")
     else:
         record("Packages", "PASS", f"all {len(pins)} pinned packages match")
 
