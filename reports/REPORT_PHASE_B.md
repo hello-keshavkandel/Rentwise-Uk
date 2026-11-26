@@ -42,6 +42,19 @@ make demo      # dashboard + API with a ready demo account
    GitHub also runs 3.11 and will confirm on the next push.
 2. **`docker compose up --build`.** Docker is not available in the sandbox.
 
+### First run on the Mac (26 Nov 2026) — what it caught
+
+`make verify` on the Mac (Python 3.11) failed 2 dashboard tests: **`pyarrow` was the only unpinned runtime
+dependency** (`pyarrow>=14`). On Python 3.11 it resolved to a release that requires NumPy 2, while RentWise pins
+NumPy 1.26.4, so every Streamlit table crashed ("pyarrow requires NumPy 2.0 or newer"). The sandbox missed it
+because Python 3.10 resolved to an older, compatible pyarrow. The live app on Streamlit Cloud installs the same
+way, so its "What's nearby" table was exposed too.
+
+*Fixes:* `pyarrow==17.0.0` (checked to import with NumPy 1.26.4); new `tests/test_requirements.py` fails if any
+runtime dependency is not pinned exactly and checks pyarrow works with the pinned NumPy; `make demo` now moves to
+the next free port when 8000 or 8501 is already in use, instead of failing. This is exactly why the Mac run was
+on the checklist.
+
 ## 3. Time from clone to running app
 
 Clean environment in 26 s plus `make verify` in 40 s in the sandbox — well inside the 10-minute target. On a Mac

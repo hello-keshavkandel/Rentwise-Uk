@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 import os
 import signal
+import socket
 import subprocess
 import sys
 import time
@@ -52,6 +53,26 @@ def seed(db_path: Path) -> dict:
     return {"api_key": key, "alerts": summary}
 
 
+def port_free(port: int) -> bool:
+    with socket.socket() as s:
+        try:
+            s.bind(("127.0.0.1", port))
+            return True
+        except OSError:
+            return False
+
+
+def pick_port(preferred: int, name: str) -> int:
+    """Use the preferred port, or the next free one (e.g. an old API still running on 8000)."""
+    for port in range(preferred, preferred + 50):
+        if port_free(port):
+            if port != preferred:
+                print(f"Note: port {preferred} is busy (something else is running there) "
+                      f"— {name} will use {port} instead.")
+            return port
+    raise SystemExit(f"No free port near {preferred} for the {name}.")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--seed-only", action="store_true")
@@ -72,6 +93,8 @@ Seeded       : saved area Westminster; alert "Camden flat rent above 50% of inco
     if args.seed_only:
         return 0
 
+    args.api_port = pick_port(args.api_port, "API")
+    args.app_port = pick_port(args.app_port, "dashboard")
     env = {**os.environ, "RENTWISE_API_DB": str(db_path)}
     py = sys.executable
     procs = [
