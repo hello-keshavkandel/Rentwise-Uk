@@ -87,6 +87,8 @@ class AreaData:
         self.areas = a
         self.trends_path = P / "rent_trends.parquet"
         self._trends = None
+        qp = P / "rent_quartiles.csv"                       # ONS median & quartiles (snapshot)
+        self.quart = pd.read_csv(qp) if qp.exists() else None
         sp = P / "sale_prices.csv"
         self.sales = pd.read_csv(sp) if sp.exists() else None
         fp = M / "rent_forecasts.json"
@@ -116,6 +118,23 @@ class AreaData:
 
     def official_rent(self, la_code: str, measure: str) -> int | None:
         return (self.official_rents(la_code).get(measure) or {}).get("rent")
+
+    def rent_range(self, la_code: str, measure: str = "All") -> dict | None:
+        """ONS median and quartiles for the area x bedroom category (one-month snapshot).
+
+        Only 'All', 'Studio' and bedroom counts exist (ONS does not publish by property type).
+        Returns None when the area/measure is absent; individual values are None when ONS
+        suppressed them for low counts — never estimated."""
+        if self.quart is None:
+            return None
+        m = self.quart[(self.quart.area_code == la_code) & (self.quart.measure == measure)]
+        if m.empty:
+            return None
+        r = m.iloc[0]
+        out = {k: (int(r[k]) if pd.notna(r[k]) else None)
+               for k in ("lower_quartile", "median", "upper_quartile", "count")}
+        out["period"] = r.period
+        return out if out["median"] is not None else None
 
     def sale_price(self, la_code: str, property_type: str = "All") -> dict | None:
         if self.sales is None:
@@ -186,6 +205,7 @@ class AreaData:
                 f"Official average rent, {MEASURE_LABEL.get(measure, measure)} (£/month)": rent,
                 "Annual change (%)": off.get("annual_change_pct"),
                 "Rent period": off.get("period"),
+                **self._range_cols(c, measure),
                 "Local full-time median pay (£/year)": self.area_income(c),
                 "Rent / local full-time pay (%)": round(local["ratio"] * 100, 1) if local else None,
                 **({"Rent / your income (%)": round(own["ratio"] * 100, 1) if own else None} if income else {}),
@@ -204,6 +224,16 @@ class AreaData:
             })
         return pd.DataFrame(rows)
 
+    def _range_cols(self, la_code: str, measure: str) -> dict:
+        """Comparison columns for the ONS median and middle-half range (bedroom measures only)."""
+        if self.quart is None:
+            return {}
+        rr = self.rent_range(la_code, measure) if measure not in TYPE_MEASURES else None
+        return {"Median rent (£/month)": rr["median"] if rr else None,
+                "Middle half of rents (£/month)": (f"{rr['lower_quartile']:,}–{rr['upper_quartile']:,}"
+                                                   if rr and rr["lower_quartile"] and rr["upper_quartile"]
+                                                   else None)}
+
     def all_areas_table(self) -> pd.DataFrame:
         """Every area x every official measure — the analyst download."""
         pay = pd.Series({c: self.area_income(c) for c in self.areas.index}, name="pay", dtype=float)
@@ -211,8 +241,17 @@ class AreaData:
         o["rent_to_fulltime_pay_pct"] = (o.rent * 12 / o.pay * 100).round(1)
         o = o.rename(columns={"area_code": "la_code", "area_name": "la_name", "rent": "average_rent",
                               "pay": "median_fulltime_pay"})
-        return o[["la_code", "la_name", "region", "period", "measure", "average_rent", "annual_change_pct",
-                  "median_fulltime_pay", "rent_to_fulltime_pay_pct"]]
+        cols = ["la_code", "la_name", "region", "period", "measure", "average_rent", "annual_change_pct",
+                "median_fulltime_pay", "rent_to_fulltime_pay_pct"]
+        if self.quart is not None:                     # ONS snapshot distribution, bedroom measures
+            q = self.quart[self.quart.level == "la"].rename(columns={
+                "area_code": "la_code", "period": "quartiles_period", "count": "rents_counted",
+                "lower_quartile": "lower_quartile_rent", "median": "median_rent",
+                "upper_quartile": "upper_quartile_rent"})
+            o = o.merge(q[["la_code", "measure", "quartiles_period", "lower_quartile_rent", "median_rent",
+                           "upper_quartile_rent", "rents_counted"]], on=["la_code", "measure"], how="left")
+            cols += ["quartiles_period", "lower_quartile_rent", "median_rent", "upper_quartile_rent", "rents_counted"]
+        return o[cols]
 
     def official_affordability(self) -> dict[str, float]:
         """la_code -> official average rent / full-time median pay, ALL properties (for the map)."""

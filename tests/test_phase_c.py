@@ -193,6 +193,10 @@ class TestApiPhaseC:
         assert by["2 bed"]["vs_your_income"]["ratio"] == pytest.approx(by["2 bed"]["rent_gbp_month"] * 12 / 40000,
                                                                        abs=1e-4)
         assert by["2 bed"]["gross_yield_pct"] is None and j["sources"]["rents"]["period"]
+        dist = by["2 bed"]["distribution"]
+        if dist is not None:                                     # present once quartiles are built
+            assert dist["lower_quartile"] <= dist["median"] <= dist["upper_quartile"]
+            assert by["Flat"]["distribution"] is None            # by bedrooms only
 
     def test_trend_and_forecast(self, ctx):
         c, H = ctx

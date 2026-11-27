@@ -74,5 +74,22 @@
     "file": "ashe_table8_7a.xlsx",
     "areas": 316,
     "missing": []
+  },
+  "rent_quartiles": {
+    "source": "ONS Private rent price median and quartiles, England and Wales (from PIPR data)",
+    "period": "2026-09",
+    "released": "18 November 2026",
+    "file": "privaterentpricemedianandquartilesenglandandwales.xlsx",
+    "measures": [
+      "All",
+      "Studio",
+      "1 bed",
+      "2 bed",
+      "3 bed",
+      "4+ bed"
+    ],
+    "note": "Snapshot for one month; not comparable over time; not the same measure as the PIPR average.",
+    "areas": 316,
+    "published_medians": 1814
   }
 }

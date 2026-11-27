@@ -89,6 +89,18 @@ Wrekin) — unmatched districts are reported, never guessed (only City of London
 ONS rents); gross yield is shown only where rent and price describe the same property type (Price Paid has no
 bedroom counts).
 
+## Rent ranges — ONS median & quartiles (added 27 Nov 2026)
+
+| Input | Where | Save as |
+|---|---|---|
+| ONS *Private rent price median and quartiles, England and Wales* (first published 18 Nov 2026) | https://www.ons.gov.uk/peoplepopulationandcommunity/housing/datasets/privaterentpricemedianandquartilesenglandandwales | `data/raw/privaterentpricemedianandquartilesenglandandwales.xlsx` |
+
+Built by `python -m src.data.rent_quartiles` (also `make rents` / `make build`) into `rent_quartiles.csv`: latest
+month only (a snapshot — ONS says not comparable over time), every LA + England + Wales × All / Studio / 1 / 2 / 3 /
+4+ bed: lower quartile, median, upper quartile, count. Suppressed cells (`[c]`, `[u]`, `[x]`) stay missing.
+**Cross-check (tested):** by bedroom count the LA median is within a few % of the PIPR average (correlation 0.998;
+the average lies inside the middle half in ≥ 98% of cases).
+
 ## Module 3 geospatial enrichment (optional — fetched later)
 
 ### OpenStreetMap amenities

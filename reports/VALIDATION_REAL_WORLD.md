@@ -73,6 +73,26 @@ After the fix: **198 of 316 areas (63%)** have average rent above 30% of one loc
 (median area 33%; range 20%–86%). Examples: Leeds 38%, Manchester 46%, Bristol 58%, Hartlepool 21%.
 *(Phase C's "276 of 316 / median 40%" used all-jobs pay and is superseded.)*
 
+### 3a. Rent ranges added (ONS median & quartiles, September 2026 snapshot)
+
+Integrated the new ONS dataset so users see **what most people pay**: lower quartile, median and upper quartile
+by bedroom count for all 316 areas (Studio for 234 where published). Cross-check against the PIPR averages —
+two different ONS measures built from the same rents:
+
+| Measure | Median ÷ PIPR average (median across LAs) | Correlation across LAs | PIPR average inside the middle half |
+|---|---|---|---|
+| 1 bed | 1.00 | 0.998 | 98% |
+| 2 bed | 0.99 | 0.999 | 99% |
+| 3 bed | 0.99 | 0.999 | 99% |
+| 4+ bed | 0.98 | 0.994 | 98% |
+| All homes | 0.94 | 0.990 | 90% |
+
+By bedroom count the two agree closely. For "all homes" the median is about 6% lower, and nationally much
+lower (England median £1,052 vs average £1,472), because PIPR weights and mix-adjusts to a fixed basket while the
+median reflects the homes in that month's data — ONS warns the two are not directly comparable. The app shows both,
+with that explanation, and uses the range only to compare places at one point in time (ONS's guidance).
+Example — Leeds, 2 bedrooms: average £978; median £962; middle half £913–£1,015 (3,098 rents).
+
 ## 4. Sale prices — compared with ONS house price statistics
 
 | | ONS (HPSSA median, year to Sept 2025) | RentWise (Land Registry Price Paid median, Jan–Jun 2026, standard sales) |

@@ -276,6 +276,10 @@ if __name__ == "__main__":
     _em = build_earnings(RAW, config.DATA_PROCESSED)
     _v = json.loads((config.DATA_PROCESSED / "data_vintages.json").read_text())
     _v["earnings_fulltime"] = _em
+    # ONS median & quartile rents (snapshot ranges by bedrooms), when the workbook is present
+    if (RAW / "privaterentpricemedianandquartilesenglandandwales.xlsx").exists():
+        from src.data.rent_quartiles import build as build_quartiles
+        _v["rent_quartiles"] = build_quartiles(RAW, config.DATA_PROCESSED)
     (config.DATA_PROCESSED / "data_vintages.json").write_text(json.dumps(_v, indent=2))
     run_module3_and_spatial_model()
     run_module1()

@@ -26,6 +26,7 @@ data/processed/*
 !data/processed/rent_areas.csv
 !data/processed/sale_prices.csv
 !data/processed/earnings.csv
+!data/processed/rent_quartiles.csv
 # The DuckDB store is the app's primary data source — committed and deployed.
 !
 # Models (large binaries)

@@ -149,6 +149,8 @@ with st.sidebar:
             f"{' (released ' + _r['released'] + ')' if _r.get('released') else ''}; history from {_r.get('history_from')}\n"
             f"- **Earnings:** ONS ASHE Table 8.7a, median gross annual pay of full-time employees by place of "
             f"residence — {_e.get('period')}\n"
+            f"- **Rent ranges (median & quartiles):** ONS — "
+            f"{month_label((V.get('rent_quartiles') or {}).get('period'))}\n"
             f"- **Sale prices:** {_s.get('source', 'HM Land Registry')} — {_s.get('period')}\n"
             f"- **Population:** {_p.get('source')} — {_p.get('period')}\n"
             f"- **Crime:** {_c.get('measure')} — {_c.get('period')} ({_c.get('months')} months)\n"
@@ -238,15 +240,52 @@ if view == "Rent check":
                f"**{local['band']}**. Enter your own income on the left for a personal answer.")
         (st.success if local["affordable"] else st.warning)(("✅ " if local["affordable"] else "⚠️ ") + msg)
 
+    # ---- what most people pay: ONS median and middle-half range (snapshot) ----
+    rr = data.rent_range(code, measure) if measure not in TYPE_MEASURES else None
+    if rr:
+        homes = {"All": "homes", "1 bed": "1-bedroom homes", "2 bed": "2-bedroom homes",
+                 "3 bed": "3-bedroom homes", "4+ bed": "homes with 4 or more bedrooms"}.get(measure, "homes")
+        if rr["lower_quartile"] and rr["upper_quartile"]:
+            st.markdown(f"**What most people pay:** half of rented {homes} here cost between "
+                        f"**£{rr['lower_quartile']:,} and £{rr['upper_quartile']:,}** a month; the median is "
+                        f"**£{rr['median']:,}**" + (f" ({rr['count']:,} rents" if rr["count"] else " (")
+                        + f", {month_label(rr['period'])}).")
+        else:
+            st.markdown(f"**What most people pay:** median **£{rr['median']:,}** a month "
+                        f"({month_label(rr['period'])}; too few rents for a reliable range).")
+        st.caption("ONS median and quartiles — a one-month snapshot of rents actually paid. The median is the "
+                   "middle rent; the official average above is ONS's mix-adjusted measure, so the two can differ.")
+    elif measure in TYPE_MEASURES:
+        st.caption("ONS publishes rent ranges by bedroom count, not property type — choose a bedroom size to see "
+                   "what most people pay.")
+
     # ---- every official rent for this area ----
     with st.expander(f"All official rents in {area} ({AS_OF})", expanded=False):
-        rows = [{"Home": MEASURE_LABEL.get(m, m), "Average rent (£/month)": r["rent"],
-                 "Change on a year (%)": r["annual_change_pct"],
-                 "Rent / local full-time pay (%)": round(r["rent"] * 12 / data.area_income(code) * 100, 1)
-                 if data.area_income(code) else None}
-                for m, r in sorted(offs.items(), key=lambda kv: data.measures().index(kv[0]))]
+        rows = []
+        for m, r in sorted(offs.items(), key=lambda kv: data.measures().index(kv[0])):
+            q = data.rent_range(code, m) if m not in TYPE_MEASURES else None
+            rows.append({"Home": MEASURE_LABEL.get(m, m), "Average rent (£/month)": r["rent"],
+                         "Change on a year (%)": r["annual_change_pct"],
+                         "Median rent (£/month)": q["median"] if q else None,
+                         "Middle half (£/month)": (f"{q['lower_quartile']:,}–{q['upper_quartile']:,}"
+                                                   if q and q["lower_quartile"] and q["upper_quartile"] else None),
+                         "Rent / local full-time pay (%)": round(r["rent"] * 12 / data.area_income(code) * 100, 1)
+                         if data.area_income(code) else None})
+        studio = data.rent_range(code, "Studio")
+        if studio:
+            rows.insert(1, {"Home": "Studio", "Average rent (£/month)": None, "Change on a year (%)": None,
+                            "Median rent (£/month)": studio["median"],
+                            "Middle half (£/month)": (f"{studio['lower_quartile']:,}–{studio['upper_quartile']:,}"
+                                                      if studio["lower_quartile"] and studio["upper_quartile"]
+                                                      else None),
+                            "Rent / local full-time pay (%)": None})
         tbl = pd.DataFrame(rows)
-        st.dataframe(tbl, hide_index=True, use_container_width=True)
+        st.caption("Average: ONS PIPR, " + AS_OF + ". Median and middle half: ONS median & quartiles, "
+                   + month_label((V.get("rent_quartiles") or {}).get("period")) + " (by bedrooms only). "
+                   "Blank = not published.")
+        shown = tbl.map(lambda v: "—" if v is None or (isinstance(v, float) and v != v)
+                        else (f"{v:,}" if isinstance(v, int) else str(v)))
+        st.dataframe(shown, hide_index=True, use_container_width=True)
         st.download_button("Download this table (CSV)", tbl.to_csv(index=False).encode(),
                            file_name=f"rentwise_{code}_{data.period}.csv", mime="text/csv")
 
@@ -438,6 +477,7 @@ between places. It covers areas, not individual homes: no open dataset records t
 |---|---|---|
 | **Official average rent** | ONS's average monthly private rent for the area (the PIPR price level — a geometric-mean measure of rents actually paid in new *and* existing tenancies, adjusted for the mix of homes), by bedroom count (1–4+) or property type. It is not an asking rent and not a median | {_r.get('source')}, {month_label(_r.get('period'))} (released {_r.get('released')}) |
 | **Change on a year** | % change in that average over 12 months, as published | ONS PIPR |
+| **Median and middle half** | The middle rent, and the range covering the middle 50% of rents (lower to upper quartile), by bedroom count. A one-month snapshot: ONS advises it is for comparing places at one time, not for trends. Values based on 10 or fewer rents are suppressed by ONS and shown blank | ONS Private rent price median and quartiles, {month_label((V.get('rent_quartiles') or {}).get('period'))} (released {(V.get('rent_quartiles') or {}).get('released')}) |
 | **Rent ÷ local pay** | Annual rent ÷ **median gross annual pay of full-time employees living in the area** — one earner; the same earnings basis ONS uses for its housing affordability ratios. Households with two earners will find rent more affordable than this | ASHE Table 8.7a (full-time, residence), {_e.get('period')} |
 | **Rent ÷ your income** | Annual rent ÷ the gross annual income *you* enter (use household income if rent is shared). Never stored | — |
 | **30% guideline** | Rent at or below 30% of gross income is widely used as the affordability line; above 40% is shown as “well above” | convention |
@@ -470,8 +510,8 @@ Bands are conformal (from the backtest's own errors). In out-of-time tests the 8
 Forecasts extrapolate the official series and do not model policy changes such as the Renters' Rights Act.
 
 #### Limits
-- Areas, not individual homes; an average hides variation within an area (ONS began publishing area medians and
-  quartiles in November 2026 — planned for RentWise).
+- Areas, not individual homes. The median and middle-half range show the spread of rents, but a specific flat
+  depends on its size, condition and street.
 - Scotland and Northern Ireland are not covered yet.
 - Rents are ONS's measure of rents paid by tenants (new and existing lets), which moves more slowly than advertised asking rents.
 - Indicative information, **not financial advice**.

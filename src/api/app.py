@@ -298,19 +298,25 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
                         "annual_change_pct": r["annual_change_pct"], "period": r["period"],
                         "vs_local_fulltime_pay": affordability(r["rent"], local),
                         "vs_your_income": affordability(r["rent"], income_gbp_year) if income_gbp_year else None,
-                        "gross_yield_pct": d.gross_yield(la_code, m)})
+                        "gross_yield_pct": d.gross_yield(la_code, m),
+                        # ONS median & quartiles (bedroom measures; one-month snapshot; null if suppressed)
+                        "distribution": d.rent_range(la_code, m) if hasattr(d, "rent_range") else None})
         order = {m: i for i, m in enumerate(d.measures())}
         return {"la_code": la_code, "la_name": a["la_name"], "region": a["region"],
                 "median_fulltime_pay_gbp_year": local,
                 "rents": sorted(out, key=lambda x: order.get(x["measure"], 99)),
                 "sale_prices": {t: d.sale_price(la_code, t) for t in ("All", "Flat", "Terraced",
                                                                       "Semi-detached", "Detached")},
-                "sources": {k: d.vintages.get(k) for k in ("rents", "earnings_fulltime", "sale_prices")},
+                "studio_distribution": d.rent_range(la_code, "Studio") if hasattr(d, "rent_range") else None,
+                "sources": {k: d.vintages.get(k) for k in ("rents", "rent_quartiles", "earnings_fulltime",
+                                                           "sale_prices")},
                 "notes": ["rent_gbp_month is the ONS PIPR average (geometric-mean price level) for rents paid in "
                           "new and existing tenancies — not a median and not an asking rent.",
                           "Affordability = annual rent / gross annual income; 30% guideline. Local pay = median "
                           "gross annual pay of full-time employees living in the area (ASHE), the ONS basis.",
-                          "Gross yield = annual average rent / median sale price; indicative, before costs."],
+                          "Gross yield = annual average rent / median sale price; indicative, before costs.",
+                          "distribution = ONS median and quartile rents for one month (snapshot; compare places, "
+                          "not months); published by bedroom count only."],
                 "disclaimer": DISCLAIMER}
 
     @app.get("/v1/areas/{la_code}/trend", tags=["data"])
