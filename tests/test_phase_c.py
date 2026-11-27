@@ -159,7 +159,7 @@ def test_area_data_answers_consistently():
     assert pd.isna(df.loc[df.Area == "Manchester", "Crime per 1,000 residents"]).all()   # missing, not 0
     assert "Rent / your income (%)" in df.columns
     t = d.all_areas_table()
-    assert len(t) == 316 * 9 and t.rent.notna().all()
+    assert len(t) == 316 * 9 and t.average_rent.notna().all()
 
 
 # ------------------------------------------------------------------ API (real data)

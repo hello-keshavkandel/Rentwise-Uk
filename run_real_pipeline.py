@@ -271,6 +271,12 @@ if __name__ == "__main__":
     print("=" * 60); print("RentWise UK — REAL-DATA pipeline (all four modules)"); print("=" * 60)
     build_module2_dataset()
     run_module2()
+    # full-time median pay per area: the ONS basis for affordability (validation fix, Nov 2026)
+    from src.data.earnings import build as build_earnings
+    _em = build_earnings(RAW, config.DATA_PROCESSED)
+    _v = json.loads((config.DATA_PROCESSED / "data_vintages.json").read_text())
+    _v["earnings_fulltime"] = _em
+    (config.DATA_PROCESSED / "data_vintages.json").write_text(json.dumps(_v, indent=2))
     run_module3_and_spatial_model()
     run_module1()
     run_module4()

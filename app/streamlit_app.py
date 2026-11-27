@@ -147,7 +147,8 @@ with st.sidebar:
         st.markdown(
             f"- **Rents:** {_r.get('source')} — {month_label(_r.get('period'))}"
             f"{' (released ' + _r['released'] + ')' if _r.get('released') else ''}; history from {_r.get('history_from')}\n"
-            f"- **Earnings:** {_e.get('source')} — {_e.get('period')}\n"
+            f"- **Earnings:** ONS ASHE Table 8.7a, median gross annual pay of full-time employees by place of "
+            f"residence — {_e.get('period')}\n"
             f"- **Sale prices:** {_s.get('source', 'HM Land Registry')} — {_s.get('period')}\n"
             f"- **Population:** {_p.get('source')} — {_p.get('period')}\n"
             f"- **Crime:** {_c.get('measure')} — {_c.get('period')} ({_c.get('months')} months)\n"
@@ -170,7 +171,7 @@ if view == "Rent check":
         income = st.number_input("Your gross annual income, £ (optional)", min_value=0, max_value=2_000_000,
                                  value=0, step=1000,
                                  help="Before tax, for everyone paying the rent. Used only on this page; "
-                                      "never stored. Leave at 0 to compare with local earnings.")
+                                      "never stored. Leave at 0 to compare with local full-time pay.")
     code = data.code_for(area)
     a = data.areas.loc[code]
     offs = data.official_rents(code)
@@ -195,7 +196,9 @@ if view == "Rent check":
     c1, c2, c3 = st.columns(3)
     if kind == "official":
         ch = off.get("annual_change_pct")
-        c1.metric("Official median rent", f"£{rent:,}", help="Per calendar month, ONS median.",
+        c1.metric("Official average rent", f"£{rent:,}",
+                  help="ONS average monthly private rent (PIPR price level: a geometric-mean measure of rents "
+                       "paid by tenants in new and existing lets). Not an asking rent.",
                   delta=f"{ch:+.1f}% in a year" if ch is not None else None, delta_color="off")
         st.caption(f"**Official ONS figure** for {AS_OF} — Price Index of Private Rents. "
                    + (f"RentWise's model estimates £{pred['model_rent']:,} for the same area and type and uses "
@@ -206,7 +209,7 @@ if view == "Rent check":
         st.caption("**Model estimate** — ONS publishes no figure for this home type here. "
                    + (f"{int(iv['level'] * 100)}% range: **£{iv['low']:,} – £{iv['high']:,}**." if iv else ""))
     else:
-        c1.metric("Official median rent", "No figure")
+        c1.metric("Official average rent", "No figure")
         st.info("ONS publishes no official rent for this home size here, and RentWise does not estimate "
                 "bedroom-specific rents.")
 
@@ -214,7 +217,9 @@ if view == "Rent check":
     mine = affordability(rent, income) if income else None
     if local:
         c2.metric("Share of local pay", f"{local['ratio'] * 100:.0f}%",
-                  help=f"Annual rent ÷ median gross annual pay of residents (£{data.area_income(code):,.0f}, ASHE).")
+                  help=f"Annual rent ÷ median gross annual pay of full-time employees living here "
+                       f"(£{data.area_income(code):,.0f}, ASHE {V.get('earnings', {}).get('period')}) — "
+                       "the earnings basis ONS uses for affordability.")
     if mine:
         c3.metric("Share of your income", f"{mine['ratio'] * 100:.0f}%",
                   help="Annual rent ÷ the gross annual income you entered.")
@@ -228,15 +233,16 @@ if view == "Rent check":
                "/month**.")
         (st.success if mine["affordable"] else st.warning)(("✅ " if mine["affordable"] else "⚠️ ") + msg)
     elif local:
-        msg = (f"For someone on the local median wage this rent is **{local['ratio'] * 100:.0f}%** of gross pay — "
+        msg = (f"For one full-time worker on the local median pay this rent is **{local['ratio'] * 100:.0f}%** of "
+               "gross pay — "
                f"**{local['band']}**. Enter your own income on the left for a personal answer.")
         (st.success if local["affordable"] else st.warning)(("✅ " if local["affordable"] else "⚠️ ") + msg)
 
     # ---- every official rent for this area ----
     with st.expander(f"All official rents in {area} ({AS_OF})", expanded=False):
-        rows = [{"Home": MEASURE_LABEL.get(m, m), "Median rent (£/month)": r["rent"],
+        rows = [{"Home": MEASURE_LABEL.get(m, m), "Average rent (£/month)": r["rent"],
                  "Change on a year (%)": r["annual_change_pct"],
-                 "Rent / local earnings (%)": round(r["rent"] * 12 / data.area_income(code) * 100, 1)
+                 "Rent / local full-time pay (%)": round(r["rent"] * 12 / data.area_income(code) * 100, 1)
                  if data.area_income(code) else None}
                 for m, r in sorted(offs.items(), key=lambda kv: data.measures().index(kv[0]))]
         tbl = pd.DataFrame(rows)
@@ -252,7 +258,7 @@ if view == "Rent check":
         st.markdown(f"**Buy vs rent:** {'homes' if sp_type == 'All' else MEASURE_LABEL[sp_type].lower() + 's'} "
                     f"here sold for a median **{gbp(sp['median_price'])}** ({sp['sales']:,} sales, {sp['period']})"
                     + (f" — an indicative gross yield of **{y:.1f}%** a year." if y else "."))
-        st.caption("HM Land Registry Price Paid, standard-price sales. Yield = annual median rent ÷ median sale "
+        st.caption("HM Land Registry Price Paid, standard-price sales. Yield = annual ONS average rent ÷ median sale "
                    "price; before costs, voids and tax; rented and sold homes are not the same homes.")
 
     # ---- trend since 2015 ----
@@ -267,7 +273,7 @@ if view == "Rent check":
     tdf = pd.concat({k: v.set_index("period")["rent"] for k, v in series.items() if not v.empty}, axis=1)
     if not tdf.empty:
         tdf.index = pd.to_datetime(tdf.index)
-        line_chart(tdf, f"Official median rent — {MEASURE_LABEL.get(measure, measure).lower()}")
+        line_chart(tdf, f"Official average rent — {MEASURE_LABEL.get(measure, measure).lower()}")
         first, last = tdf[area].dropna().iloc[0], tdf[area].dropna().iloc[-1]
         st.caption(f"{area}: £{first:,.0f} in {tdf[area].dropna().index[0]:%b %Y} → £{last:,.0f} in {AS_OF} "
                    f"({(last / first - 1) * 100:+.0f}%). Source: ONS PIPR.")
@@ -363,9 +369,9 @@ elif view == "Compare areas":
         tdf = pd.concat({p: data.trend(c, measure).set_index("period")["rent"] for p, c in zip(picked, codes)}, axis=1)
         if not tdf.empty:
             tdf.index = pd.to_datetime(tdf.index)
-            line_chart(tdf, f"Official median rent since 2015 — {MEASURE_LABEL.get(measure, measure).lower()}")
+            line_chart(tdf, f"Official average rent since 2015 — {MEASURE_LABEL.get(measure, measure).lower()}")
     st.divider()
-    st.markdown("**For analysts:** every area × every official measure, with local earnings and ratio.")
+    st.markdown("**For analysts:** every area × every official measure, with local full-time pay and ratio.")
     st.download_button("Download all areas (CSV)", data.all_areas_table().to_csv(index=False).encode(),
                        file_name=f"rentwise_all_areas_{data.period}.csv", mime="text/csv")
 
@@ -377,8 +383,8 @@ elif view == "Area map":
     geo = P / "lad_boundaries_wgs84.geojson"
     if not geo.exists():
         st.warning("Boundary file missing — run `make geo`."); st.stop()
-    options = {"Rent ÷ local earnings, all properties (official)": "ratio",
-               "Official median rent, all properties (£/month)": "rent",
+    options = {"Rent ÷ local full-time pay, all properties (official)": "ratio",
+               "Official average rent, all properties (£/month)": "rent",
                "Rent change on a year (%)": "change",
                "Indicative gross rental yield (%)": "yield",
                "Average historic Ofsted school quality (England)": "school_quality",
@@ -430,18 +436,27 @@ between places. It covers areas, not individual homes: no open dataset records t
 #### The numbers
 | Figure | What it is | Source & date |
 |---|---|---|
-| **Official median rent** | Median monthly private rent for the area, by bedroom count (1–4+) or property type | {_r.get('source')}, {month_label(_r.get('period'))} (released {_r.get('released')}) |
-| **Change on a year** | % change in that median over 12 months, as published | ONS PIPR |
-| **Rent ÷ earnings** | Annual rent ÷ **median gross annual pay of residents** — one full-time-equivalent earner, so stricter than household measures | ASHE Table 8.7a, {_e.get('period')} |
+| **Official average rent** | ONS's average monthly private rent for the area (the PIPR price level — a geometric-mean measure of rents actually paid in new *and* existing tenancies, adjusted for the mix of homes), by bedroom count (1–4+) or property type. It is not an asking rent and not a median | {_r.get('source')}, {month_label(_r.get('period'))} (released {_r.get('released')}) |
+| **Change on a year** | % change in that average over 12 months, as published | ONS PIPR |
+| **Rent ÷ local pay** | Annual rent ÷ **median gross annual pay of full-time employees living in the area** — one earner; the same earnings basis ONS uses for its housing affordability ratios. Households with two earners will find rent more affordable than this | ASHE Table 8.7a (full-time, residence), {_e.get('period')} |
 | **Rent ÷ your income** | Annual rent ÷ the gross annual income *you* enter (use household income if rent is shared). Never stored | — |
 | **30% guideline** | Rent at or below 30% of gross income is widely used as the affordability line; above 40% is shown as “well above” | convention |
 | **Median sale price** | Median price paid, standard-price sales (Land Registry category A), shown only with ≥ 20 sales | HM Land Registry, {_s.get('period')} |
-| **Gross yield** | Annual median rent ÷ median sale price for the same property type. Indicative: before costs, voids, tax; rented and sold homes differ | derived |
+| **Gross yield** | Annual ONS average rent ÷ median sale price for the same property type. Indicative: before costs, voids, tax; rented and sold homes differ | derived |
 | **Crime** | Recorded street crimes per 1,000 residents, annualised over {_c.get('months')} months. Missing where a force published nothing — never zero | data.police.uk + ONS population |
 | **Schools / amenities** | Historic Ofsted grades (England only); OpenStreetMap amenity counts per km² | Ofsted & DfE; © OSM contributors |
 
+**How this compares with ONS's own affordability figure.** ONS's *Private rental affordability* bulletin divides
+rent by the **household** income of private renters (FYE 2024: England 36.3%, London 41.6%, North East 19.8%). That
+is lower than RentWise's one-earner figure because many renting households have more than one income. Use
+"Rent ÷ your income" with your household's income for your own answer.
+
+**Checked against the official releases.** RentWise's figures reproduce the ONS November 2026 release exactly
+(UK £1,411, +3.8%; England £1,472; Wales £849; London £2,350; Kensington and Chelsea £3,765). See the
+validation report in the project repository.
+
 #### The model (explains rents; estimates only where ONS publishes nothing)
-XGBoost on local earnings, crime, region, property type, amenities and schools, trained on {meta.get('n_las', '316')} areas.
+XGBoost on local earnings (all employee jobs), crime, region, property type, amenities and schools, trained on {meta.get('n_las', '316')} areas.
 Accuracy: R² **{rcv.get('r2', 0):.2f}** / MAE **£{rcv.get('mae', 0):.0f}** for areas seen in training; R² **{gcv.get('r2', 0):.2f}** /
 MAE **£{gcv.get('mae', 0):.0f}** when whole areas are held out (the honest test). Explanations use SHAP; they show
 association, not cause. Only trained areas are served, because the 80% conformal range is calibrated there.
@@ -451,11 +466,12 @@ Regional (9 English regions + Wales), all properties, 12 months ahead. Three mod
 backtest; **{fm.get('chosen', '—')}** chosen (MAPE {(fm.get('backtest_mape_pct') or {}).get(fm.get('chosen'), 0):.2f}%).
 Bands are conformal (from the backtest's own errors). In out-of-time tests the 80% band covered
 **{(fm.get('out_of_time_coverage') or {}).get('80%', 0) * 100:.0f}%** of outcomes and the 95% band
-**{(fm.get('out_of_time_coverage') or {}).get('95%', 0) * 100:.0f}%** — slightly narrow, as rent growth has been slowing.
+**{(fm.get('out_of_time_coverage') or {}).get('95%', 0) * 100:.0f}%** — slightly narrow, because the pace of rent growth has shifted more in recent years than before.
 Forecasts extrapolate the official series and do not model policy changes such as the Renters' Rights Act.
 
 #### Limits
-- Areas, not individual homes; medians hide variation within an area.
+- Areas, not individual homes; an average hides variation within an area (ONS began publishing area medians and
+  quartiles in November 2026 — planned for RentWise).
 - Scotland and Northern Ireland are not covered yet.
 - Rents are ONS's measure of rents paid by tenants (new and existing lets), which moves more slowly than advertised asking rents.
 - Indicative information, **not financial advice**.

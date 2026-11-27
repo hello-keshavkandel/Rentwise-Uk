@@ -2,7 +2,7 @@
 official_rents.py  —  every official ONS rent RentWise can show, latest and since 2015 (Phase C).
 
 The ONS Price Index of Private Rents (PIPR) publishes, for each local authority, region and
-nation, a monthly median rent for:
+nation, a monthly average rent (the PIPR price level, a geometric-mean measure) for:
   * all properties,
   * each bedroom count (1, 2, 3, 4 or more bed),
   * each property type (detached, semi-detached, terraced, flat/maisonette),

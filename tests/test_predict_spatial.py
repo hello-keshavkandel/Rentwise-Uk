@@ -71,7 +71,7 @@ def test_model_saved_with_the_deployed_xgboost_version():
 
 
 def test_headline_equals_official_ons_figure_wherever_published(predictor):
-    """Official-first: for every (area, type) ONS publishes, the answer IS the ONS median."""
+    """Official-first: for every (area, type) ONS publishes, the answer IS the ONS figure."""
     import pandas as pd
     clean = pd.read_csv(config.DATA_PROCESSED / "rentwise_clean.csv")
     for r in clean.itertuples():

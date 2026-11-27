@@ -28,7 +28,7 @@ def test_rent_check_shows_official_rent_with_date():
     at = _search(_app(), "Westminster", "Flat")
     assert not at.exception
     m = {x.label: x.value for x in at.metric}
-    assert m["Official median rent"].startswith("£")
+    assert m["Official average rent"].startswith("£")
     assert any("Official ONS figure" in c.value for c in at.caption)
 
 
@@ -38,7 +38,7 @@ def test_bedroom_rent_is_the_official_figure():
     at = _search(_app(), "Leeds", "2 bed")
     assert not at.exception
     want = d.official_rent(d.code_for("Leeds"), "2 bed")
-    assert {x.label: x.value for x in at.metric}["Official median rent"] == f"£{want:,}"
+    assert {x.label: x.value for x in at.metric}["Official average rent"] == f"£{want:,}"
 
 
 def test_personal_affordability_uses_my_income():

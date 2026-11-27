@@ -40,7 +40,7 @@ spatial:            ## Module 3 features + retrain/recalibrate the deployed spat
 	$(PY) -m src.modules.module3_spatial && $(PY) -m src.models.rent_spatial
 
 rents:              ## official rents (all measures, since 2015) + sale prices from the newest PIPR / Price Paid
-	$(PY) -m src.data.official_rents && $(PY) -m src.data.sale_prices
+	$(PY) -m src.data.official_rents && $(PY) -m src.data.sale_prices && $(PY) -m src.data.earnings
 
 forecast:           ## regional 12-month rent forecasts with conformal bands (needs `make rents`)
 	$(PY) -m src.models.rent_forecast

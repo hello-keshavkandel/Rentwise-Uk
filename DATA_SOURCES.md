@@ -6,7 +6,7 @@ Every dataset is open, public, and licensed for reuse (Open Government Licence, 
 
 | # | File in `data/raw/` | Dataset (provider) | What it gives us | Used by | Link |
 |---|---|---|---|---|---|
-| 1 | `ons_pipr_monthly.xlsx` | Price Index of Private Rents — monthly price statistics (ONS) | **Median monthly rent (£)** by local authority **and by property type/bedroom**, monthly to Jun 2026 | Module 2 (rent target) | https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics |
+| 1 | `ons_pipr_monthly.xlsx` | Price Index of Private Rents — monthly price statistics (ONS) | **Average monthly rent (£, PIPR geometric-mean price level)** by local authority **and by property type/bedroom**, monthly to Jun 2026 | Module 2 (rent target) | https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics |
 | 2 | `ons_pipr_historical.xlsx` | Price Index of Private Rents — historical series (ONS) | Regional rent **£ levels and index**, monthly from 2005 | Module 4 (forecasting) | https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukhistoricalseries |
 | 3 | `ashe_table8_7a.xlsx` | ASHE Table 8.7a — annual pay, gross, place of residence (ONS) | **Median gross annual earnings** by local authority | Module 2 (affordability ratio) | https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/datasets/placeofresidencebylocalauthorityashetable8 |
 | 4 | `land_registry_pp_2026.csv` | Price Paid Data (HM Land Registry) | Every residential **sale price** (England & Wales) | Module 1 (sale price) | https://www.gov.uk/government/statistical-data-sets/price-paid-data-downloads |

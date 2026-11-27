@@ -41,6 +41,8 @@ validated); area-level forecasts are a candidate for later.
 
 ## 3. Findings worth knowing
 
+- *Superseded by `reports/VALIDATION_REAL_WORLD.md` (27 Nov): affordability now uses full-time pay, the ONS
+  basis — 198 of 316 areas (63%) above 30%, median area 33%; and the ONS figures are averages, not medians.*
 - **Affordability is worse than "30%" headlines suggest when measured against one earner.** On official
   October 2026 rents, the all-properties median is above 30% of local median pay in **276 of 316 areas (87%)**;
   the median area is at **40%** (range 24%–97%; e.g. Leeds 44%, Manchester 55%, Bristol 67%). The app states the method (individual gross pay, stricter than household

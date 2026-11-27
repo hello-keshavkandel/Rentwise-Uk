@@ -76,6 +76,14 @@ class AreaData:
         a = clean.groupby("la_code").agg(la_name=("la_name", "first"), region=("region", "first"),
                                          income=("median_annual_income", "first"),
                                          crime=("crime_per_1000", "first"))
+        # Affordability uses FULL-TIME median pay (residence-based) — the basis ONS uses for its
+        # affordability ratios. `income` (all employee jobs) stays as the model's training feature.
+        ep = P / "earnings.csv"
+        if ep.exists():
+            e = pd.read_csv(ep).set_index("la_code")
+            a["pay_fulltime"] = e["median_pay_fulltime"].reindex(a.index)
+        else:                                               # older builds: fall back, labelled
+            a["pay_fulltime"] = float("nan")
         self.areas = a
         self.trends_path = P / "rent_trends.parquet"
         self._trends = None
@@ -129,7 +137,12 @@ class AreaData:
         return round(rent * 12 / sp["median_price"] * 100, 2)
 
     def area_income(self, la_code: str) -> float | None:
-        return _clean(self.areas.loc[la_code, "income"]) if la_code in self.areas.index else None
+        """Median gross annual pay of FULL-TIME employees living in the area (ASHE), the ONS
+        affordability basis; falls back to all-jobs median only if full-time data is absent."""
+        if la_code not in self.areas.index:
+            return None
+        ft = _clean(self.areas.loc[la_code, "pay_fulltime"])
+        return ft if ft is not None else _clean(self.areas.loc[la_code, "income"])
 
     # ---------------------------------------------------------------- trends & forecasts
     def trends(self) -> pd.DataFrame:
@@ -162,7 +175,7 @@ class AreaData:
             off = self.official_rents(c).get(measure, {})
             rent = off.get("rent")
             own = affordability(rent, income) if income else None
-            local = affordability(rent, _clean(a.income))
+            local = affordability(rent, self.area_income(c))
             sp = self.sale_price(c, measure if measure in TYPE_MEASURES else "All")
             sx = self.spatial.loc[c] if self.spatial is not None and c in self.spatial.index else None
 
@@ -170,11 +183,11 @@ class AreaData:
                 return None if sx is None or pd.isna(sx.get(col)) else round(math.expm1(sx[col]), 2)
             rows.append({
                 "Area": a.la_name, "Code": c, "Region": a.region,
-                f"Official rent, {MEASURE_LABEL.get(measure, measure)} (£/month)": rent,
+                f"Official average rent, {MEASURE_LABEL.get(measure, measure)} (£/month)": rent,
                 "Annual change (%)": off.get("annual_change_pct"),
                 "Rent period": off.get("period"),
-                "Local median earnings (£/year)": _clean(a.income),
-                "Rent / local earnings (%)": round(local["ratio"] * 100, 1) if local else None,
+                "Local full-time median pay (£/year)": self.area_income(c),
+                "Rent / local full-time pay (%)": round(local["ratio"] * 100, 1) if local else None,
                 **({"Rent / your income (%)": round(own["ratio"] * 100, 1) if own else None} if income else {}),
                 ("Median sale price, all homes (£)" if measure not in TYPE_MEASURES
                  else "Median sale price (£)"): sp["median_price"] if sp else None,
@@ -193,14 +206,20 @@ class AreaData:
 
     def all_areas_table(self) -> pd.DataFrame:
         """Every area x every official measure — the analyst download."""
-        o = self.official.merge(self.areas[["income"]], left_on="area_code", right_index=True, how="left")
-        o["rent_to_local_earnings_pct"] = (o.rent * 12 / o.income * 100).round(1)
-        o = o.rename(columns={"area_code": "la_code", "area_name": "la_name", "income": "median_annual_earnings"})
-        return o[["la_code", "la_name", "region", "period", "measure", "rent", "annual_change_pct",
-                  "median_annual_earnings", "rent_to_local_earnings_pct"]]
+        pay = pd.Series({c: self.area_income(c) for c in self.areas.index}, name="pay", dtype=float)
+        o = self.official.merge(pay, left_on="area_code", right_index=True, how="left")
+        o["rent_to_fulltime_pay_pct"] = (o.rent * 12 / o.pay * 100).round(1)
+        o = o.rename(columns={"area_code": "la_code", "area_name": "la_name", "rent": "average_rent",
+                              "pay": "median_fulltime_pay"})
+        return o[["la_code", "la_name", "region", "period", "measure", "average_rent", "annual_change_pct",
+                  "median_fulltime_pay", "rent_to_fulltime_pay_pct"]]
 
     def official_affordability(self) -> dict[str, float]:
-        """la_code -> rent/earnings for ALL properties (official, for the map)."""
+        """la_code -> official average rent / full-time median pay, ALL properties (for the map)."""
         o = self.official[self.official.measure == "All"].set_index("area_code")["rent"]
-        inc = self.areas["income"]
-        return {c: float(o[c] * 12 / inc[c]) for c in o.index if c in inc.index and pd.notna(inc[c])}
+        out = {}
+        for c in o.index:
+            pay = self.area_income(c)
+            if pay:
+                out[c] = float(o[c] * 12 / pay)
+        return out

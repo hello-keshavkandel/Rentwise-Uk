@@ -7,7 +7,7 @@ data. Next to the official ONS rent this gives:
 
   * buy-vs-rent context for renters ("a typical flat here sells for £X"),
   * an indicative **gross rental yield** for landlords and analysts
-    (annual official median rent / median sale price).
+    (annual official average rent / median sale price).
 
 Rules
   * Standard-price sales only (PPD category A). Category B (repossessions, buy-to-let

@@ -67,5 +67,12 @@
       "ISLES OF SCILLY"
     ],
     "file": "land_registry_pp_2026.csv"
+  },
+  "earnings_fulltime": {
+    "source": "ONS ASHE Table 8.7a, median gross annual pay, FULL-TIME employees, by place of residence",
+    "period": "2025",
+    "file": "ashe_table8_7a.xlsx",
+    "areas": 316,
+    "missing": []
   }
 }

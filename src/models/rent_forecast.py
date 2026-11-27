@@ -5,7 +5,7 @@ Module 4 showed that regional rent series are forecastable a year ahead (MAPE ~0
 that model-based intervals were over-confident. This module turns that research into a
 product feature, on the latest official data:
 
-* Series: the ONS PIPR median rent ("All" properties) for the 9 English regions, England,
+* Series: the ONS PIPR average rent ("All" properties) for the 9 English regions, England,
   Wales and the UK, Jan 2015 -> latest month. Forecasts are REGIONAL — the level Module 4
   validated; an area's own trend is shown as history, next to its region's forecast.
 * Candidates (on log rent): ARIMA(1,1,1); ARIMA(1,1,0) with drift; damped-trend ETS.
@@ -110,7 +110,7 @@ def build(processed_dir: Path, models_dir: Path, h: int = HORIZON) -> dict:
     # 3) final widths from all origins; forecast from the latest month
     widths = conformal_widths(pooled)
     out = {"generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
-           "measure": "All properties (ONS PIPR median monthly rent)", "horizon_months": h,
+           "measure": "All properties (ONS PIPR average monthly rent)", "horizon_months": h,
            "method": {"chosen": chosen, "backtest_mape_pct": {k: round(v, 3) for k, v in mape.items()},
                       "origins_per_series": int(per[0].shape[0]),
                       "selection": "one model for all series, lowest pooled rolling-origin MAPE",

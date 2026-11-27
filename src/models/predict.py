@@ -71,11 +71,15 @@ class RentWisePredictor:
         self.type_beds = (clean.groupby("property_type")["bedrooms"].median()
                           .round().astype(int).to_dict())
         self.property_types = [t for t in PROPERTY_ORDER if t in self.type_beds]
-        # Official ONS medians for each (area, property type) the ONS publishes. These are
+        # Official ONS average rents (PIPR) for each (area, property type) the ONS publishes. These are
         # the headline figures; the model only explains them, or fills a missing type.
         self.official = {(r.la_name, r.property_type): int(r.median_monthly_rent)
                          for r in clean.itertuples()}
         self.vintages = self._load_vintages()
+        # Affordability uses FULL-TIME median pay (ONS basis); the model keeps its all-jobs feature.
+        ep = config.DATA_PROCESSED / "earnings.csv"
+        self.pay_fulltime = (pd.read_csv(ep).set_index("la_code")["median_pay_fulltime"].dropna().to_dict()
+                             if ep.exists() else {})
         self.affordability = AffordabilityEngine()      # I reuse the shared engine
         # I keep a small background sample so a linear model can be explained too.
         # (Only needed for linear models; the spatial model is explained exactly via XGBoost.)
@@ -107,7 +111,7 @@ class RentWisePredictor:
         return json.loads(p.read_text())
 
     def official_rent(self, la_name, property_type):
-        """Official ONS median monthly rent, or None if ONS publishes none for this pair."""
+        """Official ONS average monthly rent (PIPR), or None if ONS publishes none for this pair."""
         return self.official.get((la_name, property_type))
 
     def model_info(self) -> dict:
@@ -199,7 +203,7 @@ class RentWisePredictor:
         rent = max(self._predict_raw(X1), RENT_FLOOR)  # I floor to a valid rent
 
         area = self._area(la_name)
-        income = float(area["income"])
+        income = float(self.pay_fulltime.get(area["la_code"], area["income"]))
 
         shap_vals = self._shap_row(X1)
         # I drop region dummies that are 0 for this property, so the explanation

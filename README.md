@@ -15,14 +15,14 @@ RentWise UK predicts long-term rental prices and residential sale prices across 
 
 | Module | What | Headline |
 |---|---|---|
-| **2 · Rent & affordability** (deployed, with Module 3 features) | **Official ONS median rent first** (Oct 2026, 316 areas × 4 types); model explains it with SHAP and estimates only where ONS publishes none; affordability vs the 30% benchmark | Model R² **0.945** / MAE £79 for served areas, **0.858** / £152 for unseen areas; 80% interval ±£106, coverage 80% |
+| **2 · Rent & affordability** (deployed, with Module 3 features) | **Official ONS average rent first** (Oct 2026, 316 areas × 4 types); model explains it with SHAP and estimates only where ONS publishes none; affordability vs the 30% benchmark | Model R² **0.945** / MAE £79 for served areas, **0.858** / £152 for unseen areas; 80% interval ±£106, coverage 80% |
 | **1 · Sale price** | HM Land Registry price model enriched with **EPC floor area + rooms** (86% of sales matched) | XGBoost R² **0.568 → 0.732** with EPC; 90% conformal intervals |
 | **3 · Geospatial** | 11 OSM amenity densities (506k amenities) + historic Ofsted school quality + crime per 1,000 residents + LA boundary maps | Unseen-area MAE **−8%** (£169 → £156) every repeat; R² gain small (0.847 → 0.853); choropleths |
 | **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends; rolling-origin backtest + conformal intervals | mean MAPE ~0.6%, recalibrated 80/95% bands |
 
 The dashboard has five views:
 
-- **Rent check** — the official ONS median rent for any area by **bedroom count (1–4+) or property type**, with its annual change; affordability against **your own income** (or local median pay) and the rent you could afford at 30%; median **sale price and gross yield**; the **trend since 2015** against region and nation; the region's **12-month forecast** with honest bands; and what drives rent there (SHAP).
+- **Rent check** — the official ONS average rent for any area by **bedroom count (1–4+) or property type**, with its annual change; affordability against **your own income** (or local full-time median pay, the ONS basis) and the rent you could afford at 30%; median **sale price and gross yield**; the **trend since 2015** against region and nation; the region's **12-month forecast** with honest bands; and what drives rent there (SHAP).
 - **Compare areas** — 2–4 areas side by side (rent, change, affordability, prices, yield, crime, schools, amenities) with trends and **CSV download**.
 - **Area map** — official affordability, rent, rent change, yield, school quality and 11 amenity layers.
 - **Methodology & data** — what every number is, its source, date and limits.

@@ -7,7 +7,7 @@ Data endpoints (header  X-API-Key: rw_...)
     GET  /v1/areas                     areas the model serves (code, name, region)
     GET  /v1/areas/{la_code}           one area: income, spatial profile, property types
     GET  /v1/areas/{la_code}/rents     every official rent (all, 1/2/3/4+ bed, 4 types) + annual change,
-                                       affordability (local earnings / ?income_gbp_year=), sale prices, yield
+                                       affordability (local full-time pay / ?income_gbp_year=), sale prices, yield
     GET  /v1/areas/{la_code}/trend     official monthly rent since 2015 (?measure=2 bed)
     GET  /v1/areas/{la_code}/forecast  12-month regional forecast with conformal 80%/95% bands
     GET  /v1/compare?codes=A,B[,C]     2-5 areas side by side (?measure=, ?income_gbp_year=)
@@ -283,9 +283,9 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
 
     @app.get("/v1/areas/{la_code}/rents", tags=["data"])
     def area_rents(la_code: str, income_gbp_year: float | None = None, _key: dict = Depends(require_api_key)):
-        """Every official ONS rent for the area (all, 1/2/3/4+ bed, 4 types), with annual change,
-        affordability against local median earnings (and your income, if given), median sale
-        prices and indicative gross yield."""
+        """Every official ONS average rent for the area (all, 1/2/3/4+ bed, 4 types), with annual
+        change, affordability against local full-time median pay (and your income, if given),
+        median sale prices and indicative gross yield."""
         from src.models.area_data import MEASURE_LABEL, affordability
         a = check_area_and_type(la_code)
         d = get_area_data()
@@ -296,23 +296,27 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
         for m, r in d.official_rents(la_code).items():
             out.append({"measure": m, "label": MEASURE_LABEL.get(m, m), "rent_gbp_month": r["rent"],
                         "annual_change_pct": r["annual_change_pct"], "period": r["period"],
-                        "vs_local_earnings": affordability(r["rent"], local),
+                        "vs_local_fulltime_pay": affordability(r["rent"], local),
                         "vs_your_income": affordability(r["rent"], income_gbp_year) if income_gbp_year else None,
                         "gross_yield_pct": d.gross_yield(la_code, m)})
         order = {m: i for i, m in enumerate(d.measures())}
         return {"la_code": la_code, "la_name": a["la_name"], "region": a["region"],
-                "median_annual_earnings": local, "rents": sorted(out, key=lambda x: order.get(x["measure"], 99)),
+                "median_fulltime_pay_gbp_year": local,
+                "rents": sorted(out, key=lambda x: order.get(x["measure"], 99)),
                 "sale_prices": {t: d.sale_price(la_code, t) for t in ("All", "Flat", "Terraced",
                                                                       "Semi-detached", "Detached")},
-                "sources": {k: d.vintages.get(k) for k in ("rents", "earnings", "sale_prices")},
-                "notes": ["Affordability = annual rent / gross annual income; 30% guideline.",
-                          "Gross yield = annual median rent / median sale price; indicative, before costs."],
+                "sources": {k: d.vintages.get(k) for k in ("rents", "earnings_fulltime", "sale_prices")},
+                "notes": ["rent_gbp_month is the ONS PIPR average (geometric-mean price level) for rents paid in "
+                          "new and existing tenancies — not a median and not an asking rent.",
+                          "Affordability = annual rent / gross annual income; 30% guideline. Local pay = median "
+                          "gross annual pay of full-time employees living in the area (ASHE), the ONS basis.",
+                          "Gross yield = annual average rent / median sale price; indicative, before costs."],
                 "disclaimer": DISCLAIMER}
 
     @app.get("/v1/areas/{la_code}/trend", tags=["data"])
     def area_trend(la_code: str, measure: str = "All", since: str = "2015-01",
                    _key: dict = Depends(require_api_key)):
-        """Official monthly median rent since 2015 for one measure (e.g. All, 2 bed, Flat)."""
+        """Official monthly average rent (ONS PIPR) since 2015 for one measure (e.g. All, 2 bed, Flat)."""
         check_area_and_type(la_code)
         d = get_area_data()
         if measure not in d.measures():
