@@ -68,6 +68,20 @@ def test_other_views_render(view):
     assert not at.exception
 
 
+def test_shareable_link_opens_that_search():
+    from streamlit.testing.v1 import AppTest
+    at = AppTest.from_file(APP, default_timeout=120)
+    at.query_params["area"] = "Westminster"
+    at.query_params["home"] = "2 bed"
+    at.run()
+    assert not at.exception
+    assert at.sidebar.selectbox[0].value == "Westminster" and at.sidebar.selectbox[1].value == "2 bed"
+    bad = AppTest.from_file(APP, default_timeout=120)
+    bad.query_params["area"] = "<script>"                       # unknown values fall back safely
+    bad.run()
+    assert not bad.exception and bad.sidebar.selectbox[0].value == "Leeds"
+
+
 def test_cached_objects_are_keyed_on_code_and_data_versions():
     """Regression: the live app once kept an old cached AreaData across a push (AttributeError)."""
     src = (config.ROOT / "app" / "streamlit_app.py").read_text()

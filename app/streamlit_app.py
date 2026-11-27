@@ -184,11 +184,16 @@ with st.sidebar:
 # ================================================================ Rent check
 if view == "Rent check":
     areas = sorted(data.areas.la_name)
+    measures = data.measures()
+    # Shareable links: ?area=Leeds&home=2+bed opens that search (unknown values fall back safely).
+    qp = st.query_params
+    q_area = qp.get("area") if qp.get("area") in areas else "Leeds"
+    q_home = qp.get("home") if qp.get("home") in measures else "All"
     with st.sidebar:
         st.header("Your search")
-        area = st.selectbox("Local authority", areas, index=areas.index("Leeds") if "Leeds" in areas else 0)
-        measures = data.measures()
+        area = st.selectbox("Local authority", areas, index=areas.index(q_area) if q_area in areas else 0)
         measure = st.selectbox("Home size or type", measures, format_func=lambda m: MEASURE_LABEL.get(m, m),
+                               index=measures.index(q_home) if q_home in measures else 0,
                                help="ONS publishes official rents by bedroom count and by property type.")
         income = st.number_input("Your gross annual income, £ (optional)", min_value=0, max_value=2_000_000,
                                  value=0, step=1000,

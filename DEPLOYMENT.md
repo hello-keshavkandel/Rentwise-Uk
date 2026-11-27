@@ -43,6 +43,13 @@ Auto-deploys from `main` on push. Keep the Python version at **3.11** and the co
 artifacts (`models/best_model.joblib`, `models/conformal.json`, `data/processed/*.csv`)
 in the repo so the app serves without the raw data.
 
+**After every push that changes `src/` or `data/processed/`: Manage app → Reboot app.** Streamlit Cloud reruns
+`app/streamlit_app.py` on a push but can keep already-imported `src.*` modules and cached objects in memory (this
+caused an `AttributeError` in Nov 2026). The app keys its caches on file versions to limit this; a reboot guarantees it.
+Then open `https://rentwiseuk.streamlit.app/?area=Leeds&home=2+bed` and check the figures.
+
+Shareable links: `?area=<local authority>&home=<All|1 bed|2 bed|3 bed|4+ bed|Flat|Terraced|Semi-detached|Detached>`.
+
 ### Option B — Any container host (Render / Fly.io / Railway / a VM)
 ```bash
 docker build -t rentwise-uk .
