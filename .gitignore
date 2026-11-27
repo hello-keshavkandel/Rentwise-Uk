@@ -20,6 +20,11 @@ data/processed/*
 # Small outputs the deployed app reads directly
 !data/processed/affordability.csv
 !data/processed/data_vintages.json
+# Phase C: every official rent (latest + since 2015), sale prices — small, read by the app/API
+!data/processed/official_rents.csv
+!data/processed/rent_trends.parquet
+!data/processed/rent_areas.csv
+!data/processed/sale_prices.csv
 # The DuckDB store is the app's primary data source — committed and deployed.
 !
 # Models (large binaries)

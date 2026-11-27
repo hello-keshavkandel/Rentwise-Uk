@@ -17,3 +17,4 @@ ignore = [
 
 [lint.per-file-ignores]
 "tests/*" = ["E501"]   # long inline SQL / assertions in tests are readable as-is
+"app/streamlit_app.py" = ["E501"]   # the methodology page is a Markdown table; rows must stay on one line

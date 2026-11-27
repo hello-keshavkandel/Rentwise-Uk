@@ -4,7 +4,18 @@
     "period": "2026-10",
     "history_from": "2015-01",
     "released": "18 November 2026",
-    "file": "ons_pipr_monthly_2026-11.xlsx"
+    "file": "ons_pipr_monthly_2026-11.xlsx",
+    "measures": [
+      "All",
+      "1 bed",
+      "2 bed",
+      "3 bed",
+      "4+ bed",
+      "Detached",
+      "Semi-detached",
+      "Terraced",
+      "Flat"
+    ]
   },
   "earnings": {
     "source": "ONS ASHE Table 8.7a, median gross annual pay, all employee jobs, by place of residence",
@@ -45,5 +56,16 @@
       "Tewkesbury": 4
     }
   },
-  "built_at": "2026-11-25T02:44:30+00:00"
+  "built_at": "2026-11-25T02:44:30+00:00",
+  "sale_prices": {
+    "source": "HM Land Registry Price Paid Data (standard-price sales, category A)",
+    "period": "2026-01 to 2026-06",
+    "sales": 216686,
+    "min_sales_for_median": 20,
+    "unmatched_districts": [
+      "CITY OF LONDON",
+      "ISLES OF SCILLY"
+    ],
+    "file": "land_registry_pp_2026.csv"
+  }
 }

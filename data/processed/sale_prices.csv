@@ -1,0 +1,1580 @@
+la_code,la_name,property_type,median_price,sales
+E06000001,Hartlepool,All,150000.0,364
+E06000002,Middlesbrough,All,155000.0,406
+E06000003,Redcar and Cleveland,All,170000.0,520
+E06000004,Stockton-on-Tees,All,177250.0,724
+E06000005,Darlington,All,163166.5,488
+E06000006,Halton,All,190250.0,386
+E06000007,Warrington,All,265000.0,890
+E06000008,Blackburn with Darwen,All,163000.0,521
+E06000009,Blackpool,All,145000.0,564
+E06000010,"Kingston upon Hull, City of",All,140000.0,835
+E06000011,East Riding of Yorkshire,All,215000.0,1677
+E06000012,North East Lincolnshire,All,158500.0,665
+E06000013,North Lincolnshire,All,177000.0,761
+E06000014,York,All,305000.0,759
+E06000015,Derby,All,214000.0,967
+E06000016,Leicester,All,245000.0,715
+E06000017,Rutland,All,307500.0,173
+E06000018,Nottingham,All,200000.0,842
+E06000019,"Herefordshire, County of",All,285000.0,767
+E06000020,Telford and Wrekin,All,215000.0,613
+E06000021,Stoke-on-Trent,All,160000.0,780
+E06000022,Bath and North East Somerset,All,375000.0,748
+E06000023,"Bristol, City of",All,355000.0,1925
+E06000024,North Somerset,All,315000.0,1131
+E06000025,South Gloucestershire,All,340000.0,1285
+E06000026,Plymouth,All,220000.0,1166
+E06000027,Torbay,All,245000.0,680
+E06000030,Swindon,All,275000.0,934
+E06000031,Peterborough,All,238500.0,636
+E06000032,Luton,All,315000.0,532
+E06000033,Southend-on-Sea,All,344000.0,734
+E06000034,Thurrock,All,358000.0,553
+E06000035,Medway,All,310000.0,1026
+E06000036,Bracknell Forest,All,415000.0,495
+E06000037,West Berkshire,All,375000.0,627
+E06000038,Reading,All,340625.0,582
+E06000039,Slough,All,400000.0,263
+E06000040,Windsor and Maidenhead,All,501000.0,510
+E06000041,Wokingham,All,450000.0,696
+E06000042,Milton Keynes,All,340000.0,1088
+E06000043,Brighton and Hove,All,425000.0,1019
+E06000044,Portsmouth,All,260000.0,748
+E06000045,Southampton,All,260000.0,819
+E06000046,Isle of Wight,All,250000.0,719
+E06000047,County Durham,All,135000.0,2159
+E06000049,Cheshire East,All,290000.0,1876
+E06000050,Cheshire West and Chester,All,267000.0,1635
+E06000051,Shropshire,All,275000.0,1380
+E06000052,Cornwall,All,280000.0,2583
+E06000054,Wiltshire,All,315000.0,2195
+E06000055,Bedford,All,345000.0,632
+E06000056,Central Bedfordshire,All,365250.0,1296
+E06000057,Northumberland,All,201000.0,1378
+E06000058,"Bournemouth, Christchurch and Poole",All,336000.0,1792
+E06000059,Dorset,All,337750.0,1902
+E06000060,Buckinghamshire,All,460000.0,2028
+E06000061,North Northamptonshire,All,250000.0,1474
+E06000062,West Northamptonshire,All,290000.0,1711
+E06000063,Cumberland,All,175000.0,1400
+E06000064,Westmorland and Furness,All,235950.0,1135
+E06000065,North Yorkshire,All,265000.0,2950
+E06000066,Somerset,All,275000.0,2663
+E07000008,Cambridge,All,459000.0,338
+E07000009,East Cambridgeshire,All,327500.0,341
+E07000010,Fenland,All,227000.0,441
+E07000011,Huntingdonshire,All,311750.0,832
+E07000012,South Cambridgeshire,All,415000.0,543
+E07000032,Amber Valley,All,218000.0,563
+E07000033,Bolsover,All,175000.0,338
+E07000034,Chesterfield,All,191500.0,439
+E07000035,Derbyshire Dales,All,298497.5,310
+E07000036,Erewash,All,220000.0,461
+E07000037,High Peak,All,255000.0,398
+E07000038,North East Derbyshire,All,220000.0,415
+E07000039,South Derbyshire,All,247500.0,537
+E07000040,East Devon,All,320000.0,792
+E07000041,Exeter,All,295750.0,454
+E07000042,Mid Devon,All,275000.0,331
+E07000043,North Devon,All,275000.0,432
+E07000044,South Hams,All,345000.0,419
+E07000045,Teignbridge,All,290000.0,651
+E07000046,Torridge,All,254000.0,273
+E07000047,West Devon,All,287500.0,242
+E07000061,Eastbourne,All,280000.0,426
+E07000062,Hastings,All,276000.0,374
+E07000063,Lewes,All,380000.0,486
+E07000064,Rother,All,350000.0,440
+E07000065,Wealden,All,375000.0,716
+E07000066,Basildon,All,357250.0,740
+E07000067,Braintree,All,330000.0,700
+E07000068,Brentwood,All,490000.0,301
+E07000069,Castle Point,All,365000.0,357
+E07000070,Chelmsford,All,394000.0,752
+E07000071,Colchester,All,320000.0,843
+E07000072,Epping Forest,All,506250.0,434
+E07000073,Harlow,All,342000.0,329
+E07000074,Maldon,All,384000.0,279
+E07000075,Rochford,All,397500.0,326
+E07000076,Tendring,All,265000.0,771
+E07000077,Uttlesford,All,440000.0,351
+E07000078,Cheltenham,All,325000.0,539
+E07000079,Cotswold,All,421000.0,392
+E07000080,Forest of Dean,All,275000.0,315
+E07000081,Gloucester,All,250000.0,532
+E07000082,Stroud,All,345000.0,507
+E07000083,Tewkesbury,All,305000.0,453
+E07000084,Basingstoke and Deane,All,375000.0,780
+E07000085,East Hampshire,All,420000.0,525
+E07000086,Eastleigh,All,335000.0,656
+E07000087,Fareham,All,340000.0,597
+E07000088,Gosport,All,251250.0,380
+E07000089,Hart,All,430000.0,446
+E07000090,Havant,All,320000.0,520
+E07000091,New Forest,All,385000.0,784
+E07000092,Rushmoor,All,370000.0,335
+E07000093,Test Valley,All,345000.0,571
+E07000094,Winchester,All,462000.0,517
+E07000095,Broxbourne,All,425000.0,357
+E07000096,Dacorum,All,440000.0,575
+E07000098,Hertsmere,All,525000.0,355
+E07000099,North Hertfordshire,All,422500.0,540
+E07000102,Three Rivers,All,520000.0,308
+E07000103,Watford,All,417500.0,287
+E07000105,Ashford,All,340000.0,597
+E07000106,Canterbury,All,330000.0,625
+E07000107,Dartford,All,360000.0,421
+E07000108,Dover,All,290000.0,492
+E07000109,Gravesham,All,357750.0,324
+E07000110,Maidstone,All,355000.0,723
+E07000111,Sevenoaks,All,484250.0,436
+E07000112,Folkestone and Hythe,All,308750.0,480
+E07000113,Swale,All,300000.0,689
+E07000114,Thanet,All,285000.0,608
+E07000115,Tonbridge and Malling,All,410000.0,555
+E07000116,Tunbridge Wells,All,420000.0,466
+E07000117,Burnley,All,133000.0,409
+E07000118,Chorley,All,227500.0,486
+E07000119,Fylde,All,237000.0,417
+E07000120,Hyndburn,All,142750.0,344
+E07000121,Lancaster,All,195000.0,540
+E07000122,Pendle,All,150000.0,381
+E07000123,Preston,All,195000.0,588
+E07000124,Ribble Valley,All,257750.0,316
+E07000125,Rossendale,All,179500.0,300
+E07000126,South Ribble,All,209975.0,520
+E07000127,West Lancashire,All,242500.0,429
+E07000128,Wyre,All,185000.0,478
+E07000129,Blaby,All,285000.0,405
+E07000130,Charnwood,All,270000.0,713
+E07000131,Harborough,All,315000.0,447
+E07000132,Hinckley and Bosworth,All,255400.0,561
+E07000133,Melton,All,252500.0,241
+E07000134,North West Leicestershire,All,258000.0,531
+E07000135,Oadby and Wigston,All,272000.0,175
+E07000136,Boston,All,190000.0,230
+E07000137,East Lindsey,All,210000.0,602
+E07000138,Lincoln,All,185000.0,402
+E07000139,North Kesteven,All,240000.0,591
+E07000140,South Holland,All,234000.0,450
+E07000141,South Kesteven,All,265000.0,675
+E07000142,West Lindsey,All,220000.0,430
+E07000143,Breckland,All,255000.0,672
+E07000144,Broadland,All,301250.0,620
+E07000145,Great Yarmouth,All,210000.0,394
+E07000146,King's Lynn and West Norfolk,All,266250.0,664
+E07000147,North Norfolk,All,290000.0,534
+E07000148,Norwich,All,232500.0,545
+E07000149,South Norfolk,All,300000.0,634
+E07000170,Ashfield,All,181750.0,434
+E07000171,Bassetlaw,All,205000.0,476
+E07000172,Broxtowe,All,252500.0,491
+E07000173,Gedling,All,240000.0,448
+E07000174,Mansfield,All,180000.0,358
+E07000175,Newark and Sherwood,All,235000.0,525
+E07000176,Rushcliffe,All,320000.0,537
+E07000177,Cherwell,All,347500.0,645
+E07000178,Oxford,All,435000.0,405
+E07000179,South Oxfordshire,All,445000.0,565
+E07000180,Vale of White Horse,All,370000.0,567
+E07000181,West Oxfordshire,All,383500.0,462
+E07000192,Cannock Chase,All,220000.0,354
+E07000193,East Staffordshire,All,225000.0,484
+E07000194,Lichfield,All,310000.0,434
+E07000195,Newcastle-under-Lyme,All,195000.0,487
+E07000196,South Staffordshire,All,285000.0,407
+E07000197,Stafford,All,257500.0,591
+E07000198,Staffordshire Moorlands,All,220000.0,351
+E07000199,Tamworth,All,242250.0,326
+E07000200,Babergh,All,318000.0,399
+E07000202,Ipswich,All,236000.0,515
+E07000203,Mid Suffolk,All,290000.0,480
+E07000207,Elmbridge,All,600000.0,535
+E07000208,Epsom and Ewell,All,560000.0,289
+E07000209,Guildford,All,490000.0,560
+E07000210,Mole Valley,All,525000.0,332
+E07000211,Reigate and Banstead,All,480000.0,586
+E07000212,Runnymede,All,450000.0,370
+E07000213,Spelthorne,All,450000.0,351
+E07000214,Surrey Heath,All,493000.0,392
+E07000215,Tandridge,All,475000.0,340
+E07000216,Waverley,All,507500.0,570
+E07000217,Woking,All,431250.0,438
+E07000218,North Warwickshire,All,247000.0,273
+E07000219,Nuneaton and Bedworth,All,218500.0,448
+E07000220,Rugby,All,267500.0,480
+E07000221,Stratford-on-Avon,All,360000.0,689
+E07000222,Warwick,All,349250.0,660
+E07000223,Adur,All,388000.0,231
+E07000224,Arun,All,335000.0,840
+E07000225,Chichester,All,392000.0,481
+E07000226,Crawley,All,352000.0,313
+E07000227,Horsham,All,425000.0,666
+E07000228,Mid Sussex,All,429250.0,733
+E07000229,Worthing,All,330000.0,484
+E07000234,Bromsgrove,All,340000.0,399
+E07000235,Malvern Hills,All,330000.0,321
+E07000236,Redditch,All,265000.0,281
+E07000237,Worcester,All,244000.0,394
+E07000238,Wychavon,All,335000.0,509
+E07000239,Wyre Forest,All,246500.0,394
+E07000240,St Albans,All,590000.0,555
+E07000241,Welwyn Hatfield,All,430000.0,373
+E07000242,East Hertfordshire,All,449995.0,637
+E07000243,Stevenage,All,341500.0,286
+E07000244,East Suffolk,All,285000.0,1120
+E07000245,West Suffolk,All,275000.0,765
+E08000001,Bolton,All,200000.0,979
+E08000002,Bury,All,237500.0,719
+E08000003,Manchester,All,255000.0,1422
+E08000004,Oldham,All,210000.0,716
+E08000005,Rochdale,All,210500.0,730
+E08000006,Salford,All,235500.0,890
+E08000007,Stockport,All,310000.0,1355
+E08000008,Tameside,All,210000.0,733
+E08000009,Trafford,All,375500.0,892
+E08000010,Wigan,All,195000.0,1212
+E08000011,Knowsley,All,190000.0,379
+E08000012,Liverpool,All,193000.0,1365
+E08000013,St. Helens,All,185000.0,697
+E08000014,Sefton,All,225000.0,1074
+E08000015,Wirral,All,225000.0,1340
+E08000017,Doncaster,All,180000.0,1168
+E08000018,Rotherham,All,190000.0,922
+E08000021,Newcastle upon Tyne,All,210000.0,978
+E08000022,North Tyneside,All,205000.0,828
+E08000023,South Tyneside,All,162000.0,447
+E08000024,Sunderland,All,150000.0,877
+E08000025,Birmingham,All,241625.0,2670
+E08000026,Coventry,All,230000.0,960
+E08000027,Dudley,All,234000.0,984
+E08000028,Sandwell,All,220000.0,676
+E08000029,Solihull,All,326000.0,881
+E08000030,Walsall,All,220000.0,759
+E08000031,Wolverhampton,All,229000.0,619
+E08000032,Bradford,All,190000.0,1981
+E08000033,Calderdale,All,187000.0,942
+E08000034,Kirklees,All,212500.0,1590
+E08000035,Leeds,All,240000.0,2946
+E08000036,Wakefield,All,201980.0,1291
+E08000037,Gateshead,All,160000.0,745
+E08000038,Barnsley,All,176250.0,941
+E08000039,Sheffield,All,215000.0,1792
+E09000002,Barking and Dagenham,All,387500.0,357
+E09000003,Barnet,All,555000.0,829
+E09000004,Bexley,All,425000.0,751
+E09000005,Brent,All,527250.0,414
+E09000006,Bromley,All,515000.0,1214
+E09000007,Camden,All,640000.0,447
+E09000008,Croydon,All,420000.0,1080
+E09000009,Ealing,All,505000.0,702
+E09000010,Enfield,All,455500.0,598
+E09000011,Greenwich,All,455000.0,743
+E09000012,Hackney,All,550000.0,506
+E09000013,Hammersmith and Fulham,All,645000.0,475
+E09000014,Haringey,All,562000.0,513
+E09000015,Harrow,All,575000.0,427
+E09000016,Havering,All,450000.0,972
+E09000017,Hillingdon,All,500000.0,715
+E09000018,Hounslow,All,460000.0,523
+E09000019,Islington,All,600000.0,473
+E09000020,Kensington and Chelsea,All,950000.0,324
+E09000021,Kingston upon Thames,All,525000.0,487
+E09000022,Lambeth,All,525000.0,908
+E09000023,Lewisham,All,465500.0,833
+E09000024,Merton,All,525025.0,572
+E09000025,Newham,All,415000.0,479
+E09000026,Redbridge,All,500000.0,570
+E09000027,Richmond upon Thames,All,692500.0,654
+E09000028,Southwark,All,500000.0,698
+E09000029,Sutton,All,445000.0,615
+E09000030,Tower Hamlets,All,455000.0,653
+E09000031,Waltham Forest,All,547625.0,722
+E09000032,Wandsworth,All,600000.0,1171
+E09000033,Westminster,All,717500.0,440
+W06000001,Isle of Anglesey,All,235000.0,227
+W06000002,Gwynedd,All,200000.0,450
+W06000003,Conwy,All,205000.0,557
+W06000004,Denbighshire,All,200000.0,387
+W06000005,Flintshire,All,213333.0,573
+W06000006,Wrexham,All,196667.0,491
+W06000008,Ceredigion,All,236500.0,278
+W06000009,Pembrokeshire,All,220000.0,501
+W06000010,Carmarthenshire,All,195000.0,709
+W06000011,Swansea,All,190000.0,837
+W06000012,Neath Port Talbot,All,165000.0,463
+W06000013,Bridgend,All,222000.0,628
+W06000014,Vale of Glamorgan,All,275000.0,577
+W06000015,Cardiff,All,270000.0,1305
+W06000016,Rhondda Cynon Taf,All,166250.0,856
+W06000018,Caerphilly,All,205000.0,606
+W06000019,Blaenau Gwent,All,132500.0,203
+W06000020,Torfaen,All,200000.0,227
+W06000021,Monmouthshire,All,325000.0,388
+W06000022,Newport,All,225000.0,561
+W06000023,Powys,All,244000.0,418
+W06000024,Merthyr Tydfil,All,145000.0,135
+E06000001,Hartlepool,Detached,277500.0,99
+E06000001,Hartlepool,Flat,,19
+E06000001,Hartlepool,Semi-detached,152500.0,123
+E06000001,Hartlepool,Terraced,95000.0,123
+E06000002,Middlesbrough,Detached,260500.0,89
+E06000002,Middlesbrough,Flat,,14
+E06000002,Middlesbrough,Semi-detached,166000.0,190
+E06000002,Middlesbrough,Terraced,90000.0,113
+E06000003,Redcar and Cleveland,Detached,277500.0,112
+E06000003,Redcar and Cleveland,Flat,,11
+E06000003,Redcar and Cleveland,Semi-detached,172750.0,256
+E06000003,Redcar and Cleveland,Terraced,115000.0,141
+E06000004,Stockton-on-Tees,Detached,281000.0,233
+E06000004,Stockton-on-Tees,Flat,77500.0,28
+E06000004,Stockton-on-Tees,Semi-detached,164995.0,309
+E06000004,Stockton-on-Tees,Terraced,130000.0,154
+E06000005,Darlington,Detached,294000.0,106
+E06000005,Darlington,Flat,98000.0,35
+E06000005,Darlington,Semi-detached,170000.0,200
+E06000005,Darlington,Terraced,120000.0,147
+E06000006,Halton,Detached,340000.0,95
+E06000006,Halton,Flat,94250.0,21
+E06000006,Halton,Semi-detached,212500.0,135
+E06000006,Halton,Terraced,148000.0,135
+E06000007,Warrington,Detached,435000.0,231
+E06000007,Warrington,Flat,125000.0,92
+E06000007,Warrington,Semi-detached,272000.0,349
+E06000007,Warrington,Terraced,196000.0,218
+E06000008,Blackburn with Darwen,Detached,305000.0,104
+E06000008,Blackburn with Darwen,Flat,,17
+E06000008,Blackburn with Darwen,Semi-detached,191000.0,125
+E06000008,Blackburn with Darwen,Terraced,130000.0,275
+E06000009,Blackpool,Detached,265000.0,60
+E06000009,Blackpool,Flat,78500.0,35
+E06000009,Blackpool,Semi-detached,163000.0,259
+E06000009,Blackpool,Terraced,120000.0,210
+E06000010,"Kingston upon Hull, City of",Detached,240000.0,67
+E06000010,"Kingston upon Hull, City of",Flat,91500.0,36
+E06000010,"Kingston upon Hull, City of",Semi-detached,160000.0,263
+E06000010,"Kingston upon Hull, City of",Terraced,125000.0,469
+E06000011,East Riding of Yorkshire,Detached,325000.0,553
+E06000011,East Riding of Yorkshire,Flat,101250.0,98
+E06000011,East Riding of Yorkshire,Semi-detached,200950.0,635
+E06000011,East Riding of Yorkshire,Terraced,166000.0,391
+E06000012,North East Lincolnshire,Detached,262000.0,157
+E06000012,North East Lincolnshire,Flat,95000.0,21
+E06000012,North East Lincolnshire,Semi-detached,170000.0,251
+E06000012,North East Lincolnshire,Terraced,110000.0,236
+E06000013,North Lincolnshire,Detached,285000.0,293
+E06000013,North Lincolnshire,Flat,,14
+E06000013,North Lincolnshire,Semi-detached,160000.0,351
+E06000013,North Lincolnshire,Terraced,120000.0,103
+E06000014,York,Detached,423500.0,158
+E06000014,York,Flat,195000.0,118
+E06000014,York,Semi-detached,295000.0,227
+E06000014,York,Terraced,290250.0,256
+E06000015,Derby,Detached,322000.0,245
+E06000015,Derby,Flat,115000.0,59
+E06000015,Derby,Semi-detached,220000.0,398
+E06000015,Derby,Terraced,163000.0,265
+E06000016,Leicester,Detached,375000.0,83
+E06000016,Leicester,Flat,125000.0,73
+E06000016,Leicester,Semi-detached,269000.0,260
+E06000016,Leicester,Terraced,219000.0,299
+E06000017,Rutland,Detached,435000.0,80
+E06000017,Rutland,Flat,,8
+E06000017,Rutland,Semi-detached,270750.0,34
+E06000017,Rutland,Terraced,235000.0,51
+E06000018,Nottingham,Detached,331000.0,152
+E06000018,Nottingham,Flat,137500.0,105
+E06000018,Nottingham,Semi-detached,210000.0,288
+E06000018,Nottingham,Terraced,175000.0,297
+E06000019,"Herefordshire, County of",Detached,392500.0,338
+E06000019,"Herefordshire, County of",Flat,120000.0,59
+E06000019,"Herefordshire, County of",Semi-detached,260000.0,191
+E06000019,"Herefordshire, County of",Terraced,215000.0,179
+E06000020,Telford and Wrekin,Detached,310000.0,225
+E06000020,Telford and Wrekin,Flat,106500.0,34
+E06000020,Telford and Wrekin,Semi-detached,198000.0,204
+E06000020,Telford and Wrekin,Terraced,165000.0,150
+E06000021,Stoke-on-Trent,Detached,269500.0,144
+E06000021,Stoke-on-Trent,Flat,84000.0,31
+E06000021,Stoke-on-Trent,Semi-detached,170000.0,357
+E06000021,Stoke-on-Trent,Terraced,115000.0,248
+E06000022,Bath and North East Somerset,Detached,516250.0,156
+E06000022,Bath and North East Somerset,Flat,280000.0,146
+E06000022,Bath and North East Somerset,Semi-detached,390000.0,189
+E06000022,Bath and North East Somerset,Terraced,350000.0,257
+E06000023,"Bristol, City of",Detached,527500.0,86
+E06000023,"Bristol, City of",Flat,262500.0,569
+E06000023,"Bristol, City of",Semi-detached,370000.0,373
+E06000023,"Bristol, City of",Terraced,381500.0,897
+E06000024,North Somerset,Detached,470000.0,326
+E06000024,North Somerset,Flat,185000.0,228
+E06000024,North Somerset,Semi-detached,322550.0,332
+E06000024,North Somerset,Terraced,273400.0,245
+E06000025,South Gloucestershire,Detached,500000.0,278
+E06000025,South Gloucestershire,Flat,195000.0,165
+E06000025,South Gloucestershire,Semi-detached,360000.0,416
+E06000025,South Gloucestershire,Terraced,297250.0,426
+E06000026,Plymouth,Detached,390000.0,103
+E06000026,Plymouth,Flat,138000.0,217
+E06000026,Plymouth,Semi-detached,270000.0,316
+E06000026,Plymouth,Terraced,210000.0,530
+E06000027,Torbay,Detached,376500.0,170
+E06000027,Torbay,Flat,142750.0,164
+E06000027,Torbay,Semi-detached,270000.0,161
+E06000027,Torbay,Terraced,225000.0,185
+E06000030,Swindon,Detached,412500.0,187
+E06000030,Swindon,Flat,145000.0,120
+E06000030,Swindon,Semi-detached,309500.0,246
+E06000030,Swindon,Terraced,242000.0,381
+E06000031,Peterborough,Detached,325000.0,199
+E06000031,Peterborough,Flat,128750.0,58
+E06000031,Peterborough,Semi-detached,240000.0,205
+E06000031,Peterborough,Terraced,185000.0,174
+E06000032,Luton,Detached,439500.0,92
+E06000032,Luton,Flat,155000.0,68
+E06000032,Luton,Semi-detached,333000.0,235
+E06000032,Luton,Terraced,265000.0,137
+E06000033,Southend-on-Sea,Detached,515000.0,104
+E06000033,Southend-on-Sea,Flat,220000.0,241
+E06000033,Southend-on-Sea,Semi-detached,405000.0,235
+E06000033,Southend-on-Sea,Terraced,330000.0,154
+E06000034,Thurrock,Detached,580000.0,63
+E06000034,Thurrock,Flat,205000.0,97
+E06000034,Thurrock,Semi-detached,400000.0,185
+E06000034,Thurrock,Terraced,335000.0,208
+E06000035,Medway,Detached,490000.0,151
+E06000035,Medway,Flat,171500.0,102
+E06000035,Medway,Semi-detached,352000.0,329
+E06000035,Medway,Terraced,275000.0,444
+E06000036,Bracknell Forest,Detached,619500.0,124
+E06000036,Bracknell Forest,Flat,235000.0,97
+E06000036,Bracknell Forest,Semi-detached,455000.0,103
+E06000036,Bracknell Forest,Terraced,370500.0,171
+E06000037,West Berkshire,Detached,617500.0,154
+E06000037,West Berkshire,Flat,210000.0,126
+E06000037,West Berkshire,Semi-detached,399950.0,209
+E06000037,West Berkshire,Terraced,330750.0,138
+E06000038,Reading,Detached,575000.0,53
+E06000038,Reading,Flat,225000.0,179
+E06000038,Reading,Semi-detached,420000.0,138
+E06000038,Reading,Terraced,345000.0,212
+E06000039,Slough,Detached,620000.0,25
+E06000039,Slough,Flat,210000.0,71
+E06000039,Slough,Semi-detached,455000.0,83
+E06000039,Slough,Terraced,405000.0,84
+E06000040,Windsor and Maidenhead,Detached,843000.0,123
+E06000040,Windsor and Maidenhead,Flat,285000.0,128
+E06000040,Windsor and Maidenhead,Semi-detached,530000.0,136
+E06000040,Windsor and Maidenhead,Terraced,485000.0,123
+E06000041,Wokingham,Detached,657000.0,220
+E06000041,Wokingham,Flat,263500.0,115
+E06000041,Wokingham,Semi-detached,475000.0,207
+E06000041,Wokingham,Terraced,371250.0,154
+E06000042,Milton Keynes,Detached,507500.0,330
+E06000042,Milton Keynes,Flat,176000.0,144
+E06000042,Milton Keynes,Semi-detached,335000.0,315
+E06000042,Milton Keynes,Terraced,286000.0,299
+E06000043,Brighton and Hove,Detached,651250.0,120
+E06000043,Brighton and Hove,Flat,295000.0,408
+E06000043,Brighton and Hove,Semi-detached,477500.0,191
+E06000043,Brighton and Hove,Terraced,511000.0,300
+E06000044,Portsmouth,Detached,,13
+E06000044,Portsmouth,Flat,172500.0,165
+E06000044,Portsmouth,Semi-detached,330000.0,107
+E06000044,Portsmouth,Terraced,270000.0,463
+E06000045,Southampton,Detached,380000.0,115
+E06000045,Southampton,Flat,163000.0,267
+E06000045,Southampton,Semi-detached,305000.0,193
+E06000045,Southampton,Terraced,260500.0,244
+E06000046,Isle of Wight,Detached,368500.0,224
+E06000046,Isle of Wight,Flat,139582.0,128
+E06000046,Isle of Wight,Semi-detached,250000.0,207
+E06000046,Isle of Wight,Terraced,213500.0,160
+E06000047,County Durham,Detached,260050.0,454
+E06000047,County Durham,Flat,86000.0,87
+E06000047,County Durham,Semi-detached,145000.0,717
+E06000047,County Durham,Terraced,100000.0,901
+E06000049,Cheshire East,Detached,439000.0,634
+E06000049,Cheshire East,Flat,155000.0,180
+E06000049,Cheshire East,Semi-detached,270000.0,597
+E06000049,Cheshire East,Terraced,215950.0,465
+E06000050,Cheshire West and Chester,Detached,410000.0,468
+E06000050,Cheshire West and Chester,Flat,133000.0,165
+E06000050,Cheshire West and Chester,Semi-detached,258000.0,630
+E06000050,Cheshire West and Chester,Terraced,205000.0,372
+E06000051,Shropshire,Detached,385000.0,548
+E06000051,Shropshire,Flat,142000.0,114
+E06000051,Shropshire,Semi-detached,245000.0,443
+E06000051,Shropshire,Terraced,210000.0,275
+E06000052,Cornwall,Detached,400000.0,937
+E06000052,Cornwall,Flat,170000.0,267
+E06000052,Cornwall,Semi-detached,264500.0,590
+E06000052,Cornwall,Terraced,231000.0,789
+E06000054,Wiltshire,Detached,450000.0,694
+E06000054,Wiltshire,Flat,155000.0,271
+E06000054,Wiltshire,Semi-detached,310000.0,610
+E06000054,Wiltshire,Terraced,262250.0,620
+E06000055,Bedford,Detached,502500.0,193
+E06000055,Bedford,Flat,177500.0,81
+E06000055,Bedford,Semi-detached,340000.0,199
+E06000055,Bedford,Terraced,305250.0,159
+E06000056,Central Bedfordshire,Detached,494000.0,370
+E06000056,Central Bedfordshire,Flat,191500.0,147
+E06000056,Central Bedfordshire,Semi-detached,375000.0,422
+E06000056,Central Bedfordshire,Terraced,310000.0,357
+E06000057,Northumberland,Detached,350000.0,409
+E06000057,Northumberland,Flat,104250.0,108
+E06000057,Northumberland,Semi-detached,187250.0,400
+E06000057,Northumberland,Terraced,158000.0,461
+E06000058,"Bournemouth, Christchurch and Poole",Detached,460000.0,687
+E06000058,"Bournemouth, Christchurch and Poole",Flat,213500.0,543
+E06000058,"Bournemouth, Christchurch and Poole",Semi-detached,340000.0,313
+E06000058,"Bournemouth, Christchurch and Poole",Terraced,300000.0,249
+E06000059,Dorset,Detached,473750.0,744
+E06000059,Dorset,Flat,176000.0,299
+E06000059,Dorset,Semi-detached,332000.0,385
+E06000059,Dorset,Terraced,269000.0,474
+E06000060,Buckinghamshire,Detached,700000.0,602
+E06000060,Buckinghamshire,Flat,250000.0,320
+E06000060,Buckinghamshire,Semi-detached,465000.0,650
+E06000060,Buckinghamshire,Terraced,365000.0,456
+E06000061,North Northamptonshire,Detached,375000.0,452
+E06000061,North Northamptonshire,Flat,130000.0,110
+E06000061,North Northamptonshire,Semi-detached,245000.0,525
+E06000061,North Northamptonshire,Terraced,205000.0,387
+E06000062,West Northamptonshire,Detached,410500.0,552
+E06000062,West Northamptonshire,Flat,145000.0,142
+E06000062,West Northamptonshire,Semi-detached,280000.0,535
+E06000062,West Northamptonshire,Terraced,235000.0,482
+E06000063,Cumberland,Detached,321750.0,342
+E06000063,Cumberland,Flat,114000.0,71
+E06000063,Cumberland,Semi-detached,175500.0,468
+E06000063,Cumberland,Terraced,132500.0,519
+E06000064,Westmorland and Furness,Detached,390000.0,269
+E06000064,Westmorland and Furness,Flat,150000.0,99
+E06000064,Westmorland and Furness,Semi-detached,250000.0,355
+E06000064,Westmorland and Furness,Terraced,162750.0,412
+E06000065,North Yorkshire,Detached,403250.0,948
+E06000065,North Yorkshire,Flat,150000.0,314
+E06000065,North Yorkshire,Semi-detached,255000.0,843
+E06000065,North Yorkshire,Terraced,210000.0,845
+E06000066,Somerset,Detached,425000.0,834
+E06000066,Somerset,Flat,145000.0,283
+E06000066,Somerset,Semi-detached,277500.0,773
+E06000066,Somerset,Terraced,230000.0,773
+E07000008,Cambridge,Detached,815000.0,29
+E07000008,Cambridge,Flat,305000.0,107
+E07000008,Cambridge,Semi-detached,535000.0,73
+E07000008,Cambridge,Terraced,500000.0,129
+E07000009,East Cambridgeshire,Detached,445000.0,131
+E07000009,East Cambridgeshire,Flat,155000.0,21
+E07000009,East Cambridgeshire,Semi-detached,295000.0,103
+E07000009,East Cambridgeshire,Terraced,284195.0,86
+E07000010,Fenland,Detached,297000.0,211
+E07000010,Fenland,Flat,,15
+E07000010,Fenland,Semi-detached,208000.0,127
+E07000010,Fenland,Terraced,171000.0,88
+E07000011,Huntingdonshire,Detached,427000.0,319
+E07000011,Huntingdonshire,Flat,169500.0,88
+E07000011,Huntingdonshire,Semi-detached,291500.0,216
+E07000011,Huntingdonshire,Terraced,256500.0,209
+E07000012,South Cambridgeshire,Detached,560000.0,219
+E07000012,South Cambridgeshire,Flat,203500.0,28
+E07000012,South Cambridgeshire,Semi-detached,395000.0,169
+E07000012,South Cambridgeshire,Terraced,319000.0,127
+E07000032,Amber Valley,Detached,330000.0,204
+E07000032,Amber Valley,Flat,,12
+E07000032,Amber Valley,Semi-detached,206000.0,190
+E07000032,Amber Valley,Terraced,170000.0,157
+E07000033,Bolsover,Detached,267000.0,113
+E07000033,Bolsover,Flat,,1
+E07000033,Bolsover,Semi-detached,165000.0,129
+E07000033,Bolsover,Terraced,125000.0,95
+E07000034,Chesterfield,Detached,325000.0,127
+E07000034,Chesterfield,Flat,114000.0,24
+E07000034,Chesterfield,Semi-detached,190000.0,187
+E07000034,Chesterfield,Terraced,145000.0,101
+E07000035,Derbyshire Dales,Detached,442000.0,111
+E07000035,Derbyshire Dales,Flat,181875.0,24
+E07000035,Derbyshire Dales,Semi-detached,268750.0,90
+E07000035,Derbyshire Dales,Terraced,235000.0,85
+E07000036,Erewash,Detached,327500.0,135
+E07000036,Erewash,Flat,,16
+E07000036,Erewash,Semi-detached,220000.0,201
+E07000036,Erewash,Terraced,162500.0,109
+E07000037,High Peak,Detached,417500.0,76
+E07000037,High Peak,Flat,159000.0,47
+E07000037,High Peak,Semi-detached,275000.0,128
+E07000037,High Peak,Terraced,217000.0,147
+E07000038,North East Derbyshire,Detached,349000.0,159
+E07000038,North East Derbyshire,Flat,,16
+E07000038,North East Derbyshire,Semi-detached,200000.0,171
+E07000038,North East Derbyshire,Terraced,145000.0,69
+E07000039,South Derbyshire,Detached,334000.0,209
+E07000039,South Derbyshire,Flat,,19
+E07000039,South Derbyshire,Semi-detached,225000.0,189
+E07000039,South Derbyshire,Terraced,190000.0,120
+E07000040,East Devon,Detached,465000.0,292
+E07000040,East Devon,Flat,185000.0,125
+E07000040,East Devon,Semi-detached,300000.0,163
+E07000040,East Devon,Terraced,265000.0,212
+E07000041,Exeter,Detached,491250.0,76
+E07000041,Exeter,Flat,175000.0,82
+E07000041,Exeter,Semi-detached,330000.0,117
+E07000041,Exeter,Terraced,272000.0,179
+E07000042,Mid Devon,Detached,420000.0,114
+E07000042,Mid Devon,Flat,131500.0,20
+E07000042,Mid Devon,Semi-detached,266500.0,88
+E07000042,Mid Devon,Terraced,218000.0,109
+E07000043,North Devon,Detached,375000.0,175
+E07000043,North Devon,Flat,145000.0,41
+E07000043,North Devon,Semi-detached,267500.0,73
+E07000043,North Devon,Terraced,210000.0,143
+E07000044,South Hams,Detached,470000.0,145
+E07000044,South Hams,Flat,191250.0,58
+E07000044,South Hams,Semi-detached,315000.0,95
+E07000044,South Hams,Terraced,270000.0,121
+E07000045,Teignbridge,Detached,425000.0,228
+E07000045,Teignbridge,Flat,145000.0,79
+E07000045,Teignbridge,Semi-detached,300000.0,141
+E07000045,Teignbridge,Terraced,225000.0,203
+E07000046,Torridge,Detached,378500.0,110
+E07000046,Torridge,Flat,,18
+E07000046,Torridge,Semi-detached,260000.0,42
+E07000046,Torridge,Terraced,205000.0,103
+E07000047,West Devon,Detached,440000.0,89
+E07000047,West Devon,Flat,153000.0,31
+E07000047,West Devon,Semi-detached,290000.0,52
+E07000047,West Devon,Terraced,244000.0,70
+E07000061,Eastbourne,Detached,425000.0,71
+E07000061,Eastbourne,Flat,195000.0,159
+E07000061,Eastbourne,Semi-detached,316500.0,72
+E07000061,Eastbourne,Terraced,279500.0,124
+E07000062,Hastings,Detached,385000.0,77
+E07000062,Hastings,Flat,175000.0,99
+E07000062,Hastings,Semi-detached,302500.0,94
+E07000062,Hastings,Terraced,251000.0,104
+E07000063,Lewes,Detached,470000.0,161
+E07000063,Lewes,Flat,218750.0,78
+E07000063,Lewes,Semi-detached,400000.0,127
+E07000063,Lewes,Terraced,354250.0,120
+E07000064,Rother,Detached,500000.0,184
+E07000064,Rother,Flat,195000.0,91
+E07000064,Rother,Semi-detached,336000.0,97
+E07000064,Rother,Terraced,287500.0,68
+E07000065,Wealden,Detached,515000.0,273
+E07000065,Wealden,Flat,182750.0,84
+E07000065,Wealden,Semi-detached,350000.0,238
+E07000065,Wealden,Terraced,290000.0,121
+E07000066,Basildon,Detached,541000.0,160
+E07000066,Basildon,Flat,200000.0,103
+E07000066,Basildon,Semi-detached,412500.0,194
+E07000066,Basildon,Terraced,330000.0,283
+E07000067,Braintree,Detached,490000.0,211
+E07000067,Braintree,Flat,175500.0,94
+E07000067,Braintree,Semi-detached,340000.0,221
+E07000067,Braintree,Terraced,287500.0,174
+E07000068,Brentwood,Detached,800000.0,87
+E07000068,Brentwood,Flat,285000.0,77
+E07000068,Brentwood,Semi-detached,550000.0,85
+E07000068,Brentwood,Terraced,447500.0,52
+E07000069,Castle Point,Detached,455000.0,157
+E07000069,Castle Point,Flat,220000.0,38
+E07000069,Castle Point,Semi-detached,355000.0,137
+E07000069,Castle Point,Terraced,305000.0,25
+E07000070,Chelmsford,Detached,560000.0,219
+E07000070,Chelmsford,Flat,215000.0,143
+E07000070,Chelmsford,Semi-detached,425000.0,211
+E07000070,Chelmsford,Terraced,345000.0,179
+E07000071,Colchester,Detached,447500.0,260
+E07000071,Colchester,Flat,170000.0,143
+E07000071,Colchester,Semi-detached,325000.0,255
+E07000071,Colchester,Terraced,270000.0,185
+E07000072,Epping Forest,Detached,800000.0,84
+E07000072,Epping Forest,Flat,310000.0,83
+E07000072,Epping Forest,Semi-detached,545500.0,136
+E07000072,Epping Forest,Terraced,490000.0,131
+E07000073,Harlow,Detached,532500.0,49
+E07000073,Harlow,Flat,220000.0,68
+E07000073,Harlow,Semi-detached,420000.0,52
+E07000073,Harlow,Terraced,335500.0,160
+E07000074,Maldon,Detached,495000.0,141
+E07000074,Maldon,Flat,198000.0,21
+E07000074,Maldon,Semi-detached,345000.0,83
+E07000074,Maldon,Terraced,288750.0,34
+E07000075,Rochford,Detached,550000.0,94
+E07000075,Rochford,Flat,195000.0,43
+E07000075,Rochford,Semi-detached,390000.0,149
+E07000075,Rochford,Terraced,333750.0,40
+E07000076,Tendring,Detached,341500.0,344
+E07000076,Tendring,Flat,147500.0,95
+E07000076,Tendring,Semi-detached,250000.0,229
+E07000076,Tendring,Terraced,208000.0,103
+E07000077,Uttlesford,Detached,630000.0,141
+E07000077,Uttlesford,Flat,213750.0,30
+E07000077,Uttlesford,Semi-detached,418750.0,102
+E07000077,Uttlesford,Terraced,360625.0,78
+E07000078,Cheltenham,Detached,629500.0,91
+E07000078,Cheltenham,Flat,193000.0,137
+E07000078,Cheltenham,Semi-detached,377500.0,152
+E07000078,Cheltenham,Terraced,310000.0,159
+E07000079,Cotswold,Detached,650000.0,144
+E07000079,Cotswold,Flat,201250.0,32
+E07000079,Cotswold,Semi-detached,400000.0,107
+E07000079,Cotswold,Terraced,335000.0,109
+E07000080,Forest of Dean,Detached,376000.0,140
+E07000080,Forest of Dean,Flat,,18
+E07000080,Forest of Dean,Semi-detached,243500.0,102
+E07000080,Forest of Dean,Terraced,200000.0,55
+E07000081,Gloucester,Detached,382750.0,100
+E07000081,Gloucester,Flat,145000.0,89
+E07000081,Gloucester,Semi-detached,280000.0,202
+E07000081,Gloucester,Terraced,215000.0,141
+E07000082,Stroud,Detached,490000.0,189
+E07000082,Stroud,Flat,155000.0,42
+E07000082,Stroud,Semi-detached,331250.0,154
+E07000082,Stroud,Terraced,265000.0,122
+E07000083,Tewkesbury,Detached,488750.0,140
+E07000083,Tewkesbury,Flat,152500.0,42
+E07000083,Tewkesbury,Semi-detached,309000.0,150
+E07000083,Tewkesbury,Terraced,250000.0,121
+E07000084,Basingstoke and Deane,Detached,573500.0,236
+E07000084,Basingstoke and Deane,Flat,190750.0,132
+E07000084,Basingstoke and Deane,Semi-detached,400000.0,178
+E07000084,Basingstoke and Deane,Terraced,320000.0,234
+E07000085,East Hampshire,Detached,625000.0,194
+E07000085,East Hampshire,Flat,190000.0,81
+E07000085,East Hampshire,Semi-detached,417000.0,129
+E07000085,East Hampshire,Terraced,330000.0,121
+E07000086,Eastleigh,Detached,480000.0,201
+E07000086,Eastleigh,Flat,181250.0,106
+E07000086,Eastleigh,Semi-detached,340000.0,171
+E07000086,Eastleigh,Terraced,295000.0,178
+E07000087,Fareham,Detached,520000.0,183
+E07000087,Fareham,Flat,172500.0,87
+E07000087,Fareham,Semi-detached,345000.0,188
+E07000087,Fareham,Terraced,300000.0,139
+E07000088,Gosport,Detached,472475.0,40
+E07000088,Gosport,Flat,155000.0,93
+E07000088,Gosport,Semi-detached,309500.0,84
+E07000088,Gosport,Terraced,246000.0,163
+E07000089,Hart,Detached,630000.0,131
+E07000089,Hart,Flat,225000.0,96
+E07000089,Hart,Semi-detached,475000.0,110
+E07000089,Hart,Terraced,380000.0,109
+E07000090,Havant,Detached,470000.0,149
+E07000090,Havant,Flat,151000.0,86
+E07000090,Havant,Semi-detached,340000.0,148
+E07000090,Havant,Terraced,277000.0,137
+E07000091,New Forest,Detached,570000.0,336
+E07000091,New Forest,Flat,208000.0,110
+E07000091,New Forest,Semi-detached,365000.0,186
+E07000091,New Forest,Terraced,286500.0,152
+E07000092,Rushmoor,Detached,550000.0,63
+E07000092,Rushmoor,Flat,200000.0,75
+E07000092,Rushmoor,Semi-detached,408000.0,109
+E07000092,Rushmoor,Terraced,342250.0,88
+E07000093,Test Valley,Detached,562250.0,178
+E07000093,Test Valley,Flat,190000.0,78
+E07000093,Test Valley,Semi-detached,355000.0,132
+E07000093,Test Valley,Terraced,290000.0,183
+E07000094,Winchester,Detached,667500.0,176
+E07000094,Winchester,Flat,236500.0,90
+E07000094,Winchester,Semi-detached,435000.0,115
+E07000094,Winchester,Terraced,375000.0,136
+E07000095,Broxbourne,Detached,687500.0,59
+E07000095,Broxbourne,Flat,235000.0,80
+E07000095,Broxbourne,Semi-detached,485000.0,87
+E07000095,Broxbourne,Terraced,415000.0,131
+E07000096,Dacorum,Detached,745000.0,112
+E07000096,Dacorum,Flat,250000.0,135
+E07000096,Dacorum,Semi-detached,526250.0,122
+E07000096,Dacorum,Terraced,411250.0,206
+E07000098,Hertsmere,Detached,937500.0,47
+E07000098,Hertsmere,Flat,315000.0,101
+E07000098,Hertsmere,Semi-detached,620000.0,121
+E07000098,Hertsmere,Terraced,463750.0,86
+E07000099,North Hertfordshire,Detached,678500.0,123
+E07000099,North Hertfordshire,Flat,217500.0,124
+E07000099,North Hertfordshire,Semi-detached,485000.0,148
+E07000099,North Hertfordshire,Terraced,370000.0,145
+E07000102,Three Rivers,Detached,912500.0,60
+E07000102,Three Rivers,Flat,294900.0,64
+E07000102,Three Rivers,Semi-detached,612500.0,100
+E07000102,Three Rivers,Terraced,432500.0,84
+E07000103,Watford,Detached,865000.0,28
+E07000103,Watford,Flat,265000.0,103
+E07000103,Watford,Semi-detached,560000.0,73
+E07000103,Watford,Terraced,420000.0,83
+E07000105,Ashford,Detached,500000.0,193
+E07000105,Ashford,Flat,170000.0,65
+E07000105,Ashford,Semi-detached,340000.0,174
+E07000105,Ashford,Terraced,285000.0,165
+E07000106,Canterbury,Detached,478000.0,186
+E07000106,Canterbury,Flat,193250.0,98
+E07000106,Canterbury,Semi-detached,330000.0,199
+E07000106,Canterbury,Terraced,294000.0,142
+E07000107,Dartford,Detached,650000.0,45
+E07000107,Dartford,Flat,221000.0,105
+E07000107,Dartford,Semi-detached,440000.0,116
+E07000107,Dartford,Terraced,350000.0,155
+E07000108,Dover,Detached,395000.0,101
+E07000108,Dover,Flat,155000.0,50
+E07000108,Dover,Semi-detached,300000.0,145
+E07000108,Dover,Terraced,249950.0,196
+E07000109,Gravesham,Detached,570000.0,58
+E07000109,Gravesham,Flat,181750.0,38
+E07000109,Gravesham,Semi-detached,406000.0,103
+E07000109,Gravesham,Terraced,312000.0,125
+E07000110,Maidstone,Detached,552500.0,175
+E07000110,Maidstone,Flat,185000.0,108
+E07000110,Maidstone,Semi-detached,375000.0,244
+E07000110,Maidstone,Terraced,300000.0,196
+E07000111,Sevenoaks,Detached,820000.0,117
+E07000111,Sevenoaks,Flat,278000.0,63
+E07000111,Sevenoaks,Semi-detached,508500.0,123
+E07000111,Sevenoaks,Terraced,375000.0,133
+E07000112,Folkestone and Hythe,Detached,458000.0,114
+E07000112,Folkestone and Hythe,Flat,184500.0,106
+E07000112,Folkestone and Hythe,Semi-detached,344500.0,126
+E07000112,Folkestone and Hythe,Terraced,275000.0,134
+E07000113,Swale,Detached,420000.0,140
+E07000113,Swale,Flat,175000.0,77
+E07000113,Swale,Semi-detached,325000.0,204
+E07000113,Swale,Terraced,265000.0,268
+E07000114,Thanet,Detached,420000.0,151
+E07000114,Thanet,Flat,165000.0,134
+E07000114,Thanet,Semi-detached,305000.0,158
+E07000114,Thanet,Terraced,255000.0,165
+E07000115,Tonbridge and Malling,Detached,660000.0,133
+E07000115,Tonbridge and Malling,Flat,232500.0,75
+E07000115,Tonbridge and Malling,Semi-detached,432500.0,187
+E07000115,Tonbridge and Malling,Terraced,343750.0,160
+E07000116,Tunbridge Wells,Detached,745000.0,95
+E07000116,Tunbridge Wells,Flat,250000.0,107
+E07000116,Tunbridge Wells,Semi-detached,450000.0,137
+E07000116,Tunbridge Wells,Terraced,360000.0,127
+E07000117,Burnley,Detached,292000.0,59
+E07000117,Burnley,Flat,85500.0,22
+E07000117,Burnley,Semi-detached,180000.0,110
+E07000117,Burnley,Terraced,99975.0,218
+E07000118,Chorley,Detached,365000.0,147
+E07000118,Chorley,Flat,125000.0,31
+E07000118,Chorley,Semi-detached,220000.0,161
+E07000118,Chorley,Terraced,165500.0,147
+E07000119,Fylde,Detached,345000.0,117
+E07000119,Fylde,Flat,160750.0,84
+E07000119,Fylde,Semi-detached,238500.0,129
+E07000119,Fylde,Terraced,175000.0,87
+E07000120,Hyndburn,Detached,270000.0,47
+E07000120,Hyndburn,Flat,,7
+E07000120,Hyndburn,Semi-detached,180600.0,96
+E07000120,Hyndburn,Terraced,120000.0,194
+E07000121,Lancaster,Detached,337500.0,106
+E07000121,Lancaster,Flat,115000.0,57
+E07000121,Lancaster,Semi-detached,213000.0,197
+E07000121,Lancaster,Terraced,165000.0,180
+E07000122,Pendle,Detached,347500.0,52
+E07000122,Pendle,Flat,119950.0,21
+E07000122,Pendle,Semi-detached,199950.0,78
+E07000122,Pendle,Terraced,119500.0,230
+E07000123,Preston,Detached,328000.0,161
+E07000123,Preston,Flat,98000.0,35
+E07000123,Preston,Semi-detached,205000.0,219
+E07000123,Preston,Terraced,135000.0,173
+E07000124,Ribble Valley,Detached,426000.0,90
+E07000124,Ribble Valley,Flat,,11
+E07000124,Ribble Valley,Semi-detached,250000.0,93
+E07000124,Ribble Valley,Terraced,189950.0,122
+E07000125,Rossendale,Detached,351250.0,56
+E07000125,Rossendale,Flat,,12
+E07000125,Rossendale,Semi-detached,225000.0,78
+E07000125,Rossendale,Terraced,152500.0,154
+E07000126,South Ribble,Detached,320000.0,142
+E07000126,South Ribble,Flat,114250.0,34
+E07000126,South Ribble,Semi-detached,201000.0,252
+E07000126,South Ribble,Terraced,154337.5,92
+E07000127,West Lancashire,Detached,369000.0,148
+E07000127,West Lancashire,Flat,,19
+E07000127,West Lancashire,Semi-detached,235000.0,164
+E07000127,West Lancashire,Terraced,165000.0,98
+E07000128,Wyre,Detached,299950.0,132
+E07000128,Wyre,Flat,94250.0,30
+E07000128,Wyre,Semi-detached,180000.0,229
+E07000128,Wyre,Terraced,132000.0,87
+E07000129,Blaby,Detached,360000.0,153
+E07000129,Blaby,Flat,,19
+E07000129,Blaby,Semi-detached,268500.0,168
+E07000129,Blaby,Terraced,220000.0,65
+E07000130,Charnwood,Detached,385000.0,222
+E07000130,Charnwood,Flat,145000.0,53
+E07000130,Charnwood,Semi-detached,265000.0,258
+E07000130,Charnwood,Terraced,220000.0,180
+E07000131,Harborough,Detached,430000.0,205
+E07000131,Harborough,Flat,150000.0,29
+E07000131,Harborough,Semi-detached,290000.0,126
+E07000131,Harborough,Terraced,232750.0,87
+E07000132,Hinckley and Bosworth,Detached,375000.0,171
+E07000132,Hinckley and Bosworth,Flat,130000.0,37
+E07000132,Hinckley and Bosworth,Semi-detached,248500.0,228
+E07000132,Hinckley and Bosworth,Terraced,190000.0,125
+E07000133,Melton,Detached,342500.0,99
+E07000133,Melton,Flat,,7
+E07000133,Melton,Semi-detached,235000.0,88
+E07000133,Melton,Terraced,180000.0,47
+E07000134,North West Leicestershire,Detached,365000.0,223
+E07000134,North West Leicestershire,Flat,,13
+E07000134,North West Leicestershire,Semi-detached,240000.0,173
+E07000134,North West Leicestershire,Terraced,175500.0,122
+E07000135,Oadby and Wigston,Detached,387000.0,61
+E07000135,Oadby and Wigston,Flat,,8
+E07000135,Oadby and Wigston,Semi-detached,252500.0,81
+E07000135,Oadby and Wigston,Terraced,190000.0,25
+E07000136,Boston,Detached,252500.0,139
+E07000136,Boston,Flat,,11
+E07000136,Boston,Semi-detached,150000.0,47
+E07000136,Boston,Terraced,138000.0,33
+E07000137,East Lindsey,Detached,262000.0,325
+E07000137,East Lindsey,Flat,105000.0,25
+E07000137,East Lindsey,Semi-detached,180000.0,143
+E07000137,East Lindsey,Terraced,150000.0,109
+E07000138,Lincoln,Detached,293000.0,78
+E07000138,Lincoln,Flat,117750.0,32
+E07000138,Lincoln,Semi-detached,195875.0,130
+E07000138,Lincoln,Terraced,160000.0,162
+E07000139,North Kesteven,Detached,310000.0,319
+E07000139,North Kesteven,Flat,,15
+E07000139,North Kesteven,Semi-detached,209975.0,176
+E07000139,North Kesteven,Terraced,177000.0,81
+E07000140,South Holland,Detached,287500.0,265
+E07000140,South Holland,Flat,,9
+E07000140,South Holland,Semi-detached,183000.0,122
+E07000140,South Holland,Terraced,145000.0,54
+E07000141,South Kesteven,Detached,358500.0,292
+E07000141,South Kesteven,Flat,130000.0,35
+E07000141,South Kesteven,Semi-detached,228000.0,202
+E07000141,South Kesteven,Terraced,193000.0,146
+E07000142,West Lindsey,Detached,295000.0,211
+E07000142,West Lindsey,Flat,,6
+E07000142,West Lindsey,Semi-detached,185000.0,113
+E07000142,West Lindsey,Terraced,135500.0,100
+E07000143,Breckland,Detached,325000.0,317
+E07000143,Breckland,Flat,120000.0,23
+E07000143,Breckland,Semi-detached,234000.0,189
+E07000143,Breckland,Terraced,193000.0,143
+E07000144,Broadland,Detached,372500.0,285
+E07000144,Broadland,Flat,170000.0,25
+E07000144,Broadland,Semi-detached,275000.0,216
+E07000144,Broadland,Terraced,232500.0,94
+E07000145,Great Yarmouth,Detached,316250.0,122
+E07000145,Great Yarmouth,Flat,,16
+E07000145,Great Yarmouth,Semi-detached,227500.0,93
+E07000145,Great Yarmouth,Terraced,160000.0,163
+E07000146,King's Lynn and West Norfolk,Detached,335000.0,323
+E07000146,King's Lynn and West Norfolk,Flat,120000.0,33
+E07000146,King's Lynn and West Norfolk,Semi-detached,235000.0,179
+E07000146,King's Lynn and West Norfolk,Terraced,200000.0,129
+E07000147,North Norfolk,Detached,385000.0,241
+E07000147,North Norfolk,Flat,168750.0,64
+E07000147,North Norfolk,Semi-detached,266000.0,119
+E07000147,North Norfolk,Terraced,217000.0,110
+E07000148,Norwich,Detached,420000.0,53
+E07000148,Norwich,Flat,150000.0,138
+E07000148,Norwich,Semi-detached,261000.0,86
+E07000148,Norwich,Terraced,241250.0,268
+E07000149,South Norfolk,Detached,367750.0,306
+E07000149,South Norfolk,Flat,154000.0,36
+E07000149,South Norfolk,Semi-detached,266500.0,173
+E07000149,South Norfolk,Terraced,230000.0,119
+E07000170,Ashfield,Detached,271500.0,142
+E07000170,Ashfield,Flat,,10
+E07000170,Ashfield,Semi-detached,177500.0,155
+E07000170,Ashfield,Terraced,146000.0,127
+E07000171,Bassetlaw,Detached,296000.0,182
+E07000171,Bassetlaw,Flat,,12
+E07000171,Bassetlaw,Semi-detached,182250.0,182
+E07000171,Bassetlaw,Terraced,140000.0,100
+E07000172,Broxtowe,Detached,320000.0,190
+E07000172,Broxtowe,Flat,140000.0,22
+E07000172,Broxtowe,Semi-detached,245000.0,195
+E07000172,Broxtowe,Terraced,189997.5,84
+E07000173,Gedling,Detached,348500.0,180
+E07000173,Gedling,Flat,135000.0,37
+E07000173,Gedling,Semi-detached,225000.0,145
+E07000173,Gedling,Terraced,179500.0,86
+E07000174,Mansfield,Detached,270000.0,142
+E07000174,Mansfield,Flat,104000.0,22
+E07000174,Mansfield,Semi-detached,165000.0,122
+E07000174,Mansfield,Terraced,122500.0,72
+E07000175,Newark and Sherwood,Detached,325000.0,221
+E07000175,Newark and Sherwood,Flat,,18
+E07000175,Newark and Sherwood,Semi-detached,195000.0,189
+E07000175,Newark and Sherwood,Terraced,168000.0,97
+E07000176,Rushcliffe,Detached,449750.0,226
+E07000176,Rushcliffe,Flat,155000.0,41
+E07000176,Rushcliffe,Semi-detached,294000.0,175
+E07000176,Rushcliffe,Terraced,260000.0,95
+E07000177,Cherwell,Detached,495000.0,207
+E07000177,Cherwell,Flat,193000.0,71
+E07000177,Cherwell,Semi-detached,340000.0,193
+E07000177,Cherwell,Terraced,300500.0,174
+E07000178,Oxford,Detached,810000.0,32
+E07000178,Oxford,Flat,319000.0,93
+E07000178,Oxford,Semi-detached,473000.0,127
+E07000178,Oxford,Terraced,442500.0,153
+E07000179,South Oxfordshire,Detached,680000.0,175
+E07000179,South Oxfordshire,Flat,272500.0,65
+E07000179,South Oxfordshire,Semi-detached,425000.0,189
+E07000179,South Oxfordshire,Terraced,365000.0,136
+E07000180,Vale of White Horse,Detached,535000.0,184
+E07000180,Vale of White Horse,Flat,210000.0,99
+E07000180,Vale of White Horse,Semi-detached,370000.0,160
+E07000180,Vale of White Horse,Terraced,315000.0,124
+E07000181,West Oxfordshire,Detached,585000.0,155
+E07000181,West Oxfordshire,Flat,197500.0,60
+E07000181,West Oxfordshire,Semi-detached,380000.0,135
+E07000181,West Oxfordshire,Terraced,325000.0,112
+E07000192,Cannock Chase,Detached,330000.0,105
+E07000192,Cannock Chase,Flat,96500.0,25
+E07000192,Cannock Chase,Semi-detached,215000.0,148
+E07000192,Cannock Chase,Terraced,185000.0,76
+E07000193,East Staffordshire,Detached,350000.0,175
+E07000193,East Staffordshire,Flat,110000.0,39
+E07000193,East Staffordshire,Semi-detached,222000.0,147
+E07000193,East Staffordshire,Terraced,167000.0,123
+E07000194,Lichfield,Detached,487500.0,158
+E07000194,Lichfield,Flat,168000.0,51
+E07000194,Lichfield,Semi-detached,280000.0,140
+E07000194,Lichfield,Terraced,240000.0,85
+E07000195,Newcastle-under-Lyme,Detached,310000.0,138
+E07000195,Newcastle-under-Lyme,Flat,,17
+E07000195,Newcastle-under-Lyme,Semi-detached,195000.0,214
+E07000195,Newcastle-under-Lyme,Terraced,137400.0,118
+E07000196,South Staffordshire,Detached,425000.0,157
+E07000196,South Staffordshire,Flat,149000.0,26
+E07000196,South Staffordshire,Semi-detached,254975.0,160
+E07000196,South Staffordshire,Terraced,247250.0,64
+E07000197,Stafford,Detached,373750.0,236
+E07000197,Stafford,Flat,125000.0,45
+E07000197,Stafford,Semi-detached,240000.0,180
+E07000197,Stafford,Terraced,190000.0,130
+E07000198,Staffordshire Moorlands,Detached,340000.0,118
+E07000198,Staffordshire Moorlands,Flat,,15
+E07000198,Staffordshire Moorlands,Semi-detached,210000.0,130
+E07000198,Staffordshire Moorlands,Terraced,150500.0,88
+E07000199,Tamworth,Detached,360000.0,107
+E07000199,Tamworth,Flat,135000.0,31
+E07000199,Tamworth,Semi-detached,238997.5,116
+E07000199,Tamworth,Terraced,196162.5,72
+E07000200,Babergh,Detached,433000.0,161
+E07000200,Babergh,Flat,,16
+E07000200,Babergh,Semi-detached,288750.0,112
+E07000200,Babergh,Terraced,250000.0,110
+E07000202,Ipswich,Detached,375950.0,64
+E07000202,Ipswich,Flat,125000.0,74
+E07000202,Ipswich,Semi-detached,260000.0,221
+E07000202,Ipswich,Terraced,201500.0,156
+E07000203,Mid Suffolk,Detached,401000.0,221
+E07000203,Mid Suffolk,Flat,141000.0,24
+E07000203,Mid Suffolk,Semi-detached,265000.0,143
+E07000203,Mid Suffolk,Terraced,229000.0,92
+E07000207,Elmbridge,Detached,1200000.0,104
+E07000207,Elmbridge,Flat,360000.0,151
+E07000207,Elmbridge,Semi-detached,740000.0,146
+E07000207,Elmbridge,Terraced,521250.0,134
+E07000208,Epsom and Ewell,Detached,815000.0,71
+E07000208,Epsom and Ewell,Flat,315000.0,81
+E07000208,Epsom and Ewell,Semi-detached,636500.0,90
+E07000208,Epsom and Ewell,Terraced,500000.0,47
+E07000209,Guildford,Detached,782500.0,159
+E07000209,Guildford,Flat,265000.0,129
+E07000209,Guildford,Semi-detached,500000.0,177
+E07000209,Guildford,Terraced,403000.0,95
+E07000210,Mole Valley,Detached,847500.0,82
+E07000210,Mole Valley,Flat,265000.0,85
+E07000210,Mole Valley,Semi-detached,570000.0,103
+E07000210,Mole Valley,Terraced,452500.0,62
+E07000211,Reigate and Banstead,Detached,785000.0,131
+E07000211,Reigate and Banstead,Flat,265000.0,157
+E07000211,Reigate and Banstead,Semi-detached,550000.0,173
+E07000211,Reigate and Banstead,Terraced,440000.0,125
+E07000212,Runnymede,Detached,670000.0,84
+E07000212,Runnymede,Flat,257750.0,86
+E07000212,Runnymede,Semi-detached,490000.0,126
+E07000212,Runnymede,Terraced,415000.0,74
+E07000213,Spelthorne,Detached,692500.0,56
+E07000213,Spelthorne,Flat,290000.0,98
+E07000213,Spelthorne,Semi-detached,500000.0,111
+E07000213,Spelthorne,Terraced,437000.0,86
+E07000214,Surrey Heath,Detached,699975.0,154
+E07000214,Surrey Heath,Flat,226500.0,70
+E07000214,Surrey Heath,Semi-detached,485000.0,101
+E07000214,Surrey Heath,Terraced,370000.0,67
+E07000215,Tandridge,Detached,730000.0,103
+E07000215,Tandridge,Flat,273500.0,74
+E07000215,Tandridge,Semi-detached,472500.0,100
+E07000215,Tandridge,Terraced,425000.0,63
+E07000216,Waverley,Detached,792500.0,184
+E07000216,Waverley,Flat,254500.0,114
+E07000216,Waverley,Semi-detached,525000.0,146
+E07000216,Waverley,Terraced,432099.5,126
+E07000217,Woking,Detached,755000.0,100
+E07000217,Woking,Flat,250000.0,118
+E07000217,Woking,Semi-detached,482500.0,118
+E07000217,Woking,Terraced,420000.0,102
+E07000218,North Warwickshire,Detached,379000.0,64
+E07000218,North Warwickshire,Flat,146000.0,23
+E07000218,North Warwickshire,Semi-detached,256000.0,111
+E07000218,North Warwickshire,Terraced,190000.0,75
+E07000219,Nuneaton and Bedworth,Detached,330000.0,124
+E07000219,Nuneaton and Bedworth,Flat,110000.0,32
+E07000219,Nuneaton and Bedworth,Semi-detached,220000.0,176
+E07000219,Nuneaton and Bedworth,Terraced,175500.0,116
+E07000220,Rugby,Detached,420000.0,150
+E07000220,Rugby,Flat,135000.0,54
+E07000220,Rugby,Semi-detached,273750.0,150
+E07000220,Rugby,Terraced,209500.0,126
+E07000221,Stratford-on-Avon,Detached,505000.0,267
+E07000221,Stratford-on-Avon,Flat,178000.0,68
+E07000221,Stratford-on-Avon,Semi-detached,324000.0,207
+E07000221,Stratford-on-Avon,Terraced,285000.0,147
+E07000222,Warwick,Detached,546250.0,156
+E07000222,Warwick,Flat,187500.0,135
+E07000222,Warwick,Semi-detached,350000.0,203
+E07000222,Warwick,Terraced,314775.0,166
+E07000223,Adur,Detached,494975.0,54
+E07000223,Adur,Flat,215000.0,37
+E07000223,Adur,Semi-detached,405000.0,91
+E07000223,Adur,Terraced,335000.0,49
+E07000224,Arun,Detached,469000.0,272
+E07000224,Arun,Flat,170000.0,147
+E07000224,Arun,Semi-detached,340000.0,223
+E07000224,Arun,Terraced,290000.0,198
+E07000225,Chichester,Detached,590000.0,172
+E07000225,Chichester,Flat,200000.0,81
+E07000225,Chichester,Semi-detached,381800.0,126
+E07000225,Chichester,Terraced,330000.0,102
+E07000226,Crawley,Detached,600000.0,53
+E07000226,Crawley,Flat,212250.0,60
+E07000226,Crawley,Semi-detached,399000.0,51
+E07000226,Crawley,Terraced,345000.0,149
+E07000227,Horsham,Detached,645000.0,209
+E07000227,Horsham,Flat,239995.0,123
+E07000227,Horsham,Semi-detached,437250.0,180
+E07000227,Horsham,Terraced,366500.0,154
+E07000228,Mid Sussex,Detached,625000.0,237
+E07000228,Mid Sussex,Flat,240000.0,146
+E07000228,Mid Sussex,Semi-detached,444260.0,204
+E07000228,Mid Sussex,Terraced,367500.0,146
+E07000229,Worthing,Detached,550000.0,97
+E07000229,Worthing,Flat,210000.0,179
+E07000229,Worthing,Semi-detached,387500.0,117
+E07000229,Worthing,Terraced,335000.0,91
+E07000234,Bromsgrove,Detached,487500.0,148
+E07000234,Bromsgrove,Flat,151500.0,32
+E07000234,Bromsgrove,Semi-detached,310500.0,137
+E07000234,Bromsgrove,Terraced,260000.0,82
+E07000235,Malvern Hills,Detached,450000.0,143
+E07000235,Malvern Hills,Flat,174375.0,28
+E07000235,Malvern Hills,Semi-detached,295000.0,110
+E07000235,Malvern Hills,Terraced,250000.0,40
+E07000236,Redditch,Detached,375000.0,95
+E07000236,Redditch,Flat,131000.0,30
+E07000236,Redditch,Semi-detached,251000.0,81
+E07000236,Redditch,Terraced,200000.0,75
+E07000237,Worcester,Detached,366650.0,76
+E07000237,Worcester,Flat,145000.0,73
+E07000237,Worcester,Semi-detached,260000.0,122
+E07000237,Worcester,Terraced,226000.0,123
+E07000238,Wychavon,Detached,442500.0,234
+E07000238,Wychavon,Flat,137000.0,42
+E07000238,Wychavon,Semi-detached,300000.0,131
+E07000238,Wychavon,Terraced,240000.0,102
+E07000239,Wyre Forest,Detached,358000.0,123
+E07000239,Wyre Forest,Flat,123000.0,37
+E07000239,Wyre Forest,Semi-detached,244500.0,138
+E07000239,Wyre Forest,Terraced,188500.0,96
+E07000240,St Albans,Detached,850000.0,107
+E07000240,St Albans,Flat,337050.0,132
+E07000240,St Albans,Semi-detached,688150.0,139
+E07000240,St Albans,Terraced,575000.0,177
+E07000241,Welwyn Hatfield,Detached,780000.0,62
+E07000241,Welwyn Hatfield,Flat,245000.0,82
+E07000241,Welwyn Hatfield,Semi-detached,558500.0,76
+E07000241,Welwyn Hatfield,Terraced,415000.0,153
+E07000242,East Hertfordshire,Detached,745000.0,128
+E07000242,East Hertfordshire,Flat,253312.5,132
+E07000242,East Hertfordshire,Semi-detached,495000.0,182
+E07000242,East Hertfordshire,Terraced,412500.0,195
+E07000243,Stevenage,Detached,557000.0,31
+E07000243,Stevenage,Flat,189250.0,42
+E07000243,Stevenage,Semi-detached,395000.0,40
+E07000243,Stevenage,Terraced,335000.0,173
+E07000244,East Suffolk,Detached,380000.0,457
+E07000244,East Suffolk,Flat,160000.0,64
+E07000244,East Suffolk,Semi-detached,267500.0,312
+E07000244,East Suffolk,Terraced,206000.0,287
+E07000245,West Suffolk,Detached,387000.0,243
+E07000245,West Suffolk,Flat,162500.0,65
+E07000245,West Suffolk,Semi-detached,270000.0,222
+E07000245,West Suffolk,Terraced,235000.0,235
+E08000001,Bolton,Detached,355000.0,198
+E08000001,Bolton,Flat,115000.0,81
+E08000001,Bolton,Semi-detached,220000.0,337
+E08000001,Bolton,Terraced,160000.0,363
+E08000002,Bury,Detached,380000.0,125
+E08000002,Bury,Flat,138750.0,68
+E08000002,Bury,Semi-detached,265000.0,272
+E08000002,Bury,Terraced,189500.0,254
+E08000003,Manchester,Detached,371000.0,57
+E08000003,Manchester,Flat,202500.0,513
+E08000003,Manchester,Semi-detached,307500.0,429
+E08000003,Manchester,Terraced,262000.0,423
+E08000004,Oldham,Detached,360000.0,100
+E08000004,Oldham,Flat,145000.0,23
+E08000004,Oldham,Semi-detached,240000.0,257
+E08000004,Oldham,Terraced,175000.0,336
+E08000005,Rochdale,Detached,347500.0,155
+E08000005,Rochdale,Flat,120000.0,41
+E08000005,Rochdale,Semi-detached,230000.0,255
+E08000005,Rochdale,Terraced,170000.0,279
+E08000006,Salford,Detached,385500.0,98
+E08000006,Salford,Flat,154500.0,202
+E08000006,Salford,Semi-detached,272500.0,302
+E08000006,Salford,Terraced,220000.0,288
+E08000007,Stockport,Detached,560000.0,267
+E08000007,Stockport,Flat,165000.0,154
+E08000007,Stockport,Semi-detached,330000.0,576
+E08000007,Stockport,Terraced,245000.0,358
+E08000008,Tameside,Detached,350000.0,100
+E08000008,Tameside,Flat,135500.0,54
+E08000008,Tameside,Semi-detached,241000.0,257
+E08000008,Tameside,Terraced,185000.0,322
+E08000009,Trafford,Detached,695000.0,103
+E08000009,Trafford,Flat,190000.0,145
+E08000009,Trafford,Semi-detached,420000.0,385
+E08000009,Trafford,Terraced,340000.0,259
+E08000010,Wigan,Detached,335000.0,250
+E08000010,Wigan,Flat,108000.0,69
+E08000010,Wigan,Semi-detached,210000.0,540
+E08000010,Wigan,Terraced,147500.0,353
+E08000011,Knowsley,Detached,300000.0,74
+E08000011,Knowsley,Flat,96000.0,24
+E08000011,Knowsley,Semi-detached,195000.0,178
+E08000011,Knowsley,Terraced,150000.0,103
+E08000012,Liverpool,Detached,343750.0,124
+E08000012,Liverpool,Flat,140050.0,281
+E08000012,Liverpool,Semi-detached,240000.0,389
+E08000012,Liverpool,Terraced,171000.0,571
+E08000013,St. Helens,Detached,340000.0,120
+E08000013,St. Helens,Flat,102000.0,40
+E08000013,St. Helens,Semi-detached,200000.0,309
+E08000013,St. Helens,Terraced,140000.0,228
+E08000014,Sefton,Detached,385000.0,174
+E08000014,Sefton,Flat,133750.0,192
+E08000014,Sefton,Semi-detached,240000.0,494
+E08000014,Sefton,Terraced,175000.0,214
+E08000015,Wirral,Detached,410000.0,243
+E08000015,Wirral,Flat,137250.0,176
+E08000015,Wirral,Semi-detached,245000.0,589
+E08000015,Wirral,Terraced,168750.0,332
+E08000017,Doncaster,Detached,280000.0,340
+E08000017,Doncaster,Flat,103500.0,53
+E08000017,Doncaster,Semi-detached,170000.0,536
+E08000017,Doncaster,Terraced,125000.0,239
+E08000018,Rotherham,Detached,304000.0,238
+E08000018,Rotherham,Flat,122500.0,34
+E08000018,Rotherham,Semi-detached,187000.0,423
+E08000018,Rotherham,Terraced,131000.0,227
+E08000021,Newcastle upon Tyne,Detached,370000.0,119
+E08000021,Newcastle upon Tyne,Flat,150000.0,194
+E08000021,Newcastle upon Tyne,Semi-detached,225000.0,324
+E08000021,Newcastle upon Tyne,Terraced,181000.0,341
+E08000022,North Tyneside,Detached,330000.0,119
+E08000022,North Tyneside,Flat,130150.0,187
+E08000022,North Tyneside,Semi-detached,222500.0,244
+E08000022,North Tyneside,Terraced,205000.0,278
+E08000023,South Tyneside,Detached,325000.0,41
+E08000023,South Tyneside,Flat,91000.0,74
+E08000023,South Tyneside,Semi-detached,188750.0,174
+E08000023,South Tyneside,Terraced,145000.0,158
+E08000024,Sunderland,Detached,270000.0,129
+E08000024,Sunderland,Flat,65995.0,79
+E08000024,Sunderland,Semi-detached,165000.0,339
+E08000024,Sunderland,Terraced,125500.0,330
+E08000025,Birmingham,Detached,470000.0,322
+E08000025,Birmingham,Flat,142000.0,405
+E08000025,Birmingham,Semi-detached,262250.0,976
+E08000025,Birmingham,Terraced,224000.0,967
+E08000026,Coventry,Detached,365000.0,98
+E08000026,Coventry,Flat,131500.0,94
+E08000026,Coventry,Semi-detached,255000.0,259
+E08000026,Coventry,Terraced,219000.0,509
+E08000027,Dudley,Detached,350000.0,201
+E08000027,Dudley,Flat,131000.0,112
+E08000027,Dudley,Semi-detached,240000.0,421
+E08000027,Dudley,Terraced,209000.0,250
+E08000028,Sandwell,Detached,297500.0,88
+E08000028,Sandwell,Flat,114975.0,66
+E08000028,Sandwell,Semi-detached,240000.0,311
+E08000028,Sandwell,Terraced,192500.0,211
+E08000029,Solihull,Detached,581375.0,228
+E08000029,Solihull,Flat,170000.0,169
+E08000029,Solihull,Semi-detached,337000.0,321
+E08000029,Solihull,Terraced,260000.0,163
+E08000030,Walsall,Detached,368000.0,165
+E08000030,Walsall,Flat,110000.0,75
+E08000030,Walsall,Semi-detached,230000.0,300
+E08000030,Walsall,Terraced,190000.0,219
+E08000031,Wolverhampton,Detached,315500.0,115
+E08000031,Wolverhampton,Flat,110000.0,65
+E08000031,Wolverhampton,Semi-detached,235000.0,285
+E08000031,Wolverhampton,Terraced,189000.0,154
+E08000032,Bradford,Detached,370000.0,305
+E08000032,Bradford,Flat,115000.0,141
+E08000032,Bradford,Semi-detached,202000.0,752
+E08000032,Bradford,Terraced,155500.0,783
+E08000033,Calderdale,Detached,402500.0,121
+E08000033,Calderdale,Flat,128000.0,85
+E08000033,Calderdale,Semi-detached,216000.0,259
+E08000033,Calderdale,Terraced,165000.0,477
+E08000034,Kirklees,Detached,372500.0,377
+E08000034,Kirklees,Flat,110000.0,102
+E08000034,Kirklees,Semi-detached,223250.0,494
+E08000034,Kirklees,Terraced,165000.0,617
+E08000035,Leeds,Detached,430000.0,461
+E08000035,Leeds,Flat,147999.5,442
+E08000035,Leeds,Semi-detached,260000.0,1133
+E08000035,Leeds,Terraced,200000.0,910
+E08000036,Wakefield,Detached,340000.0,321
+E08000036,Wakefield,Flat,95000.0,75
+E08000036,Wakefield,Semi-detached,206500.0,532
+E08000036,Wakefield,Terraced,156000.0,363
+E08000037,Gateshead,Detached,299600.0,84
+E08000037,Gateshead,Flat,115000.0,125
+E08000037,Gateshead,Semi-detached,176775.0,250
+E08000037,Gateshead,Terraced,148500.0,286
+E08000038,Barnsley,Detached,295000.0,229
+E08000038,Barnsley,Flat,102000.0,44
+E08000038,Barnsley,Semi-detached,180000.0,381
+E08000038,Barnsley,Terraced,135000.0,287
+E08000039,Sheffield,Detached,405000.0,287
+E08000039,Sheffield,Flat,148000.0,253
+E08000039,Sheffield,Semi-detached,224250.0,674
+E08000039,Sheffield,Terraced,195125.0,578
+E09000002,Barking and Dagenham,Detached,,5
+E09000002,Barking and Dagenham,Flat,228750.0,80
+E09000002,Barking and Dagenham,Semi-detached,445000.0,32
+E09000002,Barking and Dagenham,Terraced,404000.0,240
+E09000003,Barnet,Detached,1072500.0,62
+E09000003,Barnet,Flat,385000.0,351
+E09000003,Barnet,Semi-detached,765000.0,233
+E09000003,Barnet,Terraced,630000.0,183
+E09000004,Bexley,Detached,617500.0,42
+E09000004,Bexley,Flat,255000.0,168
+E09000004,Bexley,Semi-detached,492000.0,281
+E09000004,Bexley,Terraced,413000.0,260
+E09000005,Brent,Detached,,10
+E09000005,Brent,Flat,400000.0,218
+E09000005,Brent,Semi-detached,675000.0,84
+E09000005,Brent,Terraced,590000.0,102
+E09000006,Bromley,Detached,817500.0,175
+E09000006,Bromley,Flat,340000.0,356
+E09000006,Bromley,Semi-detached,612500.0,359
+E09000006,Bromley,Terraced,515000.0,324
+E09000007,Camden,Detached,,3
+E09000007,Camden,Flat,590000.0,386
+E09000007,Camden,Semi-detached,,14
+E09000007,Camden,Terraced,1564700.0,44
+E09000008,Croydon,Detached,700000.0,123
+E09000008,Croydon,Flat,268500.0,360
+E09000008,Croydon,Semi-detached,560000.0,242
+E09000008,Croydon,Terraced,425000.0,355
+E09000009,Ealing,Detached,,17
+E09000009,Ealing,Flat,375000.0,333
+E09000009,Ealing,Semi-detached,666000.0,100
+E09000009,Ealing,Terraced,621750.0,252
+E09000010,Enfield,Detached,926250.0,30
+E09000010,Enfield,Flat,315000.0,205
+E09000010,Enfield,Semi-detached,641250.0,122
+E09000010,Enfield,Terraced,480000.0,241
+E09000011,Greenwich,Detached,,19
+E09000011,Greenwich,Flat,375000.0,351
+E09000011,Greenwich,Semi-detached,575000.0,83
+E09000011,Greenwich,Terraced,497500.0,290
+E09000012,Hackney,Detached,,3
+E09000012,Hackney,Flat,510000.0,432
+E09000012,Hackney,Semi-detached,,7
+E09000012,Hackney,Terraced,1024764.0,64
+E09000013,Hammersmith and Fulham,Detached,,2
+E09000013,Hammersmith and Fulham,Flat,572500.0,362
+E09000013,Hammersmith and Fulham,Semi-detached,,6
+E09000013,Hammersmith and Fulham,Terraced,1225000.0,105
+E09000014,Haringey,Detached,,4
+E09000014,Haringey,Flat,469250.0,300
+E09000014,Haringey,Semi-detached,927500.0,26
+E09000014,Haringey,Terraced,675000.0,183
+E09000015,Harrow,Detached,1050000.0,43
+E09000015,Harrow,Flat,324500.0,136
+E09000015,Harrow,Semi-detached,648500.0,144
+E09000015,Harrow,Terraced,580000.0,104
+E09000016,Havering,Detached,664500.0,85
+E09000016,Havering,Flat,265000.0,199
+E09000016,Havering,Semi-detached,517500.0,384
+E09000016,Havering,Terraced,426500.0,304
+E09000017,Hillingdon,Detached,840000.0,89
+E09000017,Hillingdon,Flat,298500.0,214
+E09000017,Hillingdon,Semi-detached,575000.0,240
+E09000017,Hillingdon,Terraced,500000.0,172
+E09000018,Hounslow,Detached,,13
+E09000018,Hounslow,Flat,335000.0,220
+E09000018,Hounslow,Semi-detached,561250.0,134
+E09000018,Hounslow,Terraced,500000.0,156
+E09000019,Islington,Detached,,1
+E09000019,Islington,Flat,563000.0,405
+E09000019,Islington,Semi-detached,,8
+E09000019,Islington,Terraced,1455445.0,59
+E09000020,Kensington and Chelsea,Detached,,2
+E09000020,Kensington and Chelsea,Flat,825000.0,265
+E09000020,Kensington and Chelsea,Semi-detached,,5
+E09000020,Kensington and Chelsea,Terraced,2825000.0,52
+E09000021,Kingston upon Thames,Detached,1000000.0,29
+E09000021,Kingston upon Thames,Flat,368000.0,190
+E09000021,Kingston upon Thames,Semi-detached,732875.0,150
+E09000021,Kingston upon Thames,Terraced,583750.0,118
+E09000022,Lambeth,Detached,,3
+E09000022,Lambeth,Flat,475000.0,682
+E09000022,Lambeth,Semi-detached,1110000.0,56
+E09000022,Lambeth,Terraced,805000.0,167
+E09000023,Lewisham,Detached,,7
+E09000023,Lewisham,Flat,375000.0,450
+E09000023,Lewisham,Semi-detached,715000.0,75
+E09000023,Lewisham,Terraced,650000.0,301
+E09000024,Merton,Detached,,13
+E09000024,Merton,Flat,386500.0,228
+E09000024,Merton,Semi-detached,715000.0,61
+E09000024,Merton,Terraced,638750.0,270
+E09000025,Newham,Detached,,3
+E09000025,Newham,Flat,350000.0,240
+E09000025,Newham,Semi-detached,,14
+E09000025,Newham,Terraced,463500.0,222
+E09000026,Redbridge,Detached,880000.0,21
+E09000026,Redbridge,Flat,315000.0,177
+E09000026,Redbridge,Semi-detached,656250.0,100
+E09000026,Redbridge,Terraced,555000.0,272
+E09000027,Richmond upon Thames,Detached,1080000.0,33
+E09000027,Richmond upon Thames,Flat,470000.0,256
+E09000027,Richmond upon Thames,Semi-detached,889000.0,139
+E09000027,Richmond upon Thames,Terraced,807500.0,226
+E09000028,Southwark,Detached,,8
+E09000028,Southwark,Flat,441000.0,535
+E09000028,Southwark,Semi-detached,1250000.0,24
+E09000028,Southwark,Terraced,825088.0,131
+E09000029,Sutton,Detached,826000.0,28
+E09000029,Sutton,Flat,300000.0,225
+E09000029,Sutton,Semi-detached,576000.0,152
+E09000029,Sutton,Terraced,475000.0,210
+E09000030,Tower Hamlets,Flat,435000.0,590
+E09000030,Tower Hamlets,Semi-detached,,3
+E09000030,Tower Hamlets,Terraced,797500.0,60
+E09000031,Waltham Forest,Detached,,8
+E09000031,Waltham Forest,Flat,400000.0,290
+E09000031,Waltham Forest,Semi-detached,712500.0,67
+E09000031,Waltham Forest,Terraced,680000.0,357
+E09000032,Wandsworth,Detached,,8
+E09000032,Wandsworth,Flat,500000.0,842
+E09000032,Wandsworth,Semi-detached,1430000.0,49
+E09000032,Wandsworth,Terraced,875000.0,272
+E09000033,Westminster,Detached,,5
+E09000033,Westminster,Flat,670000.0,381
+E09000033,Westminster,Semi-detached,,4
+E09000033,Westminster,Terraced,1937500.0,50
+W06000001,Isle of Anglesey,Detached,302500.0,120
+W06000001,Isle of Anglesey,Flat,,5
+W06000001,Isle of Anglesey,Semi-detached,196000.0,49
+W06000001,Isle of Anglesey,Terraced,155000.0,53
+W06000002,Gwynedd,Detached,300000.0,154
+W06000002,Gwynedd,Flat,112500.0,22
+W06000002,Gwynedd,Semi-detached,210000.0,96
+W06000002,Gwynedd,Terraced,155000.0,178
+W06000003,Conwy,Detached,302250.0,196
+W06000003,Conwy,Flat,144975.0,92
+W06000003,Conwy,Semi-detached,204000.0,169
+W06000003,Conwy,Terraced,164000.0,100
+W06000004,Denbighshire,Detached,270000.0,202
+W06000004,Denbighshire,Flat,,11
+W06000004,Denbighshire,Semi-detached,177500.0,128
+W06000004,Denbighshire,Terraced,137250.0,46
+W06000005,Flintshire,Detached,305000.0,235
+W06000005,Flintshire,Flat,,15
+W06000005,Flintshire,Semi-detached,190000.0,222
+W06000005,Flintshire,Terraced,152000.0,101
+W06000006,Wrexham,Detached,305000.0,169
+W06000006,Wrexham,Flat,117500.0,30
+W06000006,Wrexham,Semi-detached,190000.0,177
+W06000006,Wrexham,Terraced,145000.0,115
+W06000008,Ceredigion,Detached,300000.0,139
+W06000008,Ceredigion,Flat,,16
+W06000008,Ceredigion,Semi-detached,200000.0,65
+W06000008,Ceredigion,Terraced,181250.0,58
+W06000009,Pembrokeshire,Detached,300000.0,204
+W06000009,Pembrokeshire,Flat,135000.0,24
+W06000009,Pembrokeshire,Semi-detached,200000.0,141
+W06000009,Pembrokeshire,Terraced,170000.0,132
+W06000010,Carmarthenshire,Detached,290000.0,266
+W06000010,Carmarthenshire,Flat,,17
+W06000010,Carmarthenshire,Semi-detached,185000.0,251
+W06000010,Carmarthenshire,Terraced,145000.0,175
+W06000011,Swansea,Detached,310000.0,183
+W06000011,Swansea,Flat,115997.5,72
+W06000011,Swansea,Semi-detached,204000.0,300
+W06000011,Swansea,Terraced,155000.0,282
+W06000012,Neath Port Talbot,Detached,275000.0,104
+W06000012,Neath Port Talbot,Flat,,14
+W06000012,Neath Port Talbot,Semi-detached,167000.0,188
+W06000012,Neath Port Talbot,Terraced,135000.0,157
+W06000013,Bridgend,Detached,330000.0,179
+W06000013,Bridgend,Flat,139000.0,24
+W06000013,Bridgend,Semi-detached,225000.0,225
+W06000013,Bridgend,Terraced,153000.0,200
+W06000014,Vale of Glamorgan,Detached,420000.0,150
+W06000014,Vale of Glamorgan,Flat,153000.0,66
+W06000014,Vale of Glamorgan,Semi-detached,287000.0,145
+W06000014,Vale of Glamorgan,Terraced,226250.0,216
+W06000015,Cardiff,Detached,440000.0,166
+W06000015,Cardiff,Flat,165000.0,305
+W06000015,Cardiff,Semi-detached,315000.0,323
+W06000015,Cardiff,Terraced,270000.0,511
+W06000016,Rhondda Cynon Taf,Detached,332500.0,132
+W06000016,Rhondda Cynon Taf,Flat,,14
+W06000016,Rhondda Cynon Taf,Semi-detached,202000.0,209
+W06000016,Rhondda Cynon Taf,Terraced,142000.0,501
+W06000018,Caerphilly,Detached,336500.0,116
+W06000018,Caerphilly,Flat,,15
+W06000018,Caerphilly,Semi-detached,221000.0,216
+W06000018,Caerphilly,Terraced,165000.0,259
+W06000019,Blaenau Gwent,Detached,312500.0,21
+W06000019,Blaenau Gwent,Flat,,4
+W06000019,Blaenau Gwent,Semi-detached,182500.0,47
+W06000019,Blaenau Gwent,Terraced,122500.0,131
+W06000020,Torfaen,Detached,332500.0,58
+W06000020,Torfaen,Flat,,7
+W06000020,Torfaen,Semi-detached,215000.0,57
+W06000020,Torfaen,Terraced,160000.0,105
+W06000021,Monmouthshire,Detached,430000.0,178
+W06000021,Monmouthshire,Flat,,13
+W06000021,Monmouthshire,Semi-detached,277000.0,119
+W06000021,Monmouthshire,Terraced,241000.0,78
+W06000022,Newport,Detached,401250.0,126
+W06000022,Newport,Flat,125000.0,42
+W06000022,Newport,Semi-detached,250000.0,186
+W06000022,Newport,Terraced,177500.0,207
+W06000023,Powys,Detached,340000.0,184
+W06000023,Powys,Flat,,11
+W06000023,Powys,Semi-detached,225000.0,121
+W06000023,Powys,Terraced,167500.0,102
+W06000024,Merthyr Tydfil,Detached,253500.0,20
+W06000024,Merthyr Tydfil,Flat,,4
+W06000024,Merthyr Tydfil,Semi-detached,187000.0,31
+W06000024,Merthyr Tydfil,Terraced,128250.0,80

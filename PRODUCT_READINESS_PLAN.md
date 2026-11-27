@@ -96,13 +96,17 @@ an honest uncertainty range and a plain-English reason** — and to say clearly 
 - [x] CI runs the dashboard AppTest and the API tests on every push.
 - [x] `.env.example` complete; troubleshooting section in the README.
 
-### Phase C — Make it genuinely useful *(~3–4 days)*
-- [ ] **Affordability calculator** with the user's own income (not just the area median).
-- [ ] **Compare areas** side by side (2–3 areas: rent, ratio, amenities, schools).
-- [ ] **Download** area data as CSV (analysts) and a printable summary.
-- [ ] Surface **Module 4 forecasts** (regional trend + bands) and **Module 1** sale-price context in the app.
-- [ ] **Methodology & data sources page** (what each number is, its source, date, limits).
-- [ ] Accessibility basics (WCAG AA contrast, labels, keyboard) and a mobile-friendly layout.
+### Phase C — Make it genuinely useful *(done 27 Nov 2026 — reports/REPORT_PHASE_C.md)*
+- [x] **Official rents by bedroom count (1/2/3/4+)** and all properties, with annual change — 316 areas × 9 measures.
+- [x] **Affordability calculator** with the user's own income (never stored) + the rent affordable at 30%.
+- [x] **Compare areas** side by side (2–4 areas: rent, change, ratio, prices, yield, crime, schools, amenities).
+- [x] **Download** CSV: one area, a comparison, and every area × measure (analysts). *(printable summary → Phase D)*
+- [x] **Trends since 2015** and **regional 12-month forecasts** (backtested model choice, conformal bands,
+      out-of-time coverage reported); **sale-price context** + gross yield from HM Land Registry.
+- [x] **Methodology & data page** (incl. the affordability method note carried over from Phase A).
+- [x] Accessibility basics (labels/help on every input, focus outline, charts never colour-only, text
+      alternatives for charts) and a mobile layout (checked at 375 px).
+- [x] API: `/v1/areas/{code}/rents|trend|forecast`, `/v1/compare`, personal affordability in `/v1/predict`.
 
 ### Phase D — Portfolio case study *(~1–2 days, in parallel with C)*
 - [ ] Case study page: problem → data → approach → **honest evaluation** → results → impact → next steps.

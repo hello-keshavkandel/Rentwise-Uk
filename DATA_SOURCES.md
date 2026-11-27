@@ -72,6 +72,23 @@ implausibly low rate (< 5 per 1,000 — the area's force did not publish), is **
 Nov 2026 build: Greater Manchester Police published no data (10 boroughs missing); Gloucestershire published
 4 of 12 months (rates annualised from those months).
 
+## Phase C outputs (Nov 2026) — every official rent, sale prices, forecasts
+
+Built from inputs already in `data/raw/` (`make rents`, `make forecast`; both also run by `make build`):
+
+| Output | From | Contents |
+|---|---|---|
+| `official_rents.csv` | ONS PIPR (same workbook as above) | Latest month, every LA / region / nation × 9 measures: all properties, 1, 2, 3, 4+ bed, detached, semi-detached, terraced, flat — with the published annual % change |
+| `rent_trends.parquet` | ONS PIPR | Monthly history since Jan 2015 for every area × measure (419k rows, 0.6 MB) |
+| `sale_prices.csv` | HM Land Registry Price Paid, `land_registry_pp_2026.csv` (Jan–Jun 2026) | Median price per LA × type and overall; standard-price sales (category A) only; missing below 20 sales |
+| `models/rent_forecasts.json` | `rent_trends.parquet` | 12-month forecasts for 9 English regions, England, Wales, UK, with conformal 80/95% bands and an out-of-time coverage check |
+
+**Rules (tested):** type-level rents in `official_rents.csv` equal the Module 2 dataset exactly (1,264/1,264);
+Price Paid districts are matched to ONS names by a normalised name plus two known spellings (Rhondda Cynon Taff,
+Wrekin) — unmatched districts are reported, never guessed (only City of London and Isles of Scilly, which have no
+ONS rents); gross yield is shown only where rent and price describe the same property type (Price Paid has no
+bedroom counts).
+
 ## Module 3 geospatial enrichment (optional — fetched later)
 
 ### OpenStreetMap amenities

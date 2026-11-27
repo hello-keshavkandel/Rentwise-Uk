@@ -271,8 +271,16 @@ def build(raw_dir: str | Path, processed_dir: str | Path, police_dir: str | Path
     names = dict(zip(out.la_code, out.la_name))
     partial = {names[c]: int(m) for c, m in counts["months_covered"].items()
                if c in has_rate and m < len(months)}
+    # Phase C: every official measure (all / 1-4+ bed / 4 types) + history since 2015,
+    # and median sale prices for buy-vs-rent context and gross yield.
+    from src.data import official_rents, sale_prices
+    rent_meta["measures"] = official_rents.build(raw_dir, processed_dir, pipr)["measures"]
+    sales_meta = None
+    if (raw_dir / "land_registry_pp_2026.csv").exists():
+        sales_meta = sale_prices.build(raw_dir, processed_dir)
     vintages = {
         "rents": rent_meta, "earnings": ashe_meta, "population": pop_meta,
+        **({"sale_prices": sales_meta} if sales_meta else {}),
         "crime": {"source": "data.police.uk street-level crime, all forces",
                   "period": f"{months[0]} to {months[-1]}" if months else None, "months": len(months),
                   "measure": "recorded street crimes per 1,000 residents, annualised",

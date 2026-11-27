@@ -274,6 +274,11 @@ if __name__ == "__main__":
     run_module3_and_spatial_model()
     run_module1()
     run_module4()
+    # Phase C: regional 12-month forecasts the app/API show (conformal bands, out-of-time check)
+    from src.models.rent_forecast import build as build_forecasts, write_summary
+    fc = build_forecasts(config.DATA_PROCESSED, config.MODELS_DIR)
+    write_summary(fc, config.ROOT / "reports" / "rent_forecast_summary.md")
+    print(f"[Forecasts] {fc['method']['chosen']}, coverage {fc['method']['out_of_time_coverage']}")
     # Keep the DuckDB query store in sync with the freshly built processed data.
     try:
         from src.data.store import build_store

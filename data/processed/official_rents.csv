@@ -1,0 +1,2953 @@
+area_code,area_name,level,region,period,measure,rent,annual_change_pct
+K02000001,United Kingdom,nation,,2026-10,All,1411,3.806893
+K02000001,United Kingdom,nation,,2026-10,1 bed,1145,3.813675
+K02000001,United Kingdom,nation,,2026-10,2 bed,1293,3.969688
+K02000001,United Kingdom,nation,,2026-10,3 bed,1443,4.162764
+K02000001,United Kingdom,nation,,2026-10,4+ bed,2097,3.51192
+K02000001,United Kingdom,nation,,2026-10,Detached,1603,3.43312
+K02000001,United Kingdom,nation,,2026-10,Semi-detached,1406,4.20306
+K02000001,United Kingdom,nation,,2026-10,Terraced,1399,4.092126
+K02000001,United Kingdom,nation,,2026-10,Flat,1377,3.496344
+E92000001,England,nation,,2026-10,All,1472,4.012426
+E92000001,England,nation,,2026-10,1 bed,1205,3.930468
+E92000001,England,nation,,2026-10,2 bed,1347,4.151812
+E92000001,England,nation,,2026-10,3 bed,1504,4.420957
+E92000001,England,nation,,2026-10,4+ bed,2180,3.650872
+E92000001,England,nation,,2026-10,Detached,1655,3.865325
+E92000001,England,nation,,2026-10,Semi-detached,1464,4.406398
+E92000001,England,nation,,2026-10,Terraced,1448,4.245146
+E92000001,England,nation,,2026-10,Flat,1456,3.682576
+W92000004,Wales,nation,,2026-10,All,849,3.890179
+W92000004,Wales,nation,,2026-10,1 bed,637,3.366594
+W92000004,Wales,nation,,2026-10,2 bed,782,3.68093
+W92000004,Wales,nation,,2026-10,3 bed,893,3.97722
+W92000004,Wales,nation,,2026-10,4+ bed,1252,3.557628
+W92000004,Wales,nation,,2026-10,Detached,1088,4.377615
+W92000004,Wales,nation,,2026-10,Semi-detached,880,4.365312
+W92000004,Wales,nation,,2026-10,Terraced,836,3.911701
+W92000004,Wales,nation,,2026-10,Flat,708,3.061845
+E12000001,North East,region,,2026-10,All,793,4.91182
+E12000001,North East,region,,2026-10,1 bed,557,4.860388
+E12000001,North East,region,,2026-10,2 bed,701,5.110779
+E12000001,North East,region,,2026-10,3 bed,841,5.277414
+E12000001,North East,region,,2026-10,4+ bed,1224,4.197727
+E12000001,North East,region,,2026-10,Detached,1106,4.51604
+E12000001,North East,region,,2026-10,Semi-detached,837,5.338021
+E12000001,North East,region,,2026-10,Terraced,821,4.922633
+E12000001,North East,region,,2026-10,Flat,666,4.528736
+E12000002,North West,region,,2026-10,All,979,5.630258
+E12000002,North West,region,,2026-10,1 bed,708,5.328464
+E12000002,North West,region,,2026-10,2 bed,891,5.66113
+E12000002,North West,region,,2026-10,3 bed,1068,5.997807
+E12000002,North West,region,,2026-10,4+ bed,1513,4.98906
+E12000002,North West,region,,2026-10,Detached,1362,5.250612
+E12000002,North West,region,,2026-10,Semi-detached,1073,5.931799
+E12000002,North West,region,,2026-10,Terraced,986,5.803779
+E12000002,North West,region,,2026-10,Flat,823,5.133631
+E12000003,Yorkshire and The Humber,region,,2026-10,All,872,4.737029
+E12000003,Yorkshire and The Humber,region,,2026-10,1 bed,619,4.707026
+E12000003,Yorkshire and The Humber,region,,2026-10,2 bed,776,4.964981
+E12000003,Yorkshire and The Humber,region,,2026-10,3 bed,923,5.25127
+E12000003,Yorkshire and The Humber,region,,2026-10,4+ bed,1333,4.166468
+E12000003,Yorkshire and The Humber,region,,2026-10,Detached,1175,4.584116
+E12000003,Yorkshire and The Humber,region,,2026-10,Semi-detached,932,5.107552
+E12000003,Yorkshire and The Humber,region,,2026-10,Terraced,864,4.731614
+E12000003,Yorkshire and The Humber,region,,2026-10,Flat,708,4.314438
+E12000004,East Midlands,region,,2026-10,All,928,3.500088
+E12000004,East Midlands,region,,2026-10,1 bed,653,3.426035
+E12000004,East Midlands,region,,2026-10,2 bed,832,3.640233
+E12000004,East Midlands,region,,2026-10,3 bed,1001,3.85724
+E12000004,East Midlands,region,,2026-10,4+ bed,1414,2.96855
+E12000004,East Midlands,region,,2026-10,Detached,1218,3.266607
+E12000004,East Midlands,region,,2026-10,Semi-detached,974,3.823672
+E12000004,East Midlands,region,,2026-10,Terraced,907,3.565581
+E12000004,East Midlands,region,,2026-10,Flat,745,3.082879
+E12000005,West Midlands,region,,2026-10,All,983,3.710884
+E12000005,West Midlands,region,,2026-10,1 bed,712,3.506081
+E12000005,West Midlands,region,,2026-10,2 bed,887,3.769738
+E12000005,West Midlands,region,,2026-10,3 bed,1054,4.082404
+E12000005,West Midlands,region,,2026-10,4+ bed,1486,3.268102
+E12000005,West Midlands,region,,2026-10,Detached,1308,3.42018
+E12000005,West Midlands,region,,2026-10,Semi-detached,1039,4.042681
+E12000005,West Midlands,region,,2026-10,Terraced,973,3.816287
+E12000005,West Midlands,region,,2026-10,Flat,800,3.311237
+E12000006,East of England,region,,2026-10,All,1302,3.728687
+E12000006,East of England,region,,2026-10,1 bed,902,3.700075
+E12000006,East of England,region,,2026-10,2 bed,1156,3.805084
+E12000006,East of England,region,,2026-10,3 bed,1408,4.109223
+E12000006,East of England,region,,2026-10,4+ bed,1994,3.33268
+E12000006,East of England,region,,2026-10,Detached,1769,3.583537
+E12000006,East of England,region,,2026-10,Semi-detached,1418,4.096243
+E12000006,East of England,region,,2026-10,Terraced,1282,3.857023
+E12000006,East of England,region,,2026-10,Flat,1033,3.365838
+E12000007,London,region,,2026-10,All,2350,3.771312
+E12000007,London,region,,2026-10,1 bed,1774,3.838163
+E12000007,London,region,,2026-10,2 bed,2251,3.8953
+E12000007,London,region,,2026-10,3 bed,2666,4.135992
+E12000007,London,region,,2026-10,4+ bed,3672,3.24055
+E12000007,London,region,,2026-10,Detached,2945,4.043159
+E12000007,London,region,,2026-10,Semi-detached,2976,4.223337
+E12000007,London,region,,2026-10,Terraced,2862,3.93402
+E12000007,London,region,,2026-10,Flat,2071,3.61036
+E12000008,South East,region,,2026-10,All,1448,3.919324
+E12000008,South East,region,,2026-10,1 bed,1007,3.924301
+E12000008,South East,region,,2026-10,2 bed,1293,4.033677
+E12000008,South East,region,,2026-10,3 bed,1578,4.364409
+E12000008,South East,region,,2026-10,4+ bed,2248,3.607662
+E12000008,South East,region,,2026-10,Detached,2018,3.923983
+E12000008,South East,region,,2026-10,Semi-detached,1600,4.322167
+E12000008,South East,region,,2026-10,Terraced,1469,4.029196
+E12000008,South East,region,,2026-10,Flat,1162,3.607182
+E12000009,South West,region,,2026-10,All,1254,3.338198
+E12000009,South West,region,,2026-10,1 bed,836,3.336329
+E12000009,South West,region,,2026-10,2 bed,1073,3.48811
+E12000009,South West,region,,2026-10,3 bed,1309,3.766929
+E12000009,South West,region,,2026-10,4+ bed,1887,2.929116
+E12000009,South West,region,,2026-10,Detached,1617,3.233648
+E12000009,South West,region,,2026-10,Semi-detached,1368,3.743151
+E12000009,South West,region,,2026-10,Terraced,1283,3.423931
+E12000009,South West,region,,2026-10,Flat,984,2.987891
+E06000001,Hartlepool,la,North East,2026-10,All,567,2.406005
+E06000001,Hartlepool,la,North East,2026-10,1 bed,407,2.141711
+E06000001,Hartlepool,la,North East,2026-10,2 bed,517,2.658729
+E06000001,Hartlepool,la,North East,2026-10,3 bed,619,2.731464
+E06000001,Hartlepool,la,North East,2026-10,4+ bed,818,1.524886
+E06000001,Hartlepool,la,North East,2026-10,Detached,814,1.840389
+E06000001,Hartlepool,la,North East,2026-10,Semi-detached,631,2.517088
+E06000001,Hartlepool,la,North East,2026-10,Terraced,562,2.804516
+E06000001,Hartlepool,la,North East,2026-10,Flat,489,1.761208
+E06000002,Middlesbrough,la,North East,2026-10,All,698,3.543352
+E06000002,Middlesbrough,la,North East,2026-10,1 bed,497,3.199347
+E06000002,Middlesbrough,la,North East,2026-10,2 bed,633,3.70639
+E06000002,Middlesbrough,la,North East,2026-10,3 bed,754,4.057409
+E06000002,Middlesbrough,la,North East,2026-10,4+ bed,989,2.961877
+E06000002,Middlesbrough,la,North East,2026-10,Detached,950,3.244888
+E06000002,Middlesbrough,la,North East,2026-10,Semi-detached,758,3.883113
+E06000002,Middlesbrough,la,North East,2026-10,Terraced,710,3.909084
+E06000002,Middlesbrough,la,North East,2026-10,Flat,595,2.627956
+E06000003,Redcar and Cleveland,la,North East,2026-10,All,647,2.180247
+E06000003,Redcar and Cleveland,la,North East,2026-10,1 bed,458,1.994588
+E06000003,Redcar and Cleveland,la,North East,2026-10,2 bed,612,2.243446
+E06000003,Redcar and Cleveland,la,North East,2026-10,3 bed,728,2.336508
+E06000003,Redcar and Cleveland,la,North East,2026-10,4+ bed,1062,1.396715
+E06000003,Redcar and Cleveland,la,North East,2026-10,Detached,917,1.630758
+E06000003,Redcar and Cleveland,la,North East,2026-10,Semi-detached,721,2.331471
+E06000003,Redcar and Cleveland,la,North East,2026-10,Terraced,656,2.429332
+E06000003,Redcar and Cleveland,la,North East,2026-10,Flat,528,1.709762
+E06000004,Stockton-on-Tees,la,North East,2026-10,All,737,3.057759
+E06000004,Stockton-on-Tees,la,North East,2026-10,1 bed,537,2.994289
+E06000004,Stockton-on-Tees,la,North East,2026-10,2 bed,671,3.195979
+E06000004,Stockton-on-Tees,la,North East,2026-10,3 bed,801,3.529688
+E06000004,Stockton-on-Tees,la,North East,2026-10,4+ bed,1170,2.241201
+E06000004,Stockton-on-Tees,la,North East,2026-10,Detached,1088,2.452334
+E06000004,Stockton-on-Tees,la,North East,2026-10,Semi-detached,789,3.348784
+E06000004,Stockton-on-Tees,la,North East,2026-10,Terraced,743,3.333094
+E06000004,Stockton-on-Tees,la,North East,2026-10,Flat,626,2.43072
+E06000005,Darlington,la,North East,2026-10,All,695,6.239256
+E06000005,Darlington,la,North East,2026-10,1 bed,499,5.746585
+E06000005,Darlington,la,North East,2026-10,2 bed,634,6.393793
+E06000005,Darlington,la,North East,2026-10,3 bed,773,6.568269
+E06000005,Darlington,la,North East,2026-10,4+ bed,1100,5.502683
+E06000005,Darlington,la,North East,2026-10,Detached,1018,5.810121
+E06000005,Darlington,la,North East,2026-10,Semi-detached,757,6.508558
+E06000005,Darlington,la,North East,2026-10,Terraced,695,6.512511
+E06000005,Darlington,la,North East,2026-10,Flat,582,5.536371
+E06000006,Halton,la,North West,2026-10,All,756,6.375349
+E06000006,Halton,la,North West,2026-10,1 bed,550,5.857803
+E06000006,Halton,la,North West,2026-10,2 bed,692,6.303312
+E06000006,Halton,la,North West,2026-10,3 bed,835,6.75829
+E06000006,Halton,la,North West,2026-10,4+ bed,1173,5.583834
+E06000006,Halton,la,North West,2026-10,Detached,1076,6.000295
+E06000006,Halton,la,North West,2026-10,Semi-detached,821,6.716362
+E06000006,Halton,la,North West,2026-10,Terraced,759,6.719286
+E06000006,Halton,la,North West,2026-10,Flat,636,5.526028
+E06000007,Warrington,la,North West,2026-10,All,909,5.412269
+E06000007,Warrington,la,North West,2026-10,1 bed,679,5.210004
+E06000007,Warrington,la,North West,2026-10,2 bed,844,5.412739
+E06000007,Warrington,la,North West,2026-10,3 bed,1028,5.854011
+E06000007,Warrington,la,North West,2026-10,4+ bed,1471,4.916096
+E06000007,Warrington,la,North West,2026-10,Detached,1311,4.971046
+E06000007,Warrington,la,North West,2026-10,Semi-detached,985,5.672901
+E06000007,Warrington,la,North West,2026-10,Terraced,897,5.655192
+E06000007,Warrington,la,North West,2026-10,Flat,783,4.816492
+E06000008,Blackburn with Darwen,la,North West,2026-10,All,716,3.386076
+E06000008,Blackburn with Darwen,la,North West,2026-10,1 bed,535,3.319289
+E06000008,Blackburn with Darwen,la,North West,2026-10,2 bed,664,3.611077
+E06000008,Blackburn with Darwen,la,North West,2026-10,3 bed,784,3.636278
+E06000008,Blackburn with Darwen,la,North West,2026-10,4+ bed,1115,2.444357
+E06000008,Blackburn with Darwen,la,North West,2026-10,Detached,1022,2.750218
+E06000008,Blackburn with Darwen,la,North West,2026-10,Semi-detached,769,3.658838
+E06000008,Blackburn with Darwen,la,North West,2026-10,Terraced,724,3.612236
+E06000008,Blackburn with Darwen,la,North West,2026-10,Flat,602,2.969255
+E06000009,Blackpool,la,North West,2026-10,All,727,7.346449
+E06000009,Blackpool,la,North West,2026-10,1 bed,506,7.071783
+E06000009,Blackpool,la,North West,2026-10,2 bed,660,7.432753
+E06000009,Blackpool,la,North West,2026-10,3 bed,804,7.73227
+E06000009,Blackpool,la,North West,2026-10,4+ bed,1061,6.881945
+E06000009,Blackpool,la,North West,2026-10,Detached,991,7.183916
+E06000009,Blackpool,la,North West,2026-10,Semi-detached,821,7.677526
+E06000009,Blackpool,la,North West,2026-10,Terraced,751,7.459213
+E06000009,Blackpool,la,North West,2026-10,Flat,571,6.77192
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,All,697,6.946192
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,1 bed,501,6.723236
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,2 bed,625,7.249179
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,3 bed,748,7.341196
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,4+ bed,990,6.723933
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,Detached,959,6.366432
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,Semi-detached,743,7.391087
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,Terraced,690,7.051129
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-10,Flat,565,6.434718
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,All,725,5.160063
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,1 bed,502,4.925323
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,2 bed,651,5.184353
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,3 bed,801,5.279427
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,4+ bed,1165,4.505049
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,Detached,1030,4.865002
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,Semi-detached,775,5.33256
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,Terraced,702,5.319795
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-10,Flat,573,4.717348
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,All,651,7.510569
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,1 bed,458,7.447035
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,2 bed,587,7.689435
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,3 bed,687,7.807747
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,4+ bed,960,6.651152
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,Detached,872,6.949378
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,Semi-detached,712,7.559339
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,Terraced,650,7.76108
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-10,Flat,507,7.22791
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,All,656,5.495481
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,1 bed,473,5.407114
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,2 bed,619,5.499622
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,3 bed,754,5.628912
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,4+ bed,1061,4.658914
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,Detached,881,5.150915
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,Semi-detached,705,5.671122
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,Terraced,658,5.591296
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-10,Flat,522,5.233996
+E06000014,York,la,Yorkshire and The Humber,2026-10,All,1209,6.689784
+E06000014,York,la,Yorkshire and The Humber,2026-10,1 bed,881,6.361846
+E06000014,York,la,Yorkshire and The Humber,2026-10,2 bed,1091,6.685622
+E06000014,York,la,Yorkshire and The Humber,2026-10,3 bed,1291,7.027396
+E06000014,York,la,Yorkshire and The Humber,2026-10,4+ bed,1762,6.218557
+E06000014,York,la,Yorkshire and The Humber,2026-10,Detached,1576,6.811934
+E06000014,York,la,Yorkshire and The Humber,2026-10,Semi-detached,1299,6.98037
+E06000014,York,la,Yorkshire and The Humber,2026-10,Terraced,1201,6.738278
+E06000014,York,la,Yorkshire and The Humber,2026-10,Flat,1016,6.175312
+E06000015,Derby,la,East Midlands,2026-10,All,882,5.706362
+E06000015,Derby,la,East Midlands,2026-10,1 bed,622,5.541381
+E06000015,Derby,la,East Midlands,2026-10,2 bed,798,5.989363
+E06000015,Derby,la,East Midlands,2026-10,3 bed,962,6.208606
+E06000015,Derby,la,East Midlands,2026-10,4+ bed,1334,5.170412
+E06000015,Derby,la,East Midlands,2026-10,Detached,1106,5.281538
+E06000015,Derby,la,East Midlands,2026-10,Semi-detached,938,6.12517
+E06000015,Derby,la,East Midlands,2026-10,Terraced,867,5.900272
+E06000015,Derby,la,East Midlands,2026-10,Flat,725,5.105955
+E06000016,Leicester,la,East Midlands,2026-10,All,1020,0.370136
+E06000016,Leicester,la,East Midlands,2026-10,1 bed,713,0.167632
+E06000016,Leicester,la,East Midlands,2026-10,2 bed,890,0.362988
+E06000016,Leicester,la,East Midlands,2026-10,3 bed,1043,0.866667
+E06000016,Leicester,la,East Midlands,2026-10,4+ bed,1450,-0.122207
+E06000016,Leicester,la,East Midlands,2026-10,Detached,1352,0.170654
+E06000016,Leicester,la,East Midlands,2026-10,Semi-detached,1071,0.699497
+E06000016,Leicester,la,East Midlands,2026-10,Terraced,1005,0.483949
+E06000016,Leicester,la,East Midlands,2026-10,Flat,795,-0.164451
+E06000017,Rutland,la,East Midlands,2026-10,All,972,2.308186
+E06000017,Rutland,la,East Midlands,2026-10,1 bed,683,2.368054
+E06000017,Rutland,la,East Midlands,2026-10,2 bed,849,2.416264
+E06000017,Rutland,la,East Midlands,2026-10,3 bed,1006,2.409596
+E06000017,Rutland,la,East Midlands,2026-10,4+ bed,1532,1.588238
+E06000017,Rutland,la,East Midlands,2026-10,Detached,1402,2.001558
+E06000017,Rutland,la,East Midlands,2026-10,Semi-detached,962,2.5435
+E06000017,Rutland,la,East Midlands,2026-10,Terraced,919,2.360195
+E06000017,Rutland,la,East Midlands,2026-10,Flat,777,2.140799
+E06000018,Nottingham,la,East Midlands,2026-10,All,1017,1.645046
+E06000018,Nottingham,la,East Midlands,2026-10,1 bed,736,1.174108
+E06000018,Nottingham,la,East Midlands,2026-10,2 bed,917,1.530033
+E06000018,Nottingham,la,East Midlands,2026-10,3 bed,1056,2.144208
+E06000018,Nottingham,la,East Midlands,2026-10,4+ bed,1465,1.023937
+E06000018,Nottingham,la,East Midlands,2026-10,Detached,1310,1.260182
+E06000018,Nottingham,la,East Midlands,2026-10,Semi-detached,1065,2.012458
+E06000018,Nottingham,la,East Midlands,2026-10,Terraced,997,1.91893
+E06000018,Nottingham,la,East Midlands,2026-10,Flat,838,0.978446
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,All,839,2.602173
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,1 bed,608,2.482968
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,2 bed,790,2.656225
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,3 bed,976,2.75186
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,4+ bed,1373,2.035341
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,Detached,1156,2.358853
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,Semi-detached,929,2.883012
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,Terraced,798,2.769703
+E06000019,"Herefordshire, County of",la,West Midlands,2026-10,Flat,667,2.125136
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,All,862,5.637324
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,1 bed,599,5.448712
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,2 bed,771,5.617968
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,3 bed,956,5.907305
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,4+ bed,1357,4.948528
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,Detached,1199,5.225535
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,Semi-detached,914,5.962111
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,Terraced,845,5.825608
+E06000020,Telford and Wrekin,la,West Midlands,2026-10,Flat,684,5.234824
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,All,724,4.781303
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,1 bed,524,4.781185
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,2 bed,671,5.13617
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,3 bed,807,5.088961
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,4+ bed,1093,4.100056
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,Detached,917,4.335521
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,Semi-detached,773,5.036813
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,Terraced,732,4.894467
+E06000021,Stoke-on-Trent,la,West Midlands,2026-10,Flat,583,4.553873
+E06000022,Bath and North East Somerset,la,South West,2026-10,All,1906,7.672707
+E06000022,Bath and North East Somerset,la,South West,2026-10,1 bed,1219,7.612301
+E06000022,Bath and North East Somerset,la,South West,2026-10,2 bed,1541,8.023471
+E06000022,Bath and North East Somerset,la,South West,2026-10,3 bed,1834,8.315772
+E06000022,Bath and North East Somerset,la,South West,2026-10,4+ bed,2562,6.969568
+E06000022,Bath and North East Somerset,la,South West,2026-10,Detached,2427,7.597391
+E06000022,Bath and North East Somerset,la,South West,2026-10,Semi-detached,2029,7.977559
+E06000022,Bath and North East Somerset,la,South West,2026-10,Terraced,2044,7.694467
+E06000022,Bath and North East Somerset,la,South West,2026-10,Flat,1405,7.433589
+E06000023,"Bristol, City of",la,South West,2026-10,All,1907,4.543271
+E06000023,"Bristol, City of",la,South West,2026-10,1 bed,1239,4.410003
+E06000023,"Bristol, City of",la,South West,2026-10,2 bed,1563,4.572531
+E06000023,"Bristol, City of",la,South West,2026-10,3 bed,1783,5.119807
+E06000023,"Bristol, City of",la,South West,2026-10,4+ bed,2579,4.103236
+E06000023,"Bristol, City of",la,South West,2026-10,Detached,2133,4.388672
+E06000023,"Bristol, City of",la,South West,2026-10,Semi-detached,2121,4.931535
+E06000023,"Bristol, City of",la,South West,2026-10,Terraced,2035,4.667509
+E06000023,"Bristol, City of",la,South West,2026-10,Flat,1524,4.170837
+E06000024,North Somerset,la,South West,2026-10,All,1216,2.895445
+E06000024,North Somerset,la,South West,2026-10,1 bed,824,2.89743
+E06000024,North Somerset,la,South West,2026-10,2 bed,1085,2.949599
+E06000024,North Somerset,la,South West,2026-10,3 bed,1355,3.33122
+E06000024,North Somerset,la,South West,2026-10,4+ bed,1857,2.547804
+E06000024,North Somerset,la,South West,2026-10,Detached,1604,2.599148
+E06000024,North Somerset,la,South West,2026-10,Semi-detached,1320,3.356424
+E06000024,North Somerset,la,South West,2026-10,Terraced,1221,3.162457
+E06000024,North Somerset,la,South West,2026-10,Flat,992,2.419894
+E06000025,South Gloucestershire,la,South West,2026-10,All,1484,4.213789
+E06000025,South Gloucestershire,la,South West,2026-10,1 bed,1013,4.57383
+E06000025,South Gloucestershire,la,South West,2026-10,2 bed,1292,4.561861
+E06000025,South Gloucestershire,la,South West,2026-10,3 bed,1579,4.732632
+E06000025,South Gloucestershire,la,South West,2026-10,4+ bed,2259,3.775068
+E06000025,South Gloucestershire,la,South West,2026-10,Detached,2005,4.039558
+E06000025,South Gloucestershire,la,South West,2026-10,Semi-detached,1595,4.509289
+E06000025,South Gloucestershire,la,South West,2026-10,Terraced,1488,4.384729
+E06000025,South Gloucestershire,la,South West,2026-10,Flat,1169,3.862119
+E06000026,Plymouth,la,South West,2026-10,All,1014,3.784446
+E06000026,Plymouth,la,South West,2026-10,1 bed,711,3.569067
+E06000026,Plymouth,la,South West,2026-10,2 bed,894,3.85317
+E06000026,Plymouth,la,South West,2026-10,3 bed,1076,4.188896
+E06000026,Plymouth,la,South West,2026-10,4+ bed,1508,3.382282
+E06000026,Plymouth,la,South West,2026-10,Detached,1330,3.699876
+E06000026,Plymouth,la,South West,2026-10,Semi-detached,1075,4.293153
+E06000026,Plymouth,la,South West,2026-10,Terraced,1056,3.916818
+E06000026,Plymouth,la,South West,2026-10,Flat,806,3.294502
+E06000027,Torbay,la,South West,2026-10,All,926,3.728827
+E06000027,Torbay,la,South West,2026-10,1 bed,622,3.651307
+E06000027,Torbay,la,South West,2026-10,2 bed,821,3.805536
+E06000027,Torbay,la,South West,2026-10,3 bed,1004,4.081117
+E06000027,Torbay,la,South West,2026-10,4+ bed,1304,3.41691
+E06000027,Torbay,la,South West,2026-10,Detached,1224,3.670937
+E06000027,Torbay,la,South West,2026-10,Semi-detached,1002,4.133014
+E06000027,Torbay,la,South West,2026-10,Terraced,944,3.789686
+E06000027,Torbay,la,South West,2026-10,Flat,716,3.351703
+E06000030,Swindon,la,South West,2026-10,All,1112,5.005637
+E06000030,Swindon,la,South West,2026-10,1 bed,830,4.774941
+E06000030,Swindon,la,South West,2026-10,2 bed,1001,5.06811
+E06000030,Swindon,la,South West,2026-10,3 bed,1237,5.404313
+E06000030,Swindon,la,South West,2026-10,4+ bed,1681,4.584832
+E06000030,Swindon,la,South West,2026-10,Detached,1538,4.941042
+E06000030,Swindon,la,South West,2026-10,Semi-detached,1193,5.413967
+E06000030,Swindon,la,South West,2026-10,Terraced,1083,5.185874
+E06000030,Swindon,la,South West,2026-10,Flat,919,4.526641
+E06000031,Peterborough,la,East of England,2026-10,All,1016,4.901658
+E06000031,Peterborough,la,East of England,2026-10,1 bed,712,5.080698
+E06000031,Peterborough,la,East of England,2026-10,2 bed,898,5.049751
+E06000031,Peterborough,la,East of England,2026-10,3 bed,1085,5.473819
+E06000031,Peterborough,la,East of England,2026-10,4+ bed,1562,4.458607
+E06000031,Peterborough,la,East of England,2026-10,Detached,1411,4.536526
+E06000031,Peterborough,la,East of England,2026-10,Semi-detached,1068,5.229984
+E06000031,Peterborough,la,East of England,2026-10,Terraced,1022,5.141417
+E06000031,Peterborough,la,East of England,2026-10,Flat,807,4.596065
+E06000032,Luton,la,East of England,2026-10,All,1242,4.364292
+E06000032,Luton,la,East of England,2026-10,1 bed,920,4.223718
+E06000032,Luton,la,East of England,2026-10,2 bed,1132,4.503152
+E06000032,Luton,la,East of England,2026-10,3 bed,1361,4.759227
+E06000032,Luton,la,East of England,2026-10,4+ bed,1845,3.9606
+E06000032,Luton,la,East of England,2026-10,Detached,1632,4.116196
+E06000032,Luton,la,East of England,2026-10,Semi-detached,1353,4.610113
+E06000032,Luton,la,East of England,2026-10,Terraced,1238,4.581146
+E06000032,Luton,la,East of England,2026-10,Flat,990,4.027702
+E06000033,Southend-on-Sea,la,East of England,2026-10,All,1326,5.195997
+E06000033,Southend-on-Sea,la,East of England,2026-10,1 bed,890,5.074239
+E06000033,Southend-on-Sea,la,East of England,2026-10,2 bed,1132,5.028983
+E06000033,Southend-on-Sea,la,East of England,2026-10,3 bed,1382,5.486771
+E06000033,Southend-on-Sea,la,East of England,2026-10,4+ bed,1893,4.842709
+E06000033,Southend-on-Sea,la,East of England,2026-10,Detached,1691,5.05988
+E06000033,Southend-on-Sea,la,East of England,2026-10,Semi-detached,1444,5.519187
+E06000033,Southend-on-Sea,la,East of England,2026-10,Terraced,1343,5.429201
+E06000033,Southend-on-Sea,la,East of England,2026-10,Flat,1048,4.701161
+E06000034,Thurrock,la,East of England,2026-10,All,1395,5.538047
+E06000034,Thurrock,la,East of England,2026-10,1 bed,949,5.545237
+E06000034,Thurrock,la,East of England,2026-10,2 bed,1227,5.457578
+E06000034,Thurrock,la,East of England,2026-10,3 bed,1491,5.951916
+E06000034,Thurrock,la,East of England,2026-10,4+ bed,2218,5.133734
+E06000034,Thurrock,la,East of England,2026-10,Detached,1953,5.503491
+E06000034,Thurrock,la,East of England,2026-10,Semi-detached,1520,5.903339
+E06000034,Thurrock,la,East of England,2026-10,Terraced,1364,5.68919
+E06000034,Thurrock,la,East of England,2026-10,Flat,1087,5.06852
+E06000035,Medway,la,South East,2026-10,All,1237,1.426448
+E06000035,Medway,la,South East,2026-10,1 bed,898,1.441625
+E06000035,Medway,la,South East,2026-10,2 bed,1142,1.564842
+E06000035,Medway,la,South East,2026-10,3 bed,1344,1.901927
+E06000035,Medway,la,South East,2026-10,4+ bed,1831,1.114911
+E06000035,Medway,la,South East,2026-10,Detached,1662,1.445735
+E06000035,Medway,la,South East,2026-10,Semi-detached,1389,1.855783
+E06000035,Medway,la,South East,2026-10,Terraced,1255,1.622099
+E06000035,Medway,la,South East,2026-10,Flat,1018,1.034093
+E06000036,Bracknell Forest,la,South East,2026-10,All,1503,3.051189
+E06000036,Bracknell Forest,la,South East,2026-10,1 bed,1095,2.89318
+E06000036,Bracknell Forest,la,South East,2026-10,2 bed,1382,2.891596
+E06000036,Bracknell Forest,la,South East,2026-10,3 bed,1691,3.302244
+E06000036,Bracknell Forest,la,South East,2026-10,4+ bed,2437,2.509748
+E06000036,Bracknell Forest,la,South East,2026-10,Detached,2255,2.823495
+E06000036,Bracknell Forest,la,South East,2026-10,Semi-detached,1673,3.354454
+E06000036,Bracknell Forest,la,South East,2026-10,Terraced,1463,3.384445
+E06000036,Bracknell Forest,la,South East,2026-10,Flat,1209,2.693626
+E06000037,West Berkshire,la,South East,2026-10,All,1375,7.678391
+E06000037,West Berkshire,la,South East,2026-10,1 bed,961,7.858319
+E06000037,West Berkshire,la,South East,2026-10,2 bed,1249,7.669099
+E06000037,West Berkshire,la,South East,2026-10,3 bed,1555,8.060692
+E06000037,West Berkshire,la,South East,2026-10,4+ bed,2258,7.120269
+E06000037,West Berkshire,la,South East,2026-10,Detached,2069,7.491333
+E06000037,West Berkshire,la,South East,2026-10,Semi-detached,1489,8.16895
+E06000037,West Berkshire,la,South East,2026-10,Terraced,1308,8.076841
+E06000037,West Berkshire,la,South East,2026-10,Flat,1132,7.181768
+E06000038,Reading,la,South East,2026-10,All,1584,0.591925
+E06000038,Reading,la,South East,2026-10,1 bed,1121,0.419924
+E06000038,Reading,la,South East,2026-10,2 bed,1401,0.491026
+E06000038,Reading,la,South East,2026-10,3 bed,1683,1.029778
+E06000038,Reading,la,South East,2026-10,4+ bed,2368,0.259733
+E06000038,Reading,la,South East,2026-10,Detached,2188,0.465347
+E06000038,Reading,la,South East,2026-10,Semi-detached,1769,1.072861
+E06000038,Reading,la,South East,2026-10,Terraced,1618,0.922995
+E06000038,Reading,la,South East,2026-10,Flat,1277,0.130735
+E06000039,Slough,la,South East,2026-10,All,1570,2.500379
+E06000039,Slough,la,South East,2026-10,1 bed,1143,2.244903
+E06000039,Slough,la,South East,2026-10,2 bed,1428,2.283551
+E06000039,Slough,la,South East,2026-10,3 bed,1721,2.91648
+E06000039,Slough,la,South East,2026-10,4+ bed,2444,1.942293
+E06000039,Slough,la,South East,2026-10,Detached,2147,2.478925
+E06000039,Slough,la,South East,2026-10,Semi-detached,1775,2.780026
+E06000039,Slough,la,South East,2026-10,Terraced,1580,2.925029
+E06000039,Slough,la,South East,2026-10,Flat,1257,1.982476
+E06000040,Windsor and Maidenhead,la,South East,2026-10,All,1806,0.820924
+E06000040,Windsor and Maidenhead,la,South East,2026-10,1 bed,1248,0.822662
+E06000040,Windsor and Maidenhead,la,South East,2026-10,2 bed,1572,0.792568
+E06000040,Windsor and Maidenhead,la,South East,2026-10,3 bed,1926,1.257532
+E06000040,Windsor and Maidenhead,la,South East,2026-10,4+ bed,2707,0.488491
+E06000040,Windsor and Maidenhead,la,South East,2026-10,Detached,2533,0.729628
+E06000040,Windsor and Maidenhead,la,South East,2026-10,Semi-detached,1948,1.250191
+E06000040,Windsor and Maidenhead,la,South East,2026-10,Terraced,1827,1.009732
+E06000040,Windsor and Maidenhead,la,South East,2026-10,Flat,1451,0.446547
+E06000041,Wokingham,la,South East,2026-10,All,1475,-0.323754
+E06000041,Wokingham,la,South East,2026-10,1 bed,1060,-0.156446
+E06000041,Wokingham,la,South East,2026-10,2 bed,1354,-0.345855
+E06000041,Wokingham,la,South East,2026-10,3 bed,1658,-0.086293
+E06000041,Wokingham,la,South East,2026-10,4+ bed,2315,-0.793524
+E06000041,Wokingham,la,South East,2026-10,Detached,2135,-0.394098
+E06000041,Wokingham,la,South East,2026-10,Semi-detached,1692,-0.018109
+E06000041,Wokingham,la,South East,2026-10,Terraced,1411,-0.060356
+E06000041,Wokingham,la,South East,2026-10,Flat,1212,-0.652683
+E06000042,Milton Keynes,la,South East,2026-10,All,1348,4.170663
+E06000042,Milton Keynes,la,South East,2026-10,1 bed,981,4.343275
+E06000042,Milton Keynes,la,South East,2026-10,2 bed,1222,4.422397
+E06000042,Milton Keynes,la,South East,2026-10,3 bed,1459,4.716882
+E06000042,Milton Keynes,la,South East,2026-10,4+ bed,2098,3.878124
+E06000042,Milton Keynes,la,South East,2026-10,Detached,1962,3.999822
+E06000042,Milton Keynes,la,South East,2026-10,Semi-detached,1430,4.604251
+E06000042,Milton Keynes,la,South East,2026-10,Terraced,1351,4.450471
+E06000042,Milton Keynes,la,South East,2026-10,Flat,1140,3.809665
+E06000043,Brighton and Hove,la,South East,2026-10,All,1823,-0.558407
+E06000043,Brighton and Hove,la,South East,2026-10,1 bed,1198,-0.351695
+E06000043,Brighton and Hove,la,South East,2026-10,2 bed,1531,-0.278714
+E06000043,Brighton and Hove,la,South East,2026-10,3 bed,1814,-0.043309
+E06000043,Brighton and Hove,la,South East,2026-10,4+ bed,2499,-1.032219
+E06000043,Brighton and Hove,la,South East,2026-10,Detached,2240,-0.665744
+E06000043,Brighton and Hove,la,South East,2026-10,Semi-detached,2044,-0.268037
+E06000043,Brighton and Hove,la,South East,2026-10,Terraced,2003,-0.617205
+E06000043,Brighton and Hove,la,South East,2026-10,Flat,1390,-0.63067
+E06000044,Portsmouth,la,South East,2026-10,All,1385,3.696155
+E06000044,Portsmouth,la,South East,2026-10,1 bed,910,3.572712
+E06000044,Portsmouth,la,South East,2026-10,2 bed,1149,3.837542
+E06000044,Portsmouth,la,South East,2026-10,3 bed,1379,4.321041
+E06000044,Portsmouth,la,South East,2026-10,4+ bed,1985,3.342489
+E06000044,Portsmouth,la,South East,2026-10,Detached,1860,3.745433
+E06000044,Portsmouth,la,South East,2026-10,Semi-detached,1583,4.141367
+E06000044,Portsmouth,la,South East,2026-10,Terraced,1423,3.908611
+E06000044,Portsmouth,la,South East,2026-10,Flat,1055,3.268138
+E06000045,Southampton,la,South East,2026-10,All,1272,4.264974
+E06000045,Southampton,la,South East,2026-10,1 bed,890,4.2105
+E06000045,Southampton,la,South East,2026-10,2 bed,1127,4.208367
+E06000045,Southampton,la,South East,2026-10,3 bed,1375,4.742439
+E06000045,Southampton,la,South East,2026-10,4+ bed,1912,3.691823
+E06000045,Southampton,la,South East,2026-10,Detached,1636,4.166939
+E06000045,Southampton,la,South East,2026-10,Semi-detached,1443,4.630955
+E06000045,Southampton,la,South East,2026-10,Terraced,1346,4.430533
+E06000045,Southampton,la,South East,2026-10,Flat,1010,3.950593
+E06000046,Isle of Wight,la,South East,2026-10,All,955,6.430354
+E06000046,Isle of Wight,la,South East,2026-10,1 bed,665,6.356729
+E06000046,Isle of Wight,la,South East,2026-10,2 bed,876,6.602445
+E06000046,Isle of Wight,la,South East,2026-10,3 bed,1095,6.865964
+E06000046,Isle of Wight,la,South East,2026-10,4+ bed,1524,6.275162
+E06000046,Isle of Wight,la,South East,2026-10,Detached,1277,6.433629
+E06000046,Isle of Wight,la,South East,2026-10,Semi-detached,1055,6.88214
+E06000046,Isle of Wight,la,South East,2026-10,Terraced,993,6.615894
+E06000046,Isle of Wight,la,South East,2026-10,Flat,767,6.027782
+E06000047,County Durham,la,North East,2026-10,All,657,6.236912
+E06000047,County Durham,la,North East,2026-10,1 bed,461,6.56129
+E06000047,County Durham,la,North East,2026-10,2 bed,586,6.88109
+E06000047,County Durham,la,North East,2026-10,3 bed,702,6.842432
+E06000047,County Durham,la,North East,2026-10,4+ bed,1010,5.669845
+E06000047,County Durham,la,North East,2026-10,Detached,887,5.657034
+E06000047,County Durham,la,North East,2026-10,Semi-detached,691,6.467365
+E06000047,County Durham,la,North East,2026-10,Terraced,690,6.568551
+E06000047,County Durham,la,North East,2026-10,Flat,552,5.651322
+E06000049,Cheshire East,la,North West,2026-10,All,1001,7.341228
+E06000049,Cheshire East,la,North West,2026-10,1 bed,707,7.423916
+E06000049,Cheshire East,la,North West,2026-10,2 bed,914,7.688384
+E06000049,Cheshire East,la,North West,2026-10,3 bed,1126,7.862468
+E06000049,Cheshire East,la,North West,2026-10,4+ bed,1637,6.61535
+E06000049,Cheshire East,la,North West,2026-10,Detached,1456,6.813786
+E06000049,Cheshire East,la,North West,2026-10,Semi-detached,1108,7.681327
+E06000049,Cheshire East,la,North West,2026-10,Terraced,985,7.487443
+E06000049,Cheshire East,la,North West,2026-10,Flat,833,6.952615
+E06000050,Cheshire West and Chester,la,North West,2026-10,All,1010,7.34878
+E06000050,Cheshire West and Chester,la,North West,2026-10,1 bed,738,7.38714
+E06000050,Cheshire West and Chester,la,North West,2026-10,2 bed,931,7.509792
+E06000050,Cheshire West and Chester,la,North West,2026-10,3 bed,1144,7.860982
+E06000050,Cheshire West and Chester,la,North West,2026-10,4+ bed,1644,6.817312
+E06000050,Cheshire West and Chester,la,North West,2026-10,Detached,1427,7.039874
+E06000050,Cheshire West and Chester,la,North West,2026-10,Semi-detached,1146,7.644512
+E06000050,Cheshire West and Chester,la,North West,2026-10,Terraced,998,7.524589
+E06000050,Cheshire West and Chester,la,North West,2026-10,Flat,864,6.860935
+E06000051,Shropshire,la,West Midlands,2026-10,All,833,5.224399
+E06000051,Shropshire,la,West Midlands,2026-10,1 bed,615,5.180902
+E06000051,Shropshire,la,West Midlands,2026-10,2 bed,778,5.362801
+E06000051,Shropshire,la,West Midlands,2026-10,3 bed,966,5.451224
+E06000051,Shropshire,la,West Midlands,2026-10,4+ bed,1416,4.704955
+E06000051,Shropshire,la,West Midlands,2026-10,Detached,1136,5.095695
+E06000051,Shropshire,la,West Midlands,2026-10,Semi-detached,890,5.593575
+E06000051,Shropshire,la,West Midlands,2026-10,Terraced,804,5.334749
+E06000051,Shropshire,la,West Midlands,2026-10,Flat,680,4.684269
+E06000052,Cornwall,la,South West,2026-10,All,995,0.416851
+E06000052,Cornwall,la,South West,2026-10,1 bed,685,0.553991
+E06000052,Cornwall,la,South West,2026-10,2 bed,877,0.721278
+E06000052,Cornwall,la,South West,2026-10,3 bed,1074,0.869346
+E06000052,Cornwall,la,South West,2026-10,4+ bed,1496,0.07385
+E06000052,Cornwall,la,South West,2026-10,Detached,1273,0.249092
+E06000052,Cornwall,la,South West,2026-10,Semi-detached,1067,0.813895
+E06000052,Cornwall,la,South West,2026-10,Terraced,1029,0.522447
+E06000052,Cornwall,la,South West,2026-10,Flat,806,0.100582
+E06000054,Wiltshire,la,South West,2026-10,All,1099,5.511767
+E06000054,Wiltshire,la,South West,2026-10,1 bed,761,5.590579
+E06000054,Wiltshire,la,South West,2026-10,2 bed,989,5.737016
+E06000054,Wiltshire,la,South West,2026-10,3 bed,1241,5.935207
+E06000054,Wiltshire,la,South West,2026-10,4+ bed,1768,5.147257
+E06000054,Wiltshire,la,South West,2026-10,Detached,1521,5.339725
+E06000054,Wiltshire,la,South West,2026-10,Semi-detached,1211,5.873936
+E06000054,Wiltshire,la,South West,2026-10,Terraced,1079,5.676352
+E06000054,Wiltshire,la,South West,2026-10,Flat,864,5.146222
+E06000055,Bedford,la,East of England,2026-10,All,1182,3.152345
+E06000055,Bedford,la,East of England,2026-10,1 bed,804,3.094228
+E06000055,Bedford,la,East of England,2026-10,2 bed,1036,3.255264
+E06000055,Bedford,la,East of England,2026-10,3 bed,1271,3.591763
+E06000055,Bedford,la,East of England,2026-10,4+ bed,1820,2.833289
+E06000055,Bedford,la,East of England,2026-10,Detached,1612,3.142486
+E06000055,Bedford,la,East of England,2026-10,Semi-detached,1325,3.464852
+E06000055,Bedford,la,East of England,2026-10,Terraced,1156,3.29545
+E06000055,Bedford,la,East of England,2026-10,Flat,920,2.724985
+E06000056,Central Bedfordshire,la,East of England,2026-10,All,1267,4.73409
+E06000056,Central Bedfordshire,la,East of England,2026-10,1 bed,875,4.815658
+E06000056,Central Bedfordshire,la,East of England,2026-10,2 bed,1113,4.903308
+E06000056,Central Bedfordshire,la,East of England,2026-10,3 bed,1397,5.212362
+E06000056,Central Bedfordshire,la,East of England,2026-10,4+ bed,2072,4.467024
+E06000056,Central Bedfordshire,la,East of England,2026-10,Detached,1785,4.612261
+E06000056,Central Bedfordshire,la,East of England,2026-10,Semi-detached,1373,5.088756
+E06000056,Central Bedfordshire,la,East of England,2026-10,Terraced,1222,4.942609
+E06000056,Central Bedfordshire,la,East of England,2026-10,Flat,1001,4.264185
+E06000057,Northumberland,la,North East,2026-10,All,698,6.768996
+E06000057,Northumberland,la,North East,2026-10,1 bed,496,6.87572
+E06000057,Northumberland,la,North East,2026-10,2 bed,632,6.983478
+E06000057,Northumberland,la,North East,2026-10,3 bed,770,7.08976
+E06000057,Northumberland,la,North East,2026-10,4+ bed,1137,6.072573
+E06000057,Northumberland,la,North East,2026-10,Detached,1006,5.941026
+E06000057,Northumberland,la,North East,2026-10,Semi-detached,751,7.179771
+E06000057,Northumberland,la,North East,2026-10,Terraced,700,6.841761
+E06000057,Northumberland,la,North East,2026-10,Flat,587,6.412757
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,All,1402,1.62619
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,1 bed,919,1.499629
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,2 bed,1172,1.606413
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,3 bed,1462,1.959892
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,4+ bed,2088,1.145649
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,Detached,1879,1.406263
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,Semi-detached,1524,1.995732
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,Terraced,1350,1.841828
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-10,Flat,1077,1.226592
+E06000059,Dorset,la,South West,2026-10,All,1062,3.775417
+E06000059,Dorset,la,South West,2026-10,1 bed,735,3.786543
+E06000059,Dorset,la,South West,2026-10,2 bed,972,3.946776
+E06000059,Dorset,la,South West,2026-10,3 bed,1198,4.20715
+E06000059,Dorset,la,South West,2026-10,4+ bed,1693,3.464735
+E06000059,Dorset,la,South West,2026-10,Detached,1450,3.544576
+E06000059,Dorset,la,South West,2026-10,Semi-detached,1159,4.263938
+E06000059,Dorset,la,South West,2026-10,Terraced,1051,3.97979
+E06000059,Dorset,la,South West,2026-10,Flat,843,3.332537
+E06000060,Buckinghamshire,la,South East,2026-10,All,1500,5.485543
+E06000060,Buckinghamshire,la,South East,2026-10,1 bed,1052,5.674007
+E06000060,Buckinghamshire,la,South East,2026-10,2 bed,1333,5.709384
+E06000060,Buckinghamshire,la,South East,2026-10,3 bed,1633,5.974895
+E06000060,Buckinghamshire,la,South East,2026-10,4+ bed,2400,5.132842
+E06000060,Buckinghamshire,la,South East,2026-10,Detached,2201,5.115917
+E06000060,Buckinghamshire,la,South East,2026-10,Semi-detached,1606,5.838004
+E06000060,Buckinghamshire,la,South East,2026-10,Terraced,1446,5.772402
+E06000060,Buckinghamshire,la,South East,2026-10,Flat,1230,5.200347
+E06000061,North Northamptonshire,la,East Midlands,2026-10,All,997,4.329671
+E06000061,North Northamptonshire,la,East Midlands,2026-10,1 bed,686,4.466555
+E06000061,North Northamptonshire,la,East Midlands,2026-10,2 bed,887,4.572894
+E06000061,North Northamptonshire,la,East Midlands,2026-10,3 bed,1074,4.647357
+E06000061,North Northamptonshire,la,East Midlands,2026-10,4+ bed,1536,3.763753
+E06000061,North Northamptonshire,la,East Midlands,2026-10,Detached,1338,4.000001
+E06000061,North Northamptonshire,la,East Midlands,2026-10,Semi-detached,1035,4.59345
+E06000061,North Northamptonshire,la,East Midlands,2026-10,Terraced,971,4.44761
+E06000061,North Northamptonshire,la,East Midlands,2026-10,Flat,799,3.976036
+E06000062,West Northamptonshire,la,East Midlands,2026-10,All,1091,3.274869
+E06000062,West Northamptonshire,la,East Midlands,2026-10,1 bed,756,3.263555
+E06000062,West Northamptonshire,la,East Midlands,2026-10,2 bed,961,3.410213
+E06000062,West Northamptonshire,la,East Midlands,2026-10,3 bed,1176,3.691767
+E06000062,West Northamptonshire,la,East Midlands,2026-10,4+ bed,1692,2.81802
+E06000062,West Northamptonshire,la,East Midlands,2026-10,Detached,1481,3.244114
+E06000062,West Northamptonshire,la,East Midlands,2026-10,Semi-detached,1116,3.440478
+E06000062,West Northamptonshire,la,East Midlands,2026-10,Terraced,1070,3.40836
+E06000062,West Northamptonshire,la,East Midlands,2026-10,Flat,863,2.785826
+E06000063,Cumberland,la,North West,2026-10,All,692,7.333652
+E06000063,Cumberland,la,North West,2026-10,1 bed,516,7.274324
+E06000063,Cumberland,la,North West,2026-10,2 bed,653,7.440599
+E06000063,Cumberland,la,North West,2026-10,3 bed,798,7.5451
+E06000063,Cumberland,la,North West,2026-10,4+ bed,1111,6.692275
+E06000063,Cumberland,la,North West,2026-10,Detached,953,6.860071
+E06000063,Cumberland,la,North West,2026-10,Semi-detached,772,7.450372
+E06000063,Cumberland,la,North West,2026-10,Terraced,691,7.543465
+E06000063,Cumberland,la,North West,2026-10,Flat,594,7.020831
+E06000064,Westmorland and Furness,la,North West,2026-10,All,822,5.846289
+E06000064,Westmorland and Furness,la,North West,2026-10,1 bed,607,5.639067
+E06000064,Westmorland and Furness,la,North West,2026-10,2 bed,779,6.016957
+E06000064,Westmorland and Furness,la,North West,2026-10,3 bed,950,6.063232
+E06000064,Westmorland and Furness,la,North West,2026-10,4+ bed,1331,5.281212
+E06000064,Westmorland and Furness,la,North West,2026-10,Detached,1141,5.414222
+E06000064,Westmorland and Furness,la,North West,2026-10,Semi-detached,922,5.963646
+E06000064,Westmorland and Furness,la,North West,2026-10,Terraced,822,6.071547
+E06000064,Westmorland and Furness,la,North West,2026-10,Flat,697,5.485761
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,All,854,2.232369
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,1 bed,596,2.298648
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,2 bed,773,2.511182
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,3 bed,948,2.654775
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,4+ bed,1365,1.85864
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,Detached,1194,1.999917
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,Semi-detached,906,2.469761
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,Terraced,837,2.328881
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-10,Flat,688,1.850948
+E06000066,Somerset,la,South West,2026-10,All,1026,6.19565
+E06000066,Somerset,la,South West,2026-10,1 bed,697,6.285259
+E06000066,Somerset,la,South West,2026-10,2 bed,922,6.527019
+E06000066,Somerset,la,South West,2026-10,3 bed,1148,6.68072
+E06000066,Somerset,la,South West,2026-10,4+ bed,1636,5.933921
+E06000066,Somerset,la,South West,2026-10,Detached,1406,5.929058
+E06000066,Somerset,la,South West,2026-10,Semi-detached,1109,6.583793
+E06000066,Somerset,la,South West,2026-10,Terraced,1027,6.352376
+E06000066,Somerset,la,South West,2026-10,Flat,795,5.878006
+E07000008,Cambridge,la,East of England,2026-10,All,1805,1.707589
+E07000008,Cambridge,la,East of England,2026-10,1 bed,1253,1.523487
+E07000008,Cambridge,la,East of England,2026-10,2 bed,1612,1.688026
+E07000008,Cambridge,la,East of England,2026-10,3 bed,1909,2.165877
+E07000008,Cambridge,la,East of England,2026-10,4+ bed,2656,1.336238
+E07000008,Cambridge,la,East of England,2026-10,Detached,2344,1.613482
+E07000008,Cambridge,la,East of England,2026-10,Semi-detached,2011,2.074646
+E07000008,Cambridge,la,East of England,2026-10,Terraced,1833,1.79035
+E07000008,Cambridge,la,East of England,2026-10,Flat,1452,1.398788
+E07000009,East Cambridgeshire,la,East of England,2026-10,All,1047,-0.031468
+E07000009,East Cambridgeshire,la,East of England,2026-10,1 bed,737,0.106866
+E07000009,East Cambridgeshire,la,East of England,2026-10,2 bed,967,0.173785
+E07000009,East Cambridgeshire,la,East of England,2026-10,3 bed,1179,0.242903
+E07000009,East Cambridgeshire,la,East of England,2026-10,4+ bed,1680,-0.334108
+E07000009,East Cambridgeshire,la,East of England,2026-10,Detached,1463,0.032959
+E07000009,East Cambridgeshire,la,East of England,2026-10,Semi-detached,1097,0.386006
+E07000009,East Cambridgeshire,la,East of England,2026-10,Terraced,1034,0.163373
+E07000009,East Cambridgeshire,la,East of England,2026-10,Flat,835,-0.58252
+E07000010,Fenland,la,East of England,2026-10,All,847,3.722702
+E07000010,Fenland,la,East of England,2026-10,1 bed,630,3.815414
+E07000010,Fenland,la,East of England,2026-10,2 bed,812,3.894495
+E07000010,Fenland,la,East of England,2026-10,3 bed,986,3.922218
+E07000010,Fenland,la,East of England,2026-10,4+ bed,1397,3.140109
+E07000010,Fenland,la,East of England,2026-10,Detached,1114,3.566518
+E07000010,Fenland,la,East of England,2026-10,Semi-detached,934,4.068732
+E07000010,Fenland,la,East of England,2026-10,Terraced,843,3.912682
+E07000010,Fenland,la,East of England,2026-10,Flat,672,3.302874
+E07000011,Huntingdonshire,la,East of England,2026-10,All,1074,4.511942
+E07000011,Huntingdonshire,la,East of England,2026-10,1 bed,756,4.552631
+E07000011,Huntingdonshire,la,East of England,2026-10,2 bed,982,4.563791
+E07000011,Huntingdonshire,la,East of England,2026-10,3 bed,1190,4.787767
+E07000011,Huntingdonshire,la,East of England,2026-10,4+ bed,1725,4.018496
+E07000011,Huntingdonshire,la,East of England,2026-10,Detached,1521,4.359446
+E07000011,Huntingdonshire,la,East of England,2026-10,Semi-detached,1153,4.862571
+E07000011,Huntingdonshire,la,East of England,2026-10,Terraced,1024,4.569158
+E07000011,Huntingdonshire,la,East of England,2026-10,Flat,870,4.289446
+E07000012,South Cambridgeshire,la,East of England,2026-10,All,1406,2.397228
+E07000012,South Cambridgeshire,la,East of England,2026-10,1 bed,1008,2.648313
+E07000012,South Cambridgeshire,la,East of England,2026-10,2 bed,1279,2.638166
+E07000012,South Cambridgeshire,la,East of England,2026-10,3 bed,1530,2.914507
+E07000012,South Cambridgeshire,la,East of England,2026-10,4+ bed,2146,2.073093
+E07000012,South Cambridgeshire,la,East of England,2026-10,Detached,1926,2.197254
+E07000012,South Cambridgeshire,la,East of England,2026-10,Semi-detached,1469,2.696093
+E07000012,South Cambridgeshire,la,East of England,2026-10,Terraced,1398,2.57352
+E07000012,South Cambridgeshire,la,East of England,2026-10,Flat,1166,2.10262
+E07000032,Amber Valley,la,East Midlands,2026-10,All,816,5.878164
+E07000032,Amber Valley,la,East Midlands,2026-10,1 bed,595,5.877233
+E07000032,Amber Valley,la,East Midlands,2026-10,2 bed,757,5.984892
+E07000032,Amber Valley,la,East Midlands,2026-10,3 bed,934,6.048874
+E07000032,Amber Valley,la,East Midlands,2026-10,4+ bed,1306,5.032626
+E07000032,Amber Valley,la,East Midlands,2026-10,Detached,1083,5.56605
+E07000032,Amber Valley,la,East Midlands,2026-10,Semi-detached,862,6.179163
+E07000032,Amber Valley,la,East Midlands,2026-10,Terraced,787,5.884138
+E07000032,Amber Valley,la,East Midlands,2026-10,Flat,651,5.677185
+E07000033,Bolsover,la,East Midlands,2026-10,All,701,2.545925
+E07000033,Bolsover,la,East Midlands,2026-10,1 bed,492,2.375281
+E07000033,Bolsover,la,East Midlands,2026-10,2 bed,640,2.640719
+E07000033,Bolsover,la,East Midlands,2026-10,3 bed,741,2.801012
+E07000033,Bolsover,la,East Midlands,2026-10,4+ bed,1114,1.612263
+E07000033,Bolsover,la,East Midlands,2026-10,Detached,942,2.119826
+E07000033,Bolsover,la,East Midlands,2026-10,Semi-detached,727,2.791078
+E07000033,Bolsover,la,East Midlands,2026-10,Terraced,683,2.729567
+E07000033,Bolsover,la,East Midlands,2026-10,Flat,557,2.284103
+E07000034,Chesterfield,la,East Midlands,2026-10,All,760,3.938517
+E07000034,Chesterfield,la,East Midlands,2026-10,1 bed,541,3.496845
+E07000034,Chesterfield,la,East Midlands,2026-10,2 bed,698,3.995899
+E07000034,Chesterfield,la,East Midlands,2026-10,3 bed,835,4.236264
+E07000034,Chesterfield,la,East Midlands,2026-10,4+ bed,1173,3.241819
+E07000034,Chesterfield,la,East Midlands,2026-10,Detached,980,3.796788
+E07000034,Chesterfield,la,East Midlands,2026-10,Semi-detached,813,4.389381
+E07000034,Chesterfield,la,East Midlands,2026-10,Terraced,737,4.166062
+E07000034,Chesterfield,la,East Midlands,2026-10,Flat,616,3.028965
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,All,828,9.645151
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,1 bed,599,9.522543
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,2 bed,768,9.65903
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,3 bed,920,9.769184
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,4+ bed,1367,9.037415
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,Detached,1101,9.412345
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,Semi-detached,897,9.837987
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,Terraced,776,9.759937
+E07000035,Derbyshire Dales,la,East Midlands,2026-10,Flat,658,9.387622
+E07000036,Erewash,la,East Midlands,2026-10,All,843,2.967159
+E07000036,Erewash,la,East Midlands,2026-10,1 bed,606,2.801553
+E07000036,Erewash,la,East Midlands,2026-10,2 bed,797,3.202483
+E07000036,Erewash,la,East Midlands,2026-10,3 bed,960,3.283477
+E07000036,Erewash,la,East Midlands,2026-10,4+ bed,1324,2.345454
+E07000036,Erewash,la,East Midlands,2026-10,Detached,1099,2.85439
+E07000036,Erewash,la,East Midlands,2026-10,Semi-detached,906,3.242142
+E07000036,Erewash,la,East Midlands,2026-10,Terraced,815,2.99647
+E07000036,Erewash,la,East Midlands,2026-10,Flat,676,2.586978
+E07000037,High Peak,la,East Midlands,2026-10,All,939,7.339335
+E07000037,High Peak,la,East Midlands,2026-10,1 bed,625,7.079928
+E07000037,High Peak,la,East Midlands,2026-10,2 bed,812,7.338924
+E07000037,High Peak,la,East Midlands,2026-10,3 bed,994,7.47473
+E07000037,High Peak,la,East Midlands,2026-10,4+ bed,1434,6.692596
+E07000037,High Peak,la,East Midlands,2026-10,Detached,1312,7.124586
+E07000037,High Peak,la,East Midlands,2026-10,Semi-detached,972,7.586189
+E07000037,High Peak,la,East Midlands,2026-10,Terraced,895,7.524541
+E07000037,High Peak,la,East Midlands,2026-10,Flat,729,6.818084
+E07000038,North East Derbyshire,la,East Midlands,2026-10,All,792,3.294789
+E07000038,North East Derbyshire,la,East Midlands,2026-10,1 bed,568,3.14744
+E07000038,North East Derbyshire,la,East Midlands,2026-10,2 bed,723,3.497117
+E07000038,North East Derbyshire,la,East Midlands,2026-10,3 bed,879,3.488968
+E07000038,North East Derbyshire,la,East Midlands,2026-10,4+ bed,1209,2.618822
+E07000038,North East Derbyshire,la,East Midlands,2026-10,Detached,1040,3.011371
+E07000038,North East Derbyshire,la,East Midlands,2026-10,Semi-detached,854,3.646092
+E07000038,North East Derbyshire,la,East Midlands,2026-10,Terraced,745,3.243632
+E07000038,North East Derbyshire,la,East Midlands,2026-10,Flat,655,3.089224
+E07000039,South Derbyshire,la,East Midlands,2026-10,All,893,4.753146
+E07000039,South Derbyshire,la,East Midlands,2026-10,1 bed,617,4.566535
+E07000039,South Derbyshire,la,East Midlands,2026-10,2 bed,810,4.930457
+E07000039,South Derbyshire,la,East Midlands,2026-10,3 bed,1019,5.028234
+E07000039,South Derbyshire,la,East Midlands,2026-10,4+ bed,1457,4.191006
+E07000039,South Derbyshire,la,East Midlands,2026-10,Detached,1175,4.343804
+E07000039,South Derbyshire,la,East Midlands,2026-10,Semi-detached,939,5.155362
+E07000039,South Derbyshire,la,East Midlands,2026-10,Terraced,880,4.997573
+E07000039,South Derbyshire,la,East Midlands,2026-10,Flat,698,4.105338
+E07000040,East Devon,la,South West,2026-10,All,982,6.798802
+E07000040,East Devon,la,South West,2026-10,1 bed,694,6.799693
+E07000040,East Devon,la,South West,2026-10,2 bed,909,7.005923
+E07000040,East Devon,la,South West,2026-10,3 bed,1139,7.095738
+E07000040,East Devon,la,South West,2026-10,4+ bed,1638,6.416416
+E07000040,East Devon,la,South West,2026-10,Detached,1322,6.581253
+E07000040,East Devon,la,South West,2026-10,Semi-detached,1051,7.076589
+E07000040,East Devon,la,South West,2026-10,Terraced,985,6.986584
+E07000040,East Devon,la,South West,2026-10,Flat,783,6.510154
+E07000041,Exeter,la,South West,2026-10,All,1317,-0.159039
+E07000041,Exeter,la,South West,2026-10,1 bed,912,-0.192506
+E07000041,Exeter,la,South West,2026-10,2 bed,1129,-0.083503
+E07000041,Exeter,la,South West,2026-10,3 bed,1362,0.226416
+E07000041,Exeter,la,South West,2026-10,4+ bed,1917,-0.607359
+E07000041,Exeter,la,South West,2026-10,Detached,1710,-0.200742
+E07000041,Exeter,la,South West,2026-10,Semi-detached,1386,0.367
+E07000041,Exeter,la,South West,2026-10,Terraced,1350,-0.159775
+E07000041,Exeter,la,South West,2026-10,Flat,1043,-0.529071
+E07000042,Mid Devon,la,South West,2026-10,All,883,1.705613
+E07000042,Mid Devon,la,South West,2026-10,1 bed,644,1.58952
+E07000042,Mid Devon,la,South West,2026-10,2 bed,814,1.74775
+E07000042,Mid Devon,la,South West,2026-10,3 bed,1001,1.866592
+E07000042,Mid Devon,la,South West,2026-10,4+ bed,1459,1.131966
+E07000042,Mid Devon,la,South West,2026-10,Detached,1177,1.55662
+E07000042,Mid Devon,la,South West,2026-10,Semi-detached,953,2.0455
+E07000042,Mid Devon,la,South West,2026-10,Terraced,868,1.788061
+E07000042,Mid Devon,la,South West,2026-10,Flat,715,1.430829
+E07000043,North Devon,la,South West,2026-10,All,851,-0.179892
+E07000043,North Devon,la,South West,2026-10,1 bed,591,-0.451209
+E07000043,North Devon,la,South West,2026-10,2 bed,782,-0.191659
+E07000043,North Devon,la,South West,2026-10,3 bed,970,-0.11559
+E07000043,North Devon,la,South West,2026-10,4+ bed,1338,-0.631637
+E07000043,North Devon,la,South West,2026-10,Detached,1130,-0.358737
+E07000043,North Devon,la,South West,2026-10,Semi-detached,921,0.042072
+E07000043,North Devon,la,South West,2026-10,Terraced,862,-0.012923
+E07000043,North Devon,la,South West,2026-10,Flat,670,-0.454853
+E07000044,South Hams,la,South West,2026-10,All,1022,3.232932
+E07000044,South Hams,la,South West,2026-10,1 bed,744,3.35345
+E07000044,South Hams,la,South West,2026-10,2 bed,930,3.478278
+E07000044,South Hams,la,South West,2026-10,3 bed,1151,3.486546
+E07000044,South Hams,la,South West,2026-10,4+ bed,1647,2.675452
+E07000044,South Hams,la,South West,2026-10,Detached,1408,3.022268
+E07000044,South Hams,la,South West,2026-10,Semi-detached,1116,3.659994
+E07000044,South Hams,la,South West,2026-10,Terraced,958,3.302722
+E07000044,South Hams,la,South West,2026-10,Flat,861,3.009968
+E07000045,Teignbridge,la,South West,2026-10,All,966,3.10831
+E07000045,Teignbridge,la,South West,2026-10,1 bed,657,2.931576
+E07000045,Teignbridge,la,South West,2026-10,2 bed,873,3.095104
+E07000045,Teignbridge,la,South West,2026-10,3 bed,1092,3.238505
+E07000045,Teignbridge,la,South West,2026-10,4+ bed,1563,2.482302
+E07000045,Teignbridge,la,South West,2026-10,Detached,1352,2.894529
+E07000045,Teignbridge,la,South West,2026-10,Semi-detached,1055,3.403141
+E07000045,Teignbridge,la,South West,2026-10,Terraced,964,3.279814
+E07000045,Teignbridge,la,South West,2026-10,Flat,735,2.805111
+E07000046,Torridge,la,South West,2026-10,All,795,1.490452
+E07000046,Torridge,la,South West,2026-10,1 bed,569,1.491897
+E07000046,Torridge,la,South West,2026-10,2 bed,745,1.546005
+E07000046,Torridge,la,South West,2026-10,3 bed,915,1.5789
+E07000046,Torridge,la,South West,2026-10,4+ bed,1279,0.96249
+E07000046,Torridge,la,South West,2026-10,Detached,1045,1.316778
+E07000046,Torridge,la,South West,2026-10,Semi-detached,867,1.706149
+E07000046,Torridge,la,South West,2026-10,Terraced,795,1.647255
+E07000046,Torridge,la,South West,2026-10,Flat,645,1.263667
+E07000047,West Devon,la,South West,2026-10,All,863,4.688615
+E07000047,West Devon,la,South West,2026-10,1 bed,613,4.451989
+E07000047,West Devon,la,South West,2026-10,2 bed,786,4.784929
+E07000047,West Devon,la,South West,2026-10,3 bed,971,4.876056
+E07000047,West Devon,la,South West,2026-10,4+ bed,1377,4.008771
+E07000047,West Devon,la,South West,2026-10,Detached,1171,4.504129
+E07000047,West Devon,la,South West,2026-10,Semi-detached,930,4.975978
+E07000047,West Devon,la,South West,2026-10,Terraced,860,4.819227
+E07000047,West Devon,la,South West,2026-10,Flat,684,4.441519
+E07000061,Eastbourne,la,South East,2026-10,All,1181,2.621374
+E07000061,Eastbourne,la,South East,2026-10,1 bed,827,2.575036
+E07000061,Eastbourne,la,South East,2026-10,2 bed,1090,2.692163
+E07000061,Eastbourne,la,South East,2026-10,3 bed,1322,3.052134
+E07000061,Eastbourne,la,South East,2026-10,4+ bed,1817,2.398449
+E07000061,Eastbourne,la,South East,2026-10,Detached,1495,2.804663
+E07000061,Eastbourne,la,South East,2026-10,Semi-detached,1311,3.08982
+E07000061,Eastbourne,la,South East,2026-10,Terraced,1189,2.969978
+E07000061,Eastbourne,la,South East,2026-10,Flat,1025,2.083911
+E07000062,Hastings,la,South East,2026-10,All,1015,2.035617
+E07000062,Hastings,la,South East,2026-10,1 bed,701,1.978223
+E07000062,Hastings,la,South East,2026-10,2 bed,903,2.092344
+E07000062,Hastings,la,South East,2026-10,3 bed,1110,2.302186
+E07000062,Hastings,la,South East,2026-10,4+ bed,1524,1.53539
+E07000062,Hastings,la,South East,2026-10,Detached,1383,2.081477
+E07000062,Hastings,la,South East,2026-10,Semi-detached,1148,2.386671
+E07000062,Hastings,la,South East,2026-10,Terraced,1044,2.335192
+E07000062,Hastings,la,South East,2026-10,Flat,798,1.590898
+E07000063,Lewes,la,South East,2026-10,All,1357,5.042436
+E07000063,Lewes,la,South East,2026-10,1 bed,939,4.844622
+E07000063,Lewes,la,South East,2026-10,2 bed,1239,5.031949
+E07000063,Lewes,la,South East,2026-10,3 bed,1535,5.173653
+E07000063,Lewes,la,South East,2026-10,4+ bed,2210,4.502691
+E07000063,Lewes,la,South East,2026-10,Detached,1856,4.881913
+E07000063,Lewes,la,South East,2026-10,Semi-detached,1496,5.27507
+E07000063,Lewes,la,South East,2026-10,Terraced,1398,5.217786
+E07000063,Lewes,la,South East,2026-10,Flat,1079,4.809939
+E07000064,Rother,la,South East,2026-10,All,1163,1.301482
+E07000064,Rother,la,South East,2026-10,1 bed,801,1.245437
+E07000064,Rother,la,South East,2026-10,2 bed,1028,1.258625
+E07000064,Rother,la,South East,2026-10,3 bed,1293,1.525145
+E07000064,Rother,la,South East,2026-10,4+ bed,1908,0.754762
+E07000064,Rother,la,South East,2026-10,Detached,1587,1.088887
+E07000064,Rother,la,South East,2026-10,Semi-detached,1289,1.624788
+E07000064,Rother,la,South East,2026-10,Terraced,1178,1.349558
+E07000064,Rother,la,South East,2026-10,Flat,921,1.15635
+E07000065,Wealden,la,South East,2026-10,All,1269,1.856601
+E07000065,Wealden,la,South East,2026-10,1 bed,901,1.83027
+E07000065,Wealden,la,South East,2026-10,2 bed,1150,1.946897
+E07000065,Wealden,la,South East,2026-10,3 bed,1438,2.084818
+E07000065,Wealden,la,South East,2026-10,4+ bed,2099,1.361728
+E07000065,Wealden,la,South East,2026-10,Detached,1858,1.6732
+E07000065,Wealden,la,South East,2026-10,Semi-detached,1381,2.15595
+E07000065,Wealden,la,South East,2026-10,Terraced,1268,2.145818
+E07000065,Wealden,la,South East,2026-10,Flat,997,1.521945
+E07000066,Basildon,la,East of England,2026-10,All,1433,4.313558
+E07000066,Basildon,la,East of England,2026-10,1 bed,988,4.402617
+E07000066,Basildon,la,East of England,2026-10,2 bed,1276,4.357411
+E07000066,Basildon,la,East of England,2026-10,3 bed,1519,4.749997
+E07000066,Basildon,la,East of England,2026-10,4+ bed,2136,3.862732
+E07000066,Basildon,la,East of England,2026-10,Detached,1976,4.146173
+E07000066,Basildon,la,East of England,2026-10,Semi-detached,1505,4.652264
+E07000066,Basildon,la,East of England,2026-10,Terraced,1445,4.52243
+E07000066,Basildon,la,East of England,2026-10,Flat,1135,3.90116
+E07000067,Braintree,la,East of England,2026-10,All,1233,2.554927
+E07000067,Braintree,la,East of England,2026-10,1 bed,863,2.495409
+E07000067,Braintree,la,East of England,2026-10,2 bed,1117,2.582851
+E07000067,Braintree,la,East of England,2026-10,3 bed,1378,2.887319
+E07000067,Braintree,la,East of England,2026-10,4+ bed,2004,2.126892
+E07000067,Braintree,la,East of England,2026-10,Detached,1711,2.423725
+E07000067,Braintree,la,East of England,2026-10,Semi-detached,1325,2.923962
+E07000067,Braintree,la,East of England,2026-10,Terraced,1204,2.643072
+E07000067,Braintree,la,East of England,2026-10,Flat,983,2.231733
+E07000068,Brentwood,la,East of England,2026-10,All,1625,1.919596
+E07000068,Brentwood,la,East of England,2026-10,1 bed,1109,1.78329
+E07000068,Brentwood,la,East of England,2026-10,2 bed,1402,1.80981
+E07000068,Brentwood,la,East of England,2026-10,3 bed,1724,2.2671
+E07000068,Brentwood,la,East of England,2026-10,4+ bed,2417,1.546747
+E07000068,Brentwood,la,East of England,2026-10,Detached,2210,1.728825
+E07000068,Brentwood,la,East of England,2026-10,Semi-detached,1791,2.299533
+E07000068,Brentwood,la,East of England,2026-10,Terraced,1572,2.205891
+E07000068,Brentwood,la,East of England,2026-10,Flat,1276,1.407477
+E07000069,Castle Point,la,East of England,2026-10,All,1271,4.643906
+E07000069,Castle Point,la,East of England,2026-10,1 bed,948,4.59759
+E07000069,Castle Point,la,East of England,2026-10,2 bed,1177,4.475407
+E07000069,Castle Point,la,East of England,2026-10,3 bed,1437,4.757644
+E07000069,Castle Point,la,East of England,2026-10,4+ bed,2055,4.097555
+E07000069,Castle Point,la,East of England,2026-10,Detached,1447,4.571964
+E07000069,Castle Point,la,East of England,2026-10,Semi-detached,1369,4.74323
+E07000069,Castle Point,la,East of England,2026-10,Terraced,1343,4.786854
+E07000069,Castle Point,la,East of England,2026-10,Flat,1056,4.409463
+E07000070,Chelmsford,la,East of England,2026-10,All,1446,1.354921
+E07000070,Chelmsford,la,East of England,2026-10,1 bed,1063,1.254589
+E07000070,Chelmsford,la,East of England,2026-10,2 bed,1297,1.224127
+E07000070,Chelmsford,la,East of England,2026-10,3 bed,1552,1.732123
+E07000070,Chelmsford,la,East of England,2026-10,4+ bed,2232,1.015238
+E07000070,Chelmsford,la,East of England,2026-10,Detached,2004,1.340078
+E07000070,Chelmsford,la,East of England,2026-10,Semi-detached,1531,1.742116
+E07000070,Chelmsford,la,East of England,2026-10,Terraced,1377,1.634653
+E07000070,Chelmsford,la,East of England,2026-10,Flat,1213,0.786292
+E07000071,Colchester,la,East of England,2026-10,All,1206,1.459486
+E07000071,Colchester,la,East of England,2026-10,1 bed,824,1.433647
+E07000071,Colchester,la,East of England,2026-10,2 bed,1071,1.446902
+E07000071,Colchester,la,East of England,2026-10,3 bed,1313,1.851851
+E07000071,Colchester,la,East of England,2026-10,4+ bed,1810,1.231729
+E07000071,Colchester,la,East of England,2026-10,Detached,1579,1.531774
+E07000071,Colchester,la,East of England,2026-10,Semi-detached,1279,1.773538
+E07000071,Colchester,la,East of England,2026-10,Terraced,1238,1.615862
+E07000071,Colchester,la,East of England,2026-10,Flat,960,0.992071
+E07000072,Epping Forest,la,East of England,2026-10,All,1849,5.537104
+E07000072,Epping Forest,la,East of England,2026-10,1 bed,1232,5.715283
+E07000072,Epping Forest,la,East of England,2026-10,2 bed,1588,5.581756
+E07000072,Epping Forest,la,East of England,2026-10,3 bed,1948,5.886788
+E07000072,Epping Forest,la,East of England,2026-10,4+ bed,2889,5.030376
+E07000072,Epping Forest,la,East of England,2026-10,Detached,2573,5.083736
+E07000072,Epping Forest,la,East of England,2026-10,Semi-detached,1978,5.911822
+E07000072,Epping Forest,la,East of England,2026-10,Terraced,1826,5.706875
+E07000072,Epping Forest,la,East of England,2026-10,Flat,1437,5.312491
+E07000073,Harlow,la,East of England,2026-10,All,1542,4.467167
+E07000073,Harlow,la,East of England,2026-10,1 bed,1034,4.400579
+E07000073,Harlow,la,East of England,2026-10,2 bed,1345,4.572918
+E07000073,Harlow,la,East of England,2026-10,3 bed,1597,4.80536
+E07000073,Harlow,la,East of England,2026-10,4+ bed,2229,3.822641
+E07000073,Harlow,la,East of England,2026-10,Detached,2212,4.206212
+E07000073,Harlow,la,East of England,2026-10,Semi-detached,1710,4.724916
+E07000073,Harlow,la,East of England,2026-10,Terraced,1530,4.744591
+E07000073,Harlow,la,East of England,2026-10,Flat,1140,4.04453
+E07000074,Maldon,la,East of England,2026-10,All,1133,1.052923
+E07000074,Maldon,la,East of England,2026-10,1 bed,791,0.927054
+E07000074,Maldon,la,East of England,2026-10,2 bed,1028,1.095998
+E07000074,Maldon,la,East of England,2026-10,3 bed,1241,1.202682
+E07000074,Maldon,la,East of England,2026-10,4+ bed,1896,0.494093
+E07000074,Maldon,la,East of England,2026-10,Detached,1635,0.799085
+E07000074,Maldon,la,East of England,2026-10,Semi-detached,1248,1.328437
+E07000074,Maldon,la,East of England,2026-10,Terraced,1079,1.105282
+E07000074,Maldon,la,East of England,2026-10,Flat,857,0.914181
+E07000075,Rochford,la,East of England,2026-10,All,1305,4.642179
+E07000075,Rochford,la,East of England,2026-10,1 bed,892,4.580223
+E07000075,Rochford,la,East of England,2026-10,2 bed,1173,4.608112
+E07000075,Rochford,la,East of England,2026-10,3 bed,1435,4.759725
+E07000075,Rochford,la,East of England,2026-10,4+ bed,1877,3.994642
+E07000075,Rochford,la,East of England,2026-10,Detached,1722,4.382307
+E07000075,Rochford,la,East of England,2026-10,Semi-detached,1366,4.732917
+E07000075,Rochford,la,East of England,2026-10,Terraced,1302,4.879112
+E07000075,Rochford,la,East of England,2026-10,Flat,1069,4.426921
+E07000076,Tendring,la,East of England,2026-10,All,1064,3.346669
+E07000076,Tendring,la,East of England,2026-10,1 bed,765,3.269417
+E07000076,Tendring,la,East of England,2026-10,2 bed,984,3.335606
+E07000076,Tendring,la,East of England,2026-10,3 bed,1198,3.488821
+E07000076,Tendring,la,East of England,2026-10,4+ bed,1602,2.752975
+E07000076,Tendring,la,East of England,2026-10,Detached,1326,3.195263
+E07000076,Tendring,la,East of England,2026-10,Semi-detached,1148,3.617365
+E07000076,Tendring,la,East of England,2026-10,Terraced,1072,3.51315
+E07000076,Tendring,la,East of England,2026-10,Flat,891,3.002526
+E07000077,Uttlesford,la,East of England,2026-10,All,1329,3.401903
+E07000077,Uttlesford,la,East of England,2026-10,1 bed,932,3.449849
+E07000077,Uttlesford,la,East of England,2026-10,2 bed,1178,3.410375
+E07000077,Uttlesford,la,East of England,2026-10,3 bed,1490,3.635934
+E07000077,Uttlesford,la,East of England,2026-10,4+ bed,2101,2.998976
+E07000077,Uttlesford,la,East of England,2026-10,Detached,1822,3.263814
+E07000077,Uttlesford,la,East of England,2026-10,Semi-detached,1460,3.651517
+E07000077,Uttlesford,la,East of England,2026-10,Terraced,1320,3.554205
+E07000077,Uttlesford,la,East of England,2026-10,Flat,1038,3.115117
+E07000078,Cheltenham,la,South West,2026-10,All,1282,6.934526
+E07000078,Cheltenham,la,South West,2026-10,1 bed,883,6.84478
+E07000078,Cheltenham,la,South West,2026-10,2 bed,1114,6.946899
+E07000078,Cheltenham,la,South West,2026-10,3 bed,1378,7.32974
+E07000078,Cheltenham,la,South West,2026-10,4+ bed,1940,6.29989
+E07000078,Cheltenham,la,South West,2026-10,Detached,1784,6.799868
+E07000078,Cheltenham,la,South West,2026-10,Semi-detached,1362,7.341117
+E07000078,Cheltenham,la,South West,2026-10,Terraced,1238,7.146992
+E07000078,Cheltenham,la,South West,2026-10,Flat,999,6.444747
+E07000079,Cotswold,la,South West,2026-10,All,1273,5.573875
+E07000079,Cotswold,la,South West,2026-10,1 bed,883,5.405568
+E07000079,Cotswold,la,South West,2026-10,2 bed,1124,5.596425
+E07000079,Cotswold,la,South West,2026-10,3 bed,1367,5.766749
+E07000079,Cotswold,la,South West,2026-10,4+ bed,2072,5.144729
+E07000079,Cotswold,la,South West,2026-10,Detached,1771,5.369087
+E07000079,Cotswold,la,South West,2026-10,Semi-detached,1357,5.847946
+E07000079,Cotswold,la,South West,2026-10,Terraced,1229,5.731633
+E07000079,Cotswold,la,South West,2026-10,Flat,984,5.321526
+E07000080,Forest of Dean,la,South West,2026-10,All,829,-1.006073
+E07000080,Forest of Dean,la,South West,2026-10,1 bed,594,-1.152936
+E07000080,Forest of Dean,la,South West,2026-10,2 bed,801,-0.858294
+E07000080,Forest of Dean,la,South West,2026-10,3 bed,961,-0.818734
+E07000080,Forest of Dean,la,South West,2026-10,4+ bed,1450,-1.754924
+E07000080,Forest of Dean,la,South West,2026-10,Detached,1122,-1.298707
+E07000080,Forest of Dean,la,South West,2026-10,Semi-detached,913,-0.792509
+E07000080,Forest of Dean,la,South West,2026-10,Terraced,832,-0.83243
+E07000080,Forest of Dean,la,South West,2026-10,Flat,621,-1.173143
+E07000081,Gloucester,la,South West,2026-10,All,1129,6.565488
+E07000081,Gloucester,la,South West,2026-10,1 bed,752,6.243571
+E07000081,Gloucester,la,South West,2026-10,2 bed,982,6.456196
+E07000081,Gloucester,la,South West,2026-10,3 bed,1227,6.839275
+E07000081,Gloucester,la,South West,2026-10,4+ bed,1673,5.815905
+E07000081,Gloucester,la,South West,2026-10,Detached,1583,6.399818
+E07000081,Gloucester,la,South West,2026-10,Semi-detached,1231,6.830653
+E07000081,Gloucester,la,South West,2026-10,Terraced,1138,6.765325
+E07000081,Gloucester,la,South West,2026-10,Flat,858,6.19556
+E07000082,Stroud,la,South West,2026-10,All,1050,6.470804
+E07000082,Stroud,la,South West,2026-10,1 bed,748,6.347391
+E07000082,Stroud,la,South West,2026-10,2 bed,969,6.54606
+E07000082,Stroud,la,South West,2026-10,3 bed,1188,6.705676
+E07000082,Stroud,la,South West,2026-10,4+ bed,1673,5.748435
+E07000082,Stroud,la,South West,2026-10,Detached,1408,6.260866
+E07000082,Stroud,la,South West,2026-10,Semi-detached,1123,6.767441
+E07000082,Stroud,la,South West,2026-10,Terraced,1032,6.605915
+E07000082,Stroud,la,South West,2026-10,Flat,841,6.216051
+E07000083,Tewkesbury,la,South West,2026-10,All,1122,15.864574
+E07000083,Tewkesbury,la,South West,2026-10,1 bed,766,16.039341
+E07000083,Tewkesbury,la,South West,2026-10,2 bed,1005,15.970183
+E07000083,Tewkesbury,la,South West,2026-10,3 bed,1277,16.016772
+E07000083,Tewkesbury,la,South West,2026-10,4+ bed,1825,14.969379
+E07000083,Tewkesbury,la,South West,2026-10,Detached,1583,15.532128
+E07000083,Tewkesbury,la,South West,2026-10,Semi-detached,1218,16.115826
+E07000083,Tewkesbury,la,South West,2026-10,Terraced,1092,16.050231
+E07000083,Tewkesbury,la,South West,2026-10,Flat,840,15.680458
+E07000084,Basingstoke and Deane,la,South East,2026-10,All,1316,0.880082
+E07000084,Basingstoke and Deane,la,South East,2026-10,1 bed,935,0.93518
+E07000084,Basingstoke and Deane,la,South East,2026-10,2 bed,1217,0.862376
+E07000084,Basingstoke and Deane,la,South East,2026-10,3 bed,1477,1.383507
+E07000084,Basingstoke and Deane,la,South East,2026-10,4+ bed,2078,0.611593
+E07000084,Basingstoke and Deane,la,South East,2026-10,Detached,1884,0.896809
+E07000084,Basingstoke and Deane,la,South East,2026-10,Semi-detached,1441,1.369689
+E07000084,Basingstoke and Deane,la,South East,2026-10,Terraced,1311,1.128801
+E07000084,Basingstoke and Deane,la,South East,2026-10,Flat,1073,0.415666
+E07000085,East Hampshire,la,South East,2026-10,All,1274,2.635838
+E07000085,East Hampshire,la,South East,2026-10,1 bed,909,2.621666
+E07000085,East Hampshire,la,South East,2026-10,2 bed,1190,2.603336
+E07000085,East Hampshire,la,South East,2026-10,3 bed,1498,2.855732
+E07000085,East Hampshire,la,South East,2026-10,4+ bed,1995,1.791985
+E07000085,East Hampshire,la,South East,2026-10,Detached,1766,2.259536
+E07000085,East Hampshire,la,South East,2026-10,Semi-detached,1440,2.910129
+E07000085,East Hampshire,la,South East,2026-10,Terraced,1295,2.803204
+E07000085,East Hampshire,la,South East,2026-10,Flat,1002,2.476772
+E07000086,Eastleigh,la,South East,2026-10,All,1233,4.456815
+E07000086,Eastleigh,la,South East,2026-10,1 bed,874,4.502015
+E07000086,Eastleigh,la,South East,2026-10,2 bed,1128,4.531233
+E07000086,Eastleigh,la,South East,2026-10,3 bed,1385,4.903235
+E07000086,Eastleigh,la,South East,2026-10,4+ bed,1899,4.013399
+E07000086,Eastleigh,la,South East,2026-10,Detached,1664,4.420448
+E07000086,Eastleigh,la,South East,2026-10,Semi-detached,1357,4.987994
+E07000086,Eastleigh,la,South East,2026-10,Terraced,1232,4.811574
+E07000086,Eastleigh,la,South East,2026-10,Flat,1033,3.904254
+E07000087,Fareham,la,South East,2026-10,All,1186,1.592831
+E07000087,Fareham,la,South East,2026-10,1 bed,838,1.669345
+E07000087,Fareham,la,South East,2026-10,2 bed,1082,1.75961
+E07000087,Fareham,la,South East,2026-10,3 bed,1343,2.008124
+E07000087,Fareham,la,South East,2026-10,4+ bed,1951,1.206422
+E07000087,Fareham,la,South East,2026-10,Detached,1732,1.527459
+E07000087,Fareham,la,South East,2026-10,Semi-detached,1297,2.072397
+E07000087,Fareham,la,South East,2026-10,Terraced,1159,1.904189
+E07000087,Fareham,la,South East,2026-10,Flat,980,1.118009
+E07000088,Gosport,la,South East,2026-10,All,1187,4.95432
+E07000088,Gosport,la,South East,2026-10,1 bed,835,5.0207
+E07000088,Gosport,la,South East,2026-10,2 bed,1061,5.019603
+E07000088,Gosport,la,South East,2026-10,3 bed,1295,5.401291
+E07000088,Gosport,la,South East,2026-10,4+ bed,1755,4.64969
+E07000088,Gosport,la,South East,2026-10,Detached,1597,4.915401
+E07000088,Gosport,la,South East,2026-10,Semi-detached,1344,5.503963
+E07000088,Gosport,la,South East,2026-10,Terraced,1190,5.088968
+E07000088,Gosport,la,South East,2026-10,Flat,974,4.542611
+E07000089,Hart,la,South East,2026-10,All,1426,3.714096
+E07000089,Hart,la,South East,2026-10,1 bed,1030,3.55695
+E07000089,Hart,la,South East,2026-10,2 bed,1313,3.581021
+E07000089,Hart,la,South East,2026-10,3 bed,1596,3.910786
+E07000089,Hart,la,South East,2026-10,4+ bed,2321,3.183024
+E07000089,Hart,la,South East,2026-10,Detached,2125,3.542493
+E07000089,Hart,la,South East,2026-10,Semi-detached,1509,3.997002
+E07000089,Hart,la,South East,2026-10,Terraced,1403,4.00963
+E07000089,Hart,la,South East,2026-10,Flat,1167,3.381877
+E07000090,Havant,la,South East,2026-10,All,1172,5.125032
+E07000090,Havant,la,South East,2026-10,1 bed,866,4.951613
+E07000090,Havant,la,South East,2026-10,2 bed,1105,5.036369
+E07000090,Havant,la,South East,2026-10,3 bed,1381,5.346714
+E07000090,Havant,la,South East,2026-10,4+ bed,1930,4.53997
+E07000090,Havant,la,South East,2026-10,Detached,1573,4.921421
+E07000090,Havant,la,South East,2026-10,Semi-detached,1340,5.397157
+E07000090,Havant,la,South East,2026-10,Terraced,1194,5.360752
+E07000090,Havant,la,South East,2026-10,Flat,959,4.837969
+E07000091,New Forest,la,South East,2026-10,All,1252,2.051307
+E07000091,New Forest,la,South East,2026-10,1 bed,869,2.302906
+E07000091,New Forest,la,South East,2026-10,2 bed,1140,2.322891
+E07000091,New Forest,la,South East,2026-10,3 bed,1401,2.383646
+E07000091,New Forest,la,South East,2026-10,4+ bed,2003,1.569811
+E07000091,New Forest,la,South East,2026-10,Detached,1704,1.945187
+E07000091,New Forest,la,South East,2026-10,Semi-detached,1355,2.415575
+E07000091,New Forest,la,South East,2026-10,Terraced,1278,2.189757
+E07000091,New Forest,la,South East,2026-10,Flat,1018,1.773336
+E07000092,Rushmoor,la,South East,2026-10,All,1397,4.36228
+E07000092,Rushmoor,la,South East,2026-10,1 bed,986,4.159097
+E07000092,Rushmoor,la,South East,2026-10,2 bed,1279,4.112752
+E07000092,Rushmoor,la,South East,2026-10,3 bed,1547,4.649645
+E07000092,Rushmoor,la,South East,2026-10,4+ bed,2190,3.723468
+E07000092,Rushmoor,la,South East,2026-10,Detached,1950,4.226168
+E07000092,Rushmoor,la,South East,2026-10,Semi-detached,1541,4.55623
+E07000092,Rushmoor,la,South East,2026-10,Terraced,1396,4.650628
+E07000092,Rushmoor,la,South East,2026-10,Flat,1146,4.048822
+E07000093,Test Valley,la,South East,2026-10,All,1237,2.708169
+E07000093,Test Valley,la,South East,2026-10,1 bed,888,2.686449
+E07000093,Test Valley,la,South East,2026-10,2 bed,1145,2.709924
+E07000093,Test Valley,la,South East,2026-10,3 bed,1412,2.992944
+E07000093,Test Valley,la,South East,2026-10,4+ bed,2006,2.257476
+E07000093,Test Valley,la,South East,2026-10,Detached,1743,2.555846
+E07000093,Test Valley,la,South East,2026-10,Semi-detached,1372,3.013151
+E07000093,Test Valley,la,South East,2026-10,Terraced,1259,2.799637
+E07000093,Test Valley,la,South East,2026-10,Flat,986,2.526107
+E07000094,Winchester,la,South East,2026-10,All,1522,4.772918
+E07000094,Winchester,la,South East,2026-10,1 bed,1026,4.999766
+E07000094,Winchester,la,South East,2026-10,2 bed,1332,5.118235
+E07000094,Winchester,la,South East,2026-10,3 bed,1643,5.392739
+E07000094,Winchester,la,South East,2026-10,4+ bed,2273,4.31789
+E07000094,Winchester,la,South East,2026-10,Detached,2042,4.900673
+E07000094,Winchester,la,South East,2026-10,Semi-detached,1720,5.09046
+E07000094,Winchester,la,South East,2026-10,Terraced,1571,4.836558
+E07000094,Winchester,la,South East,2026-10,Flat,1221,4.512171
+E07000095,Broxbourne,la,East of England,2026-10,All,1693,3.608319
+E07000095,Broxbourne,la,East of England,2026-10,1 bed,1136,3.633809
+E07000095,Broxbourne,la,East of England,2026-10,2 bed,1457,3.546967
+E07000095,Broxbourne,la,East of England,2026-10,3 bed,1791,3.99985
+E07000095,Broxbourne,la,East of England,2026-10,4+ bed,2509,3.081828
+E07000095,Broxbourne,la,East of England,2026-10,Detached,2316,3.472716
+E07000095,Broxbourne,la,East of England,2026-10,Semi-detached,1866,3.878161
+E07000095,Broxbourne,la,East of England,2026-10,Terraced,1669,3.755599
+E07000095,Broxbourne,la,East of England,2026-10,Flat,1314,3.261276
+E07000096,Dacorum,la,East of England,2026-10,All,1630,3.154908
+E07000096,Dacorum,la,East of England,2026-10,1 bed,1121,3.181086
+E07000096,Dacorum,la,East of England,2026-10,2 bed,1408,3.145477
+E07000096,Dacorum,la,East of England,2026-10,3 bed,1695,3.653733
+E07000096,Dacorum,la,East of England,2026-10,4+ bed,2341,2.734455
+E07000096,Dacorum,la,East of England,2026-10,Detached,2247,2.947012
+E07000096,Dacorum,la,East of England,2026-10,Semi-detached,1779,3.545041
+E07000096,Dacorum,la,East of England,2026-10,Terraced,1562,3.313745
+E07000096,Dacorum,la,East of England,2026-10,Flat,1277,2.778825
+E07000098,Hertsmere,la,East of England,2026-10,All,1853,3.747938
+E07000098,Hertsmere,la,East of England,2026-10,1 bed,1272,3.662533
+E07000098,Hertsmere,la,East of England,2026-10,2 bed,1624,3.634141
+E07000098,Hertsmere,la,East of England,2026-10,3 bed,1969,4.157405
+E07000098,Hertsmere,la,East of England,2026-10,4+ bed,2835,3.188446
+E07000098,Hertsmere,la,East of England,2026-10,Detached,2549,3.459501
+E07000098,Hertsmere,la,East of England,2026-10,Semi-detached,2059,4.0188
+E07000098,Hertsmere,la,East of England,2026-10,Terraced,1762,4.102788
+E07000098,Hertsmere,la,East of England,2026-10,Flat,1463,3.273699
+E07000099,North Hertfordshire,la,East of England,2026-10,All,1451,6.304744
+E07000099,North Hertfordshire,la,East of England,2026-10,1 bed,1034,6.268267
+E07000099,North Hertfordshire,la,East of England,2026-10,2 bed,1297,6.206482
+E07000099,North Hertfordshire,la,East of England,2026-10,3 bed,1595,6.671079
+E07000099,North Hertfordshire,la,East of England,2026-10,4+ bed,2261,5.842767
+E07000099,North Hertfordshire,la,East of England,2026-10,Detached,1962,6.13638
+E07000099,North Hertfordshire,la,East of England,2026-10,Semi-detached,1570,6.711296
+E07000099,North Hertfordshire,la,East of England,2026-10,Terraced,1395,6.515434
+E07000099,North Hertfordshire,la,East of England,2026-10,Flat,1169,5.831545
+E07000102,Three Rivers,la,East of England,2026-10,All,1834,1.986706
+E07000102,Three Rivers,la,East of England,2026-10,1 bed,1277,1.611647
+E07000102,Three Rivers,la,East of England,2026-10,2 bed,1594,1.899633
+E07000102,Three Rivers,la,East of England,2026-10,3 bed,1984,2.413824
+E07000102,Three Rivers,la,East of England,2026-10,4+ bed,2790,1.407318
+E07000102,Three Rivers,la,East of England,2026-10,Detached,2618,1.738869
+E07000102,Three Rivers,la,East of England,2026-10,Semi-detached,2007,2.257554
+E07000102,Three Rivers,la,East of England,2026-10,Terraced,1679,2.303607
+E07000102,Three Rivers,la,East of England,2026-10,Flat,1464,1.538451
+E07000103,Watford,la,East of England,2026-10,All,1839,1.840741
+E07000103,Watford,la,East of England,2026-10,1 bed,1270,1.550043
+E07000103,Watford,la,East of England,2026-10,2 bed,1606,1.63777
+E07000103,Watford,la,East of England,2026-10,3 bed,1836,2.301224
+E07000103,Watford,la,East of England,2026-10,4+ bed,2665,1.247591
+E07000103,Watford,la,East of England,2026-10,Detached,2560,1.460074
+E07000103,Watford,la,East of England,2026-10,Semi-detached,2029,2.248657
+E07000103,Watford,la,East of England,2026-10,Terraced,1758,2.180873
+E07000103,Watford,la,East of England,2026-10,Flat,1438,1.307948
+E07000105,Ashford,la,South East,2026-10,All,1258,3.205077
+E07000105,Ashford,la,South East,2026-10,1 bed,900,3.269541
+E07000105,Ashford,la,South East,2026-10,2 bed,1152,3.3484
+E07000105,Ashford,la,South East,2026-10,3 bed,1420,3.71197
+E07000105,Ashford,la,South East,2026-10,4+ bed,2057,2.896354
+E07000105,Ashford,la,South East,2026-10,Detached,1798,3.273605
+E07000105,Ashford,la,South East,2026-10,Semi-detached,1346,3.749152
+E07000105,Ashford,la,South East,2026-10,Terraced,1278,3.386286
+E07000105,Ashford,la,South East,2026-10,Flat,1051,2.776695
+E07000106,Canterbury,la,South East,2026-10,All,1297,6.408328
+E07000106,Canterbury,la,South East,2026-10,1 bed,886,6.565875
+E07000106,Canterbury,la,South East,2026-10,2 bed,1147,6.592554
+E07000106,Canterbury,la,South East,2026-10,3 bed,1388,6.932231
+E07000106,Canterbury,la,South East,2026-10,4+ bed,1927,5.773461
+E07000106,Canterbury,la,South East,2026-10,Detached,1689,6.329426
+E07000106,Canterbury,la,South East,2026-10,Semi-detached,1490,6.690599
+E07000106,Canterbury,la,South East,2026-10,Terraced,1356,6.550092
+E07000106,Canterbury,la,South East,2026-10,Flat,1037,6.153249
+E07000107,Dartford,la,South East,2026-10,All,1587,3.397557
+E07000107,Dartford,la,South East,2026-10,1 bed,1099,3.424264
+E07000107,Dartford,la,South East,2026-10,2 bed,1429,3.439627
+E07000107,Dartford,la,South East,2026-10,3 bed,1724,3.879719
+E07000107,Dartford,la,South East,2026-10,4+ bed,2388,3.059395
+E07000107,Dartford,la,South East,2026-10,Detached,2315,3.196232
+E07000107,Dartford,la,South East,2026-10,Semi-detached,1720,3.729152
+E07000107,Dartford,la,South East,2026-10,Terraced,1592,3.745174
+E07000107,Dartford,la,South East,2026-10,Flat,1284,2.990825
+E07000108,Dover,la,South East,2026-10,All,1051,11.406945
+E07000108,Dover,la,South East,2026-10,1 bed,749,11.205705
+E07000108,Dover,la,South East,2026-10,2 bed,980,11.442967
+E07000108,Dover,la,South East,2026-10,3 bed,1201,11.501479
+E07000108,Dover,la,South East,2026-10,4+ bed,1709,10.748512
+E07000108,Dover,la,South East,2026-10,Detached,1424,11.148716
+E07000108,Dover,la,South East,2026-10,Semi-detached,1179,11.666729
+E07000108,Dover,la,South East,2026-10,Terraced,1063,11.55948
+E07000108,Dover,la,South East,2026-10,Flat,860,11.188884
+E07000109,Gravesham,la,South East,2026-10,All,1366,5.388187
+E07000109,Gravesham,la,South East,2026-10,1 bed,928,5.254015
+E07000109,Gravesham,la,South East,2026-10,2 bed,1228,5.470416
+E07000109,Gravesham,la,South East,2026-10,3 bed,1500,5.848745
+E07000109,Gravesham,la,South East,2026-10,4+ bed,2129,5.313863
+E07000109,Gravesham,la,South East,2026-10,Detached,1974,5.45247
+E07000109,Gravesham,la,South East,2026-10,Semi-detached,1582,5.78689
+E07000109,Gravesham,la,South East,2026-10,Terraced,1385,5.682337
+E07000109,Gravesham,la,South East,2026-10,Flat,1051,4.886691
+E07000110,Maidstone,la,South East,2026-10,All,1309,3.323612
+E07000110,Maidstone,la,South East,2026-10,1 bed,926,3.186964
+E07000110,Maidstone,la,South East,2026-10,2 bed,1205,3.408278
+E07000110,Maidstone,la,South East,2026-10,3 bed,1477,3.806592
+E07000110,Maidstone,la,South East,2026-10,4+ bed,1991,3.07842
+E07000110,Maidstone,la,South East,2026-10,Detached,1811,3.330757
+E07000110,Maidstone,la,South East,2026-10,Semi-detached,1463,3.799472
+E07000110,Maidstone,la,South East,2026-10,Terraced,1315,3.593644
+E07000110,Maidstone,la,South East,2026-10,Flat,1066,2.825003
+E07000111,Sevenoaks,la,South East,2026-10,All,1852,7.839493
+E07000111,Sevenoaks,la,South East,2026-10,1 bed,1293,7.830142
+E07000111,Sevenoaks,la,South East,2026-10,2 bed,1616,7.866324
+E07000111,Sevenoaks,la,South East,2026-10,3 bed,1974,8.126553
+E07000111,Sevenoaks,la,South East,2026-10,4+ bed,3024,7.224233
+E07000111,Sevenoaks,la,South East,2026-10,Detached,2818,7.378915
+E07000111,Sevenoaks,la,South East,2026-10,Semi-detached,1950,8.192827
+E07000111,Sevenoaks,la,South East,2026-10,Terraced,1695,8.154014
+E07000111,Sevenoaks,la,South East,2026-10,Flat,1507,7.589107
+E07000112,Folkestone and Hythe,la,South East,2026-10,All,1198,9.477709
+E07000112,Folkestone and Hythe,la,South East,2026-10,1 bed,817,9.341928
+E07000112,Folkestone and Hythe,la,South East,2026-10,2 bed,1049,9.548914
+E07000112,Folkestone and Hythe,la,South East,2026-10,3 bed,1308,9.825314
+E07000112,Folkestone and Hythe,la,South East,2026-10,4+ bed,1753,9.154535
+E07000112,Folkestone and Hythe,la,South East,2026-10,Detached,1638,9.329182
+E07000112,Folkestone and Hythe,la,South East,2026-10,Semi-detached,1353,9.930785
+E07000112,Folkestone and Hythe,la,South East,2026-10,Terraced,1223,9.896262
+E07000112,Folkestone and Hythe,la,South East,2026-10,Flat,934,8.948494
+E07000113,Swale,la,South East,2026-10,All,1137,1.892879
+E07000113,Swale,la,South East,2026-10,1 bed,794,1.831837
+E07000113,Swale,la,South East,2026-10,2 bed,1051,1.996027
+E07000113,Swale,la,South East,2026-10,3 bed,1272,2.172899
+E07000113,Swale,la,South East,2026-10,4+ bed,1894,1.28321
+E07000113,Swale,la,South East,2026-10,Detached,1612,1.763444
+E07000113,Swale,la,South East,2026-10,Semi-detached,1271,2.168314
+E07000113,Swale,la,South East,2026-10,Terraced,1176,1.982741
+E07000113,Swale,la,South East,2026-10,Flat,886,1.711454
+E07000114,Thanet,la,South East,2026-10,All,1132,4.120262
+E07000114,Thanet,la,South East,2026-10,1 bed,781,3.981575
+E07000114,Thanet,la,South East,2026-10,2 bed,1016,4.039016
+E07000114,Thanet,la,South East,2026-10,3 bed,1245,4.42693
+E07000114,Thanet,la,South East,2026-10,4+ bed,1702,3.775374
+E07000114,Thanet,la,South East,2026-10,Detached,1485,4.041252
+E07000114,Thanet,la,South East,2026-10,Semi-detached,1295,4.57693
+E07000114,Thanet,la,South East,2026-10,Terraced,1177,4.430741
+E07000114,Thanet,la,South East,2026-10,Flat,917,3.618142
+E07000115,Tonbridge and Malling,la,South East,2026-10,All,1512,4.008484
+E07000115,Tonbridge and Malling,la,South East,2026-10,1 bed,1047,4.070115
+E07000115,Tonbridge and Malling,la,South East,2026-10,2 bed,1353,4.128909
+E07000115,Tonbridge and Malling,la,South East,2026-10,3 bed,1653,4.43638
+E07000115,Tonbridge and Malling,la,South East,2026-10,4+ bed,2518,3.570886
+E07000115,Tonbridge and Malling,la,South East,2026-10,Detached,2235,4.021721
+E07000115,Tonbridge and Malling,la,South East,2026-10,Semi-detached,1619,4.424053
+E07000115,Tonbridge and Malling,la,South East,2026-10,Terraced,1449,4.396157
+E07000115,Tonbridge and Malling,la,South East,2026-10,Flat,1235,3.471621
+E07000116,Tunbridge Wells,la,South East,2026-10,All,1551,5.39505
+E07000116,Tunbridge Wells,la,South East,2026-10,1 bed,1067,5.235226
+E07000116,Tunbridge Wells,la,South East,2026-10,2 bed,1421,5.399222
+E07000116,Tunbridge Wells,la,South East,2026-10,3 bed,1724,5.843119
+E07000116,Tunbridge Wells,la,South East,2026-10,4+ bed,2493,5.075934
+E07000116,Tunbridge Wells,la,South East,2026-10,Detached,2234,5.253001
+E07000116,Tunbridge Wells,la,South East,2026-10,Semi-detached,1690,5.836078
+E07000116,Tunbridge Wells,la,South East,2026-10,Terraced,1544,5.801787
+E07000116,Tunbridge Wells,la,South East,2026-10,Flat,1240,4.870579
+E07000117,Burnley,la,North West,2026-10,All,635,3.222254
+E07000117,Burnley,la,North West,2026-10,1 bed,467,3.09485
+E07000117,Burnley,la,North West,2026-10,2 bed,592,3.522159
+E07000117,Burnley,la,North West,2026-10,3 bed,700,3.423232
+E07000117,Burnley,la,North West,2026-10,4+ bed,957,2.55926
+E07000117,Burnley,la,North West,2026-10,Detached,935,2.683374
+E07000117,Burnley,la,North West,2026-10,Semi-detached,708,3.233239
+E07000117,Burnley,la,North West,2026-10,Terraced,627,3.553667
+E07000117,Burnley,la,North West,2026-10,Flat,530,2.872982
+E07000118,Chorley,la,North West,2026-10,All,807,7.142692
+E07000118,Chorley,la,North West,2026-10,1 bed,604,7.08531
+E07000118,Chorley,la,North West,2026-10,2 bed,772,7.245796
+E07000118,Chorley,la,North West,2026-10,3 bed,915,7.338825
+E07000118,Chorley,la,North West,2026-10,4+ bed,1344,6.323559
+E07000118,Chorley,la,North West,2026-10,Detached,1106,6.812169
+E07000118,Chorley,la,North West,2026-10,Semi-detached,901,7.292761
+E07000118,Chorley,la,North West,2026-10,Terraced,798,7.394095
+E07000118,Chorley,la,North West,2026-10,Flat,692,6.65404
+E07000119,Fylde,la,North West,2026-10,All,880,5.578391
+E07000119,Fylde,la,North West,2026-10,1 bed,616,5.473029
+E07000119,Fylde,la,North West,2026-10,2 bed,795,5.540581
+E07000119,Fylde,la,North West,2026-10,3 bed,956,5.936143
+E07000119,Fylde,la,North West,2026-10,4+ bed,1419,5.026273
+E07000119,Fylde,la,North West,2026-10,Detached,1284,5.279864
+E07000119,Fylde,la,North West,2026-10,Semi-detached,966,5.909787
+E07000119,Fylde,la,North West,2026-10,Terraced,882,5.668039
+E07000119,Fylde,la,North West,2026-10,Flat,717,5.151623
+E07000120,Hyndburn,la,North West,2026-10,All,653,3.73601
+E07000120,Hyndburn,la,North West,2026-10,1 bed,488,3.572357
+E07000120,Hyndburn,la,North West,2026-10,2 bed,627,4.115257
+E07000120,Hyndburn,la,North West,2026-10,3 bed,733,3.854901
+E07000120,Hyndburn,la,North West,2026-10,4+ bed,949,2.923721
+E07000120,Hyndburn,la,North West,2026-10,Detached,897,3.140686
+E07000120,Hyndburn,la,North West,2026-10,Semi-detached,722,3.769785
+E07000120,Hyndburn,la,North West,2026-10,Terraced,653,4.065395
+E07000120,Hyndburn,la,North West,2026-10,Flat,544,3.312418
+E07000121,Lancaster,la,North West,2026-10,All,837,7.038265
+E07000121,Lancaster,la,North West,2026-10,1 bed,611,7.033447
+E07000121,Lancaster,la,North West,2026-10,2 bed,765,7.106074
+E07000121,Lancaster,la,North West,2026-10,3 bed,941,7.363801
+E07000121,Lancaster,la,North West,2026-10,4+ bed,1246,6.572642
+E07000121,Lancaster,la,North West,2026-10,Detached,1185,6.827828
+E07000121,Lancaster,la,North West,2026-10,Semi-detached,911,7.441062
+E07000121,Lancaster,la,North West,2026-10,Terraced,849,7.128286
+E07000121,Lancaster,la,North West,2026-10,Flat,708,6.5682
+E07000122,Pendle,la,North West,2026-10,All,676,6.652874
+E07000122,Pendle,la,North West,2026-10,1 bed,500,6.662992
+E07000122,Pendle,la,North West,2026-10,2 bed,639,7.046896
+E07000122,Pendle,la,North West,2026-10,3 bed,746,6.887767
+E07000122,Pendle,la,North West,2026-10,4+ bed,1103,5.922936
+E07000122,Pendle,la,North West,2026-10,Detached,1078,6.080776
+E07000122,Pendle,la,North West,2026-10,Semi-detached,772,6.834056
+E07000122,Pendle,la,North West,2026-10,Terraced,661,6.858223
+E07000122,Pendle,la,North West,2026-10,Flat,543,6.369956
+E07000123,Preston,la,North West,2026-10,All,795,5.675209
+E07000123,Preston,la,North West,2026-10,1 bed,582,5.531599
+E07000123,Preston,la,North West,2026-10,2 bed,735,5.54822
+E07000123,Preston,la,North West,2026-10,3 bed,865,6.095249
+E07000123,Preston,la,North West,2026-10,4+ bed,1256,4.955415
+E07000123,Preston,la,North West,2026-10,Detached,1123,5.167953
+E07000123,Preston,la,North West,2026-10,Semi-detached,864,6.101573
+E07000123,Preston,la,North West,2026-10,Terraced,803,5.845903
+E07000123,Preston,la,North West,2026-10,Flat,669,5.13679
+E07000124,Ribble Valley,la,North West,2026-10,All,824,5.291062
+E07000124,Ribble Valley,la,North West,2026-10,1 bed,612,5.249355
+E07000124,Ribble Valley,la,North West,2026-10,2 bed,778,5.43388
+E07000124,Ribble Valley,la,North West,2026-10,3 bed,943,5.32961
+E07000124,Ribble Valley,la,North West,2026-10,4+ bed,1407,4.434018
+E07000124,Ribble Valley,la,North West,2026-10,Detached,1087,4.82799
+E07000124,Ribble Valley,la,North West,2026-10,Semi-detached,926,5.355811
+E07000124,Ribble Valley,la,North West,2026-10,Terraced,823,5.445568
+E07000124,Ribble Valley,la,North West,2026-10,Flat,699,5.132444
+E07000125,Rossendale,la,North West,2026-10,All,816,3.499303
+E07000125,Rossendale,la,North West,2026-10,1 bed,593,3.454157
+E07000125,Rossendale,la,North West,2026-10,2 bed,759,3.580939
+E07000125,Rossendale,la,North West,2026-10,3 bed,914,3.635753
+E07000125,Rossendale,la,North West,2026-10,4+ bed,1232,2.625956
+E07000125,Rossendale,la,North West,2026-10,Detached,1169,3.040634
+E07000125,Rossendale,la,North West,2026-10,Semi-detached,916,3.668487
+E07000125,Rossendale,la,North West,2026-10,Terraced,796,3.728456
+E07000125,Rossendale,la,North West,2026-10,Flat,708,3.10675
+E07000126,South Ribble,la,North West,2026-10,All,811,5.416165
+E07000126,South Ribble,la,North West,2026-10,1 bed,567,5.573477
+E07000126,South Ribble,la,North West,2026-10,2 bed,745,5.567772
+E07000126,South Ribble,la,North West,2026-10,3 bed,898,5.733081
+E07000126,South Ribble,la,North West,2026-10,4+ bed,1277,4.620448
+E07000126,South Ribble,la,North West,2026-10,Detached,1084,5.205362
+E07000126,South Ribble,la,North West,2026-10,Semi-detached,859,5.721398
+E07000126,South Ribble,la,North West,2026-10,Terraced,840,5.501931
+E07000126,South Ribble,la,North West,2026-10,Flat,670,4.993656
+E07000127,West Lancashire,la,North West,2026-10,All,805,3.814592
+E07000127,West Lancashire,la,North West,2026-10,1 bed,587,3.579372
+E07000127,West Lancashire,la,North West,2026-10,2 bed,731,3.794305
+E07000127,West Lancashire,la,North West,2026-10,3 bed,845,4.09934
+E07000127,West Lancashire,la,North West,2026-10,4+ bed,1231,3.084767
+E07000127,West Lancashire,la,North West,2026-10,Detached,1148,3.328738
+E07000127,West Lancashire,la,North West,2026-10,Semi-detached,833,3.892877
+E07000127,West Lancashire,la,North West,2026-10,Terraced,816,4.019365
+E07000127,West Lancashire,la,North West,2026-10,Flat,692,3.570782
+E07000128,Wyre,la,North West,2026-10,All,752,7.645023
+E07000128,Wyre,la,North West,2026-10,1 bed,533,7.508262
+E07000128,Wyre,la,North West,2026-10,2 bed,726,7.716492
+E07000128,Wyre,la,North West,2026-10,3 bed,866,7.85795
+E07000128,Wyre,la,North West,2026-10,4+ bed,1258,6.849604
+E07000128,Wyre,la,North West,2026-10,Detached,1035,7.365627
+E07000128,Wyre,la,North West,2026-10,Semi-detached,824,7.769603
+E07000128,Wyre,la,North West,2026-10,Terraced,764,7.900366
+E07000128,Wyre,la,North West,2026-10,Flat,628,7.128899
+E07000129,Blaby,la,East Midlands,2026-10,All,1001,4.866513
+E07000129,Blaby,la,East Midlands,2026-10,1 bed,713,4.961967
+E07000129,Blaby,la,East Midlands,2026-10,2 bed,915,4.948339
+E07000129,Blaby,la,East Midlands,2026-10,3 bed,1087,4.982066
+E07000129,Blaby,la,East Midlands,2026-10,4+ bed,1573,4.038479
+E07000129,Blaby,la,East Midlands,2026-10,Detached,1332,4.516805
+E07000129,Blaby,la,East Midlands,2026-10,Semi-detached,1030,5.071184
+E07000129,Blaby,la,East Midlands,2026-10,Terraced,998,4.932262
+E07000129,Blaby,la,East Midlands,2026-10,Flat,790,4.729492
+E07000130,Charnwood,la,East Midlands,2026-10,All,976,4.971194
+E07000130,Charnwood,la,East Midlands,2026-10,1 bed,689,5.175897
+E07000130,Charnwood,la,East Midlands,2026-10,2 bed,861,5.189709
+E07000130,Charnwood,la,East Midlands,2026-10,3 bed,1047,5.284854
+E07000130,Charnwood,la,East Midlands,2026-10,4+ bed,1499,4.506657
+E07000130,Charnwood,la,East Midlands,2026-10,Detached,1297,4.865278
+E07000130,Charnwood,la,East Midlands,2026-10,Semi-detached,1025,5.203202
+E07000130,Charnwood,la,East Midlands,2026-10,Terraced,946,5.054907
+E07000130,Charnwood,la,East Midlands,2026-10,Flat,782,4.539611
+E07000131,Harborough,la,East Midlands,2026-10,All,991,5.202265
+E07000131,Harborough,la,East Midlands,2026-10,1 bed,725,5.007368
+E07000131,Harborough,la,East Midlands,2026-10,2 bed,928,5.291768
+E07000131,Harborough,la,East Midlands,2026-10,3 bed,1138,5.299888
+E07000131,Harborough,la,East Midlands,2026-10,4+ bed,1623,4.390779
+E07000131,Harborough,la,East Midlands,2026-10,Detached,1313,4.867609
+E07000131,Harborough,la,East Midlands,2026-10,Semi-detached,1040,5.441592
+E07000131,Harborough,la,East Midlands,2026-10,Terraced,947,5.336157
+E07000131,Harborough,la,East Midlands,2026-10,Flat,836,4.901195
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,All,929,2.043418
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,1 bed,635,1.728481
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,2 bed,840,2.04623
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,3 bed,1024,2.03419
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,4+ bed,1403,1.315282
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,Detached,1232,1.741765
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,Semi-detached,977,2.279428
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,Terraced,910,2.158583
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-10,Flat,730,1.743415
+E07000133,Melton,la,East Midlands,2026-10,All,814,5.770369
+E07000133,Melton,la,East Midlands,2026-10,1 bed,560,5.401713
+E07000133,Melton,la,East Midlands,2026-10,2 bed,738,5.870303
+E07000133,Melton,la,East Midlands,2026-10,3 bed,908,5.921945
+E07000133,Melton,la,East Midlands,2026-10,4+ bed,1382,5.441159
+E07000133,Melton,la,East Midlands,2026-10,Detached,1109,5.6954
+E07000133,Melton,la,East Midlands,2026-10,Semi-detached,847,6.003255
+E07000133,Melton,la,East Midlands,2026-10,Terraced,766,5.827698
+E07000133,Melton,la,East Midlands,2026-10,Flat,634,5.423063
+E07000134,North West Leicestershire,la,East Midlands,2026-10,All,926,6.487531
+E07000134,North West Leicestershire,la,East Midlands,2026-10,1 bed,642,6.410435
+E07000134,North West Leicestershire,la,East Midlands,2026-10,2 bed,830,6.55735
+E07000134,North West Leicestershire,la,East Midlands,2026-10,3 bed,1006,6.74421
+E07000134,North West Leicestershire,la,East Midlands,2026-10,4+ bed,1437,5.742712
+E07000134,North West Leicestershire,la,East Midlands,2026-10,Detached,1253,6.168707
+E07000134,North West Leicestershire,la,East Midlands,2026-10,Semi-detached,975,6.670706
+E07000134,North West Leicestershire,la,East Midlands,2026-10,Terraced,887,6.631292
+E07000134,North West Leicestershire,la,East Midlands,2026-10,Flat,745,6.179136
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,All,1021,1.332754
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,1 bed,729,1.076818
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,2 bed,886,1.408093
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,3 bed,1119,1.481547
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,4+ bed,1554,0.737408
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,Detached,1412,1.056884
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,Semi-detached,1104,1.578596
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,Terraced,969,1.421213
+E07000135,Oadby and Wigston,la,East Midlands,2026-10,Flat,796,1.00863
+E07000136,Boston,la,East Midlands,2026-10,All,813,4.178029
+E07000136,Boston,la,East Midlands,2026-10,1 bed,610,4.243789
+E07000136,Boston,la,East Midlands,2026-10,2 bed,771,4.266494
+E07000136,Boston,la,East Midlands,2026-10,3 bed,932,4.27938
+E07000136,Boston,la,East Midlands,2026-10,4+ bed,1295,3.243532
+E07000136,Boston,la,East Midlands,2026-10,Detached,1045,4.011954
+E07000136,Boston,la,East Midlands,2026-10,Semi-detached,869,4.486554
+E07000136,Boston,la,East Midlands,2026-10,Terraced,801,4.299809
+E07000136,Boston,la,East Midlands,2026-10,Flat,649,3.625418
+E07000137,East Lindsey,la,East Midlands,2026-10,All,709,7.291744
+E07000137,East Lindsey,la,East Midlands,2026-10,1 bed,525,7.186362
+E07000137,East Lindsey,la,East Midlands,2026-10,2 bed,671,7.301137
+E07000137,East Lindsey,la,East Midlands,2026-10,3 bed,825,7.425363
+E07000137,East Lindsey,la,East Midlands,2026-10,4+ bed,1153,6.641829
+E07000137,East Lindsey,la,East Midlands,2026-10,Detached,828,6.993888
+E07000137,East Lindsey,la,East Midlands,2026-10,Semi-detached,768,7.538177
+E07000137,East Lindsey,la,East Midlands,2026-10,Terraced,704,7.320171
+E07000137,East Lindsey,la,East Midlands,2026-10,Flat,576,7.125493
+E07000138,Lincoln,la,East Midlands,2026-10,All,952,3.230867
+E07000138,Lincoln,la,East Midlands,2026-10,1 bed,665,2.999351
+E07000138,Lincoln,la,East Midlands,2026-10,2 bed,837,3.313437
+E07000138,Lincoln,la,East Midlands,2026-10,3 bed,1002,3.533711
+E07000138,Lincoln,la,East Midlands,2026-10,4+ bed,1372,2.626647
+E07000138,Lincoln,la,East Midlands,2026-10,Detached,1198,3.22896
+E07000138,Lincoln,la,East Midlands,2026-10,Semi-detached,1004,3.783642
+E07000138,Lincoln,la,East Midlands,2026-10,Terraced,949,3.216168
+E07000138,Lincoln,la,East Midlands,2026-10,Flat,780,2.51359
+E07000139,North Kesteven,la,East Midlands,2026-10,All,828,5.028243
+E07000139,North Kesteven,la,East Midlands,2026-10,1 bed,583,5.232944
+E07000139,North Kesteven,la,East Midlands,2026-10,2 bed,762,5.232823
+E07000139,North Kesteven,la,East Midlands,2026-10,3 bed,928,5.221546
+E07000139,North Kesteven,la,East Midlands,2026-10,4+ bed,1315,4.512322
+E07000139,North Kesteven,la,East Midlands,2026-10,Detached,1079,4.868272
+E07000139,North Kesteven,la,East Midlands,2026-10,Semi-detached,843,5.255952
+E07000139,North Kesteven,la,East Midlands,2026-10,Terraced,814,5.026287
+E07000139,North Kesteven,la,East Midlands,2026-10,Flat,694,4.836688
+E07000140,South Holland,la,East Midlands,2026-10,All,784,4.892993
+E07000140,South Holland,la,East Midlands,2026-10,1 bed,600,4.836184
+E07000140,South Holland,la,East Midlands,2026-10,2 bed,748,4.992054
+E07000140,South Holland,la,East Midlands,2026-10,3 bed,913,4.881235
+E07000140,South Holland,la,East Midlands,2026-10,4+ bed,1204,4.045785
+E07000140,South Holland,la,East Midlands,2026-10,Detached,973,4.682943
+E07000140,South Holland,la,East Midlands,2026-10,Semi-detached,846,5.073879
+E07000140,South Holland,la,East Midlands,2026-10,Terraced,764,4.953609
+E07000140,South Holland,la,East Midlands,2026-10,Flat,641,4.664273
+E07000141,South Kesteven,la,East Midlands,2026-10,All,853,3.41111
+E07000141,South Kesteven,la,East Midlands,2026-10,1 bed,590,3.394455
+E07000141,South Kesteven,la,East Midlands,2026-10,2 bed,764,3.586595
+E07000141,South Kesteven,la,East Midlands,2026-10,3 bed,924,3.668865
+E07000141,South Kesteven,la,East Midlands,2026-10,4+ bed,1333,2.880105
+E07000141,South Kesteven,la,East Midlands,2026-10,Detached,1118,3.294347
+E07000141,South Kesteven,la,East Midlands,2026-10,Semi-detached,896,3.769055
+E07000141,South Kesteven,la,East Midlands,2026-10,Terraced,837,3.26776
+E07000141,South Kesteven,la,East Midlands,2026-10,Flat,653,3.254486
+E07000142,West Lindsey,la,East Midlands,2026-10,All,749,8.295997
+E07000142,West Lindsey,la,East Midlands,2026-10,1 bed,545,8.527395
+E07000142,West Lindsey,la,East Midlands,2026-10,2 bed,680,8.502155
+E07000142,West Lindsey,la,East Midlands,2026-10,3 bed,833,8.444881
+E07000142,West Lindsey,la,East Midlands,2026-10,4+ bed,1158,7.559596
+E07000142,West Lindsey,la,East Midlands,2026-10,Detached,978,7.997094
+E07000142,West Lindsey,la,East Midlands,2026-10,Semi-detached,790,8.584518
+E07000142,West Lindsey,la,East Midlands,2026-10,Terraced,735,8.242928
+E07000142,West Lindsey,la,East Midlands,2026-10,Flat,588,8.257517
+E07000143,Breckland,la,East of England,2026-10,All,943,5.084437
+E07000143,Breckland,la,East of England,2026-10,1 bed,675,5.077093
+E07000143,Breckland,la,East of England,2026-10,2 bed,860,5.282797
+E07000143,Breckland,la,East of England,2026-10,3 bed,1062,5.324285
+E07000143,Breckland,la,East of England,2026-10,4+ bed,1543,4.457923
+E07000143,Breckland,la,East of England,2026-10,Detached,1343,4.954891
+E07000143,Breckland,la,East of England,2026-10,Semi-detached,1012,5.426427
+E07000143,Breckland,la,East of England,2026-10,Terraced,928,5.109348
+E07000143,Breckland,la,East of England,2026-10,Flat,714,4.873721
+E07000144,Broadland,la,East of England,2026-10,All,945,3.703605
+E07000144,Broadland,la,East of England,2026-10,1 bed,696,3.67501
+E07000144,Broadland,la,East of England,2026-10,2 bed,901,3.797733
+E07000144,Broadland,la,East of England,2026-10,3 bed,1088,3.843502
+E07000144,Broadland,la,East of England,2026-10,4+ bed,1559,2.98423
+E07000144,Broadland,la,East of England,2026-10,Detached,1246,3.475422
+E07000144,Broadland,la,East of England,2026-10,Semi-detached,1011,3.937241
+E07000144,Broadland,la,East of England,2026-10,Terraced,951,3.80921
+E07000144,Broadland,la,East of England,2026-10,Flat,769,3.524993
+E07000145,Great Yarmouth,la,East of England,2026-10,All,842,6.726272
+E07000145,Great Yarmouth,la,East of England,2026-10,1 bed,590,6.569151
+E07000145,Great Yarmouth,la,East of England,2026-10,2 bed,772,6.826902
+E07000145,Great Yarmouth,la,East of England,2026-10,3 bed,935,6.868348
+E07000145,Great Yarmouth,la,East of England,2026-10,4+ bed,1326,6.310024
+E07000145,Great Yarmouth,la,East of England,2026-10,Detached,1143,6.509684
+E07000145,Great Yarmouth,la,East of England,2026-10,Semi-detached,907,6.905137
+E07000145,Great Yarmouth,la,East of England,2026-10,Terraced,840,6.903443
+E07000145,Great Yarmouth,la,East of England,2026-10,Flat,660,6.490338
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,All,941,3.13459
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,1 bed,650,3.175064
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,2 bed,849,3.449326
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,3 bed,1055,3.535949
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,4+ bed,1512,2.825278
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,Detached,1278,2.882947
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,Semi-detached,1006,3.536879
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,Terraced,946,3.314321
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-10,Flat,735,2.777231
+E07000147,North Norfolk,la,East of England,2026-10,All,867,3.70816
+E07000147,North Norfolk,la,East of England,2026-10,1 bed,624,3.687762
+E07000147,North Norfolk,la,East of England,2026-10,2 bed,811,3.831419
+E07000147,North Norfolk,la,East of England,2026-10,3 bed,1005,3.950846
+E07000147,North Norfolk,la,East of England,2026-10,4+ bed,1359,3.237813
+E07000147,North Norfolk,la,East of England,2026-10,Detached,1133,3.693338
+E07000147,North Norfolk,la,East of England,2026-10,Semi-detached,951,4.024809
+E07000147,North Norfolk,la,East of England,2026-10,Terraced,852,3.870044
+E07000147,North Norfolk,la,East of England,2026-10,Flat,708,3.296809
+E07000148,Norwich,la,East of England,2026-10,All,1154,1.324881
+E07000148,Norwich,la,East of England,2026-10,1 bed,785,1.38739
+E07000148,Norwich,la,East of England,2026-10,2 bed,982,1.540856
+E07000148,Norwich,la,East of England,2026-10,3 bed,1151,1.846954
+E07000148,Norwich,la,East of England,2026-10,4+ bed,1594,0.8327
+E07000148,Norwich,la,East of England,2026-10,Detached,1597,0.894673
+E07000148,Norwich,la,East of England,2026-10,Semi-detached,1253,1.668036
+E07000148,Norwich,la,East of England,2026-10,Terraced,1166,1.473131
+E07000148,Norwich,la,East of England,2026-10,Flat,888,1.097466
+E07000149,South Norfolk,la,East of England,2026-10,All,992,3.774805
+E07000149,South Norfolk,la,East of England,2026-10,1 bed,704,4.120171
+E07000149,South Norfolk,la,East of England,2026-10,2 bed,901,4.122887
+E07000149,South Norfolk,la,East of England,2026-10,3 bed,1121,4.178778
+E07000149,South Norfolk,la,East of England,2026-10,4+ bed,1592,3.327103
+E07000149,South Norfolk,la,East of England,2026-10,Detached,1322,3.517378
+E07000149,South Norfolk,la,East of England,2026-10,Semi-detached,1032,4.135414
+E07000149,South Norfolk,la,East of England,2026-10,Terraced,997,3.983877
+E07000149,South Norfolk,la,East of England,2026-10,Flat,829,3.423169
+E07000170,Ashfield,la,East Midlands,2026-10,All,803,5.001423
+E07000170,Ashfield,la,East Midlands,2026-10,1 bed,564,4.971136
+E07000170,Ashfield,la,East Midlands,2026-10,2 bed,733,5.290268
+E07000170,Ashfield,la,East Midlands,2026-10,3 bed,856,5.388429
+E07000170,Ashfield,la,East Midlands,2026-10,4+ bed,1204,4.287647
+E07000170,Ashfield,la,East Midlands,2026-10,Detached,1052,4.696743
+E07000170,Ashfield,la,East Midlands,2026-10,Semi-detached,857,5.466331
+E07000170,Ashfield,la,East Midlands,2026-10,Terraced,784,5.045579
+E07000170,Ashfield,la,East Midlands,2026-10,Flat,636,4.483088
+E07000171,Bassetlaw,la,East Midlands,2026-10,All,743,4.526826
+E07000171,Bassetlaw,la,East Midlands,2026-10,1 bed,513,4.218412
+E07000171,Bassetlaw,la,East Midlands,2026-10,2 bed,672,4.625814
+E07000171,Bassetlaw,la,East Midlands,2026-10,3 bed,818,4.78562
+E07000171,Bassetlaw,la,East Midlands,2026-10,4+ bed,1156,3.79169
+E07000171,Bassetlaw,la,East Midlands,2026-10,Detached,985,4.137277
+E07000171,Bassetlaw,la,East Midlands,2026-10,Semi-detached,770,4.912008
+E07000171,Bassetlaw,la,East Midlands,2026-10,Terraced,730,4.597368
+E07000171,Bassetlaw,la,East Midlands,2026-10,Flat,579,4.189134
+E07000172,Broxtowe,la,East Midlands,2026-10,All,944,-1.77118
+E07000172,Broxtowe,la,East Midlands,2026-10,1 bed,652,-1.816193
+E07000172,Broxtowe,la,East Midlands,2026-10,2 bed,841,-1.516582
+E07000172,Broxtowe,la,East Midlands,2026-10,3 bed,1007,-1.426641
+E07000172,Broxtowe,la,East Midlands,2026-10,4+ bed,1388,-2.248387
+E07000172,Broxtowe,la,East Midlands,2026-10,Detached,1188,-1.982975
+E07000172,Broxtowe,la,East Midlands,2026-10,Semi-detached,1022,-1.625716
+E07000172,Broxtowe,la,East Midlands,2026-10,Terraced,912,-1.565071
+E07000172,Broxtowe,la,East Midlands,2026-10,Flat,775,-2.189004
+E07000173,Gedling,la,East Midlands,2026-10,All,916,3.623897
+E07000173,Gedling,la,East Midlands,2026-10,1 bed,637,3.743721
+E07000173,Gedling,la,East Midlands,2026-10,2 bed,805,3.815456
+E07000173,Gedling,la,East Midlands,2026-10,3 bed,992,3.91566
+E07000173,Gedling,la,East Midlands,2026-10,4+ bed,1414,2.834975
+E07000173,Gedling,la,East Midlands,2026-10,Detached,1184,3.118903
+E07000173,Gedling,la,East Midlands,2026-10,Semi-detached,961,4.051794
+E07000173,Gedling,la,East Midlands,2026-10,Terraced,896,3.758213
+E07000173,Gedling,la,East Midlands,2026-10,Flat,757,3.189623
+E07000174,Mansfield,la,East Midlands,2026-10,All,804,6.156167
+E07000174,Mansfield,la,East Midlands,2026-10,1 bed,560,6.105084
+E07000174,Mansfield,la,East Midlands,2026-10,2 bed,721,6.414365
+E07000174,Mansfield,la,East Midlands,2026-10,3 bed,863,6.502997
+E07000174,Mansfield,la,East Midlands,2026-10,4+ bed,1177,5.193632
+E07000174,Mansfield,la,East Midlands,2026-10,Detached,1000,5.938224
+E07000174,Mansfield,la,East Midlands,2026-10,Semi-detached,840,6.57881
+E07000174,Mansfield,la,East Midlands,2026-10,Terraced,809,6.296691
+E07000174,Mansfield,la,East Midlands,2026-10,Flat,646,5.466513
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,All,819,4.946131
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,1 bed,562,4.766471
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,2 bed,743,4.882652
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,3 bed,898,5.176795
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,4+ bed,1321,4.114432
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,Detached,1068,4.642623
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,Semi-detached,862,5.24669
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,Terraced,798,5.037687
+E07000175,Newark and Sherwood,la,East Midlands,2026-10,Flat,658,4.622163
+E07000176,Rushcliffe,la,East Midlands,2026-10,All,1053,2.865364
+E07000176,Rushcliffe,la,East Midlands,2026-10,1 bed,728,2.863837
+E07000176,Rushcliffe,la,East Midlands,2026-10,2 bed,903,2.998175
+E07000176,Rushcliffe,la,East Midlands,2026-10,3 bed,1143,3.240695
+E07000176,Rushcliffe,la,East Midlands,2026-10,4+ bed,1574,2.465199
+E07000176,Rushcliffe,la,East Midlands,2026-10,Detached,1368,2.482269
+E07000176,Rushcliffe,la,East Midlands,2026-10,Semi-detached,1097,3.328193
+E07000176,Rushcliffe,la,East Midlands,2026-10,Terraced,1023,2.894461
+E07000176,Rushcliffe,la,East Midlands,2026-10,Flat,868,2.433087
+E07000177,Cherwell,la,South East,2026-10,All,1329,4.170768
+E07000177,Cherwell,la,South East,2026-10,1 bed,993,4.405315
+E07000177,Cherwell,la,South East,2026-10,2 bed,1241,4.427482
+E07000177,Cherwell,la,South East,2026-10,3 bed,1501,4.577929
+E07000177,Cherwell,la,South East,2026-10,4+ bed,2247,3.868386
+E07000177,Cherwell,la,South East,2026-10,Detached,1901,4.141656
+E07000177,Cherwell,la,South East,2026-10,Semi-detached,1435,4.569489
+E07000177,Cherwell,la,South East,2026-10,Terraced,1323,4.438405
+E07000177,Cherwell,la,South East,2026-10,Flat,1099,3.760842
+E07000178,Oxford,la,South East,2026-10,All,1956,2.135174
+E07000178,Oxford,la,South East,2026-10,1 bed,1345,2.111994
+E07000178,Oxford,la,South East,2026-10,2 bed,1662,2.317013
+E07000178,Oxford,la,South East,2026-10,3 bed,2030,2.659787
+E07000178,Oxford,la,South East,2026-10,4+ bed,2850,1.661138
+E07000178,Oxford,la,South East,2026-10,Detached,2587,2.187323
+E07000178,Oxford,la,South East,2026-10,Semi-detached,2184,2.489564
+E07000178,Oxford,la,South East,2026-10,Terraced,2016,2.157249
+E07000178,Oxford,la,South East,2026-10,Flat,1549,1.917523
+E07000179,South Oxfordshire,la,South East,2026-10,All,1430,6.096189
+E07000179,South Oxfordshire,la,South East,2026-10,1 bed,1062,6.159101
+E07000179,South Oxfordshire,la,South East,2026-10,2 bed,1318,6.344311
+E07000179,South Oxfordshire,la,South East,2026-10,3 bed,1648,6.409255
+E07000179,South Oxfordshire,la,South East,2026-10,4+ bed,2374,5.623839
+E07000179,South Oxfordshire,la,South East,2026-10,Detached,2068,5.948453
+E07000179,South Oxfordshire,la,South East,2026-10,Semi-detached,1586,6.508522
+E07000179,South Oxfordshire,la,South East,2026-10,Terraced,1357,6.377603
+E07000179,South Oxfordshire,la,South East,2026-10,Flat,1192,5.709224
+E07000180,Vale of White Horse,la,South East,2026-10,All,1385,5.638649
+E07000180,Vale of White Horse,la,South East,2026-10,1 bed,1010,5.665858
+E07000180,Vale of White Horse,la,South East,2026-10,2 bed,1260,5.686811
+E07000180,Vale of White Horse,la,South East,2026-10,3 bed,1541,5.888016
+E07000180,Vale of White Horse,la,South East,2026-10,4+ bed,2286,5.2677
+E07000180,Vale of White Horse,la,South East,2026-10,Detached,1946,5.572942
+E07000180,Vale of White Horse,la,South East,2026-10,Semi-detached,1473,6.028484
+E07000180,Vale of White Horse,la,South East,2026-10,Terraced,1389,5.915206
+E07000180,Vale of White Horse,la,South East,2026-10,Flat,1167,5.261635
+E07000181,West Oxfordshire,la,South East,2026-10,All,1339,6.381864
+E07000181,West Oxfordshire,la,South East,2026-10,1 bed,978,6.230121
+E07000181,West Oxfordshire,la,South East,2026-10,2 bed,1240,6.465645
+E07000181,West Oxfordshire,la,South East,2026-10,3 bed,1559,6.658051
+E07000181,West Oxfordshire,la,South East,2026-10,4+ bed,2137,5.825956
+E07000181,West Oxfordshire,la,South East,2026-10,Detached,1784,6.22574
+E07000181,West Oxfordshire,la,South East,2026-10,Semi-detached,1498,6.788719
+E07000181,West Oxfordshire,la,South East,2026-10,Terraced,1354,6.594943
+E07000181,West Oxfordshire,la,South East,2026-10,Flat,1074,6.041184
+E07000192,Cannock Chase,la,West Midlands,2026-10,All,841,3.332714
+E07000192,Cannock Chase,la,West Midlands,2026-10,1 bed,570,3.177765
+E07000192,Cannock Chase,la,West Midlands,2026-10,2 bed,757,3.097284
+E07000192,Cannock Chase,la,West Midlands,2026-10,3 bed,936,3.557425
+E07000192,Cannock Chase,la,West Midlands,2026-10,4+ bed,1305,2.677129
+E07000192,Cannock Chase,la,West Midlands,2026-10,Detached,1134,3.098155
+E07000192,Cannock Chase,la,West Midlands,2026-10,Semi-detached,883,3.64107
+E07000192,Cannock Chase,la,West Midlands,2026-10,Terraced,850,3.433544
+E07000192,Cannock Chase,la,West Midlands,2026-10,Flat,655,2.93368
+E07000193,East Staffordshire,la,West Midlands,2026-10,All,863,6.925855
+E07000193,East Staffordshire,la,West Midlands,2026-10,1 bed,617,6.734566
+E07000193,East Staffordshire,la,West Midlands,2026-10,2 bed,780,6.966987
+E07000193,East Staffordshire,la,West Midlands,2026-10,3 bed,950,7.213612
+E07000193,East Staffordshire,la,West Midlands,2026-10,4+ bed,1412,6.332454
+E07000193,East Staffordshire,la,West Midlands,2026-10,Detached,1181,6.688653
+E07000193,East Staffordshire,la,West Midlands,2026-10,Semi-detached,924,7.332603
+E07000193,East Staffordshire,la,West Midlands,2026-10,Terraced,844,7.204267
+E07000193,East Staffordshire,la,West Midlands,2026-10,Flat,684,6.147896
+E07000194,Lichfield,la,West Midlands,2026-10,All,1073,3.462881
+E07000194,Lichfield,la,West Midlands,2026-10,1 bed,719,3.13878
+E07000194,Lichfield,la,West Midlands,2026-10,2 bed,941,3.474229
+E07000194,Lichfield,la,West Midlands,2026-10,3 bed,1128,3.712479
+E07000194,Lichfield,la,West Midlands,2026-10,4+ bed,1651,2.885879
+E07000194,Lichfield,la,West Midlands,2026-10,Detached,1480,3.337564
+E07000194,Lichfield,la,West Midlands,2026-10,Semi-detached,1110,3.781689
+E07000194,Lichfield,la,West Midlands,2026-10,Terraced,1066,3.593475
+E07000194,Lichfield,la,West Midlands,2026-10,Flat,862,2.940732
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,All,846,6.737017
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,1 bed,587,6.719179
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,2 bed,756,6.997414
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,3 bed,910,7.104556
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,4+ bed,1328,5.935544
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,Detached,1157,6.51168
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,Semi-detached,881,7.24639
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,Terraced,847,6.567242
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-10,Flat,672,6.514315
+E07000196,South Staffordshire,la,West Midlands,2026-10,All,972,6.226325
+E07000196,South Staffordshire,la,West Midlands,2026-10,1 bed,674,5.915211
+E07000196,South Staffordshire,la,West Midlands,2026-10,2 bed,870,6.290932
+E07000196,South Staffordshire,la,West Midlands,2026-10,3 bed,1034,6.419675
+E07000196,South Staffordshire,la,West Midlands,2026-10,4+ bed,1556,5.316032
+E07000196,South Staffordshire,la,West Midlands,2026-10,Detached,1353,5.813761
+E07000196,South Staffordshire,la,West Midlands,2026-10,Semi-detached,985,6.527108
+E07000196,South Staffordshire,la,West Midlands,2026-10,Terraced,952,6.363079
+E07000196,South Staffordshire,la,West Midlands,2026-10,Flat,789,5.896147
+E07000197,Stafford,la,West Midlands,2026-10,All,904,6.221663
+E07000197,Stafford,la,West Midlands,2026-10,1 bed,632,6.07884
+E07000197,Stafford,la,West Midlands,2026-10,2 bed,794,6.325031
+E07000197,Stafford,la,West Midlands,2026-10,3 bed,982,6.554782
+E07000197,Stafford,la,West Midlands,2026-10,4+ bed,1357,5.507779
+E07000197,Stafford,la,West Midlands,2026-10,Detached,1190,5.986102
+E07000197,Stafford,la,West Midlands,2026-10,Semi-detached,960,6.617677
+E07000197,Stafford,la,West Midlands,2026-10,Terraced,917,6.44287
+E07000197,Stafford,la,West Midlands,2026-10,Flat,708,5.573776
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,All,741,7.882843
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,1 bed,535,7.620278
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,2 bed,697,7.965463
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,3 bed,881,8.011914
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,4+ bed,1208,7.172018
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,Detached,979,7.633044
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,Semi-detached,824,8.055568
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,Terraced,702,8.078639
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-10,Flat,592,7.525127
+E07000199,Tamworth,la,West Midlands,2026-10,All,934,0.158755
+E07000199,Tamworth,la,West Midlands,2026-10,1 bed,680,-0.01926
+E07000199,Tamworth,la,West Midlands,2026-10,2 bed,835,0.015842
+E07000199,Tamworth,la,West Midlands,2026-10,3 bed,1016,0.361579
+E07000199,Tamworth,la,West Midlands,2026-10,4+ bed,1450,-0.719795
+E07000199,Tamworth,la,West Midlands,2026-10,Detached,1252,-0.200476
+E07000199,Tamworth,la,West Midlands,2026-10,Semi-detached,984,0.376855
+E07000199,Tamworth,la,West Midlands,2026-10,Terraced,923,0.33578
+E07000199,Tamworth,la,West Midlands,2026-10,Flat,762,-0.169549
+E07000200,Babergh,la,East of England,2026-10,All,974,2.570458
+E07000200,Babergh,la,East of England,2026-10,1 bed,722,2.410484
+E07000200,Babergh,la,East of England,2026-10,2 bed,925,2.719848
+E07000200,Babergh,la,East of England,2026-10,3 bed,1121,2.712732
+E07000200,Babergh,la,East of England,2026-10,4+ bed,1612,2.011553
+E07000200,Babergh,la,East of England,2026-10,Detached,1306,2.40759
+E07000200,Babergh,la,East of England,2026-10,Semi-detached,1065,2.756615
+E07000200,Babergh,la,East of England,2026-10,Terraced,944,2.741818
+E07000200,Babergh,la,East of England,2026-10,Flat,808,2.358132
+E07000202,Ipswich,la,East of England,2026-10,All,1005,4.031203
+E07000202,Ipswich,la,East of England,2026-10,1 bed,750,3.836447
+E07000202,Ipswich,la,East of England,2026-10,2 bed,924,4.068263
+E07000202,Ipswich,la,East of England,2026-10,3 bed,1058,4.562283
+E07000202,Ipswich,la,East of England,2026-10,4+ bed,1487,3.591469
+E07000202,Ipswich,la,East of England,2026-10,Detached,1308,4.069937
+E07000202,Ipswich,la,East of England,2026-10,Semi-detached,1068,4.488285
+E07000202,Ipswich,la,East of England,2026-10,Terraced,975,4.165814
+E07000202,Ipswich,la,East of England,2026-10,Flat,879,3.535037
+E07000203,Mid Suffolk,la,East of England,2026-10,All,1019,7.513484
+E07000203,Mid Suffolk,la,East of England,2026-10,1 bed,730,7.762241
+E07000203,Mid Suffolk,la,East of England,2026-10,2 bed,936,7.528596
+E07000203,Mid Suffolk,la,East of England,2026-10,3 bed,1139,7.628935
+E07000203,Mid Suffolk,la,East of England,2026-10,4+ bed,1606,6.846037
+E07000203,Mid Suffolk,la,East of England,2026-10,Detached,1393,7.318501
+E07000203,Mid Suffolk,la,East of England,2026-10,Semi-detached,1086,7.755163
+E07000203,Mid Suffolk,la,East of England,2026-10,Terraced,1005,7.626397
+E07000203,Mid Suffolk,la,East of England,2026-10,Flat,811,7.334544
+E07000207,Elmbridge,la,South East,2026-10,All,1909,4.00228
+E07000207,Elmbridge,la,South East,2026-10,1 bed,1273,4.009776
+E07000207,Elmbridge,la,South East,2026-10,2 bed,1604,4.024008
+E07000207,Elmbridge,la,South East,2026-10,3 bed,1957,4.464246
+E07000207,Elmbridge,la,South East,2026-10,4+ bed,2914,3.290271
+E07000207,Elmbridge,la,South East,2026-10,Detached,2759,3.543279
+E07000207,Elmbridge,la,South East,2026-10,Semi-detached,1975,4.37934
+E07000207,Elmbridge,la,South East,2026-10,Terraced,1918,4.406551
+E07000207,Elmbridge,la,South East,2026-10,Flat,1507,3.631333
+E07000208,Epsom and Ewell,la,South East,2026-10,All,1741,5.846451
+E07000208,Epsom and Ewell,la,South East,2026-10,1 bed,1216,5.681166
+E07000208,Epsom and Ewell,la,South East,2026-10,2 bed,1523,5.780477
+E07000208,Epsom and Ewell,la,South East,2026-10,3 bed,1929,6.45222
+E07000208,Epsom and Ewell,la,South East,2026-10,4+ bed,2677,5.409064
+E07000208,Epsom and Ewell,la,South East,2026-10,Detached,2546,5.558068
+E07000208,Epsom and Ewell,la,South East,2026-10,Semi-detached,1943,6.322115
+E07000208,Epsom and Ewell,la,South East,2026-10,Terraced,1711,6.272309
+E07000208,Epsom and Ewell,la,South East,2026-10,Flat,1384,5.307609
+E07000209,Guildford,la,South East,2026-10,All,1770,5.78038
+E07000209,Guildford,la,South East,2026-10,1 bed,1207,5.789956
+E07000209,Guildford,la,South East,2026-10,2 bed,1572,5.944917
+E07000209,Guildford,la,South East,2026-10,3 bed,1906,6.275833
+E07000209,Guildford,la,South East,2026-10,4+ bed,2576,5.18541
+E07000209,Guildford,la,South East,2026-10,Detached,2552,5.92381
+E07000209,Guildford,la,South East,2026-10,Semi-detached,1963,5.887255
+E07000209,Guildford,la,South East,2026-10,Terraced,1785,6.145226
+E07000209,Guildford,la,South East,2026-10,Flat,1395,5.405513
+E07000210,Mole Valley,la,South East,2026-10,All,1581,4.738575
+E07000210,Mole Valley,la,South East,2026-10,1 bed,1160,4.611567
+E07000210,Mole Valley,la,South East,2026-10,2 bed,1483,4.512307
+E07000210,Mole Valley,la,South East,2026-10,3 bed,1894,4.962188
+E07000210,Mole Valley,la,South East,2026-10,4+ bed,2629,4.194737
+E07000210,Mole Valley,la,South East,2026-10,Detached,2247,4.626204
+E07000210,Mole Valley,la,South East,2026-10,Semi-detached,1787,5.013282
+E07000210,Mole Valley,la,South East,2026-10,Terraced,1493,4.985123
+E07000210,Mole Valley,la,South East,2026-10,Flat,1294,4.427564
+E07000211,Reigate and Banstead,la,South East,2026-10,All,1672,4.214192
+E07000211,Reigate and Banstead,la,South East,2026-10,1 bed,1162,4.140668
+E07000211,Reigate and Banstead,la,South East,2026-10,2 bed,1510,4.102069
+E07000211,Reigate and Banstead,la,South East,2026-10,3 bed,1855,4.547839
+E07000211,Reigate and Banstead,la,South East,2026-10,4+ bed,2610,3.756743
+E07000211,Reigate and Banstead,la,South East,2026-10,Detached,2444,4.083074
+E07000211,Reigate and Banstead,la,South East,2026-10,Semi-detached,1786,4.51446
+E07000211,Reigate and Banstead,la,South East,2026-10,Terraced,1687,4.59298
+E07000211,Reigate and Banstead,la,South East,2026-10,Flat,1341,3.774725
+E07000212,Runnymede,la,South East,2026-10,All,1627,2.498831
+E07000212,Runnymede,la,South East,2026-10,1 bed,1110,2.402246
+E07000212,Runnymede,la,South East,2026-10,2 bed,1429,2.38174
+E07000212,Runnymede,la,South East,2026-10,3 bed,1716,2.623165
+E07000212,Runnymede,la,South East,2026-10,4+ bed,2470,2.217201
+E07000212,Runnymede,la,South East,2026-10,Detached,2282,2.564891
+E07000212,Runnymede,la,South East,2026-10,Semi-detached,1842,2.652824
+E07000212,Runnymede,la,South East,2026-10,Terraced,1596,2.743106
+E07000212,Runnymede,la,South East,2026-10,Flat,1313,2.176938
+E07000213,Spelthorne,la,South East,2026-10,All,1742,7.564763
+E07000213,Spelthorne,la,South East,2026-10,1 bed,1262,7.289695
+E07000213,Spelthorne,la,South East,2026-10,2 bed,1623,7.20924
+E07000213,Spelthorne,la,South East,2026-10,3 bed,1892,7.910392
+E07000213,Spelthorne,la,South East,2026-10,4+ bed,2556,7.053987
+E07000213,Spelthorne,la,South East,2026-10,Detached,2298,7.488191
+E07000213,Spelthorne,la,South East,2026-10,Semi-detached,1938,7.932914
+E07000213,Spelthorne,la,South East,2026-10,Terraced,1688,7.830948
+E07000213,Spelthorne,la,South East,2026-10,Flat,1505,7.199812
+E07000214,Surrey Heath,la,South East,2026-10,All,1519,2.585556
+E07000214,Surrey Heath,la,South East,2026-10,1 bed,1046,2.473747
+E07000214,Surrey Heath,la,South East,2026-10,2 bed,1347,2.408108
+E07000214,Surrey Heath,la,South East,2026-10,3 bed,1632,2.797505
+E07000214,Surrey Heath,la,South East,2026-10,4+ bed,2437,2.087403
+E07000214,Surrey Heath,la,South East,2026-10,Detached,2268,2.304772
+E07000214,Surrey Heath,la,South East,2026-10,Semi-detached,1627,2.755531
+E07000214,Surrey Heath,la,South East,2026-10,Terraced,1473,2.982909
+E07000214,Surrey Heath,la,South East,2026-10,Flat,1228,2.298955
+E07000215,Tandridge,la,South East,2026-10,All,1669,7.105409
+E07000215,Tandridge,la,South East,2026-10,1 bed,1179,7.002139
+E07000215,Tandridge,la,South East,2026-10,2 bed,1494,6.89761
+E07000215,Tandridge,la,South East,2026-10,3 bed,1870,7.312614
+E07000215,Tandridge,la,South East,2026-10,4+ bed,2881,6.564344
+E07000215,Tandridge,la,South East,2026-10,Detached,2277,6.898085
+E07000215,Tandridge,la,South East,2026-10,Semi-detached,1778,7.354486
+E07000215,Tandridge,la,South East,2026-10,Terraced,1711,7.288478
+E07000215,Tandridge,la,South East,2026-10,Flat,1368,6.874744
+E07000216,Waverley,la,South East,2026-10,All,1479,-0.022573
+E07000216,Waverley,la,South East,2026-10,1 bed,1071,-0.014656
+E07000216,Waverley,la,South East,2026-10,2 bed,1373,0.003563
+E07000216,Waverley,la,South East,2026-10,3 bed,1658,0.136025
+E07000216,Waverley,la,South East,2026-10,4+ bed,2394,-0.44889
+E07000216,Waverley,la,South East,2026-10,Detached,2160,-0.310082
+E07000216,Waverley,la,South East,2026-10,Semi-detached,1576,0.309998
+E07000216,Waverley,la,South East,2026-10,Terraced,1427,0.170039
+E07000216,Waverley,la,South East,2026-10,Flat,1209,-0.255017
+E07000217,Woking,la,South East,2026-10,All,1643,-0.357056
+E07000217,Woking,la,South East,2026-10,1 bed,1147,-0.602627
+E07000217,Woking,la,South East,2026-10,2 bed,1463,-0.600266
+E07000217,Woking,la,South East,2026-10,3 bed,1787,0.007574
+E07000217,Woking,la,South East,2026-10,4+ bed,2733,-0.897846
+E07000217,Woking,la,South East,2026-10,Detached,2546,-0.575125
+E07000217,Woking,la,South East,2026-10,Semi-detached,1789,0.079058
+E07000217,Woking,la,South East,2026-10,Terraced,1513,0.03851
+E07000217,Woking,la,South East,2026-10,Flat,1308,-0.790212
+E07000218,North Warwickshire,la,West Midlands,2026-10,All,983,3.963402
+E07000218,North Warwickshire,la,West Midlands,2026-10,1 bed,719,3.564944
+E07000218,North Warwickshire,la,West Midlands,2026-10,2 bed,883,3.978675
+E07000218,North Warwickshire,la,West Midlands,2026-10,3 bed,1061,4.116124
+E07000218,North Warwickshire,la,West Midlands,2026-10,4+ bed,1600,2.968017
+E07000218,North Warwickshire,la,West Midlands,2026-10,Detached,1355,3.572164
+E07000218,North Warwickshire,la,West Midlands,2026-10,Semi-detached,1037,4.225196
+E07000218,North Warwickshire,la,West Midlands,2026-10,Terraced,939,4.115833
+E07000218,North Warwickshire,la,West Midlands,2026-10,Flat,805,3.665011
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,All,909,0.645145
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,1 bed,643,0.453966
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,2 bed,822,0.601746
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,3 bed,997,0.759183
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,4+ bed,1439,-0.190786
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,Detached,1216,0.279785
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,Semi-detached,974,0.832227
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,Terraced,895,0.825313
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-10,Flat,732,0.351721
+E07000220,Rugby,la,West Midlands,2026-10,All,1052,4.608127
+E07000220,Rugby,la,West Midlands,2026-10,1 bed,756,4.449626
+E07000220,Rugby,la,West Midlands,2026-10,2 bed,935,4.688807
+E07000220,Rugby,la,West Midlands,2026-10,3 bed,1127,4.990654
+E07000220,Rugby,la,West Midlands,2026-10,4+ bed,1659,4.138205
+E07000220,Rugby,la,West Midlands,2026-10,Detached,1532,4.188001
+E07000220,Rugby,la,West Midlands,2026-10,Semi-detached,1103,4.865524
+E07000220,Rugby,la,West Midlands,2026-10,Terraced,1006,4.826764
+E07000220,Rugby,la,West Midlands,2026-10,Flat,841,4.162279
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,All,1153,6.078589
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,1 bed,817,6.193165
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,2 bed,1023,6.202942
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,3 bed,1273,6.375026
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,4+ bed,1820,5.532384
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,Detached,1585,5.897866
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,Semi-detached,1234,6.45587
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,Terraced,1110,6.061731
+E07000221,Stratford-on-Avon,la,West Midlands,2026-10,Flat,931,5.741781
+E07000222,Warwick,la,West Midlands,2026-10,All,1249,1.994852
+E07000222,Warwick,la,West Midlands,2026-10,1 bed,888,1.942048
+E07000222,Warwick,la,West Midlands,2026-10,2 bed,1112,2.058343
+E07000222,Warwick,la,West Midlands,2026-10,3 bed,1340,2.374851
+E07000222,Warwick,la,West Midlands,2026-10,4+ bed,1919,1.55012
+E07000222,Warwick,la,West Midlands,2026-10,Detached,1738,1.652103
+E07000222,Warwick,la,West Midlands,2026-10,Semi-detached,1303,2.306625
+E07000222,Warwick,la,West Midlands,2026-10,Terraced,1216,2.089108
+E07000222,Warwick,la,West Midlands,2026-10,Flat,1027,1.685478
+E07000223,Adur,la,South East,2026-10,All,1432,4.364749
+E07000223,Adur,la,South East,2026-10,1 bed,1014,4.134625
+E07000223,Adur,la,South East,2026-10,2 bed,1320,4.35172
+E07000223,Adur,la,South East,2026-10,3 bed,1633,4.56186
+E07000223,Adur,la,South East,2026-10,4+ bed,2109,3.657008
+E07000223,Adur,la,South East,2026-10,Detached,1839,4.112924
+E07000223,Adur,la,South East,2026-10,Semi-detached,1558,4.564695
+E07000223,Adur,la,South East,2026-10,Terraced,1520,4.524236
+E07000223,Adur,la,South East,2026-10,Flat,1175,4.189596
+E07000224,Arun,la,South East,2026-10,All,1250,4.074408
+E07000224,Arun,la,South East,2026-10,1 bed,861,4.00337
+E07000224,Arun,la,South East,2026-10,2 bed,1158,4.093593
+E07000224,Arun,la,South East,2026-10,3 bed,1418,4.310867
+E07000224,Arun,la,South East,2026-10,4+ bed,2013,3.528521
+E07000224,Arun,la,South East,2026-10,Detached,1702,3.956997
+E07000224,Arun,la,South East,2026-10,Semi-detached,1382,4.381966
+E07000224,Arun,la,South East,2026-10,Terraced,1289,4.0911
+E07000224,Arun,la,South East,2026-10,Flat,993,3.932201
+E07000225,Chichester,la,South East,2026-10,All,1348,3.716997
+E07000225,Chichester,la,South East,2026-10,1 bed,957,3.829912
+E07000225,Chichester,la,South East,2026-10,2 bed,1236,3.853358
+E07000225,Chichester,la,South East,2026-10,3 bed,1527,4.158811
+E07000225,Chichester,la,South East,2026-10,4+ bed,2144,3.24027
+E07000225,Chichester,la,South East,2026-10,Detached,1784,3.545705
+E07000225,Chichester,la,South East,2026-10,Semi-detached,1484,4.18833
+E07000225,Chichester,la,South East,2026-10,Terraced,1374,3.884443
+E07000225,Chichester,la,South East,2026-10,Flat,1110,3.38752
+E07000226,Crawley,la,South East,2026-10,All,1505,3.614295
+E07000226,Crawley,la,South East,2026-10,1 bed,1078,3.75474
+E07000226,Crawley,la,South East,2026-10,2 bed,1401,3.627033
+E07000226,Crawley,la,South East,2026-10,3 bed,1664,4.057956
+E07000226,Crawley,la,South East,2026-10,4+ bed,2286,3.149398
+E07000226,Crawley,la,South East,2026-10,Detached,2188,3.534654
+E07000226,Crawley,la,South East,2026-10,Semi-detached,1645,3.88065
+E07000226,Crawley,la,South East,2026-10,Terraced,1492,3.950659
+E07000226,Crawley,la,South East,2026-10,Flat,1237,3.231905
+E07000227,Horsham,la,South East,2026-10,All,1505,5.545683
+E07000227,Horsham,la,South East,2026-10,1 bed,1043,5.366333
+E07000227,Horsham,la,South East,2026-10,2 bed,1380,5.502837
+E07000227,Horsham,la,South East,2026-10,3 bed,1737,5.896984
+E07000227,Horsham,la,South East,2026-10,4+ bed,2481,5.165276
+E07000227,Horsham,la,South East,2026-10,Detached,2150,5.525856
+E07000227,Horsham,la,South East,2026-10,Semi-detached,1673,5.873641
+E07000227,Horsham,la,South East,2026-10,Terraced,1511,5.891296
+E07000227,Horsham,la,South East,2026-10,Flat,1182,5.127207
+E07000228,Mid Sussex,la,South East,2026-10,All,1451,4.871168
+E07000228,Mid Sussex,la,South East,2026-10,1 bed,1027,4.775161
+E07000228,Mid Sussex,la,South East,2026-10,2 bed,1315,4.785255
+E07000228,Mid Sussex,la,South East,2026-10,3 bed,1654,5.166743
+E07000228,Mid Sussex,la,South East,2026-10,4+ bed,2254,4.43487
+E07000228,Mid Sussex,la,South East,2026-10,Detached,2084,4.778306
+E07000228,Mid Sussex,la,South East,2026-10,Semi-detached,1638,5.115443
+E07000228,Mid Sussex,la,South East,2026-10,Terraced,1441,5.221611
+E07000228,Mid Sussex,la,South East,2026-10,Flat,1164,4.474928
+E07000229,Worthing,la,South East,2026-10,All,1303,-0.156228
+E07000229,Worthing,la,South East,2026-10,1 bed,892,-0.365356
+E07000229,Worthing,la,South East,2026-10,2 bed,1187,-0.209415
+E07000229,Worthing,la,South East,2026-10,3 bed,1436,0.190371
+E07000229,Worthing,la,South East,2026-10,4+ bed,1941,-0.543666
+E07000229,Worthing,la,South East,2026-10,Detached,1725,-0.126732
+E07000229,Worthing,la,South East,2026-10,Semi-detached,1458,0.233346
+E07000229,Worthing,la,South East,2026-10,Terraced,1366,0.179961
+E07000229,Worthing,la,South East,2026-10,Flat,1045,-0.655576
+E07000234,Bromsgrove,la,West Midlands,2026-10,All,1004,3.157928
+E07000234,Bromsgrove,la,West Midlands,2026-10,1 bed,724,3.144448
+E07000234,Bromsgrove,la,West Midlands,2026-10,2 bed,909,3.188688
+E07000234,Bromsgrove,la,West Midlands,2026-10,3 bed,1104,3.221317
+E07000234,Bromsgrove,la,West Midlands,2026-10,4+ bed,1621,2.351972
+E07000234,Bromsgrove,la,West Midlands,2026-10,Detached,1356,2.856726
+E07000234,Bromsgrove,la,West Midlands,2026-10,Semi-detached,1054,3.347565
+E07000234,Bromsgrove,la,West Midlands,2026-10,Terraced,987,3.243816
+E07000234,Bromsgrove,la,West Midlands,2026-10,Flat,797,2.979416
+E07000235,Malvern Hills,la,West Midlands,2026-10,All,963,5.604319
+E07000235,Malvern Hills,la,West Midlands,2026-10,1 bed,708,5.350052
+E07000235,Malvern Hills,la,West Midlands,2026-10,2 bed,894,5.57261
+E07000235,Malvern Hills,la,West Midlands,2026-10,3 bed,1105,5.802822
+E07000235,Malvern Hills,la,West Midlands,2026-10,4+ bed,1508,5.056473
+E07000235,Malvern Hills,la,West Midlands,2026-10,Detached,1254,5.427133
+E07000235,Malvern Hills,la,West Midlands,2026-10,Semi-detached,1033,5.880332
+E07000235,Malvern Hills,la,West Midlands,2026-10,Terraced,932,5.802692
+E07000235,Malvern Hills,la,West Midlands,2026-10,Flat,818,5.09837
+E07000236,Redditch,la,West Midlands,2026-10,All,988,11.457747
+E07000236,Redditch,la,West Midlands,2026-10,1 bed,689,11.193694
+E07000236,Redditch,la,West Midlands,2026-10,2 bed,893,11.380334
+E07000236,Redditch,la,West Midlands,2026-10,3 bed,1067,11.630842
+E07000236,Redditch,la,West Midlands,2026-10,4+ bed,1464,10.873007
+E07000236,Redditch,la,West Midlands,2026-10,Detached,1347,11.198339
+E07000236,Redditch,la,West Midlands,2026-10,Semi-detached,1037,11.625237
+E07000236,Redditch,la,West Midlands,2026-10,Terraced,1002,11.666943
+E07000236,Redditch,la,West Midlands,2026-10,Flat,761,11.081734
+E07000237,Worcester,la,West Midlands,2026-10,All,991,6.610012
+E07000237,Worcester,la,West Midlands,2026-10,1 bed,720,6.292164
+E07000237,Worcester,la,West Midlands,2026-10,2 bed,921,6.649008
+E07000237,Worcester,la,West Midlands,2026-10,3 bed,1104,6.940266
+E07000237,Worcester,la,West Midlands,2026-10,4+ bed,1563,6.028878
+E07000237,Worcester,la,West Midlands,2026-10,Detached,1362,6.494606
+E07000237,Worcester,la,West Midlands,2026-10,Semi-detached,1059,7.03787
+E07000237,Worcester,la,West Midlands,2026-10,Terraced,968,6.766086
+E07000237,Worcester,la,West Midlands,2026-10,Flat,806,5.922376
+E07000238,Wychavon,la,West Midlands,2026-10,All,971,5.981157
+E07000238,Wychavon,la,West Midlands,2026-10,1 bed,682,6.167188
+E07000238,Wychavon,la,West Midlands,2026-10,2 bed,887,5.916453
+E07000238,Wychavon,la,West Midlands,2026-10,3 bed,1094,6.024578
+E07000238,Wychavon,la,West Midlands,2026-10,4+ bed,1597,5.162645
+E07000238,Wychavon,la,West Midlands,2026-10,Detached,1379,5.57148
+E07000238,Wychavon,la,West Midlands,2026-10,Semi-detached,1039,6.17838
+E07000238,Wychavon,la,West Midlands,2026-10,Terraced,935,6.015779
+E07000238,Wychavon,la,West Midlands,2026-10,Flat,762,5.944787
+E07000239,Wyre Forest,la,West Midlands,2026-10,All,852,0.100645
+E07000239,Wyre Forest,la,West Midlands,2026-10,1 bed,601,-0.06266
+E07000239,Wyre Forest,la,West Midlands,2026-10,2 bed,765,0.110493
+E07000239,Wyre Forest,la,West Midlands,2026-10,3 bed,926,0.255994
+E07000239,Wyre Forest,la,West Midlands,2026-10,4+ bed,1279,-0.54279
+E07000239,Wyre Forest,la,West Midlands,2026-10,Detached,1107,-0.101742
+E07000239,Wyre Forest,la,West Midlands,2026-10,Semi-detached,947,0.359284
+E07000239,Wyre Forest,la,West Midlands,2026-10,Terraced,837,0.252398
+E07000239,Wyre Forest,la,West Midlands,2026-10,Flat,659,-0.368015
+E07000240,St Albans,la,East of England,2026-10,All,1940,2.71233
+E07000240,St Albans,la,East of England,2026-10,1 bed,1275,2.733863
+E07000240,St Albans,la,East of England,2026-10,2 bed,1639,2.845531
+E07000240,St Albans,la,East of England,2026-10,3 bed,2030,3.123462
+E07000240,St Albans,la,East of England,2026-10,4+ bed,2916,2.112568
+E07000240,St Albans,la,East of England,2026-10,Detached,2681,2.347014
+E07000240,St Albans,la,East of England,2026-10,Semi-detached,2181,3.094526
+E07000240,St Albans,la,East of England,2026-10,Terraced,1805,2.851133
+E07000240,St Albans,la,East of England,2026-10,Flat,1490,2.441241
+E07000241,Welwyn Hatfield,la,East of England,2026-10,All,1506,2.982863
+E07000241,Welwyn Hatfield,la,East of England,2026-10,1 bed,1058,3.160304
+E07000241,Welwyn Hatfield,la,East of England,2026-10,2 bed,1369,3.011624
+E07000241,Welwyn Hatfield,la,East of England,2026-10,3 bed,1643,3.501164
+E07000241,Welwyn Hatfield,la,East of England,2026-10,4+ bed,2327,2.415121
+E07000241,Welwyn Hatfield,la,East of England,2026-10,Detached,1917,2.907555
+E07000241,Welwyn Hatfield,la,East of England,2026-10,Semi-detached,1665,3.255485
+E07000241,Welwyn Hatfield,la,East of England,2026-10,Terraced,1522,3.099616
+E07000241,Welwyn Hatfield,la,East of England,2026-10,Flat,1191,2.632066
+E07000242,East Hertfordshire,la,East of England,2026-10,All,1555,5.106388
+E07000242,East Hertfordshire,la,East of England,2026-10,1 bed,1101,5.199385
+E07000242,East Hertfordshire,la,East of England,2026-10,2 bed,1402,5.118449
+E07000242,East Hertfordshire,la,East of England,2026-10,3 bed,1699,5.506728
+E07000242,East Hertfordshire,la,East of England,2026-10,4+ bed,2487,4.709637
+E07000242,East Hertfordshire,la,East of England,2026-10,Detached,2190,4.900873
+E07000242,East Hertfordshire,la,East of England,2026-10,Semi-detached,1688,5.403197
+E07000242,East Hertfordshire,la,East of England,2026-10,Terraced,1445,5.327449
+E07000242,East Hertfordshire,la,East of England,2026-10,Flat,1271,4.735585
+E07000243,Stevenage,la,East of England,2026-10,All,1449,4.789817
+E07000243,Stevenage,la,East of England,2026-10,1 bed,1033,4.863501
+E07000243,Stevenage,la,East of England,2026-10,2 bed,1328,4.667544
+E07000243,Stevenage,la,East of England,2026-10,3 bed,1564,5.115703
+E07000243,Stevenage,la,East of England,2026-10,4+ bed,2140,4.308627
+E07000243,Stevenage,la,East of England,2026-10,Detached,1979,4.728133
+E07000243,Stevenage,la,East of England,2026-10,Semi-detached,1475,5.222834
+E07000243,Stevenage,la,East of England,2026-10,Terraced,1479,4.92386
+E07000243,Stevenage,la,East of England,2026-10,Flat,1172,4.329609
+E07000244,East Suffolk,la,East of England,2026-10,All,850,5.672201
+E07000244,East Suffolk,la,East of England,2026-10,1 bed,608,5.448416
+E07000244,East Suffolk,la,East of England,2026-10,2 bed,800,5.771786
+E07000244,East Suffolk,la,East of England,2026-10,3 bed,950,5.904688
+E07000244,East Suffolk,la,East of England,2026-10,4+ bed,1354,4.999789
+E07000244,East Suffolk,la,East of England,2026-10,Detached,1133,5.500508
+E07000244,East Suffolk,la,East of England,2026-10,Semi-detached,930,5.955034
+E07000244,East Suffolk,la,East of England,2026-10,Terraced,853,5.886455
+E07000244,East Suffolk,la,East of England,2026-10,Flat,657,5.276472
+E07000245,West Suffolk,la,East of England,2026-10,All,1196,3.978431
+E07000245,West Suffolk,la,East of England,2026-10,1 bed,825,3.909279
+E07000245,West Suffolk,la,East of England,2026-10,2 bed,1072,4.109472
+E07000245,West Suffolk,la,East of England,2026-10,3 bed,1334,4.250616
+E07000245,West Suffolk,la,East of England,2026-10,4+ bed,1875,3.480772
+E07000245,West Suffolk,la,East of England,2026-10,Detached,1686,3.800979
+E07000245,West Suffolk,la,East of England,2026-10,Semi-detached,1277,4.343016
+E07000245,West Suffolk,la,East of England,2026-10,Terraced,1174,4.037203
+E07000245,West Suffolk,la,East of England,2026-10,Flat,961,3.756714
+E08000001,Bolton,la,North West,2026-10,All,908,7.816666
+E08000001,Bolton,la,North West,2026-10,1 bed,663,7.457847
+E08000001,Bolton,la,North West,2026-10,2 bed,828,7.974244
+E08000001,Bolton,la,North West,2026-10,3 bed,1005,8.216948
+E08000001,Bolton,la,North West,2026-10,4+ bed,1472,7.211842
+E08000001,Bolton,la,North West,2026-10,Detached,1376,7.508538
+E08000001,Bolton,la,North West,2026-10,Semi-detached,985,8.123712
+E08000001,Bolton,la,North West,2026-10,Terraced,874,8.117455
+E08000001,Bolton,la,North West,2026-10,Flat,795,7.102641
+E08000002,Bury,la,North West,2026-10,All,976,1.678865
+E08000002,Bury,la,North West,2026-10,1 bed,690,1.409419
+E08000002,Bury,la,North West,2026-10,2 bed,895,1.87008
+E08000002,Bury,la,North West,2026-10,3 bed,1074,2.026797
+E08000002,Bury,la,North West,2026-10,4+ bed,1570,1.036264
+E08000002,Bury,la,North West,2026-10,Detached,1455,1.441558
+E08000002,Bury,la,North West,2026-10,Semi-detached,1068,2.031682
+E08000002,Bury,la,North West,2026-10,Terraced,953,1.827755
+E08000002,Bury,la,North West,2026-10,Flat,837,1.104787
+E08000003,Manchester,la,North West,2026-10,All,1386,4.722316
+E08000003,Manchester,la,North West,2026-10,1 bed,1010,4.053575
+E08000003,Manchester,la,North West,2026-10,2 bed,1244,4.239421
+E08000003,Manchester,la,North West,2026-10,3 bed,1448,5.041741
+E08000003,Manchester,la,North West,2026-10,4+ bed,2032,3.812007
+E08000003,Manchester,la,North West,2026-10,Detached,1896,4.399017
+E08000003,Manchester,la,North West,2026-10,Semi-detached,1512,5.150147
+E08000003,Manchester,la,North West,2026-10,Terraced,1419,4.916081
+E08000003,Manchester,la,North West,2026-10,Flat,1156,4.076554
+E08000004,Oldham,la,North West,2026-10,All,954,12.696686
+E08000004,Oldham,la,North West,2026-10,1 bed,709,12.247971
+E08000004,Oldham,la,North West,2026-10,2 bed,890,13.004516
+E08000004,Oldham,la,North West,2026-10,3 bed,1081,13.048035
+E08000004,Oldham,la,North West,2026-10,4+ bed,1470,11.871944
+E08000004,Oldham,la,North West,2026-10,Detached,1371,12.290922
+E08000004,Oldham,la,North West,2026-10,Semi-detached,1058,13.100727
+E08000004,Oldham,la,North West,2026-10,Terraced,935,12.720714
+E08000004,Oldham,la,North West,2026-10,Flat,818,12.354368
+E08000005,Rochdale,la,North West,2026-10,All,863,9.056757
+E08000005,Rochdale,la,North West,2026-10,1 bed,627,8.9331
+E08000005,Rochdale,la,North West,2026-10,2 bed,807,9.207851
+E08000005,Rochdale,la,North West,2026-10,3 bed,970,9.19495
+E08000005,Rochdale,la,North West,2026-10,4+ bed,1390,8.265591
+E08000005,Rochdale,la,North West,2026-10,Detached,1283,8.552691
+E08000005,Rochdale,la,North West,2026-10,Semi-detached,956,9.306059
+E08000005,Rochdale,la,North West,2026-10,Terraced,849,9.273445
+E08000005,Rochdale,la,North West,2026-10,Flat,711,8.588112
+E08000006,Salford,la,North West,2026-10,All,1177,2.96225
+E08000006,Salford,la,North West,2026-10,1 bed,891,2.323211
+E08000006,Salford,la,North West,2026-10,2 bed,1090,2.730675
+E08000006,Salford,la,North West,2026-10,3 bed,1297,3.36684
+E08000006,Salford,la,North West,2026-10,4+ bed,1780,2.22867
+E08000006,Salford,la,North West,2026-10,Detached,1543,2.560925
+E08000006,Salford,la,North West,2026-10,Semi-detached,1324,3.234446
+E08000006,Salford,la,North West,2026-10,Terraced,1179,3.278848
+E08000006,Salford,la,North West,2026-10,Flat,1024,2.275995
+E08000007,Stockport,la,North West,2026-10,All,1130,5.65447
+E08000007,Stockport,la,North West,2026-10,1 bed,818,5.512804
+E08000007,Stockport,la,North West,2026-10,2 bed,1047,5.955718
+E08000007,Stockport,la,North West,2026-10,3 bed,1279,6.057452
+E08000007,Stockport,la,North West,2026-10,4+ bed,1762,5.034664
+E08000007,Stockport,la,North West,2026-10,Detached,1574,5.033234
+E08000007,Stockport,la,North West,2026-10,Semi-detached,1236,5.825612
+E08000007,Stockport,la,North West,2026-10,Terraced,1130,5.908751
+E08000007,Stockport,la,North West,2026-10,Flat,960,5.250849
+E08000008,Tameside,la,North West,2026-10,All,937,4.456165
+E08000008,Tameside,la,North West,2026-10,1 bed,688,4.335032
+E08000008,Tameside,la,North West,2026-10,2 bed,892,4.740616
+E08000008,Tameside,la,North West,2026-10,3 bed,1071,4.796012
+E08000008,Tameside,la,North West,2026-10,4+ bed,1411,3.854002
+E08000008,Tameside,la,North West,2026-10,Detached,1242,4.162036
+E08000008,Tameside,la,North West,2026-10,Semi-detached,1065,4.836283
+E08000008,Tameside,la,North West,2026-10,Terraced,933,4.609642
+E08000008,Tameside,la,North West,2026-10,Flat,794,3.844221
+E08000009,Trafford,la,North West,2026-10,All,1378,3.298651
+E08000009,Trafford,la,North West,2026-10,1 bed,948,3.112303
+E08000009,Trafford,la,North West,2026-10,2 bed,1209,3.23795
+E08000009,Trafford,la,North West,2026-10,3 bed,1494,3.70029
+E08000009,Trafford,la,North West,2026-10,4+ bed,2120,2.573565
+E08000009,Trafford,la,North West,2026-10,Detached,2059,2.887643
+E08000009,Trafford,la,North West,2026-10,Semi-detached,1533,3.477786
+E08000009,Trafford,la,North West,2026-10,Terraced,1365,3.510107
+E08000009,Trafford,la,North West,2026-10,Flat,1125,2.876198
+E08000010,Wigan,la,North West,2026-10,All,754,6.362152
+E08000010,Wigan,la,North West,2026-10,1 bed,547,6.312581
+E08000010,Wigan,la,North West,2026-10,2 bed,707,6.593394
+E08000010,Wigan,la,North West,2026-10,3 bed,847,6.769611
+E08000010,Wigan,la,North West,2026-10,4+ bed,1154,5.566756
+E08000010,Wigan,la,North West,2026-10,Detached,1010,5.802738
+E08000010,Wigan,la,North West,2026-10,Semi-detached,839,6.640958
+E08000010,Wigan,la,North West,2026-10,Terraced,756,6.655389
+E08000010,Wigan,la,North West,2026-10,Flat,641,5.731937
+E08000011,Knowsley,la,North West,2026-10,All,863,10.694786
+E08000011,Knowsley,la,North West,2026-10,1 bed,604,10.340961
+E08000011,Knowsley,la,North West,2026-10,2 bed,772,10.702052
+E08000011,Knowsley,la,North West,2026-10,3 bed,936,10.962064
+E08000011,Knowsley,la,North West,2026-10,4+ bed,1334,9.819528
+E08000011,Knowsley,la,North West,2026-10,Detached,1288,10.282919
+E08000011,Knowsley,la,North West,2026-10,Semi-detached,937,10.94242
+E08000011,Knowsley,la,North West,2026-10,Terraced,880,10.954727
+E08000011,Knowsley,la,North West,2026-10,Flat,694,10.094356
+E08000012,Liverpool,la,North West,2026-10,All,919,5.240938
+E08000012,Liverpool,la,North West,2026-10,1 bed,689,4.786537
+E08000012,Liverpool,la,North West,2026-10,2 bed,842,5.116687
+E08000012,Liverpool,la,North West,2026-10,3 bed,971,5.710368
+E08000012,Liverpool,la,North West,2026-10,4+ bed,1303,4.743217
+E08000012,Liverpool,la,North West,2026-10,Detached,1233,4.599276
+E08000012,Liverpool,la,North West,2026-10,Semi-detached,1016,5.402088
+E08000012,Liverpool,la,North West,2026-10,Terraced,924,5.635435
+E08000012,Liverpool,la,North West,2026-10,Flat,790,4.670833
+E08000013,St. Helens,la,North West,2026-10,All,817,7.419562
+E08000013,St. Helens,la,North West,2026-10,1 bed,600,7.308512
+E08000013,St. Helens,la,North West,2026-10,2 bed,747,7.697434
+E08000013,St. Helens,la,North West,2026-10,3 bed,914,7.764889
+E08000013,St. Helens,la,North West,2026-10,4+ bed,1316,6.506567
+E08000013,St. Helens,la,North West,2026-10,Detached,1180,7.048521
+E08000013,St. Helens,la,North West,2026-10,Semi-detached,894,7.800951
+E08000013,St. Helens,la,North West,2026-10,Terraced,808,7.649762
+E08000013,St. Helens,la,North West,2026-10,Flat,694,6.724089
+E08000014,Sefton,la,North West,2026-10,All,942,4.738904
+E08000014,Sefton,la,North West,2026-10,1 bed,624,4.498593
+E08000014,Sefton,la,North West,2026-10,2 bed,817,4.726292
+E08000014,Sefton,la,North West,2026-10,3 bed,999,5.069414
+E08000014,Sefton,la,North West,2026-10,4+ bed,1419,4.004753
+E08000014,Sefton,la,North West,2026-10,Detached,1319,4.40498
+E08000014,Sefton,la,North West,2026-10,Semi-detached,1021,5.022368
+E08000014,Sefton,la,North West,2026-10,Terraced,971,4.934995
+E08000014,Sefton,la,North West,2026-10,Flat,744,4.176951
+E08000015,Wirral,la,North West,2026-10,All,865,6.468386
+E08000015,Wirral,la,North West,2026-10,1 bed,575,6.372157
+E08000015,Wirral,la,North West,2026-10,2 bed,745,6.571153
+E08000015,Wirral,la,North West,2026-10,3 bed,912,6.80481
+E08000015,Wirral,la,North West,2026-10,4+ bed,1260,5.969999
+E08000015,Wirral,la,North West,2026-10,Detached,1198,5.924426
+E08000015,Wirral,la,North West,2026-10,Semi-detached,954,6.539729
+E08000015,Wirral,la,North West,2026-10,Terraced,874,6.904275
+E08000015,Wirral,la,North West,2026-10,Flat,717,5.841835
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,All,703,4.980629
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,1 bed,499,4.943291
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,2 bed,645,5.410595
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,3 bed,768,5.564783
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,4+ bed,1090,4.466309
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,Detached,938,4.661752
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,Semi-detached,760,5.240467
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,Terraced,707,5.176484
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-10,Flat,557,4.374653
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,All,691,3.245207
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,1 bed,491,3.452711
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,2 bed,620,3.659105
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,3 bed,750,3.75546
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,4+ bed,1082,2.711488
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,Detached,924,2.940773
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,Semi-detached,745,3.290333
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,Terraced,684,3.507513
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-10,Flat,559,2.807595
+E08000021,Newcastle upon Tyne,la,North East,2026-10,All,1225,6.066362
+E08000021,Newcastle upon Tyne,la,North East,2026-10,1 bed,819,5.741287
+E08000021,Newcastle upon Tyne,la,North East,2026-10,2 bed,1014,5.989905
+E08000021,Newcastle upon Tyne,la,North East,2026-10,3 bed,1204,6.352209
+E08000021,Newcastle upon Tyne,la,North East,2026-10,4+ bed,1852,5.327095
+E08000021,Newcastle upon Tyne,la,North East,2026-10,Detached,1710,5.957613
+E08000021,Newcastle upon Tyne,la,North East,2026-10,Semi-detached,1275,6.537156
+E08000021,Newcastle upon Tyne,la,North East,2026-10,Terraced,1304,6.009295
+E08000021,Newcastle upon Tyne,la,North East,2026-10,Flat,1000,5.79257
+E08000022,North Tyneside,la,North East,2026-10,All,864,5.808436
+E08000022,North Tyneside,la,North East,2026-10,1 bed,594,5.911519
+E08000022,North Tyneside,la,North East,2026-10,2 bed,742,5.654624
+E08000022,North Tyneside,la,North East,2026-10,3 bed,913,6.083406
+E08000022,North Tyneside,la,North East,2026-10,4+ bed,1231,5.067544
+E08000022,North Tyneside,la,North East,2026-10,Detached,1175,5.424751
+E08000022,North Tyneside,la,North East,2026-10,Semi-detached,916,6.152636
+E08000022,North Tyneside,la,North East,2026-10,Terraced,889,5.870535
+E08000022,North Tyneside,la,North East,2026-10,Flat,721,5.367318
+E08000023,South Tyneside,la,North East,2026-10,All,749,7.099988
+E08000023,South Tyneside,la,North East,2026-10,1 bed,524,6.867132
+E08000023,South Tyneside,la,North East,2026-10,2 bed,651,6.939985
+E08000023,South Tyneside,la,North East,2026-10,3 bed,783,7.376635
+E08000023,South Tyneside,la,North East,2026-10,4+ bed,1037,6.44455
+E08000023,South Tyneside,la,North East,2026-10,Detached,1096,6.74999
+E08000023,South Tyneside,la,North East,2026-10,Semi-detached,793,7.655777
+E08000023,South Tyneside,la,North East,2026-10,Terraced,749,7.103083
+E08000023,South Tyneside,la,North East,2026-10,Flat,641,6.529268
+E08000024,Sunderland,la,North East,2026-10,All,714,3.846817
+E08000024,Sunderland,la,North East,2026-10,1 bed,527,3.459533
+E08000024,Sunderland,la,North East,2026-10,2 bed,654,3.924389
+E08000024,Sunderland,la,North East,2026-10,3 bed,781,4.288978
+E08000024,Sunderland,la,North East,2026-10,4+ bed,1089,3.099902
+E08000024,Sunderland,la,North East,2026-10,Detached,1059,3.345201
+E08000024,Sunderland,la,North East,2026-10,Semi-detached,741,4.146931
+E08000024,Sunderland,la,North East,2026-10,Terraced,731,4.050912
+E08000024,Sunderland,la,North East,2026-10,Flat,613,3.294888
+E08000025,Birmingham,la,West Midlands,2026-10,All,1112,3.440733
+E08000025,Birmingham,la,West Midlands,2026-10,1 bed,838,3.067414
+E08000025,Birmingham,la,West Midlands,2026-10,2 bed,1015,3.311062
+E08000025,Birmingham,la,West Midlands,2026-10,3 bed,1148,3.960511
+E08000025,Birmingham,la,West Midlands,2026-10,4+ bed,1596,3.105821
+E08000025,Birmingham,la,West Midlands,2026-10,Detached,1451,2.91848
+E08000025,Birmingham,la,West Midlands,2026-10,Semi-detached,1166,3.813579
+E08000025,Birmingham,la,West Midlands,2026-10,Terraced,1109,3.716764
+E08000025,Birmingham,la,West Midlands,2026-10,Flat,928,2.941143
+E08000026,Coventry,la,West Midlands,2026-10,All,1023,2.015063
+E08000026,Coventry,la,West Midlands,2026-10,1 bed,760,1.723141
+E08000026,Coventry,la,West Midlands,2026-10,2 bed,916,2.057174
+E08000026,Coventry,la,West Midlands,2026-10,3 bed,1071,2.360873
+E08000026,Coventry,la,West Midlands,2026-10,4+ bed,1456,1.364356
+E08000026,Coventry,la,West Midlands,2026-10,Detached,1238,1.661276
+E08000026,Coventry,la,West Midlands,2026-10,Semi-detached,1080,2.320841
+E08000026,Coventry,la,West Midlands,2026-10,Terraced,1044,2.178706
+E08000026,Coventry,la,West Midlands,2026-10,Flat,854,1.582499
+E08000027,Dudley,la,West Midlands,2026-10,All,853,2.202755
+E08000027,Dudley,la,West Midlands,2026-10,1 bed,607,2.149398
+E08000027,Dudley,la,West Midlands,2026-10,2 bed,777,2.410883
+E08000027,Dudley,la,West Midlands,2026-10,3 bed,938,2.579876
+E08000027,Dudley,la,West Midlands,2026-10,4+ bed,1242,1.630895
+E08000027,Dudley,la,West Midlands,2026-10,Detached,1079,2.117425
+E08000027,Dudley,la,West Midlands,2026-10,Semi-detached,909,2.43822
+E08000027,Dudley,la,West Midlands,2026-10,Terraced,865,2.222123
+E08000027,Dudley,la,West Midlands,2026-10,Flat,676,1.901887
+E08000028,Sandwell,la,West Midlands,2026-10,All,952,6.135372
+E08000028,Sandwell,la,West Midlands,2026-10,1 bed,679,5.937292
+E08000028,Sandwell,la,West Midlands,2026-10,2 bed,850,6.2872
+E08000028,Sandwell,la,West Midlands,2026-10,3 bed,1014,6.620717
+E08000028,Sandwell,la,West Midlands,2026-10,4+ bed,1403,5.643035
+E08000028,Sandwell,la,West Midlands,2026-10,Detached,1248,5.776682
+E08000028,Sandwell,la,West Midlands,2026-10,Semi-detached,1026,6.479475
+E08000028,Sandwell,la,West Midlands,2026-10,Terraced,945,6.322016
+E08000028,Sandwell,la,West Midlands,2026-10,Flat,762,5.61293
+E08000029,Solihull,la,West Midlands,2026-10,All,1289,3.533866
+E08000029,Solihull,la,West Midlands,2026-10,1 bed,863,3.536248
+E08000029,Solihull,la,West Midlands,2026-10,2 bed,1073,3.534637
+E08000029,Solihull,la,West Midlands,2026-10,3 bed,1274,3.9281
+E08000029,Solihull,la,West Midlands,2026-10,4+ bed,1893,3.018036
+E08000029,Solihull,la,West Midlands,2026-10,Detached,1827,3.199638
+E08000029,Solihull,la,West Midlands,2026-10,Semi-detached,1332,3.733015
+E08000029,Solihull,la,West Midlands,2026-10,Terraced,1244,3.762207
+E08000029,Solihull,la,West Midlands,2026-10,Flat,1022,3.170423
+E08000030,Walsall,la,West Midlands,2026-10,All,933,8.266019
+E08000030,Walsall,la,West Midlands,2026-10,1 bed,659,8.191127
+E08000030,Walsall,la,West Midlands,2026-10,2 bed,805,8.342533
+E08000030,Walsall,la,West Midlands,2026-10,3 bed,964,8.776498
+E08000030,Walsall,la,West Midlands,2026-10,4+ bed,1339,7.816285
+E08000030,Walsall,la,West Midlands,2026-10,Detached,1242,7.984258
+E08000030,Walsall,la,West Midlands,2026-10,Semi-detached,974,8.60069
+E08000030,Walsall,la,West Midlands,2026-10,Terraced,923,8.458327
+E08000030,Walsall,la,West Midlands,2026-10,Flat,757,7.70091
+E08000031,Wolverhampton,la,West Midlands,2026-10,All,950,9.441839
+E08000031,Wolverhampton,la,West Midlands,2026-10,1 bed,675,8.998265
+E08000031,Wolverhampton,la,West Midlands,2026-10,2 bed,846,9.510585
+E08000031,Wolverhampton,la,West Midlands,2026-10,3 bed,1016,9.897742
+E08000031,Wolverhampton,la,West Midlands,2026-10,4+ bed,1449,8.869861
+E08000031,Wolverhampton,la,West Midlands,2026-10,Detached,1281,9.138664
+E08000031,Wolverhampton,la,West Midlands,2026-10,Semi-detached,1007,9.705594
+E08000031,Wolverhampton,la,West Midlands,2026-10,Terraced,948,9.618499
+E08000031,Wolverhampton,la,West Midlands,2026-10,Flat,739,8.972353
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,All,743,2.258709
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,1 bed,547,2.198038
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,2 bed,674,2.373454
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,3 bed,807,2.688882
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,4+ bed,1105,1.686773
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,Detached,1050,2.011488
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,Semi-detached,786,2.654824
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,Terraced,716,2.317036
+E08000032,Bradford,la,Yorkshire and The Humber,2026-10,Flat,619,1.740324
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,All,765,4.034795
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,1 bed,554,4.005222
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,2 bed,692,4.112462
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,3 bed,826,4.358805
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,4+ bed,1137,3.626353
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,Detached,1088,3.925181
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,Semi-detached,835,4.430698
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,Terraced,719,4.123123
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-10,Flat,633,3.344072
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,All,786,11.848301
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,1 bed,586,11.907307
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,2 bed,716,12.125602
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,3 bed,872,12.364253
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,4+ bed,1238,11.38977
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,Detached,1110,11.73859
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,Semi-detached,853,12.225679
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,Terraced,737,11.934626
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-10,Flat,668,11.192556
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,All,1149,4.133759
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,1 bed,784,3.95386
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,2 bed,978,4.272684
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,3 bed,1144,4.864628
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,4+ bed,1696,3.495977
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,Detached,1514,4.165366
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,Semi-detached,1233,4.487913
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,Terraced,1162,4.103201
+E08000035,Leeds,la,Yorkshire and The Humber,2026-10,Flat,907,3.742383
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,All,818,6.336051
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,1 bed,584,6.270113
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,2 bed,738,6.562228
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,3 bed,884,6.856905
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,4+ bed,1236,5.853231
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,Detached,1123,6.249159
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,Semi-detached,882,6.627866
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,Terraced,796,6.483855
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-10,Flat,673,5.644752
+E08000037,Gateshead,la,North East,2026-10,All,813,5.46662
+E08000037,Gateshead,la,North East,2026-10,1 bed,596,5.02023
+E08000037,Gateshead,la,North East,2026-10,2 bed,731,5.375555
+E08000037,Gateshead,la,North East,2026-10,3 bed,854,5.686242
+E08000037,Gateshead,la,North East,2026-10,4+ bed,1210,4.521416
+E08000037,Gateshead,la,North East,2026-10,Detached,1114,5.236586
+E08000037,Gateshead,la,North East,2026-10,Semi-detached,853,6.042173
+E08000037,Gateshead,la,North East,2026-10,Terraced,821,5.487951
+E08000037,Gateshead,la,North East,2026-10,Flat,714,4.836778
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,All,700,7.083928
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,1 bed,509,6.788497
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,2 bed,633,7.235203
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,3 bed,757,7.313163
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,4+ bed,1092,6.273181
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,Detached,956,6.71619
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,Semi-detached,751,7.442326
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,Terraced,675,7.308173
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-10,Flat,580,6.334511
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,All,940,3.568687
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,1 bed,694,3.10597
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,2 bed,847,3.416354
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,3 bed,976,3.969406
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,4+ bed,1350,2.964778
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,Detached,1244,3.132717
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,Semi-detached,1000,3.983356
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,Terraced,931,3.696041
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-10,Flat,779,2.969148
+E09000002,Barking and Dagenham,la,London,2026-10,All,1704,2.236175
+E09000002,Barking and Dagenham,la,London,2026-10,1 bed,1380,1.92093
+E09000002,Barking and Dagenham,la,London,2026-10,2 bed,1727,2.366272
+E09000002,Barking and Dagenham,la,London,2026-10,3 bed,1907,2.67293
+E09000002,Barking and Dagenham,la,London,2026-10,4+ bed,2528,2.04314
+E09000002,Barking and Dagenham,la,London,2026-10,Detached,1893,2.625837
+E09000002,Barking and Dagenham,la,London,2026-10,Semi-detached,1985,2.896789
+E09000002,Barking and Dagenham,la,London,2026-10,Terraced,1859,2.578462
+E09000002,Barking and Dagenham,la,London,2026-10,Flat,1618,2.009314
+E09000003,Barnet,la,London,2026-10,All,1959,2.585772
+E09000003,Barnet,la,London,2026-10,1 bed,1506,2.621058
+E09000003,Barnet,la,London,2026-10,2 bed,1868,2.598116
+E09000003,Barnet,la,London,2026-10,3 bed,2270,3.047019
+E09000003,Barnet,la,London,2026-10,4+ bed,3212,2.369537
+E09000003,Barnet,la,London,2026-10,Detached,3039,2.528656
+E09000003,Barnet,la,London,2026-10,Semi-detached,2591,2.996164
+E09000003,Barnet,la,London,2026-10,Terraced,2244,3.017589
+E09000003,Barnet,la,London,2026-10,Flat,1745,2.358257
+E09000004,Bexley,la,London,2026-10,All,1546,2.083131
+E09000004,Bexley,la,London,2026-10,1 bed,1235,2.109387
+E09000004,Bexley,la,London,2026-10,2 bed,1535,2.081343
+E09000004,Bexley,la,London,2026-10,3 bed,1879,2.326182
+E09000004,Bexley,la,London,2026-10,4+ bed,2441,1.76663
+E09000004,Bexley,la,London,2026-10,Detached,2284,1.971688
+E09000004,Bexley,la,London,2026-10,Semi-detached,1992,2.221581
+E09000004,Bexley,la,London,2026-10,Terraced,1803,2.391994
+E09000004,Bexley,la,London,2026-10,Flat,1394,1.964742
+E09000005,Brent,la,London,2026-10,All,2022,4.971827
+E09000005,Brent,la,London,2026-10,1 bed,1579,4.56899
+E09000005,Brent,la,London,2026-10,2 bed,1940,4.700756
+E09000005,Brent,la,London,2026-10,3 bed,2283,5.379671
+E09000005,Brent,la,London,2026-10,4+ bed,3067,4.39135
+E09000005,Brent,la,London,2026-10,Detached,3207,4.600549
+E09000005,Brent,la,London,2026-10,Semi-detached,2646,5.50647
+E09000005,Brent,la,London,2026-10,Terraced,2345,5.316142
+E09000005,Brent,la,London,2026-10,Flat,1806,4.798377
+E09000006,Bromley,la,London,2026-10,All,1706,3.780394
+E09000006,Bromley,la,London,2026-10,1 bed,1328,3.907695
+E09000006,Bromley,la,London,2026-10,2 bed,1662,3.82144
+E09000006,Bromley,la,London,2026-10,3 bed,2019,4.357654
+E09000006,Bromley,la,London,2026-10,4+ bed,2969,3.598528
+E09000006,Bromley,la,London,2026-10,Detached,2939,3.547737
+E09000006,Bromley,la,London,2026-10,Semi-detached,2192,4.36523
+E09000006,Bromley,la,London,2026-10,Terraced,1940,4.167555
+E09000006,Bromley,la,London,2026-10,Flat,1529,3.560726
+E09000007,Camden,la,London,2026-10,All,2844,1.745467
+E09000007,Camden,la,London,2026-10,1 bed,2069,1.899535
+E09000007,Camden,la,London,2026-10,2 bed,2644,1.987776
+E09000007,Camden,la,London,2026-10,3 bed,3083,1.982967
+E09000007,Camden,la,London,2026-10,4+ bed,4003,1.060082
+E09000007,Camden,la,London,2026-10,Detached,2943,1.745467
+E09000007,Camden,la,London,2026-10,Semi-detached,3783,1.951176
+E09000007,Camden,la,London,2026-10,Terraced,3464,1.854151
+E09000007,Camden,la,London,2026-10,Flat,2425,1.643757
+E09000008,Croydon,la,London,2026-10,All,1594,3.737187
+E09000008,Croydon,la,London,2026-10,1 bed,1273,3.607649
+E09000008,Croydon,la,London,2026-10,2 bed,1585,3.769021
+E09000008,Croydon,la,London,2026-10,3 bed,1876,4.297903
+E09000008,Croydon,la,London,2026-10,4+ bed,2691,3.462773
+E09000008,Croydon,la,London,2026-10,Detached,2648,3.72872
+E09000008,Croydon,la,London,2026-10,Semi-detached,2019,4.04444
+E09000008,Croydon,la,London,2026-10,Terraced,1812,4.247748
+E09000008,Croydon,la,London,2026-10,Flat,1447,3.511213
+E09000009,Ealing,la,London,2026-10,All,2131,3.935054
+E09000009,Ealing,la,London,2026-10,1 bed,1644,3.980208
+E09000009,Ealing,la,London,2026-10,2 bed,2053,3.989041
+E09000009,Ealing,la,London,2026-10,3 bed,2433,4.362235
+E09000009,Ealing,la,London,2026-10,4+ bed,3326,3.687525
+E09000009,Ealing,la,London,2026-10,Detached,3098,2.965797
+E09000009,Ealing,la,London,2026-10,Semi-detached,2787,4.297691
+E09000009,Ealing,la,London,2026-10,Terraced,2553,4.46037
+E09000009,Ealing,la,London,2026-10,Flat,1880,3.752092
+E09000010,Enfield,la,London,2026-10,All,1837,5.543186
+E09000010,Enfield,la,London,2026-10,1 bed,1429,5.762108
+E09000010,Enfield,la,London,2026-10,2 bed,1774,5.49821
+E09000010,Enfield,la,London,2026-10,3 bed,2113,6.146149
+E09000010,Enfield,la,London,2026-10,4+ bed,2826,5.231822
+E09000010,Enfield,la,London,2026-10,Detached,2589,5.135993
+E09000010,Enfield,la,London,2026-10,Semi-detached,2448,5.896528
+E09000010,Enfield,la,London,2026-10,Terraced,2051,6.108748
+E09000010,Enfield,la,London,2026-10,Flat,1663,5.314432
+E09000011,Greenwich,la,London,2026-10,All,2003,6.092538
+E09000011,Greenwich,la,London,2026-10,1 bed,1568,5.996512
+E09000011,Greenwich,la,London,2026-10,2 bed,1941,6.084024
+E09000011,Greenwich,la,London,2026-10,3 bed,2255,6.66073
+E09000011,Greenwich,la,London,2026-10,4+ bed,3017,6.064832
+E09000011,Greenwich,la,London,2026-10,Detached,3091,6.307367
+E09000011,Greenwich,la,London,2026-10,Semi-detached,2482,6.826156
+E09000011,Greenwich,la,London,2026-10,Terraced,2262,6.709486
+E09000011,Greenwich,la,London,2026-10,Flat,1838,5.791356
+E09000012,Hackney,la,London,2026-10,All,2680,4.377068
+E09000012,Hackney,la,London,2026-10,1 bed,2015,4.476495
+E09000012,Hackney,la,London,2026-10,2 bed,2510,4.598786
+E09000012,Hackney,la,London,2026-10,3 bed,2872,4.728498
+E09000012,Hackney,la,London,2026-10,4+ bed,3706,4.139961
+E09000012,Hackney,la,London,2026-10,Detached,3059,4.377068
+E09000012,Hackney,la,London,2026-10,Semi-detached,3323,4.377068
+E09000012,Hackney,la,London,2026-10,Terraced,3216,4.494469
+E09000012,Hackney,la,London,2026-10,Flat,2378,4.339345
+E09000013,Hammersmith and Fulham,la,London,2026-10,All,2880,5.467315
+E09000013,Hammersmith and Fulham,la,London,2026-10,1 bed,2037,5.663476
+E09000013,Hammersmith and Fulham,la,London,2026-10,2 bed,2673,5.646429
+E09000013,Hammersmith and Fulham,la,London,2026-10,3 bed,3052,5.737002
+E09000013,Hammersmith and Fulham,la,London,2026-10,4+ bed,4265,4.873115
+E09000013,Hammersmith and Fulham,la,London,2026-10,Detached,3822,5.467315
+E09000013,Hammersmith and Fulham,la,London,2026-10,Semi-detached,3033,5.762603
+E09000013,Hammersmith and Fulham,la,London,2026-10,Terraced,3843,5.27367
+E09000013,Hammersmith and Fulham,la,London,2026-10,Flat,2391,5.517392
+E09000014,Haringey,la,London,2026-10,All,2238,1.574177
+E09000014,Haringey,la,London,2026-10,1 bed,1651,1.576882
+E09000014,Haringey,la,London,2026-10,2 bed,2052,1.626662
+E09000014,Haringey,la,London,2026-10,3 bed,2378,2.058904
+E09000014,Haringey,la,London,2026-10,4+ bed,3217,1.373198
+E09000014,Haringey,la,London,2026-10,Detached,3403,1.264208
+E09000014,Haringey,la,London,2026-10,Semi-detached,3138,1.631632
+E09000014,Haringey,la,London,2026-10,Terraced,2657,2.043196
+E09000014,Haringey,la,London,2026-10,Flat,1932,1.405138
+E09000015,Harrow,la,London,2026-10,All,1784,2.699522
+E09000015,Harrow,la,London,2026-10,1 bed,1395,2.283519
+E09000015,Harrow,la,London,2026-10,2 bed,1720,2.477716
+E09000015,Harrow,la,London,2026-10,3 bed,2075,3.241954
+E09000015,Harrow,la,London,2026-10,4+ bed,2802,2.539014
+E09000015,Harrow,la,London,2026-10,Detached,2770,2.453129
+E09000015,Harrow,la,London,2026-10,Semi-detached,2260,3.24018
+E09000015,Harrow,la,London,2026-10,Terraced,2022,3.239051
+E09000015,Harrow,la,London,2026-10,Flat,1618,2.424217
+E09000016,Havering,la,London,2026-10,All,1571,0.657515
+E09000016,Havering,la,London,2026-10,1 bed,1221,0.816241
+E09000016,Havering,la,London,2026-10,2 bed,1548,0.765985
+E09000016,Havering,la,London,2026-10,3 bed,1858,1.304734
+E09000016,Havering,la,London,2026-10,4+ bed,2508,0.587912
+E09000016,Havering,la,London,2026-10,Detached,2414,0.656023
+E09000016,Havering,la,London,2026-10,Semi-detached,1941,1.142779
+E09000016,Havering,la,London,2026-10,Terraced,1812,1.054766
+E09000016,Havering,la,London,2026-10,Flat,1427,0.443338
+E09000017,Hillingdon,la,London,2026-10,All,1594,3.88422
+E09000017,Hillingdon,la,London,2026-10,1 bed,1270,3.875634
+E09000017,Hillingdon,la,London,2026-10,2 bed,1611,3.96806
+E09000017,Hillingdon,la,London,2026-10,3 bed,1948,4.612188
+E09000017,Hillingdon,la,London,2026-10,4+ bed,2678,3.850594
+E09000017,Hillingdon,la,London,2026-10,Detached,2415,4.021204
+E09000017,Hillingdon,la,London,2026-10,Semi-detached,2055,4.581996
+E09000017,Hillingdon,la,London,2026-10,Terraced,1767,4.506979
+E09000017,Hillingdon,la,London,2026-10,Flat,1465,3.577969
+E09000018,Hounslow,la,London,2026-10,All,1970,3.978578
+E09000018,Hounslow,la,London,2026-10,1 bed,1593,3.782543
+E09000018,Hounslow,la,London,2026-10,2 bed,1963,3.874564
+E09000018,Hounslow,la,London,2026-10,3 bed,2265,4.541536
+E09000018,Hounslow,la,London,2026-10,4+ bed,3106,3.483501
+E09000018,Hounslow,la,London,2026-10,Detached,2711,4.229659
+E09000018,Hounslow,la,London,2026-10,Semi-detached,2439,4.291078
+E09000018,Hounslow,la,London,2026-10,Terraced,2242,4.210378
+E09000018,Hounslow,la,London,2026-10,Flat,1814,3.827717
+E09000019,Islington,la,London,2026-10,All,2894,6.895446
+E09000019,Islington,la,London,2026-10,1 bed,2196,7.321835
+E09000019,Islington,la,London,2026-10,2 bed,2722,7.140871
+E09000019,Islington,la,London,2026-10,3 bed,3034,7.255634
+E09000019,Islington,la,London,2026-10,4+ bed,4270,6.703029
+E09000019,Islington,la,London,2026-10,Detached,3159,6.865392
+E09000019,Islington,la,London,2026-10,Semi-detached,3159,6.725176
+E09000019,Islington,la,London,2026-10,Terraced,3866,6.975572
+E09000019,Islington,la,London,2026-10,Flat,2503,6.92905
+E09000020,Kensington and Chelsea,la,London,2026-10,All,3765,3.632049
+E09000020,Kensington and Chelsea,la,London,2026-10,1 bed,2691,3.94281
+E09000020,Kensington and Chelsea,la,London,2026-10,2 bed,3500,4.023554
+E09000020,Kensington and Chelsea,la,London,2026-10,3 bed,4163,4.201303
+E09000020,Kensington and Chelsea,la,London,2026-10,4+ bed,5772,3.326245
+E09000020,Kensington and Chelsea,la,London,2026-10,Detached,2967,3.632049
+E09000020,Kensington and Chelsea,la,London,2026-10,Semi-detached,4864,3.328966
+E09000020,Kensington and Chelsea,la,London,2026-10,Terraced,4599,3.196447
+E09000020,Kensington and Chelsea,la,London,2026-10,Flat,3130,3.987956
+E09000021,Kingston upon Thames,la,London,2026-10,All,1832,0.081896
+E09000021,Kingston upon Thames,la,London,2026-10,1 bed,1394,0.085722
+E09000021,Kingston upon Thames,la,London,2026-10,2 bed,1776,0.127131
+E09000021,Kingston upon Thames,la,London,2026-10,3 bed,2183,0.668548
+E09000021,Kingston upon Thames,la,London,2026-10,4+ bed,2873,-0.163307
+E09000021,Kingston upon Thames,la,London,2026-10,Detached,2718,-0.032448
+E09000021,Kingston upon Thames,la,London,2026-10,Semi-detached,2392,0.629305
+E09000021,Kingston upon Thames,la,London,2026-10,Terraced,2172,0.52452
+E09000021,Kingston upon Thames,la,London,2026-10,Flat,1621,-0.163753
+E09000022,Lambeth,la,London,2026-10,All,2559,3.319964
+E09000022,Lambeth,la,London,2026-10,1 bed,1905,3.263235
+E09000022,Lambeth,la,London,2026-10,2 bed,2372,3.287454
+E09000022,Lambeth,la,London,2026-10,3 bed,2719,3.467585
+E09000022,Lambeth,la,London,2026-10,4+ bed,3766,2.99425
+E09000022,Lambeth,la,London,2026-10,Detached,3013,3.642733
+E09000022,Lambeth,la,London,2026-10,Semi-detached,3430,4.011584
+E09000022,Lambeth,la,London,2026-10,Terraced,3153,3.480528
+E09000022,Lambeth,la,London,2026-10,Flat,2213,3.105786
+E09000023,Lewisham,la,London,2026-10,All,1838,2.082243
+E09000023,Lewisham,la,London,2026-10,1 bed,1462,2.066848
+E09000023,Lewisham,la,London,2026-10,2 bed,1798,2.109207
+E09000023,Lewisham,la,London,2026-10,3 bed,2070,2.567798
+E09000023,Lewisham,la,London,2026-10,4+ bed,2728,1.921292
+E09000023,Lewisham,la,London,2026-10,Detached,2513,2.017052
+E09000023,Lewisham,la,London,2026-10,Semi-detached,2377,2.689265
+E09000023,Lewisham,la,London,2026-10,Terraced,2100,2.474474
+E09000023,Lewisham,la,London,2026-10,Flat,1663,1.829976
+E09000024,Merton,la,London,2026-10,All,2192,5.811734
+E09000024,Merton,la,London,2026-10,1 bed,1653,5.843099
+E09000024,Merton,la,London,2026-10,2 bed,2043,5.977429
+E09000024,Merton,la,London,2026-10,3 bed,2433,6.359976
+E09000024,Merton,la,London,2026-10,4+ bed,3301,5.228061
+E09000024,Merton,la,London,2026-10,Detached,2952,5.496366
+E09000024,Merton,la,London,2026-10,Semi-detached,3001,5.86495
+E09000024,Merton,la,London,2026-10,Terraced,2488,6.182118
+E09000024,Merton,la,London,2026-10,Flat,1947,5.696889
+E09000025,Newham,la,London,2026-10,All,1940,3.124518
+E09000025,Newham,la,London,2026-10,1 bed,1639,2.926316
+E09000025,Newham,la,London,2026-10,2 bed,2006,3.140419
+E09000025,Newham,la,London,2026-10,3 bed,2229,3.745833
+E09000025,Newham,la,London,2026-10,4+ bed,2692,3.287169
+E09000025,Newham,la,London,2026-10,Detached,2193,3.301392
+E09000025,Newham,la,London,2026-10,Semi-detached,2352,4.092318
+E09000025,Newham,la,London,2026-10,Terraced,2084,3.847616
+E09000025,Newham,la,London,2026-10,Flat,1846,2.758036
+E09000026,Redbridge,la,London,2026-10,All,1744,2.441269
+E09000026,Redbridge,la,London,2026-10,1 bed,1381,2.513145
+E09000026,Redbridge,la,London,2026-10,2 bed,1699,2.382098
+E09000026,Redbridge,la,London,2026-10,3 bed,2006,3.06185
+E09000026,Redbridge,la,London,2026-10,4+ bed,2742,2.25281
+E09000026,Redbridge,la,London,2026-10,Detached,2785,2.52321
+E09000026,Redbridge,la,London,2026-10,Semi-detached,2205,2.908914
+E09000026,Redbridge,la,London,2026-10,Terraced,2041,2.798336
+E09000026,Redbridge,la,London,2026-10,Flat,1566,2.229831
+E09000027,Richmond upon Thames,la,London,2026-10,All,2367,6.428924
+E09000027,Richmond upon Thames,la,London,2026-10,1 bed,1755,6.518325
+E09000027,Richmond upon Thames,la,London,2026-10,2 bed,2254,6.626567
+E09000027,Richmond upon Thames,la,London,2026-10,3 bed,2725,6.863605
+E09000027,Richmond upon Thames,la,London,2026-10,4+ bed,3969,6.004871
+E09000027,Richmond upon Thames,la,London,2026-10,Detached,4019,6.192763
+E09000027,Richmond upon Thames,la,London,2026-10,Semi-detached,3086,6.821251
+E09000027,Richmond upon Thames,la,London,2026-10,Terraced,2723,6.486442
+E09000027,Richmond upon Thames,la,London,2026-10,Flat,2072,6.328099
+E09000028,Southwark,la,London,2026-10,All,2538,8.265933
+E09000028,Southwark,la,London,2026-10,1 bed,1923,8.416763
+E09000028,Southwark,la,London,2026-10,2 bed,2409,8.377697
+E09000028,Southwark,la,London,2026-10,3 bed,2805,8.580065
+E09000028,Southwark,la,London,2026-10,4+ bed,3705,8.294381
+E09000028,Southwark,la,London,2026-10,Detached,3389,8.241605
+E09000028,Southwark,la,London,2026-10,Semi-detached,3512,8.485009
+E09000028,Southwark,la,London,2026-10,Terraced,2925,8.710155
+E09000028,Southwark,la,London,2026-10,Flat,2232,8.081014
+E09000029,Sutton,la,London,2026-10,All,1580,3.361451
+E09000029,Sutton,la,London,2026-10,1 bed,1256,3.428723
+E09000029,Sutton,la,London,2026-10,2 bed,1579,3.43351
+E09000029,Sutton,la,London,2026-10,3 bed,1931,3.984609
+E09000029,Sutton,la,London,2026-10,4+ bed,2533,3.265991
+E09000029,Sutton,la,London,2026-10,Detached,2465,3.276916
+E09000029,Sutton,la,London,2026-10,Semi-detached,2054,3.944508
+E09000029,Sutton,la,London,2026-10,Terraced,1778,3.955255
+E09000029,Sutton,la,London,2026-10,Flat,1424,3.058757
+E09000030,Tower Hamlets,la,London,2026-10,All,2472,4.125994
+E09000030,Tower Hamlets,la,London,2026-10,1 bed,2005,3.889429
+E09000030,Tower Hamlets,la,London,2026-10,2 bed,2436,4.049708
+E09000030,Tower Hamlets,la,London,2026-10,3 bed,2772,4.284967
+E09000030,Tower Hamlets,la,London,2026-10,4+ bed,3404,3.896704
+E09000030,Tower Hamlets,la,London,2026-10,Detached,3101,4.125994
+E09000030,Tower Hamlets,la,London,2026-10,Semi-detached,3042,5.012093
+E09000030,Tower Hamlets,la,London,2026-10,Terraced,2759,4.374473
+E09000030,Tower Hamlets,la,London,2026-10,Flat,2300,3.929891
+E09000031,Waltham Forest,la,London,2026-10,All,1791,3.368827
+E09000031,Waltham Forest,la,London,2026-10,1 bed,1421,3.380972
+E09000031,Waltham Forest,la,London,2026-10,2 bed,1750,3.387193
+E09000031,Waltham Forest,la,London,2026-10,3 bed,2058,3.871124
+E09000031,Waltham Forest,la,London,2026-10,4+ bed,2607,3.194187
+E09000031,Waltham Forest,la,London,2026-10,Detached,2177,3.495757
+E09000031,Waltham Forest,la,London,2026-10,Semi-detached,2347,3.780811
+E09000031,Waltham Forest,la,London,2026-10,Terraced,2084,3.750308
+E09000031,Waltham Forest,la,London,2026-10,Flat,1617,3.149839
+E09000032,Wandsworth,la,London,2026-10,All,2651,3.862921
+E09000032,Wandsworth,la,London,2026-10,1 bed,1950,4.033196
+E09000032,Wandsworth,la,London,2026-10,2 bed,2479,4.057486
+E09000032,Wandsworth,la,London,2026-10,3 bed,2831,4.045169
+E09000032,Wandsworth,la,London,2026-10,4+ bed,3845,3.189832
+E09000032,Wandsworth,la,London,2026-10,Detached,2865,3.959652
+E09000032,Wandsworth,la,London,2026-10,Semi-detached,3388,4.024131
+E09000032,Wandsworth,la,London,2026-10,Terraced,3162,3.726867
+E09000032,Wandsworth,la,London,2026-10,Flat,2350,3.875462
+E09000033,Westminster,la,London,2026-10,All,3217,-0.185339
+E09000033,Westminster,la,London,2026-10,1 bed,2563,0.237872
+E09000033,Westminster,la,London,2026-10,2 bed,3330,0.185495
+E09000033,Westminster,la,London,2026-10,3 bed,3926,0.154297
+E09000033,Westminster,la,London,2026-10,4+ bed,5466,-0.739324
+E09000033,Westminster,la,London,2026-10,Detached,2927,-0.185339
+E09000033,Westminster,la,London,2026-10,Semi-detached,2940,-0.185339
+E09000033,Westminster,la,London,2026-10,Terraced,3842,-0.055292
+E09000033,Westminster,la,London,2026-10,Flat,2974,-0.229178
+W06000001,Isle of Anglesey,la,Wales,2026-10,All,724,6.42264
+W06000001,Isle of Anglesey,la,Wales,2026-10,1 bed,558,6.066923
+W06000001,Isle of Anglesey,la,Wales,2026-10,2 bed,703,6.699639
+W06000001,Isle of Anglesey,la,Wales,2026-10,3 bed,809,6.645707
+W06000001,Isle of Anglesey,la,Wales,2026-10,4+ bed,1099,5.491275
+W06000001,Isle of Anglesey,la,Wales,2026-10,Detached,892,6.959889
+W06000001,Isle of Anglesey,la,Wales,2026-10,Semi-detached,753,6.526864
+W06000001,Isle of Anglesey,la,Wales,2026-10,Terraced,718,6.600838
+W06000001,Isle of Anglesey,la,Wales,2026-10,Flat,625,5.753188
+W06000002,Gwynedd,la,Wales,2026-10,All,724,7.204114
+W06000002,Gwynedd,la,Wales,2026-10,1 bed,560,7.107131
+W06000002,Gwynedd,la,Wales,2026-10,2 bed,675,7.346269
+W06000002,Gwynedd,la,Wales,2026-10,3 bed,803,7.380616
+W06000002,Gwynedd,la,Wales,2026-10,4+ bed,1054,5.959597
+W06000002,Gwynedd,la,Wales,2026-10,Detached,887,7.552302
+W06000002,Gwynedd,la,Wales,2026-10,Semi-detached,770,7.419209
+W06000002,Gwynedd,la,Wales,2026-10,Terraced,703,7.375262
+W06000002,Gwynedd,la,Wales,2026-10,Flat,630,6.547654
+W06000003,Conwy,la,Wales,2026-10,All,803,3.525222
+W06000003,Conwy,la,Wales,2026-10,1 bed,593,2.868213
+W06000003,Conwy,la,Wales,2026-10,2 bed,741,3.157699
+W06000003,Conwy,la,Wales,2026-10,3 bed,869,3.591258
+W06000003,Conwy,la,Wales,2026-10,4+ bed,1244,2.727981
+W06000003,Conwy,la,Wales,2026-10,Detached,1027,4.109413
+W06000003,Conwy,la,Wales,2026-10,Semi-detached,842,3.733388
+W06000003,Conwy,la,Wales,2026-10,Terraced,777,3.631453
+W06000003,Conwy,la,Wales,2026-10,Flat,667,2.740235
+W06000004,Denbighshire,la,Wales,2026-10,All,727,5.649139
+W06000004,Denbighshire,la,Wales,2026-10,1 bed,556,5.44058
+W06000004,Denbighshire,la,Wales,2026-10,2 bed,715,5.706963
+W06000004,Denbighshire,la,Wales,2026-10,3 bed,820,5.740059
+W06000004,Denbighshire,la,Wales,2026-10,4+ bed,1125,5.070494
+W06000004,Denbighshire,la,Wales,2026-10,Detached,883,6.307826
+W06000004,Denbighshire,la,Wales,2026-10,Semi-detached,768,5.57111
+W06000004,Denbighshire,la,Wales,2026-10,Terraced,693,5.764548
+W06000004,Denbighshire,la,Wales,2026-10,Flat,649,5.091808
+W06000005,Flintshire,la,Wales,2026-10,All,824,8.54322
+W06000005,Flintshire,la,Wales,2026-10,1 bed,604,8.367794
+W06000005,Flintshire,la,Wales,2026-10,2 bed,769,8.456874
+W06000005,Flintshire,la,Wales,2026-10,3 bed,907,8.811438
+W06000005,Flintshire,la,Wales,2026-10,4+ bed,1347,8.160042
+W06000005,Flintshire,la,Wales,2026-10,Detached,1063,9.434045
+W06000005,Flintshire,la,Wales,2026-10,Semi-detached,855,8.710151
+W06000005,Flintshire,la,Wales,2026-10,Terraced,813,8.724841
+W06000005,Flintshire,la,Wales,2026-10,Flat,677,7.525954
+W06000006,Wrexham,la,Wales,2026-10,All,776,3.281982
+W06000006,Wrexham,la,Wales,2026-10,1 bed,601,2.974931
+W06000006,Wrexham,la,Wales,2026-10,2 bed,715,3.096738
+W06000006,Wrexham,la,Wales,2026-10,3 bed,845,3.279817
+W06000006,Wrexham,la,Wales,2026-10,4+ bed,1233,2.642155
+W06000006,Wrexham,la,Wales,2026-10,Detached,1007,3.875566
+W06000006,Wrexham,la,Wales,2026-10,Semi-detached,809,3.575213
+W06000006,Wrexham,la,Wales,2026-10,Terraced,736,3.598511
+W06000006,Wrexham,la,Wales,2026-10,Flat,653,2.236357
+W06000008,Ceredigion,la,Wales,2026-10,All,724,2.992943
+W06000008,Ceredigion,la,Wales,2026-10,1 bed,563,3.025072
+W06000008,Ceredigion,la,Wales,2026-10,2 bed,664,2.971402
+W06000008,Ceredigion,la,Wales,2026-10,3 bed,768,3.081909
+W06000008,Ceredigion,la,Wales,2026-10,4+ bed,1086,1.977884
+W06000008,Ceredigion,la,Wales,2026-10,Detached,823,3.362837
+W06000008,Ceredigion,la,Wales,2026-10,Semi-detached,732,3.342187
+W06000008,Ceredigion,la,Wales,2026-10,Terraced,772,3.125507
+W06000008,Ceredigion,la,Wales,2026-10,Flat,612,2.300474
+W06000009,Pembrokeshire,la,Wales,2026-10,All,699,4.467299
+W06000009,Pembrokeshire,la,Wales,2026-10,1 bed,517,4.060561
+W06000009,Pembrokeshire,la,Wales,2026-10,2 bed,645,4.349339
+W06000009,Pembrokeshire,la,Wales,2026-10,3 bed,764,4.527798
+W06000009,Pembrokeshire,la,Wales,2026-10,4+ bed,1042,3.477244
+W06000009,Pembrokeshire,la,Wales,2026-10,Detached,858,4.707463
+W06000009,Pembrokeshire,la,Wales,2026-10,Semi-detached,729,4.765352
+W06000009,Pembrokeshire,la,Wales,2026-10,Terraced,708,4.71452
+W06000009,Pembrokeshire,la,Wales,2026-10,Flat,578,3.672804
+W06000010,Carmarthenshire,la,Wales,2026-10,All,695,6.251991
+W06000010,Carmarthenshire,la,Wales,2026-10,1 bed,506,6.093308
+W06000010,Carmarthenshire,la,Wales,2026-10,2 bed,654,6.144041
+W06000010,Carmarthenshire,la,Wales,2026-10,3 bed,748,6.369464
+W06000010,Carmarthenshire,la,Wales,2026-10,4+ bed,1008,5.338614
+W06000010,Carmarthenshire,la,Wales,2026-10,Detached,861,6.634758
+W06000010,Carmarthenshire,la,Wales,2026-10,Semi-detached,737,6.50215
+W06000010,Carmarthenshire,la,Wales,2026-10,Terraced,701,6.414707
+W06000010,Carmarthenshire,la,Wales,2026-10,Flat,567,5.536607
+W06000011,Swansea,la,Wales,2026-10,All,854,5.321484
+W06000011,Swansea,la,Wales,2026-10,1 bed,689,5.08879
+W06000011,Swansea,la,Wales,2026-10,2 bed,799,5.043194
+W06000011,Swansea,la,Wales,2026-10,3 bed,898,5.426302
+W06000011,Swansea,la,Wales,2026-10,4+ bed,1277,4.501292
+W06000011,Swansea,la,Wales,2026-10,Detached,1095,5.804806
+W06000011,Swansea,la,Wales,2026-10,Semi-detached,881,5.632276
+W06000011,Swansea,la,Wales,2026-10,Terraced,825,5.479865
+W06000011,Swansea,la,Wales,2026-10,Flat,751,4.586034
+W06000012,Neath Port Talbot,la,Wales,2026-10,All,696,6.554187
+W06000012,Neath Port Talbot,la,Wales,2026-10,1 bed,504,5.99003
+W06000012,Neath Port Talbot,la,Wales,2026-10,2 bed,640,6.51294
+W06000012,Neath Port Talbot,la,Wales,2026-10,3 bed,732,6.726028
+W06000012,Neath Port Talbot,la,Wales,2026-10,4+ bed,983,5.266265
+W06000012,Neath Port Talbot,la,Wales,2026-10,Detached,889,6.648707
+W06000012,Neath Port Talbot,la,Wales,2026-10,Semi-detached,737,6.870936
+W06000012,Neath Port Talbot,la,Wales,2026-10,Terraced,697,6.918854
+W06000012,Neath Port Talbot,la,Wales,2026-10,Flat,560,5.705956
+W06000013,Bridgend,la,Wales,2026-10,All,767,7.574604
+W06000013,Bridgend,la,Wales,2026-10,1 bed,564,7.082625
+W06000013,Bridgend,la,Wales,2026-10,2 bed,704,7.452855
+W06000013,Bridgend,la,Wales,2026-10,3 bed,819,7.587274
+W06000013,Bridgend,la,Wales,2026-10,4+ bed,1147,6.687231
+W06000013,Bridgend,la,Wales,2026-10,Detached,1015,7.817114
+W06000013,Bridgend,la,Wales,2026-10,Semi-detached,817,7.695851
+W06000013,Bridgend,la,Wales,2026-10,Terraced,755,7.731264
+W06000013,Bridgend,la,Wales,2026-10,Flat,623,7.090778
+W06000014,Vale of Glamorgan,la,Wales,2026-10,All,974,1.084148
+W06000014,Vale of Glamorgan,la,Wales,2026-10,1 bed,719,0.483243
+W06000014,Vale of Glamorgan,la,Wales,2026-10,2 bed,881,0.955118
+W06000014,Vale of Glamorgan,la,Wales,2026-10,3 bed,986,1.015369
+W06000014,Vale of Glamorgan,la,Wales,2026-10,4+ bed,1465,0.502761
+W06000014,Vale of Glamorgan,la,Wales,2026-10,Detached,1332,1.507039
+W06000014,Vale of Glamorgan,la,Wales,2026-10,Semi-detached,989,1.517743
+W06000014,Vale of Glamorgan,la,Wales,2026-10,Terraced,937,1.164497
+W06000014,Vale of Glamorgan,la,Wales,2026-10,Flat,798,0.250281
+W06000015,Cardiff,la,Wales,2026-10,All,1179,2.929346
+W06000015,Cardiff,la,Wales,2026-10,1 bed,909,2.400878
+W06000015,Cardiff,la,Wales,2026-10,2 bed,1086,2.541601
+W06000015,Cardiff,la,Wales,2026-10,3 bed,1212,3.371411
+W06000015,Cardiff,la,Wales,2026-10,4+ bed,1705,2.15299
+W06000015,Cardiff,la,Wales,2026-10,Detached,1523,3.353193
+W06000015,Cardiff,la,Wales,2026-10,Semi-detached,1190,3.448072
+W06000015,Cardiff,la,Wales,2026-10,Terraced,1177,2.99645
+W06000015,Cardiff,la,Wales,2026-10,Flat,996,2.04518
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,All,747,0.411451
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,1 bed,523,0.343783
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,2 bed,669,0.561526
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,3 bed,749,0.336144
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,4+ bed,985,-0.661818
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,Detached,960,0.610366
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,Semi-detached,795,0.664608
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,Terraced,725,0.45302
+W06000016,Rhondda Cynon Taf,la,Wales,2026-10,Flat,582,-0.057103
+W06000018,Caerphilly,la,Wales,2026-10,All,757,6.043183
+W06000018,Caerphilly,la,Wales,2026-10,1 bed,557,5.30117
+W06000018,Caerphilly,la,Wales,2026-10,2 bed,698,6.040556
+W06000018,Caerphilly,la,Wales,2026-10,3 bed,785,6.110718
+W06000018,Caerphilly,la,Wales,2026-10,4+ bed,1108,5.0199
+W06000018,Caerphilly,la,Wales,2026-10,Detached,965,6.32655
+W06000018,Caerphilly,la,Wales,2026-10,Semi-detached,793,6.318823
+W06000018,Caerphilly,la,Wales,2026-10,Terraced,749,6.357399
+W06000018,Caerphilly,la,Wales,2026-10,Flat,620,5.171919
+W06000019,Blaenau Gwent,la,Wales,2026-10,All,684,5.216371
+W06000019,Blaenau Gwent,la,Wales,2026-10,1 bed,505,5.329231
+W06000019,Blaenau Gwent,la,Wales,2026-10,2 bed,607,5.374235
+W06000019,Blaenau Gwent,la,Wales,2026-10,3 bed,690,5.03423
+W06000019,Blaenau Gwent,la,Wales,2026-10,4+ bed,905,4.223642
+W06000019,Blaenau Gwent,la,Wales,2026-10,Detached,926,5.627532
+W06000019,Blaenau Gwent,la,Wales,2026-10,Semi-detached,723,5.326494
+W06000019,Blaenau Gwent,la,Wales,2026-10,Terraced,647,5.215224
+W06000019,Blaenau Gwent,la,Wales,2026-10,Flat,543,4.781073
+W06000020,Torfaen,la,Wales,2026-10,All,865,2.310343
+W06000020,Torfaen,la,Wales,2026-10,1 bed,619,1.786567
+W06000020,Torfaen,la,Wales,2026-10,2 bed,769,2.391632
+W06000020,Torfaen,la,Wales,2026-10,3 bed,899,2.412934
+W06000020,Torfaen,la,Wales,2026-10,4+ bed,1386,1.306843
+W06000020,Torfaen,la,Wales,2026-10,Detached,1154,2.493563
+W06000020,Torfaen,la,Wales,2026-10,Semi-detached,917,2.428185
+W06000020,Torfaen,la,Wales,2026-10,Terraced,830,2.5766
+W06000020,Torfaen,la,Wales,2026-10,Flat,690,1.676792
+W06000021,Monmouthshire,la,Wales,2026-10,All,996,1.987652
+W06000021,Monmouthshire,la,Wales,2026-10,1 bed,730,1.771073
+W06000021,Monmouthshire,la,Wales,2026-10,2 bed,922,1.957561
+W06000021,Monmouthshire,la,Wales,2026-10,3 bed,1067,2.214066
+W06000021,Monmouthshire,la,Wales,2026-10,4+ bed,1497,1.093993
+W06000021,Monmouthshire,la,Wales,2026-10,Detached,1312,2.380536
+W06000021,Monmouthshire,la,Wales,2026-10,Semi-detached,1028,2.155033
+W06000021,Monmouthshire,la,Wales,2026-10,Terraced,960,2.113864
+W06000021,Monmouthshire,la,Wales,2026-10,Flat,825,1.366855
+W06000022,Newport,la,Wales,2026-10,All,966,2.96041
+W06000022,Newport,la,Wales,2026-10,1 bed,701,2.285326
+W06000022,Newport,la,Wales,2026-10,2 bed,868,2.34886
+W06000022,Newport,la,Wales,2026-10,3 bed,970,3.007397
+W06000022,Newport,la,Wales,2026-10,4+ bed,1370,2.425754
+W06000022,Newport,la,Wales,2026-10,Detached,1293,3.750755
+W06000022,Newport,la,Wales,2026-10,Semi-detached,1011,3.269163
+W06000022,Newport,la,Wales,2026-10,Terraced,927,3.023193
+W06000022,Newport,la,Wales,2026-10,Flat,800,1.954677
+W06000023,Powys,la,Wales,2026-10,All,630,7.743053
+W06000023,Powys,la,Wales,2026-10,1 bed,468,7.459448
+W06000023,Powys,la,Wales,2026-10,2 bed,586,7.80782
+W06000023,Powys,la,Wales,2026-10,3 bed,709,7.935794
+W06000023,Powys,la,Wales,2026-10,4+ bed,962,6.741418
+W06000023,Powys,la,Wales,2026-10,Detached,811,8.35666
+W06000023,Powys,la,Wales,2026-10,Semi-detached,673,7.824831
+W06000023,Powys,la,Wales,2026-10,Terraced,619,7.985588
+W06000023,Powys,la,Wales,2026-10,Flat,492,6.838354
+W06000024,Merthyr Tydfil,la,Wales,2026-10,All,754,-2.183082
+W06000024,Merthyr Tydfil,la,Wales,2026-10,1 bed,552,-2.511427
+W06000024,Merthyr Tydfil,la,Wales,2026-10,2 bed,640,-1.923897
+W06000024,Merthyr Tydfil,la,Wales,2026-10,3 bed,721,-2.27222
+W06000024,Merthyr Tydfil,la,Wales,2026-10,4+ bed,1086,-2.828646
+W06000024,Merthyr Tydfil,la,Wales,2026-10,Detached,1087,-1.690436
+W06000024,Merthyr Tydfil,la,Wales,2026-10,Semi-detached,765,-2.051504
+W06000024,Merthyr Tydfil,la,Wales,2026-10,Terraced,683,-1.974945
+W06000024,Merthyr Tydfil,la,Wales,2026-10,Flat,601,-3.055351

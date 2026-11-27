@@ -14,6 +14,8 @@ DEPLOY_FILES = [
     "data/processed/rentwise.duckdb", "data/processed/affordability.csv",
     "data/processed/data_vintages.json", "data/processed/la_spatial_features.csv",
     "data/processed/lad_boundaries_wgs84.geojson",
+    "data/processed/official_rents.csv", "data/processed/rent_trends.parquet",
+    "data/processed/rent_areas.csv", "data/processed/sale_prices.csv", "models/rent_forecasts.json",
     "models/rent_xgb_spatial.json", "models/rent_model_meta.json", "models/conformal.json",
     "models/best_model.joblib",
 ]

@@ -1,22 +1,26 @@
 """
-streamlit_app.py  —  Phase 9 / Module 4 integration: the RentWise UK dashboard.
+streamlit_app.py  —  the RentWise UK dashboard.
 
-the single user-facing app for the whole four-module system. The sidebar
-switches between two views:
-  * Rent estimator  - the interactive Module 2 tool (rent + affordability + SHAP).
-  * System results  - a read-only overview of all four modules' outputs.
+Views (sidebar):
+  * Rent check        official rent for any area and home size/type, affordability against YOUR
+                      income, sale prices & yield, the trend since 2015, the regional forecast,
+                      and what drives rent here (SHAP)
+  * Compare areas     2-4 areas side by side, with trends and a CSV download
+  * Area map          England & Wales choropleths (affordability, rent change, yield, schools, amenities)
+  * Methodology & data  what every number is, its source, date and limits
+  * System results    the four research modules' latest results
 
-Why this design : only dropdowns/sliders (no free text,
-no uploads, no code execution) so there is no injection surface; the model is
-loaded read-only and cached; every estimate carries a plain-English explanation
-and an 'indicative, not financial advice' disclaimer.
+Design: official figures first, every number dated and sourced, missing shown as missing,
+inputs are dropdowns and one optional number (no free text), income is never stored.
 
 Run it:  streamlit run app/streamlit_app.py
 """
 
+import json
 import sys
 from pathlib import Path
 
+import pandas as pd
 import streamlit as st
 import matplotlib
 matplotlib.use("Agg")
@@ -24,24 +28,30 @@ import matplotlib.pyplot as plt
 
 sys.path.append(str(Path(__file__).resolve().parents[1]))
 import config
+from src.models.area_data import MEASURE_LABEL, TYPE_MEASURES, AreaData, affordability
 from src.models.predict import RentWisePredictor
 
 st.set_page_config(page_title="RentWise UK", page_icon="🏠", layout="wide")
 st.markdown("""<style>
- .main .block-container {padding-top: 2rem; max-width: 1100px;}
- h1 {color:#1F3864;} .stMetric{background:#F4F8FD;border:1px solid #E1E8F0;border-radius:12px;padding:14px;}
- .disclaimer{color:#6b7280;font-size:0.85rem;}
+ .main .block-container {padding-top: 2rem; max-width: 1150px;}
+ h1 {color:#1F3864;}
+ [data-testid="stMetric"]{background:#F4F8FD;border:1px solid #D5DEEA;border-radius:12px;padding:14px;}
+ .disclaimer{color:#4b5563;font-size:0.85rem;}
+ a:focus, button:focus {outline: 3px solid #1F3864 !important; outline-offset: 2px;}
 </style>""", unsafe_allow_html=True)
 
-FRIENDLY = {"bedrooms":"Number of bedrooms","median_annual_income":"Local income",
- "crime_per_1000":"Crime per 1,000 residents",
- "property_type_ord":"Property type / size","income_band":"Area income band","year":"Year",
- "school_quality":"Local school quality (historic Ofsted)",
- "share_good_or_better":"Share of Good/Outstanding schools"}
-AMENITY = {"rail_station":"Rail stations","bus_stop":"Bus stops","supermarket":"Supermarkets",
- "convenience":"Convenience shops","gp_clinic":"GP surgeries & clinics","hospital":"Hospitals",
- "pharmacy":"Pharmacies","restaurant_cafe":"Restaurants & cafés","pub_bar":"Pubs & bars",
- "park":"Parks","gym":"Gyms"}
+FRIENDLY = {"bedrooms": "Number of bedrooms", "median_annual_income": "Local income",
+            "crime_per_1000": "Crime per 1,000 residents",
+            "property_type_ord": "Property type / size", "income_band": "Area income band", "year": "Year",
+            "school_quality": "Local school quality (historic Ofsted)",
+            "share_good_or_better": "Share of Good/Outstanding schools"}
+AMENITY = {"rail_station": "Rail stations", "bus_stop": "Bus stops", "supermarket": "Supermarkets",
+           "convenience": "Convenience shops", "gp_clinic": "GP surgeries & clinics", "hospital": "Hospitals",
+           "pharmacy": "Pharmacies", "restaurant_cafe": "Restaurants & cafés", "pub_bar": "Pubs & bars",
+           "park": "Parks", "gym": "Gyms"}
+BLUE, GREY, ORANGE = "#1F3864", "#6b7280", "#B45309"
+
+
 def friendly(f):
     if f.endswith("__missing"):
         base = f[:-len("__missing")]
@@ -54,6 +64,7 @@ def friendly(f):
         return f"Density of {AMENITY.get(f[5:], f[5:]).lower()}"
     return FRIENDLY.get(f, f)
 
+
 def month_label(period):
     """'2026-10' -> 'October 2026'."""
     import calendar
@@ -63,182 +74,413 @@ def month_label(period):
     except Exception:
         return "the latest release"
 
+
 def amenity_per_km2(log_density):
     import math
     return math.expm1(log_density) if log_density is not None else None
+
+
+def gbp(v):
+    return "—" if v is None or v != v else f"£{v:,.0f}"
+
 
 @st.cache_resource
 def get_predictor():
     return RentWisePredictor()
 
+
+@st.cache_resource
+def get_area_data():
+    return AreaData()
+
+
+def line_chart(df, title, y_title="£ per month", bands=None):
+    """Accessible line chart: titled, labelled axes, text alternative offered by the caller."""
+    import plotly.graph_objects as go
+    fig = go.Figure()
+    if bands is not None:
+        for lo, hi, name, alpha in bands:
+            fig.add_trace(go.Scatter(x=list(df.index) + list(df.index[::-1]),
+                                     y=list(df[hi]) + list(df[lo][::-1]), fill="toself", name=name,
+                                     line=dict(width=0), fillcolor=f"rgba(31,56,100,{alpha})", hoverinfo="skip"))
+    # colour-blind-safe palette, and every line also differs by dash pattern (never colour alone)
+    colors = [BLUE, ORANGE, "#0F766E", GREY]
+    dashes = ["solid", "dash", "dot", "dashdot"]
+    for i, c in enumerate([c for c in df.columns if bands is None or c not in sum(([b[0], b[1]] for b in bands), [])]):
+        fig.add_trace(go.Scatter(x=df.index, y=df[c], name=c, mode="lines",
+                                 line=dict(width=3 if i < 2 else 2, dash=dashes[i % 4], color=colors[i % 4])))
+    fig.update_layout(title=title, yaxis_title=y_title, xaxis_title=None, height=360, margin=dict(t=50, b=10),
+                      legend=dict(orientation="h", y=-0.15), hovermode="x unified")
+    st.plotly_chart(fig, use_container_width=True)
+
+
 st.title("🏠 RentWise UK")
-st.caption("Data-driven UK housing & long-term rental intelligence — predict, explain and map rents from open data")
+st.caption("Official UK rents, affordability and trends for every local authority in England & Wales — "
+           "explained, dated and sourced")
 
-view = st.sidebar.radio("View", ["Rent estimator", "Area map", "System results"])
+VIEWS = ["Rent check", "Compare areas", "Area map", "Methodology & data", "System results"]
+view = st.sidebar.radio("View", VIEWS)
 
-# ---- observability: data/model freshness banner + methodology ----
+try:
+    data = get_area_data()
+except Exception as e:  # noqa: BLE001
+    st.error("Data files are missing. Run `python run_real_pipeline.py` (or `make build`) first.")
+    st.caption(f"Detail: {e}")
+    st.stop()
+V = data.vintages
+AS_OF = month_label(data.period)
+
+# ---- observability + sources (every view) ----
 with st.sidebar:
     try:
         from src.health import check
         _h = check()
         _icon = {"ok": "🟢", "degraded": "🟡", "down": "🔴"}.get(_h["status"], "⚪")
         _d = _h["data"].get("age_days"); _m = _h["model"].get("age_days")
-        _b = _h["data"].get("backend")
         st.caption(f"{_icon} System {_h['status']}"
-                   + (f" · data via {_b}" if _b else "")
                    + (f" · data {int(_d)}d old" if _d is not None else "")
                    + (f" · model {int(_m)}d old" if _m is not None else ""))
     except Exception:
         pass
     with st.expander("Data sources & dates"):
-        try:
-            import json as _json
-            _v = _json.loads((config.DATA_PROCESSED / "data_vintages.json").read_text())
-            _r, _e, _p, _c = (_v.get(k, {}) for k in ("rents", "earnings", "population", "crime"))
-            st.markdown(
-                f"- **Rents:** {_r.get('source')} — {month_label(_r.get('period'))}"
-                f"{' (released ' + _r['released'] + ')' if _r.get('released') else ''}\n"
-                f"- **Earnings:** {_e.get('source')} — {_e.get('period')}\n"
-                f"- **Population:** {_p.get('source')} — {_p.get('period')}\n"
-                f"- **Crime:** {_c.get('measure')} — {_c.get('period')} ({_c.get('months')} months)\n"
-                "- **Amenities:** OpenStreetMap via Geofabrik — Nov 2026 · **Schools:** Ofsted & DfE — Oct 2026\n"
-                "- **Boundaries:** ONS, May 2024")
-            if _c.get("areas_without_police_data"):
-                st.caption("No police data for: " + ", ".join(_c["areas_without_police_data"])
-                           + " — shown as missing, never as zero.")
-            if _c.get("areas_with_partial_months"):
-                st.caption("Crime based on fewer months for: " + ", ".join(
-                    f"{k} ({m})" for k, m in _c["areas_with_partial_months"].items()))
-        except Exception:
-            st.caption("Data dates unavailable — run the pipeline to rebuild them.")
-    with st.expander("About & methodology"):
+        _r, _e, _p, _c, _s = (V.get(k, {}) or {} for k in ("rents", "earnings", "population", "crime", "sale_prices"))
         st.markdown(
-            "**RentWise UK** predicts UK rents and sale prices from **open government "
-            "data** (ONS, HM Land Registry, data.police.uk) and explains every estimate.\n\n"
-            "- **Rent (Modules 2+3):** XGBoost on income, crime, property type **plus local amenities "
-            "and schools**. The **official ONS median** is shown first; the model (R² 0.95 served, 0.86 unseen) "
-            "explains it with SHAP and estimates only where ONS publishes none; "
-            "affordability vs the 30% income benchmark; **calibrated 80% intervals** (conformal).\n"
-            "- **Sale price (Module 1):** HM Land Registry + EPC floor area/rooms; XGBoost R² 0.73 "
-            "(0.57 without EPC).\n"
-            "- **Geospatial (Module 3):** 506k OpenStreetMap amenities + historic Ofsted grades "
-            "(18k schools) per area; see the **Area map**.\n"
-            "- **Forecasting (Module 4):** ARIMA / Holt-Winters regional trends; rolling-origin "
-            "backtest with recalibrated (conformal) 80/95% bands.\n\n"
-            "Estimates are **indicative, not financial advice**. "
-            "Code: github.com/hello-keshavkandel/Rentwise-Uk")
+            f"- **Rents:** {_r.get('source')} — {month_label(_r.get('period'))}"
+            f"{' (released ' + _r['released'] + ')' if _r.get('released') else ''}; history from {_r.get('history_from')}\n"
+            f"- **Earnings:** {_e.get('source')} — {_e.get('period')}\n"
+            f"- **Sale prices:** {_s.get('source', 'HM Land Registry')} — {_s.get('period')}\n"
+            f"- **Population:** {_p.get('source')} — {_p.get('period')}\n"
+            f"- **Crime:** {_c.get('measure')} — {_c.get('period')} ({_c.get('months')} months)\n"
+            "- **Amenities:** OpenStreetMap via Geofabrik — Nov 2026 · **Schools:** Ofsted & DfE — Oct 2026\n"
+            "- **Boundaries:** ONS, May 2024")
+        if _c.get("areas_without_police_data"):
+            st.caption("No police data for: " + ", ".join(_c["areas_without_police_data"])
+                       + " — shown as missing, never as zero.")
 
-# ---------------------------------------------------------------- Rent estimator
-if view == "Rent estimator":
-    try:
-        predictor = get_predictor()
-    except Exception as e:
-        st.error("Could not load the trained model. Run `python run_real_pipeline.py` first.")
-        st.caption(f"Detail: {e}"); st.stop()
 
+# ================================================================ Rent check
+if view == "Rent check":
+    areas = sorted(data.areas.la_name)
     with st.sidebar:
-        st.header("Property details")
-        area = st.selectbox("Local authority", predictor.area_names())
-        ptype = st.selectbox("Property type", predictor.property_types)
-        bedrooms = predictor.typical_bedrooms(ptype)   # tied to type in the ONS data
-        st.caption(f"Typical size: **{bedrooms} bedrooms** (ONS reports rent by property type).")
-        go = st.button("Check rent", type="primary", use_container_width=True)
-        st.markdown("<p class='disclaimer'>Earnings, crime, schools and amenities are looked up "
-                    "automatically for the selected area.</p>", unsafe_allow_html=True)
+        st.header("Your search")
+        area = st.selectbox("Local authority", areas, index=areas.index("Leeds") if "Leeds" in areas else 0)
+        measures = data.measures()
+        measure = st.selectbox("Home size or type", measures, format_func=lambda m: MEASURE_LABEL.get(m, m),
+                               help="ONS publishes official rents by bedroom count and by property type.")
+        income = st.number_input("Your gross annual income, £ (optional)", min_value=0, max_value=2_000_000,
+                                 value=0, step=1000,
+                                 help="Before tax, for everyone paying the rent. Used only on this page; "
+                                      "never stored. Leave at 0 to compare with local earnings.")
+    code = data.code_for(area)
+    a = data.areas.loc[code]
+    offs = data.official_rents(code)
+    off = offs.get(measure)
+    st.subheader(f"{MEASURE_LABEL.get(measure, measure)} · {area}")
+    st.caption(f"{a.region} · local authority {code} · change the area, home or income in the sidebar "
+               "(tap › on a phone)")
 
-    if go:
-        r = predictor.predict(area, ptype, bedrooms); pct = r["ratio"]*100
-        st.subheader(f"{ptype} · {bedrooms} bed · {area}")
-        c1,c2,c3 = st.columns(3)
-        as_of = month_label(r.get("as_of"))
-        if r["kind"] == "official":
-            c1.metric("Official median rent", f"£{r['rent']:,}/month")
-            st.caption(f"**Official ONS figure** for {as_of} (Price Index of Private Rents). "
-                       f"RentWise's model estimates £{r['model_rent']:,} for the same area and type "
-                       "and uses it only to explain what drives the figure.")
-        else:
-            c1.metric("Estimated monthly rent", f"£{r['rent']:,}")
-            iv = r.get("interval")
-            st.caption("**Model estimate** — ONS publishes no figure for this property type here. "
-                       + (f"{int(iv['level']*100)}% range: **£{iv['low']:,} – £{iv['high']:,}** "
-                          "(calibrated by conformal prediction)." if iv else ""))
-        c2.metric("Rent-to-income", f"{pct:.0f}%"); c3.metric("Region", r["region"])
-        if r["affordable"]:
-            st.success(f"✅ Affordable — rent is {pct:.0f}% of local income (≤30% benchmark).")
-        else:
-            st.error(f"⚠️ Above the 30% benchmark — rent is {pct:.0f}% of local income.")
+    pred = None
+    if measure in TYPE_MEASURES:
+        try:
+            pred = get_predictor().predict(area, measure)
+        except Exception as e:  # noqa: BLE001
+            st.caption(f"Model explanation unavailable: {e}")
+    if off:
+        rent, kind = off["rent"], "official"
+    elif pred:
+        rent, kind = pred["rent"], "modelled"
+    else:
+        rent, kind = None, None
+
+    c1, c2, c3 = st.columns(3)
+    if kind == "official":
+        ch = off.get("annual_change_pct")
+        c1.metric("Official median rent", f"£{rent:,}", help="Per calendar month, ONS median.",
+                  delta=f"{ch:+.1f}% in a year" if ch is not None else None, delta_color="off")
+        st.caption(f"**Official ONS figure** for {AS_OF} — Price Index of Private Rents. "
+                   + (f"RentWise's model estimates £{pred['model_rent']:,} for the same area and type and uses "
+                      "it only to explain what drives the figure." if pred else ""))
+    elif kind == "modelled":
+        c1.metric("Estimated monthly rent", f"£{rent:,}")
+        iv = pred.get("interval")
+        st.caption("**Model estimate** — ONS publishes no figure for this home type here. "
+                   + (f"{int(iv['level'] * 100)}% range: **£{iv['low']:,} – £{iv['high']:,}**." if iv else ""))
+    else:
+        c1.metric("Official median rent", "No figure")
+        st.info("ONS publishes no official rent for this home size here, and RentWise does not estimate "
+                "bedroom-specific rents.")
+
+    local = affordability(rent, data.area_income(code))
+    mine = affordability(rent, income) if income else None
+    if local:
+        c2.metric("Share of local pay", f"{local['ratio'] * 100:.0f}%",
+                  help=f"Annual rent ÷ median gross annual pay of residents (£{data.area_income(code):,.0f}, ASHE).")
+    if mine:
+        c3.metric("Share of your income", f"{mine['ratio'] * 100:.0f}%",
+                  help="Annual rent ÷ the gross annual income you entered.")
+    elif local:
+        c3.metric("Affordable rent (30%)", f"£{local['max_rent_at_30pct']:,}",
+                  help="The monthly rent a median earner here could pay within the 30% guideline.")
+
+    if mine:
+        msg = (f"At £{income:,.0f} a year this rent is **{mine['ratio'] * 100:.0f}%** of your gross income — "
+               f"**{mine['band']}**. Staying at or under 30% means a rent of up to **£{mine['max_rent_at_30pct']:,}"
+               "/month**.")
+        (st.success if mine["affordable"] else st.warning)(("✅ " if mine["affordable"] else "⚠️ ") + msg)
+    elif local:
+        msg = (f"For someone on the local median wage this rent is **{local['ratio'] * 100:.0f}%** of gross pay — "
+               f"**{local['band']}**. Enter your own income on the left for a personal answer.")
+        (st.success if local["affordable"] else st.warning)(("✅ " if local["affordable"] else "⚠️ ") + msg)
+
+    # ---- every official rent for this area ----
+    with st.expander(f"All official rents in {area} ({AS_OF})", expanded=False):
+        rows = [{"Home": MEASURE_LABEL.get(m, m), "Median rent (£/month)": r["rent"],
+                 "Change on a year (%)": r["annual_change_pct"],
+                 "Rent / local earnings (%)": round(r["rent"] * 12 / data.area_income(code) * 100, 1)
+                 if data.area_income(code) else None}
+                for m, r in sorted(offs.items(), key=lambda kv: data.measures().index(kv[0]))]
+        tbl = pd.DataFrame(rows)
+        st.dataframe(tbl, hide_index=True, use_container_width=True)
+        st.download_button("Download this table (CSV)", tbl.to_csv(index=False).encode(),
+                           file_name=f"rentwise_{code}_{data.period}.csv", mime="text/csv")
+
+    # ---- buy vs rent ----
+    sp_type = measure if measure in TYPE_MEASURES else "All"
+    sp = data.sale_price(code, sp_type)
+    if sp and sp.get("median_price"):
+        y = data.gross_yield(code, measure)
+        st.markdown(f"**Buy vs rent:** {'homes' if sp_type == 'All' else MEASURE_LABEL[sp_type].lower() + 's'} "
+                    f"here sold for a median **{gbp(sp['median_price'])}** ({sp['sales']:,} sales, {sp['period']})"
+                    + (f" — an indicative gross yield of **{y:.1f}%** a year." if y else "."))
+        st.caption("HM Land Registry Price Paid, standard-price sales. Yield = annual median rent ÷ median sale "
+                   "price; before costs, voids and tax; rented and sold homes are not the same homes.")
+
+    # ---- trend since 2015 ----
+    st.subheader("How rent has moved since 2015")
+    reg_code = data.region_codes.get(a.region) or data.nation_codes.get(a.region)
+    series = {area: data.trend(code, measure)}
+    if reg_code:
+        series[a.region] = data.trend(reg_code, measure)
+    eng = data.nation_codes.get("England" if code.startswith("E") else "Wales")
+    if eng and eng != reg_code:
+        series["England" if code.startswith("E") else "Wales"] = data.trend(eng, measure)
+    tdf = pd.concat({k: v.set_index("period")["rent"] for k, v in series.items() if not v.empty}, axis=1)
+    if not tdf.empty:
+        tdf.index = pd.to_datetime(tdf.index)
+        line_chart(tdf, f"Official median rent — {MEASURE_LABEL.get(measure, measure).lower()}")
+        first, last = tdf[area].dropna().iloc[0], tdf[area].dropna().iloc[-1]
+        st.caption(f"{area}: £{first:,.0f} in {tdf[area].dropna().index[0]:%b %Y} → £{last:,.0f} in {AS_OF} "
+                   f"({(last / first - 1) * 100:+.0f}%). Source: ONS PIPR.")
+        with st.expander("Show the trend as a table"):
+            st.dataframe(tdf.iloc[::-6].sort_index().rename_axis("Month").style.format("£{:,.0f}"),
+                         use_container_width=True)
+
+    # ---- regional forecast ----
+    fc = data.region_forecast(code)
+    if fc:
+        st.subheader(f"Where rents in {fc['name']} may go next")
+        hist = data.trend(fc["area_code"], "All").tail(36).set_index("period")["rent"]
+        f = pd.DataFrame(fc["forecast"]).set_index("period")
+        fdf = pd.DataFrame({"Official": hist}).join(f[["rent", "low80", "high80", "low95", "high95"]], how="outer")
+        fdf.loc[hist.index[-1], ["rent", "low80", "high80", "low95", "high95"]] = hist.iloc[-1]
+        fdf = fdf.rename(columns={"rent": "Forecast"})
+        fdf.index = pd.to_datetime(fdf.index)
+        line_chart(fdf, f"{fc['name']}, all properties: 12-month forecast",
+                   bands=[("low95", "high95", "95% band", 0.10), ("low80", "high80", "80% band", 0.22)])
+        last = fc["forecast"][-1]; m = fc["method"]
+        st.caption(f"Forecast for {month_label(last['period'])}: **£{last['rent']:,}** (80% band £{last['low80']:,}–"
+                   f"£{last['high80']:,}). Method: {m['chosen']} on the official series, chosen by rolling-origin "
+                   f"backtest (MAPE {m['backtest_mape_pct'][m['chosen']]:.2f}%). The 80% band covered "
+                   f"{m['out_of_time_coverage']['80%'] * 100:.0f}% of outcomes in recent out-of-time tests — treat it "
+                   "as a guide. Regional, not area-specific; not a prediction of policy effects.")
+
+    # ---- what drives rent (model explanation) ----
+    if pred:
         st.subheader("What drives rent here?")
-        top = r["contributions"][:6]
-        labels = [friendly(f) for f,_ in top][::-1]; values = [v for _,v in top][::-1]
-        colors = ["#1E7D32" if v>=0 else "#B00020" for v in values]
-        fig, ax = plt.subplots(figsize=(7,3.5))
-        ax.barh(labels, values, color=colors); ax.axvline(0, color="#333", linewidth=0.8)
-        ax.set_xlabel("Impact on the rent estimate (£)"); ax.set_title("Top factors (SHAP)")
+        top = pred["contributions"][:6]
+        labels = [friendly(f) for f, _ in top][::-1]; values = [v for _, v in top][::-1]
+        fig, ax = plt.subplots(figsize=(7, 3.5))
+        ax.barh(labels, values, color=["#1E7D32" if v >= 0 else "#B00020" for v in values])
+        for i, v in enumerate(values):
+            ax.text(v, i, f" {'+' if v >= 0 else '−'}£{abs(v):.0f} ", va="center",
+                    ha="left" if v >= 0 else "right", fontsize=8)
+        ax.axvline(0, color="#333", linewidth=0.8)
+        ax.set_xlabel("Impact on the model's estimate (£/month)"); ax.set_title("Top factors (SHAP)")
         fig.tight_layout(); st.pyplot(fig)
         with st.expander("Read the explanation in words"):
-            for f,v in top:
-                st.write(f"- **{friendly(f)}** {'increases' if v>=0 else 'decreases'} the estimate by £{abs(v):.0f}.")
-            st.caption("These are associations learned from data across areas, not causes.")
-        prof = predictor.spatial_profile(area)
-        if prof:
-            with st.expander("What's nearby (area profile)"):
-                rows = [(AMENITY[k[5:]], amenity_per_km2(v)) for k, v in prof.items()
-                        if k.startswith("dens_") and k[5:] in AMENITY]
-                st.table({"Amenity": [r[0] for r in rows],
-                          "Per km² (whole area)": [f"{r[1]:.2f}" for r in rows]})
-                sq = prof.get("school_quality")
-                st.write("**Schools:** " + (f"average historic Ofsted score {sq:.2f}/4, "
-                         f"{prof['share_good_or_better']*100:.0f}% Good or Outstanding"
-                         if sq is not None else "no Ofsted data (Wales — schools are inspected by Estyn)"))
-                st.caption("Source: OpenStreetMap contributors (ODbL); Ofsted & DfE (historic 2019-framework grades).")
-    else:
-        st.info("👈 Choose a property on the left, then click **Estimate rent**.")
+            for f, v in top:
+                st.write(f"- **{friendly(f)}** {'increases' if v >= 0 else 'decreases'} the estimate by £{abs(v):.0f}.")
+            st.caption("Associations learned across areas, not causes. The model works by property type, "
+                       "so explanations are shown for flats and houses, not bedroom counts.")
+    elif measure not in TYPE_MEASURES:
+        st.caption("Choose a property type (flat, terraced, semi-detached, detached) to see what drives rent here.")
 
-# --------------------------------------------------------------------- Area map
+    prof = get_predictor().spatial_profile(area) if code in data.areas.index else {}
+    if prof:
+        with st.expander("What's nearby (area profile)"):
+            rows = [(AMENITY[k[5:]], amenity_per_km2(v)) for k, v in prof.items()
+                    if k.startswith("dens_") and k[5:] in AMENITY]
+            st.dataframe(pd.DataFrame({"Amenity": [r[0] for r in rows],
+                                       "Per km² (whole area)": [round(r[1], 2) for r in rows]}),
+                         hide_index=True, use_container_width=True)
+            sq = prof.get("school_quality")
+            crime = a.crime
+            st.write("**Schools:** " + (f"average historic Ofsted score {sq:.2f}/4, "
+                     f"{prof['share_good_or_better'] * 100:.0f}% Good or Outstanding"
+                     if sq is not None else "no Ofsted data (Wales — schools are inspected by Estyn)"))
+            st.write("**Crime:** " + (f"{crime:.0f} recorded street crimes per 1,000 residents a year"
+                     if crime == crime else "no police data published for this area"))
+            st.caption("OpenStreetMap contributors (ODbL); Ofsted & DfE; data.police.uk; ONS population.")
+
+# ================================================================ Compare areas
+elif view == "Compare areas":
+    st.subheader("Compare areas side by side")
+    areas = sorted(data.areas.la_name)
+    default = [x for x in ("Manchester", "Leeds", "Bristol, City of") if x in areas]
+    picked = st.multiselect("Areas (2 to 4)", areas, default=default, max_selections=4)
+    cc1, cc2 = st.columns(2)
+    measure = cc1.selectbox("Home size or type", data.measures(), format_func=lambda m: MEASURE_LABEL.get(m, m))
+    income = cc2.number_input("Your gross annual income, £ (optional)", min_value=0, max_value=2_000_000,
+                              value=0, step=1000, help="Never stored.")
+    if len(picked) < 2:
+        st.info("Choose at least two areas.")
+    else:
+        codes = [data.code_for(p) for p in picked]
+        df = data.compare(codes, measure, income or None)
+        def fmt(v):
+            if v is None or (isinstance(v, float) and v != v):
+                return "—"
+            if isinstance(v, float):
+                return f"{v:,.0f}" if abs(v) >= 1000 else f"{v:,.2f}".rstrip("0").rstrip(".")
+            return f"{v:,}" if isinstance(v, int) else str(v)
+        show = df.drop(columns=["Code"]).set_index("Area").T.map(fmt)
+        st.dataframe(show, use_container_width=True, height=(len(show) + 1) * 35 + 3)
+        st.caption(f"Rents: ONS PIPR, {AS_OF}. Earnings: ASHE {V.get('earnings', {}).get('period')}. "
+                   f"Sale prices: HM Land Registry {V.get('sale_prices', {}).get('period')}. "
+                   "Amenities per km² of the whole local authority (OpenStreetMap). “—” = no data, never zero.")
+        st.download_button("Download comparison (CSV)", df.to_csv(index=False).encode(),
+                           file_name=f"rentwise_compare_{data.period}.csv", mime="text/csv")
+        tdf = pd.concat({p: data.trend(c, measure).set_index("period")["rent"] for p, c in zip(picked, codes)}, axis=1)
+        if not tdf.empty:
+            tdf.index = pd.to_datetime(tdf.index)
+            line_chart(tdf, f"Official median rent since 2015 — {MEASURE_LABEL.get(measure, measure).lower()}")
+    st.divider()
+    st.markdown("**For analysts:** every area × every official measure, with local earnings and ratio.")
+    st.download_button("Download all areas (CSV)", data.all_areas_table().to_csv(index=False).encode(),
+                       file_name=f"rentwise_all_areas_{data.period}.csv", mime="text/csv")
+
+# ================================================================ Area map
 elif view == "Area map":
-    import pandas as pd
     import streamlit.components.v1 as components
     st.subheader("Area map — England & Wales by local authority")
     P = config.DATA_PROCESSED
     geo = P / "lad_boundaries_wgs84.geojson"
     if not geo.exists():
         st.warning("Boundary file missing — run `make geo`."); st.stop()
-    options = {"Rent-to-income ratio (affordability)": "ratio",
+    options = {"Rent ÷ local earnings, all properties (official)": "ratio",
+               "Official median rent, all properties (£/month)": "rent",
+               "Rent change on a year (%)": "change",
+               "Indicative gross rental yield (%)": "yield",
                "Average historic Ofsted school quality (England)": "school_quality",
                **{f"Density: {v.lower()} per km²": f"dens_{k}" for k, v in AMENITY.items()}}
     choice = st.selectbox("Show", list(options))
 
     @st.cache_data(show_spinner="Drawing map…")
-    def map_html(metric: str) -> str:
+    def map_html(metric: str, label: str) -> str:
         from src.viz.maps import choropleth
-        from src.data.store import load_table          # DuckDB store first, CSV fallback
-        clean = load_table("rentwise_clean")[["la_code", "la_name"]].drop_duplicates()
+        d = get_area_data()
+        allr = d.official[d.official.measure == "All"].set_index("area_code")
         if metric == "ratio":
-            a = load_table("affordability").merge(clean, on="la_name")
-            vals, label, cmap = dict(zip(a.la_code, a.rent_to_income)), "Rent-to-income ratio", "YlOrRd"
+            vals, cmap = d.official_affordability(), "YlOrRd"
+        elif metric == "rent":
+            vals, cmap = allr["rent"].to_dict(), "YlOrRd"
+        elif metric == "change":
+            vals, cmap = allr["annual_change_pct"].to_dict(), "RdYlBu_r"
+        elif metric == "yield":
+            vals, cmap = {c: d.gross_yield(c) for c in allr.index}, "YlGn"
         else:
             sp = pd.read_csv(P / "la_spatial_features.csv")
             v = sp[metric] if metric == "school_quality" else sp[metric].map(amenity_per_km2)
-            vals, label = dict(zip(sp.lad_code, v)), choice
-            cmap = "YlGnBu"
-        vals = {k: x for k, x in vals.items() if pd.notna(x)}
+            vals, cmap = dict(zip(sp.lad_code, v)), "YlGnBu"
+        vals = {k: x for k, x in vals.items() if x is not None and pd.notna(x)}
         return choropleth(vals, geo, value_name=label, fill_color=cmap)._repr_html_()
 
-    components.html(map_html(options[choice]), height=620)
-    st.caption("Grey = no data (e.g. Ofsted does not inspect Welsh schools). Boundaries: ONS (May 2024), "
-               "contains OS data © Crown copyright. Amenities: © OpenStreetMap contributors.")
+    components.html(map_html(options[choice], choice), height=620)
+    st.caption(f"Rents: ONS PIPR {AS_OF}; earnings: ASHE; prices: HM Land Registry. Grey = no data (e.g. Ofsted does "
+               "not inspect Welsh schools). Boundaries: ONS (May 2024), contains OS data © Crown copyright. "
+               "Amenities: © OpenStreetMap contributors.")
 
-# --------------------------------------------------------------- System results
+# ================================================================ Methodology
+elif view == "Methodology & data":
+    st.subheader("Methodology & data — what every number is")
+    meta = {}
+    try:
+        meta = json.loads((config.MODELS_DIR / "rent_model_meta.json").read_text())
+    except Exception:
+        pass
+    ev = meta.get("evaluation", {})
+    rcv, gcv = ev.get("random_cv", {}) or {}, ev.get("grouped_cv", {}) or {}
+    fm = (data.forecasts or {}).get("method", {})
+    _r, _e, _s, _c = (V.get(k, {}) or {} for k in ("rents", "earnings", "sale_prices", "crime"))
+    st.markdown(f"""
+**What RentWise is.** A free tool that shows the **official** typical rent for every local authority in
+England and Wales, how affordable it is, how it has moved, where it may go next, and *why* rents differ
+between places. It covers areas, not individual homes: no open dataset records the rent of a specific flat.
+
+#### The numbers
+| Figure | What it is | Source & date |
+|---|---|---|
+| **Official median rent** | Median monthly private rent for the area, by bedroom count (1–4+) or property type | {_r.get('source')}, {month_label(_r.get('period'))} (released {_r.get('released')}) |
+| **Change on a year** | % change in that median over 12 months, as published | ONS PIPR |
+| **Rent ÷ earnings** | Annual rent ÷ **median gross annual pay of residents** — one full-time-equivalent earner, so stricter than household measures | ASHE Table 8.7a, {_e.get('period')} |
+| **Rent ÷ your income** | Annual rent ÷ the gross annual income *you* enter (use household income if rent is shared). Never stored | — |
+| **30% guideline** | Rent at or below 30% of gross income is widely used as the affordability line; above 40% is shown as “well above” | convention |
+| **Median sale price** | Median price paid, standard-price sales (Land Registry category A), shown only with ≥ 20 sales | HM Land Registry, {_s.get('period')} |
+| **Gross yield** | Annual median rent ÷ median sale price for the same property type. Indicative: before costs, voids, tax; rented and sold homes differ | derived |
+| **Crime** | Recorded street crimes per 1,000 residents, annualised over {_c.get('months')} months. Missing where a force published nothing — never zero | data.police.uk + ONS population |
+| **Schools / amenities** | Historic Ofsted grades (England only); OpenStreetMap amenity counts per km² | Ofsted & DfE; © OSM contributors |
+
+#### The model (explains rents; estimates only where ONS publishes nothing)
+XGBoost on local earnings, crime, region, property type, amenities and schools, trained on {meta.get('n_las', '316')} areas.
+Accuracy: R² **{rcv.get('r2', 0):.2f}** / MAE **£{rcv.get('mae', 0):.0f}** for areas seen in training; R² **{gcv.get('r2', 0):.2f}** /
+MAE **£{gcv.get('mae', 0):.0f}** when whole areas are held out (the honest test). Explanations use SHAP; they show
+association, not cause. Only trained areas are served, because the 80% conformal range is calibrated there.
+
+#### Forecasts
+Regional (9 English regions + Wales), all properties, 12 months ahead. Three models compared by rolling-origin
+backtest; **{fm.get('chosen', '—')}** chosen (MAPE {(fm.get('backtest_mape_pct') or {}).get(fm.get('chosen'), 0):.2f}%).
+Bands are conformal (from the backtest's own errors). In out-of-time tests the 80% band covered
+**{(fm.get('out_of_time_coverage') or {}).get('80%', 0) * 100:.0f}%** of outcomes and the 95% band
+**{(fm.get('out_of_time_coverage') or {}).get('95%', 0) * 100:.0f}%** — slightly narrow, as rent growth has been slowing.
+Forecasts extrapolate the official series and do not model policy changes such as the Renters' Rights Act.
+
+#### Limits
+- Areas, not individual homes; medians hide variation within an area.
+- Scotland and Northern Ireland are not covered yet.
+- Rents are ONS's measure of rents paid by tenants (new and existing lets), which moves more slowly than advertised asking rents.
+- Indicative information, **not financial advice**.
+
+#### Licences
+Contains public sector information licensed under the **Open Government Licence v3.0** (ONS, HM Land Registry,
+Ofsted/DfE, police.uk). Amenity counts derived from **© OpenStreetMap contributors (ODbL)**.
+Code: github.com/hello-keshavkandel/Rentwise-Uk · Built on an MSc dissertation (Group 27, UWS); product
+development by Keshav Kandel.
+""")
+    st.download_button("Download all official rents (CSV)", data.all_areas_table().to_csv(index=False).encode(),
+                       file_name=f"rentwise_all_areas_{data.period}.csv", mime="text/csv")
+
+# ================================================================ System results
 else:
-    st.subheader("Full system — all four modules")
+    st.subheader("Full system — research modules")
     st.caption("Read-only overview of each module's latest results (run `python run_real_pipeline.py` to refresh).")
     reports = config.ROOT / "reports"; figs = reports / "figures"
     modules = [
         ("Module 1 — Sale Price Prediction", "module1_summary.md", "m1_predicted_vs_actual.png"),
-        ("Module 2 — Rental Price & Affordability (deployed model)",
-         "rent_model_summary.md", "rent_shap_importance.png"),
+        ("Module 2 — Rental Price & Affordability (deployed model)", "rent_model_summary.md",
+         "rent_shap_importance.png"),
         ("Module 3 — Geospatial Driver Analysis", "module3_summary.md", "m3_ablation.png"),
-        ("Module 4 — Regional Trend Forecasting", "module4_summary.md", "m4_forecast_london.png"),
+        ("Module 4 — Regional Trend Forecasting (research)", "module4_summary.md", "m4_forecast_london.png"),
+        ("Rent forecasts in the app (Phase C)", "rent_forecast_summary.md", None),
     ]
     for title, md_name, fig_name in modules:
         st.markdown(f"### {title}")
@@ -247,11 +489,10 @@ else:
         with col1:
             st.markdown(md_path.read_text() if md_path.exists() else "_Run the pipeline to generate results._")
         with col2:
-            fig_path = figs / fig_name
-            if fig_path.exists():
-                st.image(str(fig_path), use_column_width=True)
+            if fig_name and (figs / fig_name).exists():
+                st.image(str(figs / fig_name), use_column_width=True)
         st.divider()
 
-st.markdown("<p class='disclaimer'>Estimates are indicative, produced by machine-learning "
-            "models on real open data (ONS, HM Land Registry, data.police.uk), and are "
-            "<b>not financial advice</b>.</p>", unsafe_allow_html=True)
+st.markdown("<p class='disclaimer'>Official figures from ONS, HM Land Registry and data.police.uk; model "
+            "explanations and forecasts are indicative and <b>not financial advice</b>.</p>",
+            unsafe_allow_html=True)

@@ -39,6 +39,12 @@ osm:                ## OSM amenity counts per LA (needs data/raw/osm/*.osm.pbf +
 spatial:            ## Module 3 features + retrain/recalibrate the deployed spatial rent model
 	$(PY) -m src.modules.module3_spatial && $(PY) -m src.models.rent_spatial
 
+rents:              ## official rents (all measures, since 2015) + sale prices from the newest PIPR / Price Paid
+	$(PY) -m src.data.official_rents && $(PY) -m src.data.sale_prices
+
+forecast:           ## regional 12-month rent forecasts with conformal bands (needs `make rents`)
+	$(PY) -m src.models.rent_forecast
+
 api:                ## run the public REST API locally (docs at http://localhost:8000/docs)
 	$(PY) -m uvicorn src.api.app:app --reload --port 8000
 

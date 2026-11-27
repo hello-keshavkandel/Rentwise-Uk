@@ -20,7 +20,13 @@ RentWise UK predicts long-term rental prices and residential sale prices across 
 | **3 · Geospatial** | 11 OSM amenity densities (506k amenities) + historic Ofsted school quality + crime per 1,000 residents + LA boundary maps | Unseen-area MAE **−8%** (£169 → £156) every repeat; R² gain small (0.847 → 0.853); choropleths |
 | **4 · Forecasting** | ARIMA / Holt-Winters regional rent trends; rolling-origin backtest + conformal intervals | mean MAPE ~0.6%, recalibrated 80/95% bands |
 
-The dashboard has three views: a **Rent estimator** (local authority + property type → predicted rent, affordability verdict, **confidence range**, plain-English SHAP explanation and a *what's nearby* profile), an **Area map** (affordability, school quality and 11 amenity layers by local authority) and a **System results** overview — with a live **health/freshness banner**.
+The dashboard has five views:
+
+- **Rent check** — the official ONS median rent for any area by **bedroom count (1–4+) or property type**, with its annual change; affordability against **your own income** (or local median pay) and the rent you could afford at 30%; median **sale price and gross yield**; the **trend since 2015** against region and nation; the region's **12-month forecast** with honest bands; and what drives rent there (SHAP).
+- **Compare areas** — 2–4 areas side by side (rent, change, affordability, prices, yield, crime, schools, amenities) with trends and **CSV download**.
+- **Area map** — official affordability, rent, rent change, yield, school quality and 11 amenity layers.
+- **Methodology & data** — what every number is, its source, date and limits.
+- **System results** — the research modules' latest results, with a live **health/freshness banner**.
 
 ## Public API (Milestone 5)
 
@@ -32,7 +38,7 @@ curl -X POST localhost:8000/v1/predict -H "X-API-Key: rw_..." -H 'Content-Type: 
      -d '{"la_code":"E09000007","property_type":"Flat"}'
 ```
 
-Rent estimates with calibrated intervals, affordability and SHAP factors (`/v1/predict`, `/v1/areas`); self-service **accounts**, API keys, **saved areas** and **rent / affordability alerts** (`/v1/me/...`, evaluated by `make alerts` after each refresh). Hashed secrets, per-key rate limiting, served-areas-only by design. Full report: `reports/REPORT_P1_M5.md`.
+Official rents for every measure with affordability against your income, sale prices and yield (`/v1/areas/{code}/rents`), trends since 2015 (`/trend`), regional forecasts (`/forecast`), side-by-side comparison (`/v1/compare`), and rent estimates with calibrated intervals and SHAP factors (`/v1/predict`); self-service **accounts**, API keys, **saved areas** and **rent / affordability alerts** (`/v1/me/...`, evaluated by `make alerts` after each refresh). Hashed secrets, per-key rate limiting, served-areas-only by design. Full report: `reports/REPORT_P1_M5.md`.
 
 ## Quickstart
 

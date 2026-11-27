@@ -1,0 +1,329 @@
+area_code,area_name,level,region
+K02000001,United Kingdom,nation,
+E92000001,England,nation,
+W92000004,Wales,nation,
+E12000001,North East,region,
+E12000002,North West,region,
+E12000003,Yorkshire and The Humber,region,
+E12000004,East Midlands,region,
+E12000005,West Midlands,region,
+E12000006,East of England,region,
+E12000007,London,region,
+E12000008,South East,region,
+E12000009,South West,region,
+E06000001,Hartlepool,la,North East
+E06000002,Middlesbrough,la,North East
+E06000003,Redcar and Cleveland,la,North East
+E06000004,Stockton-on-Tees,la,North East
+E06000005,Darlington,la,North East
+E06000006,Halton,la,North West
+E06000007,Warrington,la,North West
+E06000008,Blackburn with Darwen,la,North West
+E06000009,Blackpool,la,North West
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber
+E06000013,North Lincolnshire,la,Yorkshire and The Humber
+E06000014,York,la,Yorkshire and The Humber
+E06000015,Derby,la,East Midlands
+E06000016,Leicester,la,East Midlands
+E06000017,Rutland,la,East Midlands
+E06000018,Nottingham,la,East Midlands
+E06000019,"Herefordshire, County of",la,West Midlands
+E06000020,Telford and Wrekin,la,West Midlands
+E06000021,Stoke-on-Trent,la,West Midlands
+E06000022,Bath and North East Somerset,la,South West
+E06000023,"Bristol, City of",la,South West
+E06000024,North Somerset,la,South West
+E06000025,South Gloucestershire,la,South West
+E06000026,Plymouth,la,South West
+E06000027,Torbay,la,South West
+E06000030,Swindon,la,South West
+E06000031,Peterborough,la,East of England
+E06000032,Luton,la,East of England
+E06000033,Southend-on-Sea,la,East of England
+E06000034,Thurrock,la,East of England
+E06000035,Medway,la,South East
+E06000036,Bracknell Forest,la,South East
+E06000037,West Berkshire,la,South East
+E06000038,Reading,la,South East
+E06000039,Slough,la,South East
+E06000040,Windsor and Maidenhead,la,South East
+E06000041,Wokingham,la,South East
+E06000042,Milton Keynes,la,South East
+E06000043,Brighton and Hove,la,South East
+E06000044,Portsmouth,la,South East
+E06000045,Southampton,la,South East
+E06000046,Isle of Wight,la,South East
+E06000047,County Durham,la,North East
+E06000049,Cheshire East,la,North West
+E06000050,Cheshire West and Chester,la,North West
+E06000051,Shropshire,la,West Midlands
+E06000052,Cornwall,la,South West
+E06000054,Wiltshire,la,South West
+E06000055,Bedford,la,East of England
+E06000056,Central Bedfordshire,la,East of England
+E06000057,Northumberland,la,North East
+E06000058,"Bournemouth, Christchurch and Poole",la,South West
+E06000059,Dorset,la,South West
+E06000060,Buckinghamshire,la,South East
+E06000061,North Northamptonshire,la,East Midlands
+E06000062,West Northamptonshire,la,East Midlands
+E06000063,Cumberland,la,North West
+E06000064,Westmorland and Furness,la,North West
+E06000065,North Yorkshire,la,Yorkshire and The Humber
+E06000066,Somerset,la,South West
+E07000008,Cambridge,la,East of England
+E07000009,East Cambridgeshire,la,East of England
+E07000010,Fenland,la,East of England
+E07000011,Huntingdonshire,la,East of England
+E07000012,South Cambridgeshire,la,East of England
+E07000032,Amber Valley,la,East Midlands
+E07000033,Bolsover,la,East Midlands
+E07000034,Chesterfield,la,East Midlands
+E07000035,Derbyshire Dales,la,East Midlands
+E07000036,Erewash,la,East Midlands
+E07000037,High Peak,la,East Midlands
+E07000038,North East Derbyshire,la,East Midlands
+E07000039,South Derbyshire,la,East Midlands
+E07000040,East Devon,la,South West
+E07000041,Exeter,la,South West
+E07000042,Mid Devon,la,South West
+E07000043,North Devon,la,South West
+E07000044,South Hams,la,South West
+E07000045,Teignbridge,la,South West
+E07000046,Torridge,la,South West
+E07000047,West Devon,la,South West
+E07000061,Eastbourne,la,South East
+E07000062,Hastings,la,South East
+E07000063,Lewes,la,South East
+E07000064,Rother,la,South East
+E07000065,Wealden,la,South East
+E07000066,Basildon,la,East of England
+E07000067,Braintree,la,East of England
+E07000068,Brentwood,la,East of England
+E07000069,Castle Point,la,East of England
+E07000070,Chelmsford,la,East of England
+E07000071,Colchester,la,East of England
+E07000072,Epping Forest,la,East of England
+E07000073,Harlow,la,East of England
+E07000074,Maldon,la,East of England
+E07000075,Rochford,la,East of England
+E07000076,Tendring,la,East of England
+E07000077,Uttlesford,la,East of England
+E07000078,Cheltenham,la,South West
+E07000079,Cotswold,la,South West
+E07000080,Forest of Dean,la,South West
+E07000081,Gloucester,la,South West
+E07000082,Stroud,la,South West
+E07000083,Tewkesbury,la,South West
+E07000084,Basingstoke and Deane,la,South East
+E07000085,East Hampshire,la,South East
+E07000086,Eastleigh,la,South East
+E07000087,Fareham,la,South East
+E07000088,Gosport,la,South East
+E07000089,Hart,la,South East
+E07000090,Havant,la,South East
+E07000091,New Forest,la,South East
+E07000092,Rushmoor,la,South East
+E07000093,Test Valley,la,South East
+E07000094,Winchester,la,South East
+E07000095,Broxbourne,la,East of England
+E07000096,Dacorum,la,East of England
+E07000098,Hertsmere,la,East of England
+E07000099,North Hertfordshire,la,East of England
+E07000102,Three Rivers,la,East of England
+E07000103,Watford,la,East of England
+E07000105,Ashford,la,South East
+E07000106,Canterbury,la,South East
+E07000107,Dartford,la,South East
+E07000108,Dover,la,South East
+E07000109,Gravesham,la,South East
+E07000110,Maidstone,la,South East
+E07000111,Sevenoaks,la,South East
+E07000112,Folkestone and Hythe,la,South East
+E07000113,Swale,la,South East
+E07000114,Thanet,la,South East
+E07000115,Tonbridge and Malling,la,South East
+E07000116,Tunbridge Wells,la,South East
+E07000117,Burnley,la,North West
+E07000118,Chorley,la,North West
+E07000119,Fylde,la,North West
+E07000120,Hyndburn,la,North West
+E07000121,Lancaster,la,North West
+E07000122,Pendle,la,North West
+E07000123,Preston,la,North West
+E07000124,Ribble Valley,la,North West
+E07000125,Rossendale,la,North West
+E07000126,South Ribble,la,North West
+E07000127,West Lancashire,la,North West
+E07000128,Wyre,la,North West
+E07000129,Blaby,la,East Midlands
+E07000130,Charnwood,la,East Midlands
+E07000131,Harborough,la,East Midlands
+E07000132,Hinckley and Bosworth,la,East Midlands
+E07000133,Melton,la,East Midlands
+E07000134,North West Leicestershire,la,East Midlands
+E07000135,Oadby and Wigston,la,East Midlands
+E07000136,Boston,la,East Midlands
+E07000137,East Lindsey,la,East Midlands
+E07000138,Lincoln,la,East Midlands
+E07000139,North Kesteven,la,East Midlands
+E07000140,South Holland,la,East Midlands
+E07000141,South Kesteven,la,East Midlands
+E07000142,West Lindsey,la,East Midlands
+E07000143,Breckland,la,East of England
+E07000144,Broadland,la,East of England
+E07000145,Great Yarmouth,la,East of England
+E07000146,King's Lynn and West Norfolk,la,East of England
+E07000147,North Norfolk,la,East of England
+E07000148,Norwich,la,East of England
+E07000149,South Norfolk,la,East of England
+E07000170,Ashfield,la,East Midlands
+E07000171,Bassetlaw,la,East Midlands
+E07000172,Broxtowe,la,East Midlands
+E07000173,Gedling,la,East Midlands
+E07000174,Mansfield,la,East Midlands
+E07000175,Newark and Sherwood,la,East Midlands
+E07000176,Rushcliffe,la,East Midlands
+E07000177,Cherwell,la,South East
+E07000178,Oxford,la,South East
+E07000179,South Oxfordshire,la,South East
+E07000180,Vale of White Horse,la,South East
+E07000181,West Oxfordshire,la,South East
+E07000192,Cannock Chase,la,West Midlands
+E07000193,East Staffordshire,la,West Midlands
+E07000194,Lichfield,la,West Midlands
+E07000195,Newcastle-under-Lyme,la,West Midlands
+E07000196,South Staffordshire,la,West Midlands
+E07000197,Stafford,la,West Midlands
+E07000198,Staffordshire Moorlands,la,West Midlands
+E07000199,Tamworth,la,West Midlands
+E07000200,Babergh,la,East of England
+E07000202,Ipswich,la,East of England
+E07000203,Mid Suffolk,la,East of England
+E07000207,Elmbridge,la,South East
+E07000208,Epsom and Ewell,la,South East
+E07000209,Guildford,la,South East
+E07000210,Mole Valley,la,South East
+E07000211,Reigate and Banstead,la,South East
+E07000212,Runnymede,la,South East
+E07000213,Spelthorne,la,South East
+E07000214,Surrey Heath,la,South East
+E07000215,Tandridge,la,South East
+E07000216,Waverley,la,South East
+E07000217,Woking,la,South East
+E07000218,North Warwickshire,la,West Midlands
+E07000219,Nuneaton and Bedworth,la,West Midlands
+E07000220,Rugby,la,West Midlands
+E07000221,Stratford-on-Avon,la,West Midlands
+E07000222,Warwick,la,West Midlands
+E07000223,Adur,la,South East
+E07000224,Arun,la,South East
+E07000225,Chichester,la,South East
+E07000226,Crawley,la,South East
+E07000227,Horsham,la,South East
+E07000228,Mid Sussex,la,South East
+E07000229,Worthing,la,South East
+E07000234,Bromsgrove,la,West Midlands
+E07000235,Malvern Hills,la,West Midlands
+E07000236,Redditch,la,West Midlands
+E07000237,Worcester,la,West Midlands
+E07000238,Wychavon,la,West Midlands
+E07000239,Wyre Forest,la,West Midlands
+E07000240,St Albans,la,East of England
+E07000241,Welwyn Hatfield,la,East of England
+E07000242,East Hertfordshire,la,East of England
+E07000243,Stevenage,la,East of England
+E07000244,East Suffolk,la,East of England
+E07000245,West Suffolk,la,East of England
+E08000001,Bolton,la,North West
+E08000002,Bury,la,North West
+E08000003,Manchester,la,North West
+E08000004,Oldham,la,North West
+E08000005,Rochdale,la,North West
+E08000006,Salford,la,North West
+E08000007,Stockport,la,North West
+E08000008,Tameside,la,North West
+E08000009,Trafford,la,North West
+E08000010,Wigan,la,North West
+E08000011,Knowsley,la,North West
+E08000012,Liverpool,la,North West
+E08000013,St. Helens,la,North West
+E08000014,Sefton,la,North West
+E08000015,Wirral,la,North West
+E08000017,Doncaster,la,Yorkshire and The Humber
+E08000018,Rotherham,la,Yorkshire and The Humber
+E08000021,Newcastle upon Tyne,la,North East
+E08000022,North Tyneside,la,North East
+E08000023,South Tyneside,la,North East
+E08000024,Sunderland,la,North East
+E08000025,Birmingham,la,West Midlands
+E08000026,Coventry,la,West Midlands
+E08000027,Dudley,la,West Midlands
+E08000028,Sandwell,la,West Midlands
+E08000029,Solihull,la,West Midlands
+E08000030,Walsall,la,West Midlands
+E08000031,Wolverhampton,la,West Midlands
+E08000032,Bradford,la,Yorkshire and The Humber
+E08000033,Calderdale,la,Yorkshire and The Humber
+E08000034,Kirklees,la,Yorkshire and The Humber
+E08000035,Leeds,la,Yorkshire and The Humber
+E08000036,Wakefield,la,Yorkshire and The Humber
+E08000037,Gateshead,la,North East
+E08000038,Barnsley,la,Yorkshire and The Humber
+E08000039,Sheffield,la,Yorkshire and The Humber
+E09000002,Barking and Dagenham,la,London
+E09000003,Barnet,la,London
+E09000004,Bexley,la,London
+E09000005,Brent,la,London
+E09000006,Bromley,la,London
+E09000007,Camden,la,London
+E09000008,Croydon,la,London
+E09000009,Ealing,la,London
+E09000010,Enfield,la,London
+E09000011,Greenwich,la,London
+E09000012,Hackney,la,London
+E09000013,Hammersmith and Fulham,la,London
+E09000014,Haringey,la,London
+E09000015,Harrow,la,London
+E09000016,Havering,la,London
+E09000017,Hillingdon,la,London
+E09000018,Hounslow,la,London
+E09000019,Islington,la,London
+E09000020,Kensington and Chelsea,la,London
+E09000021,Kingston upon Thames,la,London
+E09000022,Lambeth,la,London
+E09000023,Lewisham,la,London
+E09000024,Merton,la,London
+E09000025,Newham,la,London
+E09000026,Redbridge,la,London
+E09000027,Richmond upon Thames,la,London
+E09000028,Southwark,la,London
+E09000029,Sutton,la,London
+E09000030,Tower Hamlets,la,London
+E09000031,Waltham Forest,la,London
+E09000032,Wandsworth,la,London
+E09000033,Westminster,la,London
+W06000001,Isle of Anglesey,la,Wales
+W06000002,Gwynedd,la,Wales
+W06000003,Conwy,la,Wales
+W06000004,Denbighshire,la,Wales
+W06000005,Flintshire,la,Wales
+W06000006,Wrexham,la,Wales
+W06000008,Ceredigion,la,Wales
+W06000009,Pembrokeshire,la,Wales
+W06000010,Carmarthenshire,la,Wales
+W06000011,Swansea,la,Wales
+W06000012,Neath Port Talbot,la,Wales
+W06000013,Bridgend,la,Wales
+W06000014,Vale of Glamorgan,la,Wales
+W06000015,Cardiff,la,Wales
+W06000016,Rhondda Cynon Taf,la,Wales
+W06000018,Caerphilly,la,Wales
+W06000019,Blaenau Gwent,la,Wales
+W06000020,Torfaen,la,Wales
+W06000021,Monmouthshire,la,Wales
+W06000022,Newport,la,Wales
+W06000023,Powys,la,Wales
+W06000024,Merthyr Tydfil,la,Wales

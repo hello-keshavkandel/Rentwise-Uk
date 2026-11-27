@@ -6,8 +6,13 @@ app.py  —  the RentWise UK public REST API (Milestone 5).
 Data endpoints (header  X-API-Key: rw_...)
     GET  /v1/areas                     areas the model serves (code, name, region)
     GET  /v1/areas/{la_code}           one area: income, spatial profile, property types
+    GET  /v1/areas/{la_code}/rents     every official rent (all, 1/2/3/4+ bed, 4 types) + annual change,
+                                       affordability (local earnings / ?income_gbp_year=), sale prices, yield
+    GET  /v1/areas/{la_code}/trend     official monthly rent since 2015 (?measure=2 bed)
+    GET  /v1/areas/{la_code}/forecast  12-month regional forecast with conformal 80%/95% bands
+    GET  /v1/compare?codes=A,B[,C]     2-5 areas side by side (?measure=, ?income_gbp_year=)
     POST /v1/predict                   official ONS rent (or a model estimate + interval where ONS
-                                       publishes none) + affordability + SHAP factors
+                                       publishes none) + affordability (+ yours, if income given) + SHAP
 Public
     GET  /v1/health                    liveness + data/model freshness
     GET  /v1/model                     what is deployed and how well it performs (honest metrics)
@@ -90,6 +95,16 @@ def factor_label(f: str) -> str:
 class PredictIn(BaseModel):
     la_code: str = Field(..., pattern=r"^[EW]\d{8}$", examples=["E07000223"])
     property_type: str = Field(..., examples=["Flat"])
+    income_gbp_year: float | None = Field(None, gt=0, le=10_000_000,
+                                          description="Your gross annual (household) income, for personal "
+                                                      "affordability. Not stored.")
+
+
+class Affordability(BaseModel):
+    ratio: float
+    affordable: bool
+    band: str
+    max_rent_at_30pct: int
 
 
 class Factor(BaseModel):
@@ -120,6 +135,7 @@ class PredictOut(BaseModel):
     rent_to_income: float
     affordable: bool
     benchmark: float = 0.30
+    your_affordability: Affordability | None = None
     factors: list[Factor]
     model: str
     disclaimer: str = DISCLAIMER
@@ -154,13 +170,14 @@ class AlertIn(BaseModel):
 
 # ------------------------------------------------------------------ factory
 def create_app(db: Database | None = None, predictor=None, rate_limit: int | None = None,
-               allow_signup: bool | None = None, auth_limit: int = 10) -> FastAPI:
-    """Build the API. Tests inject an in-memory DB and/or a predictor."""
+               allow_signup: bool | None = None, auth_limit: int = 10, area_data=None) -> FastAPI:
+    """Build the API. Tests inject an in-memory DB, a predictor and/or area data."""
     app = FastAPI(title="RentWise UK API", version=API_VERSION,
                   description="UK rent estimates with calibrated uncertainty, affordability and "
                               "plain-English explanations, from open government data.")
     app.state.db = db or Database(db_path_from_env())
     app.state.predictor = predictor
+    app.state.area_data = area_data
     app.state.limiter = SlidingWindowLimiter(limit=rate_limit or int(os.environ.get("RENTWISE_RATE_LIMIT", "60")))
     app.state.auth_limiter = SlidingWindowLimiter(limit=auth_limit, window_s=60)
     app.state.allow_signup = (os.environ.get("RENTWISE_ALLOW_SIGNUP", "1") == "1"
@@ -172,6 +189,12 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
             from src.models.predict import RentWisePredictor
             app.state.predictor = RentWisePredictor()
         return app.state.predictor
+
+    def get_area_data():
+        if app.state.area_data is None:
+            from src.models.area_data import AreaData
+            app.state.area_data = AreaData()
+        return app.state.area_data
 
     # ---- dependencies --------------------------------------------------
     def require_api_key(response: Response, x_api_key: str | None = Header(None, alias="X-API-Key")) -> dict:
@@ -250,17 +273,94 @@ def create_app(db: Database | None = None, predictor=None, rate_limit: int | Non
     def area(la_code: str, _key: dict = Depends(require_api_key)):
         p = get_predictor()
         a = check_area_and_type(la_code)
+        crime = a["crime"]
         return {"la_code": la_code, "la_name": a["la_name"], "region": a["region"],
-                "median_annual_income": float(a["income"]), "crime_per_1000": float(a["crime"]),
+                "median_annual_income": float(a["income"]),
+                # areas whose police force published no data (e.g. Greater Manchester) -> null, never 0
+                "crime_per_1000": None if crime is None or crime != crime else float(crime),
                 "property_types": {t: {"typical_bedrooms": p.typical_bedrooms(t)} for t in p.property_types},
                 "spatial_profile": p.spatial_profile(a["la_name"])}
+
+    @app.get("/v1/areas/{la_code}/rents", tags=["data"])
+    def area_rents(la_code: str, income_gbp_year: float | None = None, _key: dict = Depends(require_api_key)):
+        """Every official ONS rent for the area (all, 1/2/3/4+ bed, 4 types), with annual change,
+        affordability against local median earnings (and your income, if given), median sale
+        prices and indicative gross yield."""
+        from src.models.area_data import MEASURE_LABEL, affordability
+        a = check_area_and_type(la_code)
+        d = get_area_data()
+        if income_gbp_year is not None and not (0 < income_gbp_year <= 10_000_000):
+            raise HTTPException(422, "income_gbp_year must be between 0 and 10,000,000")
+        local = d.area_income(la_code)
+        out = []
+        for m, r in d.official_rents(la_code).items():
+            out.append({"measure": m, "label": MEASURE_LABEL.get(m, m), "rent_gbp_month": r["rent"],
+                        "annual_change_pct": r["annual_change_pct"], "period": r["period"],
+                        "vs_local_earnings": affordability(r["rent"], local),
+                        "vs_your_income": affordability(r["rent"], income_gbp_year) if income_gbp_year else None,
+                        "gross_yield_pct": d.gross_yield(la_code, m)})
+        order = {m: i for i, m in enumerate(d.measures())}
+        return {"la_code": la_code, "la_name": a["la_name"], "region": a["region"],
+                "median_annual_earnings": local, "rents": sorted(out, key=lambda x: order.get(x["measure"], 99)),
+                "sale_prices": {t: d.sale_price(la_code, t) for t in ("All", "Flat", "Terraced",
+                                                                      "Semi-detached", "Detached")},
+                "sources": {k: d.vintages.get(k) for k in ("rents", "earnings", "sale_prices")},
+                "notes": ["Affordability = annual rent / gross annual income; 30% guideline.",
+                          "Gross yield = annual median rent / median sale price; indicative, before costs."],
+                "disclaimer": DISCLAIMER}
+
+    @app.get("/v1/areas/{la_code}/trend", tags=["data"])
+    def area_trend(la_code: str, measure: str = "All", since: str = "2015-01",
+                   _key: dict = Depends(require_api_key)):
+        """Official monthly median rent since 2015 for one measure (e.g. All, 2 bed, Flat)."""
+        check_area_and_type(la_code)
+        d = get_area_data()
+        if measure not in d.measures():
+            raise HTTPException(422, f"measure must be one of {d.measures()}")
+        t = d.trend(la_code, measure)
+        t = t[t.period >= since]
+        return {"la_code": la_code, "measure": measure,
+                "points": [{"period": p, "rent_gbp_month": int(r)} for p, r in zip(t.period, t.rent)],
+                "source": (d.vintages.get("rents") or {}).get("source")}
+
+    @app.get("/v1/areas/{la_code}/forecast", tags=["data"])
+    def area_forecast(la_code: str, _key: dict = Depends(require_api_key)):
+        """12-month forecast for the area's REGION (all properties) with conformal 80%/95% bands."""
+        check_area_and_type(la_code)
+        f = get_area_data().region_forecast(la_code)
+        if f is None:
+            raise HTTPException(503, "forecasts not built — run `python -m src.models.rent_forecast`")
+        return {"la_code": la_code, "region_code": f["area_code"], "region": f["name"],
+                "last_period": f["last_period"], "last_rent_gbp_month": f["last_rent"],
+                "forecast": f["forecast"], "method": f["method"],
+                "note": "Regional statistical extrapolation of the official series; not a prediction "
+                        "of policy effects. Indicative only."}
+
+    @app.get("/v1/compare", tags=["data"])
+    def compare(codes: str, measure: str = "All", income_gbp_year: float | None = None,
+                _key: dict = Depends(require_api_key)):
+        """Compare 2-5 areas side by side (codes comma-separated)."""
+        d = get_area_data()
+        lst = [c.strip() for c in codes.split(",") if c.strip()]
+        if not 2 <= len(lst) <= 5:
+            raise HTTPException(422, "give between 2 and 5 comma-separated la_codes")
+        for c in lst:
+            check_area_and_type(c)
+        if measure not in d.measures():
+            raise HTTPException(422, f"measure must be one of {d.measures()}")
+        df = d.compare(lst, measure, income_gbp_year)
+        return {"measure": measure, "areas": [{k: (None if v != v else v) for k, v in r.items()}
+                                              for r in df.to_dict(orient="records")]}
 
     @app.post("/v1/predict", response_model=PredictOut, tags=["data"])
     def predict(body: PredictIn, _key: dict = Depends(require_api_key)):
         p = get_predictor()
         a = check_area_and_type(body.la_code, body.property_type)
         r = p.predict(a["la_name"], body.property_type)
+        from src.models.area_data import affordability
+        mine = affordability(r["rent"], body.income_gbp_year) if body.income_gbp_year else None
         return PredictOut(
+            your_affordability=Affordability(**mine) if mine else None,
             la_code=body.la_code, la_name=a["la_name"], region=r["region"],
             property_type=body.property_type, bedrooms=p.typical_bedrooms(body.property_type),
             rent_gbp_month=r["rent"], kind=r["kind"], official_rent_gbp_month=r["official_rent"],
