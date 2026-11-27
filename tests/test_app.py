@@ -68,6 +68,13 @@ def test_other_views_render(view):
     assert not at.exception
 
 
+def test_cached_objects_are_keyed_on_code_and_data_versions():
+    """Regression: the live app once kept an old cached AreaData across a push (AttributeError)."""
+    src = (config.ROOT / "app" / "streamlit_app.py").read_text()
+    assert "def _area_data(version" in src and "def _predictor(version" in src
+    assert "src/models/area_data.py" in src and "src/models/predict.py" in src
+
+
 def test_compare_offers_csv_downloads():
     at = _app()
     at.sidebar.radio[0].set_value("Compare areas").run()

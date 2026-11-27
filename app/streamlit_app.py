@@ -84,14 +84,34 @@ def gbp(v):
     return "—" if v is None or v != v else f"£{v:,.0f}"
 
 
+def _version(*rel_paths) -> str:
+    """Cache key from file modification times. Streamlit Cloud can keep a cached object alive across a
+    code push; keying on the code + data files rebuilds it whenever either changes (a stale cached
+    AreaData without new methods once raised AttributeError on the live app)."""
+    import os
+    return "|".join(f"{p}:{os.path.getmtime(config.ROOT / p):.0f}" for p in rel_paths
+                    if (config.ROOT / p).exists())
+
+
 @st.cache_resource
-def get_predictor():
+def _predictor(version: str):
     return RentWisePredictor()
 
 
 @st.cache_resource
-def get_area_data():
+def _area_data(version: str):
     return AreaData()
+
+
+def get_predictor():
+    return _predictor(_version("src/models/predict.py", "models/rent_model_meta.json",
+                               "data/processed/earnings.csv", "data/processed/rentwise_clean.csv"))
+
+
+def get_area_data():
+    return _area_data(_version("src/models/area_data.py", "data/processed/official_rents.csv",
+                               "data/processed/rent_quartiles.csv", "data/processed/earnings.csv",
+                               "data/processed/sale_prices.csv", "models/rent_forecasts.json"))
 
 
 def line_chart(df, title, y_title="£ per month", bands=None):
@@ -431,7 +451,7 @@ elif view == "Area map":
     choice = st.selectbox("Show", list(options))
 
     @st.cache_data(show_spinner="Drawing map…")
-    def map_html(metric: str, label: str) -> str:
+    def map_html(metric: str, label: str, version: str = "") -> str:   # version: rebuild when data change
         from src.viz.maps import choropleth
         d = get_area_data()
         allr = d.official[d.official.measure == "All"].set_index("area_code")
@@ -450,7 +470,10 @@ elif view == "Area map":
         vals = {k: x for k, x in vals.items() if x is not None and pd.notna(x)}
         return choropleth(vals, geo, value_name=label, fill_color=cmap)._repr_html_()
 
-    components.html(map_html(options[choice], choice), height=620)
+    components.html(map_html(options[choice], choice,
+                             _version("src/models/area_data.py", "data/processed/official_rents.csv",
+                                      "data/processed/earnings.csv", "data/processed/sale_prices.csv",
+                                      "data/processed/la_spatial_features.csv")), height=620)
     st.caption(f"Rents: ONS PIPR {AS_OF}; earnings: ASHE; prices: HM Land Registry. Grey = no data (e.g. Ofsted does "
                "not inspect Welsh schools). Boundaries: ONS (May 2024), contains OS data © Crown copyright. "
                "Amenities: © OpenStreetMap contributors.")
